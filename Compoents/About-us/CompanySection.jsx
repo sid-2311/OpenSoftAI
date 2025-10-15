@@ -63,7 +63,7 @@ export default function CompanySection() {
             </h3>
             <div className="flex justify-center mb-4">
               <Image
-                src="https://theninehertz.com/wp-content/themes/ninehertz/assets2024/images/calling.webp"
+                src="/images/customer-service-representatives-on-call.webp"
                 alt="Team collaboration at OpenSoft AI"
                 width={300}
                 height={200}
@@ -92,8 +92,8 @@ export default function CompanySection() {
         <div className="flex justify-center">
           <div className="relative">
             <Image
-              src="/company.webp"
-              alt="OpenSoft AI team working together"
+              src="/images/business-team-collaboration-meeting-in-modern-office.webp"
+              alt="business team collaboration meeting in modern office"
               width={400}
               height={400}
               className="rounded-full shadow-lg"

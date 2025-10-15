@@ -27,7 +27,7 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
             <Image
-              src="/aicall.jpg"
+              src="/images/aicall.jpg"
               alt="AI Calling Agent Development"
               fill
               className="object-cover"
@@ -47,7 +47,7 @@ export default function HeroSection() {
             </h1>
 
             <Link
-              href="/contact"
+              href="/contact-us"
               className="mt-6 inline-flex items-center gap-2 bg-transparent text-white border-2 border-white font-semibold px-6 py-3 rounded-full hover:bg-gray-200 hover:text-black transition-all"
             >
               Book a Call

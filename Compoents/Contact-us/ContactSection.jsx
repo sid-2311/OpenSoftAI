@@ -23,7 +23,7 @@ export default function ContactSection() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/contact.jpg"
+            src="/watercolor floral elements hand painted flowers design.jpg"
             alt="Modern office desk with laptop"
             fill
             className="object-cover opacity-70"

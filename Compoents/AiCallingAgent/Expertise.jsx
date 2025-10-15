@@ -43,14 +43,14 @@ export default function VoiceAIExpertiseSection() {
       label: "Increased Call Completion",
       description: "Compared to human-only teams",
       icon: <Phone className="w-6 h-6" />,
-      gradient: "from-blue-600 to-blue-700",
+      gradient: "from-blue-500 to-blue-600",
     },
     {
       metric: "92%",
       label: "Customer Satisfaction",
       description: "With AI-handled interactions",
       icon: <Users className="w-6 h-6" />,
-      gradient: "from-blue-700 to-slate-800",
+      gradient: "from-blue-500 to-slate-600",
     },
   ];
 

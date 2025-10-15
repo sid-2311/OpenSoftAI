@@ -115,7 +115,7 @@ export default function CTASection() {
             </Link>
 
             <Link
-              href="/Portfolio"
+              href="/portfolio"
               className="group bg-white hover:bg-blue-50 text-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 border-blue-100 hover:border-blue-300"
             >
               <FolderOpen className="w-12 h-12 mx-auto mb-4 text-blue-600 group-hover:scale-110 transition-transform" />

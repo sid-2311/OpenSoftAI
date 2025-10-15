@@ -12,8 +12,8 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
           <Image
-            src="/aidev.webp"
-            alt="AI automation development background"
+            src="/images/artificial-intelligence-robot-using-futiristic-technology.webp"
+            alt="artificial intelligence robot using laptop futuristic technology"
             fill
             priority
             quality={90}

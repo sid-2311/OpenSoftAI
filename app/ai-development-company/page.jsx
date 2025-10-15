@@ -24,7 +24,7 @@ export const metadata = {
     url: "https://opensoftai.com/ai-development-company",
     images: [
       {
-        url: "https://opensoftai.com/aidev.webp",
+        url: "https://opensoftai.com/artificial intelligence robot using laptop futuristic technology.webp",
         alt: "AI Development Banner",
       },
     ],

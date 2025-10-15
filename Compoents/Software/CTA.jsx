@@ -55,7 +55,7 @@ export default function FinalCTA() {
       title: "View Our Software Portfolio",
       subtitle: "Explore our successful projects",
       color: "from-white to-blue-50",
-      link: "/Portfolio", // <-- Different link for portfolio
+      link: "/portfolio", // <-- Different link for portfolio
     },
   ];
 

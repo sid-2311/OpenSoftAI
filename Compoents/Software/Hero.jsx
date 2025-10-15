@@ -14,12 +14,12 @@ export const metadata = {
     title: "Custom Software Development Services | OpenSoft AI",
     description:
       "Partner with OpenSoft AI to build scalable, secure, and innovative software solutions that grow with your business.",
-    url: "https://opensoftai.com/SoftWare/",
+    url: "https://opensoftai.com/software-development-company/",
     type: "website",
-    images: ["/opensoftai-cover.png"],
+   
   },
   alternates: {
-    canonical: "https://opensoftai.com/SoftWare/",
+    canonical: "https://opensoftai.com/software-development-company/",
   },
 };
 
@@ -33,7 +33,7 @@ export default function HeroSection() {
       {/* Background Image + Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/soft.avif"
+          src="/images/soft.avif"
           alt="Software developers collaborating on project"
           fill
           priority

@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Send, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [privacyDropdownOpen, setPrivacyDropdownOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
 
   const mobileMenuItems = [
     { key: "ai", label: "AI & Automation", to: "/ai-development-company" },
     { key: "blockchain", label: "BlockChain Development", to: "/blockchain-development-service" },
-    { key: "software", label: "Software Development", to: "/software-development-comapny" },
+    { key: "software", label: "Software Development", to: "/software-development-company" },
     { key: "about", label: "About", to: "/about-us" },
   ];
 
@@ -20,16 +20,79 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto max-md:px-2 max-md:py-2 py-0">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 ml-2">
-          <img src="/final1.svg" alt="Logo" className="h-16 w-auto" />
+          <Image
+            src="/images/opensoftai-logo.svg"
+            height={100}
+            width={100}
+            alt="OpenSoftAI Logo"
+          />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center space-x-8 font-semibold text-gray-800 uppercase">
-          <li>
+        <ul className="hidden lg:flex items-center space-x-8 font-semibold text-gray-800 uppercase relative">
+          {/* Dropdown for AI & Automation */}
+          <li className="group relative">
             <Link href="/ai-development-company" className="hover:text-[#016CD3]">
               AI & Automation
             </Link>
+
+            {/* Dropdown Menu with Left-Right Layout */}
+           <div
+  className="absolute left-0 top-full mt-3 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-2 bg-white shadow-lg rounded-md p-6 w-[600px] z-50 transition-all duration-300 ease-out translate-y-0"
+>
+  {/* Main Menu Title */}
+  <h3 className="text-lg font-bold text-[#016CD3] mb-4 border-b pb-2">
+    AI & Automation Services
+  </h3>
+  
+  {/* Two Column Grid */}
+  <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+    <Link
+      href="/ai-services"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      AI Services
+    </Link>
+    <Link
+      href="/ai-calling-agent"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      AI CALLING AGENT
+    </Link>
+    <Link
+      href="/ai-development-company/ai-consulting"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      AI Consulting
+    </Link>
+    <Link
+      href="/ai-development-company/ai-recommendation-engine"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      AI Recommendation Engine
+    </Link>
+    <Link
+      href="/ai-development-company/ml-development"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      ML Development
+    </Link>
+    <Link
+      href="/ai-development-company/computer-vision-development"
+      className="block px-4 py-2 hover:bg-gray-100 rounded"
+    >
+      Computer Vision Software
+    </Link>
+    <Link
+      href="/ai-development-company/enterprise-ai-development"
+      className="block px-4 py-2 hover:bg-gray-100 rounded col-span-2"
+    >
+      Enterprise AI Development
+    </Link>
+  </div>
+</div>
           </li>
+
           <li>
             <Link href="/blockchain-development-service" className="hover:text-[#016CD3]">
               BlockChain Development
@@ -45,11 +108,11 @@ const Navbar = () => {
               About
             </Link>
           </li>
-
-          {/* Privacy Dropdown */}
-          <Link href="/portfolio" className="hover:text-[#016CD3]">
+          <li>
+            <Link href="/portfolio" className="hover:text-[#016CD3]">
               Portfolio
             </Link>
+          </li>
         </ul>
 
         {/* Desktop Contact Button */}
@@ -82,10 +145,7 @@ const Navbar = () => {
             {mobileMenuItems.map((item, idx) => (
               <React.Fragment key={item.key}>
                 <li>
-                  <Link
-                    href={item.to}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href={item.to} onClick={() => setMobileMenuOpen(false)}>
                     {item.label}
                   </Link>
                 </li>

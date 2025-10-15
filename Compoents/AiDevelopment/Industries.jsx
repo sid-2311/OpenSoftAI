@@ -18,7 +18,8 @@ We build AI that understands financial risk, recognizes suspicious patterns, and
       "Trading algorithms that adapt to market conditions in real-time",
       "Compliance monitoring that never misses regulatory requirements",
     ],
-    img: "/fin.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt: "digital finance data analysis investment dashboard",
     icon: <Landmark className="w-6 h-6" />,
   },
   {
@@ -34,7 +35,8 @@ Our healthcare AI helps predict which patients need early intervention, streamli
       "Automated scheduling that handles complex requirements and preferences",
       "Clinical decision support that provides insights without overriding professional judgment",
     ],
-    img: "/healthcare.avif",
+    img: "/images/healthcare.avif",
+    alt:"",
     icon: <Stethoscope className="w-6 h-6" />,
   },
   {
@@ -50,7 +52,8 @@ Our retail AI creates individualized experiences that feel personal because they
       "Inventory management that predicts demand fluctuations before they happen",
       "Customer service that turns problems into opportunities for deeper engagement",
     ],
-    img: "/retail.webp",
+    img: "/images/ai-shopping-app-development.webp",
+    alt:"ai shopping app development",
     icon: <ShoppingCart className="w-6 h-6" />,
   },
   {
@@ -66,7 +69,8 @@ Our manufacturing AI predicts equipment failures weeks before they happen, catch
       "Production optimization that balances efficiency, quality, and resource utilization",
       "Energy management that reduces consumption while maintaining output",
     ],
-    img: "/manufacturing.jpg",
+    img: "/images/ai-automation-manifacterng-software.jpg",
+    alt:"ai automation manifacterng software",
     icon: <Factory className="w-6 h-6" />,
   },
   {
@@ -82,7 +86,8 @@ Our logistics solutions optimize routes with real-time traffic and weather data,
       "Warehouse automation that increases throughput without increasing errors",
       "Fleet management that maximizes uptime and minimizes operational costs",
     ],
-    img: "/logistics.jpg",
+    img: "/images/global-logistics-and-supply-chain-transportation-network.jpg",
+    alt:"global logistics and supply chain transportation network",
     icon: <Truck className="w-6 h-6" />,
   },
   {
@@ -98,7 +103,8 @@ We provide startups with enterprise-grade architecture from day one, so they nev
       "Change management support for smooth organizational adoption",
       "Strategic consulting that aligns AI capabilities with business objectives",
     ],
-    img: "/startups.jpg",
+    img: "/images/business-startup-concept-innovation-growth.jpg",
+    alt:"business startup concept innovation growth",
     icon: <Building2 className="w-6 h-6" />,
   },
 ];
@@ -177,7 +183,7 @@ export default function IndustriesWeKnow() {
                 <div className="w-full flex justify-center md:justify-end">
                   <Image
                     src={tab.img}
-                    alt={tab.heading}
+                    alt={tab.alt}
                     width={480}
                     height={360}
                     className="rounded-lg object-cover"

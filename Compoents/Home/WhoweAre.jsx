@@ -9,8 +9,8 @@ export default function WhoWeAre() {
       {/* Left decorative element */}
       <div className="absolute left-6 top-12 w-16 h-16 flex items-center justify-center">
         <Image
-          src="/icon-3.png"
-          alt="Decorative Element"
+          src="/images/separate-line.png"
+          alt="separateline"
           width={64}
           height={64}
           className="rotate-slow"
@@ -20,8 +20,8 @@ export default function WhoWeAre() {
       {/* Right decorative element */}
       <div className="absolute right-6 top-12 w-16 h-16 flex items-center justify-center">
         <Image
-          src="/icon-4.png"
-          alt="Decorative Element"
+          src="/images/dotted-pattern-background-design.png"
+          alt="dotted pattern background design"
           width={64}
           height={64}
           className="rotate-slow"

@@ -22,7 +22,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://opensoftai.com/contact.jpg",
+        url: "https://opensoftai.com/watercolor floral elements hand painted flowers design.jpg",
         alt: "Contact OpenSoftAI Banner",
       },
     ],

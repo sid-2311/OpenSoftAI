@@ -91,7 +91,7 @@ export default function AISolutionsSection() {
             </p>
 
             <Link
-              href="/contact"
+              href="/contact-us"
               className="group relative inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 focus:ring-4 focus:ring-blue-300 focus:outline-none"
               aria-label="Start your AI journey with OpenSoft AI"
             >

@@ -97,13 +97,7 @@ export default function ClientTestimonials() {
                   className="flex gap-1 mb-6 mt-4"
                   aria-label="5 star testimonial"
                 >
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-blue-500 fill-blue-500"
-                      aria-hidden="true"
-                    />
-                  ))}
+                  
                 </div>
 
                 {/* Quote Text */}
@@ -154,7 +148,7 @@ export default function ClientTestimonials() {
               Join These Success Stories
             </h3>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="bg-blue-600 text-white px-10 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl inline-block"
             >
               Start Your Transformation

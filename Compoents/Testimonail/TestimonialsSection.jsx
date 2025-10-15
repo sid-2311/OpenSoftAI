@@ -12,7 +12,7 @@ export default function TestimonialsSection() {
     name: 'Alex Morgan',
     title: 'Founder & CEO - BrightTech Solutions',
     image:
-      '/imgtest1.jpg',
+      '/man in orange shirt and black cap.jpg',
     quote:
       'Working with The OpenSoftAI was an incredible experience. Their team delivered a robust and scalable product ahead of schedule. I truly appreciate their dedication and technical excellence.',
     video:
@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
     name: 'Taylor Johnson',
     title: 'CTO - Nova Digital Labs',
     image:
-      '/imgtest2.jpg',
+      '/man with glasses and beard in white shirt.jpg',
     quote:
       'The OpenSoftAI team exceeded our expectations with their seamless project management and outstanding UI/UX designs. Their communication and technical depth made the whole process smooth and efficient.',
     video:
@@ -31,7 +31,7 @@ export default function TestimonialsSection() {
   {
     name: 'Jordan Lee',
     title: 'Product Manager - Visionary Apps Inc.',
-    image:'/imgtest3.jpg',
+    image:'/portrait man wearing gray sweater on black background.jpg',
     quote:
       'From concept to deployment, The OpenSoftAI team supported us every step of the way. Their attention to detail and ability to turn ideas into functional products is remarkable.',
     video:

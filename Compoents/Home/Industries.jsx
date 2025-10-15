@@ -9,7 +9,8 @@ const TABS = [
     title: "Financial Services",
     heading: "Financial Services",
     text: `We've built trading platforms that don't crash during market volatility. Payment systems that actually process payments. Compliance tools that keep regulators happy.`,
-    img: "/fin.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt: "digital finance data analysis investment dashboard.webp",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +33,8 @@ const TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Electronic health records that doctors don't hate. Telemedicine platforms that work when patients need them most. Everything HIPAA-compliant because nobody has time for lawsuits.`,
-    img: "/healthcare.avif",
+    img: "/images/healthcare.avif",
+    alt: "",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +57,8 @@ const TABS = [
     title: "Retail & E-commerce",
     heading: "Retail & E-commerce",
     text: `Shopping platforms that convert browsers into buyers. Inventory systems that know what you have before you run out. Recommendation engines that actually recommend useful things.`,
-    img: "/retail.webp",
+    img: "/images/ai shopping app development.webp",
+    alt:"",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +78,8 @@ const TABS = [
     title: "Manufacturing",
     heading: "Manufacturing",
     text: `Supply chains that talk to each other. IoT systems that prevent expensive breakdowns. Quality control that catches problems before customers do.`,
-    img: "/manufacturing.jpg",
+    img: "/images/ai automation manifacterng software .jpg",
+    alt:"",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +99,8 @@ const TABS = [
     title: "Technology",
     heading: "Technology",
     text: `SaaS platforms that scale. APIs that other developers actually want to use. Cloud migrations that don't give you nightmares.`,
-    img: "/technology.jpg",
+    img: "/images/ai and human brain collaboration.jpg",
+    alt:"",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -193,8 +198,8 @@ export default function Industries() {
                 <div className="w-full flex justify-center md:justify-end">
                   <Image
                     src={tab.img}
-                    alt={`${tab.heading} industry by OpenSoft AI`}
-                    width={480}
+                    alt={tab.alt}
+                                        width={480}
                     height={320}
                     className="w-full max-w-[480px] rounded-lg object-cover"
                     loading="lazy"

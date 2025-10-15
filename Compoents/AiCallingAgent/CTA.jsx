@@ -61,7 +61,7 @@ export default function GetStartedSection() {
     {
       icon: Phone,
       title: "Direct Line",
-      description: "+91 9509653923 – Speak with our voice AI specialists.",
+      description: "+91 9256497999 – Speak with our voice AI specialists.",
       action: "Call Now",
     },
     {
@@ -161,38 +161,41 @@ export default function GetStartedSection() {
           </section>
 
           {/* Contact Methods */}
-          <section aria-label="Contact Options" className="mb-16">
-            <h2 className="text-3xl font-bold text-blue-900 text-center mb-12">
-              Multiple Ways to Get Started
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {contactMethods.map((method, index) => {
-                const Icon = method.icon;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-100"
-                  >
-                    <div className="text-center">
-                      <div className="inline-flex w-16 h-16 bg-blue-100 rounded-2xl items-center justify-center mb-6">
-                        <Icon className="w-8 h-8 text-blue-600" />
-                      </div>
-                      <h3 className="text-xl font-bold text-blue-900 mb-3">
-                        {method.title}
-                      </h3>
-                      <p className="text-gray-700 mb-6 leading-relaxed">
-                        {method.description}
-                      </p>
-                      <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 w-full flex items-center justify-center gap-2">
-                        {method.action}
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+         <div className="grid md:grid-cols-3 mb-4 gap-8">
+  {contactMethods.map((method, index) => {
+    const Icon = method.icon;
+    // Define hrefs for each method
+    let href = "#";
+    if (method.title === "Book Your Free Demo") href = "/contact-us";
+    if (method.title === "Direct Line") href = "tel:+919256497999";
+    if (method.title === "Email Us") href = "mailto:info@opensoftai.com";
+    return (
+      <div
+        key={index}
+        className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-blue-100"
+      >
+        <div className="text-center">
+          <div className="inline-flex w-16 h-16 bg-blue-100 rounded-2xl items-center justify-center mb-6">
+            <Icon className="w-8 h-8 text-blue-600" />
+          </div>
+          <h3 className="text-xl font-bold text-blue-900 mb-3">
+            {method.title}
+          </h3>
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            {method.description}
+          </p>
+          <Link
+            href={href}
+            className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 w-full flex items-center justify-center gap-2"
+          >
+            {method.action}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    );
+  })}
+</div>
 
           {/* Special Offer Banner */}
           <section
@@ -236,7 +239,7 @@ export default function GetStartedSection() {
               Contact OpenSoft AI today and never miss another opportunity.
             </p>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="bg-blue-600 text-white px-12 py-5 rounded-xl font-bold text-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3"
             >
               Get Started Now

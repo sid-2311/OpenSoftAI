@@ -13,7 +13,8 @@ const TABS = [
     text: `Remember when you had that brilliant idea? The one that could change everything if only you had the right software to make it happen?
 That's where we come in. We build websites that don't just look pretty – they convert visitors into customers. Mobile apps that people actually want to use. Enterprise systems that make your team's life easier, not harder.
 No cookie-cutter solutions here. Your business is unique, and your software should be too.`,
-    img: "/csHome.png",
+    img: "/images/custom-software-development.png",
+    imgAlt: "custom software development", // ✅ ALT added
     icon: <Code2 className="w-6 h-6" />,
     link: "/software-development-company",
   },
@@ -23,7 +24,8 @@ No cookie-cutter solutions here. Your business is unique, and your software shou
     heading: "AI & Automation Solutions",
     text: `Let's be honest. Your team is probably doing a lot of boring, repetitive stuff right now. Stuff that a smart system could handle while they focus on what actually matters.
 We build AI that works in the real world. Chatbots that don't make your customers want to throw their phones. Automation that saves you hours every day. Machine learning models that actually predict useful things. The kind of technology that makes you wonder how you ever managed without it.`,
-    img: "/Aiautomation.jpg",
+    img: "/images/ai-automation-development.jpg",
+    imgAlt: "ai automation development", // ✅ ALT added
     icon: <Bot className="w-6 h-6" />,
     link: "/ai-development-company",
   },
@@ -33,7 +35,8 @@ We build AI that works in the real world. Chatbots that don't make your customer
     heading: "Full-Stack Blockchain Development",
     text: `Blockchain isn't just about crypto anymore. Though we build those too – wallets, DeFi platforms, NFT marketplaces that don't fall apart when things get busy.
 Smart contracts that are actually smart. Decentralized apps that regular people can figure out. The whole blockchain thing, but done right. Secure, transparent, and built to scale when your big break comes.`,
-    img: "/blockchain.jpg",
+    img: "/images/ai-blockchain-technology.jpg",
+    imgAlt: "ai blockchain technology", // ✅ ALT added
     icon: <Blocks className="w-6 h-6" />,
     link: "/blockchain-development-service",
   },
@@ -124,9 +127,9 @@ export default function CoreServices() {
                   <div className="relative w-full max-w-[480px] h-[300px] md:h-[320px] rounded-lg overflow-hidden">
                     <Image
                       src={tab.img}
-                      alt={tab.heading}
+                      alt={tab.imgAlt} // ✅ using the new alt text
                       fill
-                      className="object-conatin rounded-lg"
+                      className="object-contain rounded-lg"
                       sizes="(max-width: 768px) 100vw, 480px"
                       onError={(e) => {
                         e.currentTarget.src =

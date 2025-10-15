@@ -21,6 +21,10 @@ export const metadata = {
   alternates: {
     canonical: "https://opensoftai.com/privacy-policy",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 

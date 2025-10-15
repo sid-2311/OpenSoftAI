@@ -66,8 +66,8 @@ export default function MissionVisionSection() {
         <div className="flex justify-center">
           <div className="relative">
             <Image
-              src="/company.webp"
-              alt="OpenSoft AI team collaborating on digital transformation"
+              src="/images/business-team-collaboration-meeting-in-modern-office.webp"
+              alt="business team collaboration meeting in modern office"
               width={400}
               height={400}
               className="rounded-full shadow-lg"

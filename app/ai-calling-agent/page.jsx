@@ -4,6 +4,7 @@ import VoiceAIExpertiseSection from "@/Compoents/AiCallingAgent/Expertise";
 import AICallingAgents from "@/Compoents/AiCallingAgent/Feature";
 import HeroSection from "@/Compoents/AiCallingAgent/Hero";
 import InboundOutboundAgentsSection from "@/Compoents/AiCallingAgent/InboundOutbound";
+import IndustriesWeKnow from "@/Compoents/AiCallingAgent/Industries";
 import AICallingIntroSection from "@/Compoents/AiCallingAgent/Intro";
 import OpenSoftAIPartner from "@/Compoents/AiCallingAgent/Partner";
 import ClientTestimonials from "@/Compoents/AiCallingAgent/Testimonail";
@@ -18,6 +19,7 @@ export default function AiCallingAgent(){
         <AdvancedFeaturesSection/>
         <AICallingAgents/>
         <OpenSoftAIPartner/>
+        <IndustriesWeKnow/>
         <ClientTestimonials/>
         <GetStartedSection/>
 

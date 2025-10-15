@@ -1,6 +1,7 @@
 "use client"; // because we’re using interactive components like Link
 
 import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link"; // ✅ use next/link instead of react-router-dom
 
 export default function Banner() {
@@ -14,7 +15,7 @@ export default function Banner() {
         className="absolute left-0 bottom-0 top-[50px] w-1/2 bg-contain bg-no-repeat bg-center"
         style={{
           backgroundImage:
-            "url(https://theninehertz.com/wp-content/themes/ninehertz/assets2024/images/banner-shape.png)",
+            "url(/images/banner-shape.png)",
         }}
       ></div>
 
@@ -23,7 +24,7 @@ export default function Banner() {
         className="absolute top-0 right-10 bg-no-repeat bg-right opacity-40"
         style={{
           backgroundImage:
-            "url(https://theninehertz.com/wp-content/themes/ninehertz/assets2024/images/Digital-Transformation1.webp)",
+            "url(/images/Digital-Transformation1.webp)",
         }}
       ></div>
 
@@ -52,12 +53,14 @@ export default function Banner() {
 
         {/* Image (hidden on mobile) */}
         <div className="hidden md:block w-1/2">
-          <img
-            src="https://theninehertz.com/wp-content/themes/ninehertz/assets2024/images/Digital-Transformation-img2.webp"
-            alt="Digital transformation illustration showing AI and software integration"
-            className="h-[500px] w-[80%] object-contain mx-auto"
-            loading="lazy"
-          />
+         <Image
+  src="\images\people-playing-vr-games-with-virtual-reality-headsets.webp"
+  alt="people laying vr games with virtual reality headsets"
+  width={800}
+  height={500}
+  className="h-[500px] w-[80%] object-contain mx-auto"
+  loading="lazy"
+/>
         </div>
       </div>
     </section>

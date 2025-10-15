@@ -41,7 +41,7 @@ export default function CallToActionCard() {
             </Link>
             
             <Link
-              href="/Portfolio"
+              href="/portfolio"
               className="px-6 py-3 rounded-full bg-gray-100 text-gray-800 font-semibold shadow-md hover:bg-gray-200 transition duration-300"
               role="button"
             >

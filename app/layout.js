@@ -38,11 +38,11 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <link rel="icon" href="/final1.svg" type="image/png" />
+        <link rel="icon" href="/images/opensoftai-logo.svg" type="image/png" />
         <link rel="canonical" herf= "https://opensoftai.com"/>
 
       </head>
-      <link rel="icon" href="/final1.svg" type="image/png"/>
+      <link rel="icon" href="/opensoftai logo.svg" type="image/png"/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

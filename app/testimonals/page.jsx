@@ -21,12 +21,12 @@ export const metadata = {
       "Discover client feedback and success stories from businesses that partnered with OpenSoftAI for AI, blockchain, and software development solutions.",
     url: "https://opensoftai.com/testimonials",
     type: "website",
-    images: [
-      {
-        url: "https://opensoftai.com/images/testimonials-banner.jpg",
-        alt: "OpenSoftAI Client Testimonials Banner",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://opensoftai.com/images/testimonials-banner.jpg",
+    //     alt: "OpenSoftAI Client Testimonials Banner",
+    //   },
+    // ],
   },
   robots: {
     index: true,

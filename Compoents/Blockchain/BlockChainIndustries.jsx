@@ -9,7 +9,8 @@ const BLOCKCHAIN_TABS = [
     title: "Cryptocurrency",
     heading: "Cryptocurrency Solutions",
     text: `Secure crypto wallets, exchange platforms, and trading tools built for high performance and reliability. Enable seamless transactions and real-time tracking for users globally.`,
-    img: "/crypto.jpg",
+    img: "/images/cryptocurrency-digital-coins-bitcoin-ethereum-blockchain-concept.jpg",
+    alt:"cryptocurrency digital coins bitcoin ethereum blockchain concept",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 1.343-3 3 0 1.656 1.343 3 3 3s3-1.344 3-3c0-1.657-1.343-3-3-3z" />
@@ -22,7 +23,8 @@ const BLOCKCHAIN_TABS = [
     title: "DeFi",
     heading: "Decentralized Finance",
     text: `Build decentralized finance applications that allow lending, borrowing, and yield farming without intermediaries. Smart contracts secure every transaction and automate processes.`,
-    img: "/defi.webp",
+    img: "/images/defi-decentralized-finance-digital-technology-concept.webp",
+    alt:"defi decentralized finance digital technology concept",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v20M2 12h20M4 4l16 16M4 20L20 4" />
@@ -34,7 +36,8 @@ const BLOCKCHAIN_TABS = [
     title: "NFTs",
     heading: "NFT Platforms",
     text: `Create, trade, and manage NFTs with user-friendly platforms. Support secure minting, marketplace features, and wallet integrations for digital assets.`,
-    img: "/nft.webp",
+    img: "/images/nft-non-fungible-token-digital-network-concept.jpg",
+    alt:"nft non fungible token digital network concept",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l9 4v12l-9 4-9-4V6l9-4z" />
@@ -48,7 +51,8 @@ const BLOCKCHAIN_TABS = [
     title: "Smart Contracts",
     heading: "Smart Contract Development",
     text: `Deploy secure and efficient smart contracts on Ethereum, Solana, and other blockchains. Automate agreements, reduce intermediaries, and increase trust in transactions.`,
-    img: "/smartcontract.webp",
+    img: "/images/blockchain-smart-contract-illustration.webp",
+    alt:"blockchain smart contract illustration",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -60,7 +64,8 @@ const BLOCKCHAIN_TABS = [
     title: "Enterprise",
     heading: "Blockchain for Enterprise",
     text: `Integrate blockchain into enterprise systems for supply chain, data security, and identity management. Private, permissioned networks that scale for business needs.`,
-    img: "/enterprise.jpg",
+    img: "/images/data-center-cloud-network-illustration.jpg",
+    alt:"data center cloud network illustration",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 7h18M3 12h18M3 17h18" />
@@ -134,7 +139,7 @@ export default function BlockchainIndustries() {
                 <div className="w-full flex justify-center md:justify-end">
                   <Image
                     src={tab.img}
-                    alt={`${tab.heading} blockchain solution by OpenSoft AI`}
+                    alt={tab.alt}
                     width={480}
                     height={320}
                     className="w-full max-w-[480px] rounded-lg object-cover"

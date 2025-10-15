@@ -54,8 +54,8 @@ export default function CTAContactSection() {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      value: "+91 9509653923",
-      link: "tel:+919509653923",
+      value: "+91 9256497999",
+      link: "tel:+919256497999",
       gradient: "from-blue-500 to-blue-600",
     },
     {
@@ -69,7 +69,7 @@ export default function CTAContactSection() {
       icon: <Calendar className="w-6 h-6" />,
       title: "Schedule a Consultation",
       value: "Book your free AI strategy session",
-      link: "/contact",
+      link: "/contact-us",
       gradient: "from-blue-700 to-blue-800",
     },
   ];
@@ -227,7 +227,7 @@ export default function CTAContactSection() {
                 {/* CTA Button */}
                 <div className="text-center mb-8">
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-900 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20"
                   >
                     <Calendar className="w-6 h-6" />

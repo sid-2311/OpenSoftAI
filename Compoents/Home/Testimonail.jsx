@@ -9,29 +9,28 @@ const testimonials = [
   {
     name: "Aarav Mehta",
     company: "InnovateTech Solutions",
-    image:
-      "/men1.jpg",
+    image: "/images/smiling-man-in-yellow-shirt-on-blue-background.jpg",
+    alt: "smiling man in yellow shirt on blue background",
     quote:
       "These guys took our messy manual processes and turned them into something that actually works. Cut our costs by 40% and our team finally stopped complaining about the system. That's worth its weight in gold.",
   },
   {
     name: "Priya Nair",
     company: "NextWave Digital",
-    image:
-      "/men3.jpg",
+    image: "/images/men3.jpg",
+    alt: "smiling woman in white shirt on blue background",
     quote:
       "The CRM they built completely changed how we work with clients. ROI showed up in the first quarter, which honestly surprised everyone, including me.",
   },
   {
     name: "Rohan Sharma",
     company: "Finverse Technologies",
-    image:
-      "/men2.jpg",
+    image: "/images/men2.jpg",
+    alt: "man in white shirt on white background",
     quote:
       "Over ₹400 crore in transactions through our platform and zero security issues. Zero. I sleep better at night knowing these guys built it right.",
   },
 ];
-
 
 export default function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,7 +47,8 @@ export default function TestimonialsSection() {
     );
   };
 
-  const { name, company, image, quote } = testimonials[currentIndex];
+  // ✅ include `alt` in destructuring
+  const { name, company, image, alt, quote } = testimonials[currentIndex];
 
   return (
     <section className="bg-slate-900 py-20 px-6">
@@ -63,7 +63,6 @@ export default function TestimonialsSection() {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Side - Image */}
           <div className="flex-1 relative">
-            {/* Decorative dots */}
             <div className="absolute -left-16 -top-8 opacity-20">
               <div className="grid grid-cols-8 gap-2">
                 {[...Array(64)].map((_, i) => (
@@ -87,7 +86,7 @@ export default function TestimonialsSection() {
                   >
                     <Image
                       src={image}
-                      alt={name}
+                      alt={alt} // ✅ now works correctly
                       width={600}
                       height={400}
                       className="w-full h-full object-cover rounded-xl"
@@ -96,7 +95,6 @@ export default function TestimonialsSection() {
                   </motion.div>
                 </AnimatePresence>
 
-                {/* Play button overlay */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <button className="bg-transparent bg-opacity-20 rounded-full p-6 hover:bg-opacity-30 transition-all duration-300 group">
                     <Play
@@ -109,7 +107,7 @@ export default function TestimonialsSection() {
             </div>
           </div>
 
-          {/* Right Side - Testimonial Content */}
+          {/* Right Side - Text */}
           <div className="flex-1">
             <div className="flex justify-end gap-4 mb-8">
               <button
@@ -126,7 +124,6 @@ export default function TestimonialsSection() {
               </button>
             </div>
 
-            {/* Quote Icon */}
             <div className="mb-8">
               <svg
                 className="w-20 h-20 text-blue-400 opacity-60"
@@ -137,7 +134,6 @@ export default function TestimonialsSection() {
               </svg>
             </div>
 
-            {/* Quote */}
             <AnimatePresence mode="wait">
               <motion.blockquote
                 key={currentIndex}
@@ -151,11 +147,10 @@ export default function TestimonialsSection() {
               </motion.blockquote>
             </AnimatePresence>
 
-            {/* Client Info */}
             <div className="flex items-center gap-4">
               <Image
                 src={image}
-                alt={name}
+                alt={alt} // ✅ fixed here too
                 width={48}
                 height={48}
                 className="w-12 h-12 rounded-full object-cover"

@@ -11,6 +11,7 @@ import {
   CheckCircle,
   Headphones,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function AICallingIntroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -157,23 +158,26 @@ export default function AICallingIntroSection() {
               </div>
 
               {/* CTA */}
-              <button className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40">
-                <PhoneCall className="w-5 h-5" />
-                <span>Get Your AI Calling Agent</span>
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </button>
+              <Link
+  href="/contact-us"
+  className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40"
+>
+  <PhoneCall className="w-5 h-5" />
+  <span>Get Your AI Calling Agent</span>
+  <svg
+    className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
+  </svg>
+</Link>
             </div>
 
             {/* RIGHT: Visual Side */}

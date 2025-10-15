@@ -51,7 +51,7 @@ export default function TestimonialHero() {
               </div>
 
               <Link
-                href="/Contact-Us"
+                href="/contact-us"
                 className="group w-fit mt-8 px-8 py-4 bg-transparent border-2 border-white rounded-full text-white font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center gap-2"
               >
                 Free Consultation
@@ -72,8 +72,8 @@ export default function TestimonialHero() {
                 {/* Top Row */}
                 <div className="col-span-2 h-40 rounded-lg overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=300&fit=crop"
-                    alt="Smiling happy client"
+                    src="/images/young-woman-portrait-natural-light-outdoors.jpg"
+                    alt="young woman portrait natural light outdoors"
                     width={400}
                     height={300}
                     className="w-full h-full object-cover opacity-90 rounded-lg"
@@ -82,8 +82,8 @@ export default function TestimonialHero() {
                 </div>
                 <div className="h-40 rounded-lg overflow-hidden border-4 border-white">
                   <Image
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=300&fit=crop"
-                    alt="Happy employee portrait"
+                    src="/images/professional-woman-smiling-in-business-attire-office-setting.jpg"
+                    alt="professional woman smiling in business attire office setting"
                     width={200}
                     height={300}
                     className="w-full h-full object-cover"
@@ -93,8 +93,8 @@ export default function TestimonialHero() {
                 {/* Middle Row */}
                 <div className="h-48 rounded-lg overflow-hidden">
                   <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop"
-                    alt="Smiling man testimonial"
+                    src="/images/smiling-man-in-white-shirt-portrait.jpg"
+                    alt="smiling man in white shirt portrait"
                     width={200}
                     height={300}
                     className="w-full h-full object-cover"
@@ -102,8 +102,8 @@ export default function TestimonialHero() {
                 </div>
                 <div className="h-48 rounded-lg overflow-hidden border-4 border-white">
                   <Image
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=300&fit=crop"
-                    alt="Professional portrait woman"
+                    src="/images/young-woman-portrait-natural-light-outdoors.jpg"
+                    alt="young woman portrait natural light outdoors"
                     width={200}
                     height={300}
                     className="w-full h-full object-cover"
@@ -111,8 +111,8 @@ export default function TestimonialHero() {
                 </div>
                 <div className="row-span-2 h-full rounded-lg overflow-hidden border-4 border-white">
                   <Image
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=500&fit=crop"
-                    alt="Confident smiling employee"
+                    src="/images/portrait-of-woman-with-blue-light-modern-studio-photography.jpg"
+                    alt="portrait of woman with blue light modern studio photography"
                     width={300}
                     height={500}
                     className="w-full h-full object-cover"
@@ -122,8 +122,8 @@ export default function TestimonialHero() {
                 {/* Bottom Row */}
                 <div className="col-span-2 h-40 rounded-lg overflow-hidden border-4 border-white">
                   <Image
-                    src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=400&h=300&fit=crop"
-                    alt="Teamwork and collaboration"
+                    src="/images/confident-man-wearing-glasses-in-gray-tshirt.jpg"
+                    alt="confident man wearing glasses in gray tshirt"
                     width={400}
                     height={300}
                     className="w-full h-full object-cover"

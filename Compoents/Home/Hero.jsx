@@ -16,7 +16,7 @@ export default function Hero() {
         muted
         playsInline
       >
-        <source src="/video_0.mp4" type="video/mp4" />
+        <source src="/images/video_0.mp4" type="video/mp4" />
         <source src="/video/video_0.webm" type="video/webm" />
         <source src="/video/video_0.ogg" type="video/ogg" />
       </video>

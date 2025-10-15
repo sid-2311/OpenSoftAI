@@ -18,7 +18,8 @@ const SOFTWARE_TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Electronic health records, telemedicine platforms, practice management systems, and patient engagement tools that improve healthcare delivery while ensuring compliance.`,
-    img: "/healthcare.avif",
+    img: "/images/doctor-using-digital-health-technology.avif",
+    alt:"doctor using digital health technology",
     icon: <Stethoscope className="w-6 h-6" />,
   },
   {
@@ -26,7 +27,8 @@ const SOFTWARE_TABS = [
     title: "Hospitality",
     heading: "Hospitality & Travel",
     text: `Booking systems, property management solutions, guest experience platforms, and operational management tools that enhance customer satisfaction and business efficiency.`,
-    img: "/hospitality.jpg",
+    img: "/images/hospitality-industry-word-cloud-service-hotel-restaurant.jpg",
+    alt:"hospitality industry word cloud service hotel restaurant",
     icon: <Plane className="w-6 h-6" />,
   },
   {
@@ -34,7 +36,8 @@ const SOFTWARE_TABS = [
     title: "Finance",
     heading: "Finance & Banking",
     text: `Trading platforms, risk management systems, digital banking solutions, and regulatory compliance tools that modernize financial services securely.`,
-    img: "/fin.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt:"digital finance data analysis investment dashboard",
     icon: <Landmark className="w-6 h-6" />,
   },
   {
@@ -42,7 +45,8 @@ const SOFTWARE_TABS = [
     title: "Education",
     heading: "Education",
     text: `Learning management systems, student information systems, online assessment platforms, and administrative tools that support modern educational environments.`,
-    img: "/education.avif",
+    img: "/images/creative-business-ideas-book.avif",
+    alt:"creative business ideas book",
     icon: <GraduationCap className="w-6 h-6" />,
   },
   {
@@ -50,7 +54,8 @@ const SOFTWARE_TABS = [
     title: "Retail",
     heading: "Retail & E-commerce",
     text: `Inventory management, point-of-sale systems, customer relationship platforms, and e-commerce solutions that drive sales and improve customer experiences.`,
-    img: "/retail.webp",
+    img: "/images/ai-shopping-app-development.webp",
+    alt:"ai shopping app development",
     icon: <ShoppingBag className="w-6 h-6" />,
   },
   {
@@ -58,7 +63,8 @@ const SOFTWARE_TABS = [
     title: "Logistics",
     heading: "Logistics & Supply Chain",
     text: `Warehouse management, transportation optimization, inventory tracking, and supply chain visibility tools that reduce costs and improve efficiency.`,
-    img: "/logistics.jpg",
+    img: "/images/global-logistics-and-supply-chain-transportation-network.jpg",
+    alt:"global logistics and supply chain transportation network",
     icon: <Truck className="w-6 h-6" />,
   },
   {
@@ -66,7 +72,8 @@ const SOFTWARE_TABS = [
     title: "Real Estate",
     heading: "Real Estate",
     text: `Property management systems, CRM platforms, listing management tools, and transaction processing software that streamline real estate operations.`,
-    img: "/realestate.webp",
+    img: "/images/real-estate-handshake-property-deal.webp",
+    alt:"real estate handshake property deal",
     icon: <Building2 className="w-6 h-6" />,
   },
   {
@@ -74,7 +81,8 @@ const SOFTWARE_TABS = [
     title: "Manufacturing",
     heading: "Manufacturing",
     text: `Production planning systems, quality management tools, supply chain integration, and operational efficiency platforms that optimize manufacturing processes.`,
-    img: "/manufacturing.jpg",
+    img: "/images/ai-automation-manifacterng-software.jpg",
+    alt:"ai automation manifacterng software",
     icon: <Factory className="w-6 h-6" />,
   },
 ];
@@ -162,7 +170,7 @@ export default function SoftwareIndustries() {
                   <div className="relative w-full max-w-[480px] h-[320px] rounded-lg overflow-hidden">
                     <Image
                       src={tab.img}
-                      alt={`${tab.heading} industry software development`}
+                      alt={tab.alt}
                       fill
                       sizes="(max-width: 768px) 100vw, 480px"
                       className="object-conatin"

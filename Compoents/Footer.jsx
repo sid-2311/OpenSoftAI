@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <img
-                src="/final1.svg"
+                src="/images/opensoftai-logo.svg"
                 alt="OpenSoftAI Logo"
                 className="h-14 md:h-16 w-auto"
               />
@@ -47,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/aidevelopment"
+                  href="/ai-development-company"
                   className="text-gray-600 hover:text-blue-600 transition"
                 >
                   AI & Automation
@@ -55,7 +55,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/blockchain"
+                  href="/blockchain-development-service"
                   className="text-gray-600 hover:text-blue-600 transition"
                 >
                   BlockChain Development
@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/software"
+                  href="/software-development-company"
                   className="text-gray-600 hover:text-blue-600 transition"
                 >
                   Software Development
@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/aboutus"
+                  href="/about-us"
                   className="text-gray-600 hover:text-blue-600 transition"
                 >
                   About Us
