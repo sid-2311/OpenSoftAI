@@ -169,13 +169,13 @@ export default function TechnicalFeaturesSection() {
           {/* Header */}
           <header className="text-center mb-20 animate-slideUp">
            
-            <h2 className="text-5xl md:text-5xl font-black text-gray-900 mb-8 leading-tight">
+            <h2 className="text-5xl md:text-5xl font-medium text-gray-900 mb-8 leading-tight">
               The Technical Stuff That {" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                 Actually Works
               </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Advanced AI technology and enterprise integrations working together to create chatbots that feel remarkably human.
             </p>
           </header>
@@ -372,22 +372,7 @@ export default function TechnicalFeaturesSection() {
           </div>
 
           {/* CTA */}
-          <div className="relative group max-w-4xl mx-auto">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition duration-500 animate-glow"></div>
-            <div className="relative bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-12 text-center shadow-2xl">
-              <h3 className="text-4xl font-black text-white mb-6">
-                Want to See the Technology in Action?
-              </h3>
-              <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Schedule a technical demo and see how our AI chatbots can integrate seamlessly with your existing systems.
-              </p>
-              <button className="group/btn relative inline-flex items-center gap-3 bg-white text-blue-600 px-12 py-6 rounded-full text-lg font-black shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105">
-                <span>Book Technical Demo</span>
-                <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                <div className="absolute inset-0 rounded-full animate-shimmer"></div>
-              </button>
-            </div>
-          </div>
+          
         </div>
       </section>
     </>

@@ -76,7 +76,7 @@ export default function Industries() {
       className="container mx-auto px-4 py-16 bg-[#F9FAFB] flex flex-col items-center"
     >
       {/* SEO Heading */}
-      <header className="text-center mb-10 max-w-3xl">
+      <header className="text-center mb-10 max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900">
           Industries We Transform Through AI Chatbots
         </h2>

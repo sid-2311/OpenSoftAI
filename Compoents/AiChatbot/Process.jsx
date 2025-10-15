@@ -1,4 +1,5 @@
 import { Headphones, Sparkles, TestTube, TrendingUp, ArrowRight, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ProcessSection() {
   const steps = [
@@ -134,9 +135,9 @@ export default function ProcessSection() {
             <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
               Let's analyze your customer conversations and create a chatbot that actually works for your business.
             </p>
-            <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <Link href="/contact-us" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
               Schedule a Discovery Call
-            </button>
+            </Link>
           </div>
         </div>
       </div>

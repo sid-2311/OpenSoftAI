@@ -298,13 +298,7 @@ export default function ExperienceSection() {
               </div>
 
               {/* CTA */}
-              <div className="mt-8 pt-8 border-t border-gray-200 text-center">
-                <p className="text-gray-600 mb-6">Ready to see similar results for your business?</p>
-                <button className="group bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3">
-                  Let's Talk About Your Project
-                  <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-                </button>
-              </div>
+             
             </div>
           </div>
         </div>

@@ -39,9 +39,7 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
-            <Quote className="w-8 h-8 text-blue-600" />
-          </div>
+          
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             What People Actually Tell Us
           </h2>
@@ -97,14 +95,7 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-gray-600 mb-6">
-            Join hundreds of businesses seeing similar results
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
-            Start Your Free Trial
-          </button>
-        </div>
+       
       </div>
     </section>
   );
