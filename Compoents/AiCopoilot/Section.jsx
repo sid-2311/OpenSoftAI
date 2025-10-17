@@ -110,16 +110,7 @@ export default function AiCopilot() {
         </div>
 
         {/* CTA Section */}
-        <div className={`text-center transition-all duration-1000 delay-900 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          <a
-            href="#"
-            className="inline-block px-12 py-5 bg-gradient-to-r from-blue-500 to-blue-400 text-white text-xl font-semibold rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-blue-500/50"
-          >
-            See How AI Can Transform Your Workflow
-          </a>
-        </div>
+       
       </div>
 
       <style jsx>{`

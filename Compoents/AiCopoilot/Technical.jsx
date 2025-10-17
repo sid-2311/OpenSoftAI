@@ -37,10 +37,10 @@ export default function TechnicalMagicSection() {
       className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-24 px-6 text-slate-800"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
+        <h2 className="text-5xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           The Technical Magic That Makes Them Feel Human
         </h2>
-        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
           These aren't just tools — they're intelligent partners that understand you, learn from you, and grow with your team.
         </p>
       </div>
@@ -65,19 +65,7 @@ export default function TechnicalMagicSection() {
         })}
       </div>
 
-      <div className="text-center mt-20">
-        <div className="inline-block bg-white rounded-2xl px-10 py-8 shadow-xl border border-blue-200">
-          <h3 className="text-2xl font-semibold text-slate-800 mb-4">
-            Building AI That Feels Human Takes Real Engineering
-          </h3>
-          <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-            Every layer of our copilots—from data architecture to user experience—is designed to make AI feel natural, contextual, and trustworthy.
-          </p>
-          <button className="px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            Discover How It Works
-          </button>
-        </div>
-      </div>
+     
 
       <style jsx>{`
         @keyframes fade-up {

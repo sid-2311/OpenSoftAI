@@ -33,8 +33,8 @@ const TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Electronic health records that doctors don't hate. Telemedicine platforms that work when patients need them most. Everything HIPAA-compliant because nobody has time for lawsuits.`,
-    img: "/images/healthcare.avif",
-    alt: "",
+    img: "/images/doctor-using-digital-health-technology.avif",
+    alt:"doctor using digital health technology",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -57,8 +57,8 @@ const TABS = [
     title: "Retail & E-commerce",
     heading: "Retail & E-commerce",
     text: `Shopping platforms that convert browsers into buyers. Inventory systems that know what you have before you run out. Recommendation engines that actually recommend useful things.`,
-    img: "/images/ai shopping app development.webp",
-    alt:"",
+     img: "/images/ai-shopping-app-development.webp",
+    alt:"ai shopping app development",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@ const TABS = [
     title: "Manufacturing",
     heading: "Manufacturing",
     text: `Supply chains that talk to each other. IoT systems that prevent expensive breakdowns. Quality control that catches problems before customers do.`,
-    img: "/images/ai automation manifacterng software .jpg",
-    alt:"",
+        img: "/images/ai-automation-manifacterng-software.jpg",
+    alt:"ai automation manifacterng software",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +99,8 @@ const TABS = [
     title: "Technology",
     heading: "Technology",
     text: `SaaS platforms that scale. APIs that other developers actually want to use. Cloud migrations that don't give you nightmares.`,
-    img: "/images/ai and human brain collaboration.jpg",
-    alt:"",
+    img: "/images/ai-and-human-brain-collaboration.jpg",
+    alt:"ai and human brain collaboration",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

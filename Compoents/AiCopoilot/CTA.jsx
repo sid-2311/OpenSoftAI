@@ -1,6 +1,7 @@
 "use client";
 
 import { PhoneCall, Mail, Calendar, Rocket } from "lucide-react";
+import Link from "next/link";
 
 export default function FinalCTACopilotSection() {
   return (
@@ -13,12 +14,12 @@ export default function FinalCTACopilotSection() {
 
       <div className="relative max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-cyan-300 via-white to-blue-200 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight bg-gradient-to-r from-cyan-300 via-white to-blue-200 bg-clip-text text-transparent">
           Ready to Give Your Team Their AI Assistant?
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+        <p className="text-lg md:text-lg text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
           You already know your team is spending too much time on routine work
           instead of the strategic stuff that actually moves your business
           forward. The question isn't <strong>whether</strong> AI copilots will
@@ -35,10 +36,10 @@ export default function FinalCTACopilotSection() {
               Call us to discuss your team's workflow challenges
             </p>
             <a
-              href="tel:+15551234567"
+              href="tel:+91 9256497999"
               className="text-cyan-300 font-medium hover:underline"
             >
-              +1 (555) 123-4567
+              +91 9256497999
             </a>
           </div>
 
@@ -49,10 +50,10 @@ export default function FinalCTACopilotSection() {
               Tell us about your biggest workflow challenge
             </p>
             <a
-              href="mailto:copilot-ai@opensoftai.com"
+              href="mailto:info@opensoftai.com"
               className="text-cyan-300 font-medium hover:underline"
             >
-              copilot-ai@opensoftai.com
+             info@opensoftai.com
             </a>
           </div>
 
@@ -62,12 +63,12 @@ export default function FinalCTACopilotSection() {
             <p className="text-blue-100 text-sm mb-4">
               See what a custom AI copilot built for your team looks like
             </p>
-            <a
-              href="#demo"
+            <Link
+              href="/contact-us"
               className="text-cyan-300 font-medium hover:underline"
             >
               Schedule Your Demo →
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -96,9 +97,9 @@ export default function FinalCTACopilotSection() {
         </p>
 
         {/* Final CTA Button */}
-        <button className="px-10 py-4 bg-gradient-to-r from-cyan-400 via-blue-600 to-blue-800 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+        <Link href="/contact-us"  className="px-10 py-4 bg-gradient-to-r from-cyan-400 via-blue-600 to-blue-800 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
           Schedule Your Free AI Copilot Consultation
-        </button>
+        </Link>
       </div>
 
       {/* Animation */}

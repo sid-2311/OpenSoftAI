@@ -4,6 +4,7 @@ import ExperienceSection from "@/Compoents/AiChatbot/Experience";
 import TechnicalFeaturesSection from "@/Compoents/AiChatbot/Feature";
 import HeroSection from "@/Compoents/AiChatbot/Hero";
 import Industries from "@/Compoents/AiChatbot/Industries";
+import AIChatbotIntroSection from "@/Compoents/AiChatbot/Intro";
 import ChatbotArticleSections from "@/Compoents/AiChatbot/Intro";
 import ProcessSection from "@/Compoents/AiChatbot/Process";
 import TestimonialsSection from "@/Compoents/AiChatbot/Testimonail";
@@ -13,7 +14,7 @@ export default function ChatBot(){
     return(
         <>
         <HeroSection/>
-        <ChatbotArticleSections/>
+        <AIChatbotIntroSection/>
         <ExperienceSection/>
         <ChatbotTypesSection/>
         <TechnicalFeaturesSection/>

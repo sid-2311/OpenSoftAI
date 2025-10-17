@@ -69,6 +69,33 @@ const Navbar = () => {
                   >
                     AI Chatbot Development
                   </Link>
+                   <Link
+                    href="/ai-copilot-development-company"
+                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
+                  >
+                    AI Copilot Development
+                  </Link>
+
+                  <Link
+                    href="/ai-consulting-development-company"
+                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
+                  >
+                    AI consulting
+                  </Link>
+
+                  <Link
+                    href="/genrative-ai-development-company"
+                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
+                  >
+                  Genrative AI
+                  </Link>
+
+                  <Link
+                    href="/ai-workflow-automation-development-company"
+                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
+                  >
+                   AI workflow automation development
+                  </Link>
                 </div>
               </div>
             </div>

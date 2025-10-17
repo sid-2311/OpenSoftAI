@@ -1,6 +1,7 @@
 "use client";
 
 import { Eye, PenTool, CheckCircle2, GraduationCap } from "lucide-react";
+import Link from "next/link";
 
 export default function BuildCopilotSection() {
   const steps = [
@@ -37,10 +38,10 @@ export default function BuildCopilotSection() {
     >
       {/* Header */}
       <div className="max-w-5xl mx-auto text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           How We Build Copilots That Teams Actually Want to Use
         </h2>
-        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
           Our process is built around real people, real work, and real results —
           not just technology for technology’s sake.
         </p>
@@ -77,13 +78,10 @@ export default function BuildCopilotSection() {
 
       {/* Bottom CTA */}
       <div className="text-center mt-20">
-        <p className="text-lg text-slate-700 mb-6">
-          We don’t just build AI copilots — we build partners that people
-          actually enjoy working with.
-        </p>
-        <button className="px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        
+        <Link href="/contact-us" className="px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
           Explore Our Process
-        </button>
+        </Link>
       </div>
 
       {/* Animation */}

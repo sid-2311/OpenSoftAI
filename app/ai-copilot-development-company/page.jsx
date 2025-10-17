@@ -7,13 +7,14 @@ import HowTeamsWorkSection from "@/Compoents/AiCopoilot/HowteamWorks";
 import TestimonialsSection from "@/Compoents/AiCopoilot/Testimonail";
 import BuildCopilotSection from "@/Compoents/AiCopoilot/Steps";
 import FinalCTACopilotSection from "@/Compoents/AiCopoilot/CTA";
+import AICopilotIntroSection from "@/Compoents/AiCopoilot/AiCopilotSection";
 // import TechnicalFeaturesSection from "@/Compoents/AiChatbot/Feature";
 
 export default function AICopilot(){
     return(
         <>
         <HeroSection/>
-        <AICopilotSection/>
+       <AICopilotIntroSection/>
         <AiCopilot/>
         <CopilotTypesSection/>
         <TechnicalMagicSection/>

@@ -37,10 +37,10 @@ export default function HowTeamsWorkSection() {
       className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-24 px-6 text-slate-800"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           How This Changes How Teams Actually Work
         </h2>
-        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
           AI copilots transform daily operations, freeing teams from routine work and letting them focus on what truly matters.
         </p>
       </div>
@@ -66,19 +66,7 @@ export default function HowTeamsWorkSection() {
       </div>
 
       {/* Bottom Highlight Card */}
-      <div className="text-center mt-20 animate-fade-up">
-        <div className="inline-block bg-white rounded-2xl p-10 shadow-xl border border-blue-200 max-w-3xl">
-          <h3 className="text-2xl font-semibold text-slate-800 mb-4">
-            The Result: Smarter, Happier, More Connected Teams
-          </h3>
-          <p className="text-slate-600 mb-6">
-            When AI copilots take care of the repetitive and mechanical, teams unlock creativity, speed, and satisfaction—turning every workday into meaningful progress.
-          </p>
-          <button className="px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            See Real-World Examples
-          </button>
-        </div>
-      </div>
+    
 
       <style jsx>{`
         @keyframes fade-up {

@@ -23,8 +23,8 @@ export default function ContactSection() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/watercolor floral elements hand painted flowers design.jpg"
-            alt="Modern office desk with laptop"
+            src="/images/watercolor-floral-elements-hand-painted-flowers-design.jpg"
+            alt="watercolor floral elements hand painted flowers design"
             fill
             className="object-cover opacity-70"
             priority

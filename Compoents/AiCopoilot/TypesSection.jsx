@@ -83,7 +83,7 @@ export default function CopilotTypesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-5xl font-bold mb-6 bg-blue-600 bg-clip-text text-transparent">
             The Different Types of AI Copilots We Build
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -150,7 +150,7 @@ export default function CopilotTypesSection() {
           <div
             className={`bg-gradient-to-r ${active.color} bg-opacity-5 rounded-xl p-6 mb-6 border-l-4 ${active.borderColor}`}
           >
-            <p className="text-slate-700 italic leading-relaxed">
+            <p className="text-white italic leading-relaxed">
               {active.caseStudy}
             </p>
           </div>
@@ -176,20 +176,7 @@ export default function CopilotTypesSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20 animate-fade-in">
-          <div className="inline-block bg-white rounded-2xl p-8 shadow-xl border-2 border-blue-400">
-            <h3 className="text-2xl font-bold text-slate-800 mb-4">
-              Not Sure Which Copilot You Need?
-            </h3>
-            <p className="text-slate-600 mb-6 max-w-xl">
-              We'll help you identify the perfect AI solution for your team's
-              workflow
-            </p>
-            <button className="px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              Schedule a Consultation
-            </button>
-          </div>
-        </div>
+      
       </div>
 
       <style jsx>{`

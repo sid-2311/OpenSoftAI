@@ -37,10 +37,10 @@ export default function TestimonialsSection() {
       className="bg-gradient-to-b from-white to-blue-50 py-24 px-6 text-slate-800"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           What Teams Tell Us After Using AI Copilots
         </h2>
-        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
           Real voices from teams who transformed the way they work with intelligent AI copilots.
         </p>
       </div>
@@ -70,11 +70,7 @@ export default function TestimonialsSection() {
               <p className="text-sm text-slate-500">{t.company}</p>
             </div>
 
-            <div className="flex justify-center mt-4 text-yellow-400">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-yellow-400" />
-              ))}
-            </div>
+            
           </div>
         ))}
       </div>
