@@ -7,7 +7,8 @@ import InboundOutboundAgentsSection from "@/Compoents/AiCallingAgent/InboundOutb
 import IndustriesWeKnow from "@/Compoents/AiCallingAgent/Industries";
 import AICallingIntroSection from "@/Compoents/AiCallingAgent/Intro";
 import OpenSoftAIPartner from "@/Compoents/AiCallingAgent/Partner";
-import ClientTestimonials from "@/Compoents/AiCallingAgent/Testimonail";
+import TestAICalling from "@/Compoents/AiCallingAgent/Testimonail";
+// import ClientTestimonials from "@/Compoents/AiCallingAgent/Testimonail";
 
 export default function AiCallingAgent(){
     return(
@@ -20,7 +21,8 @@ export default function AiCallingAgent(){
         <AICallingAgents/>
         <OpenSoftAIPartner/>
         <IndustriesWeKnow/>
-        <ClientTestimonials/>
+        <TestAICalling/>
+        {/* <ClientTestimonials/> */}
         <GetStartedSection/>
 
         </>

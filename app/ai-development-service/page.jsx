@@ -4,7 +4,8 @@ import CTAContactSection from "@/Compoents/AiServices/CTA";
 import AIExpertiseSection from "@/Compoents/AiServices/Expertise";
 import HeroSection from "@/Compoents/AiServices/Hero";
 import IndustriesWeKnow from "@/Compoents/AiServices/Industries";
-import TestimonialsSection from "@/Compoents/AiServices/Testimonails";
+import TestAIServices from "@/Compoents/AiServices/Testimonails";
+// import TestimonialsSection from "@/Compoents/AiServices/Testimonails";
 import WhyChooseSection from "@/Compoents/AiServices/WhyChoose";
 
 export default function AiServices(){
@@ -16,7 +17,8 @@ export default function AiServices(){
         <BusinessImpactSection/>
         <WhyChooseSection/>
         <IndustriesWeKnow/>
-        <TestimonialsSection/>
+        {/* <TestimonialsSection/> */}
+        <TestAIServices/>
         <CTAContactSection/>
         
         </>

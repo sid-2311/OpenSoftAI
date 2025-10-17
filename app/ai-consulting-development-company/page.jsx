@@ -5,7 +5,8 @@ import AIConsultingExpertiseSection from "@/Compoents/AIConsulting/ExpertiseSect
 import HeroSection from "@/Compoents/AIConsulting/Hero";
 import Industries from "@/Compoents/AIConsulting/Industries";
 import AIConsultingSection from "@/Compoents/AIConsulting/Intro";
-import TestimonialsSection from "@/Compoents/AIConsulting/Testimonail";
+import TestAIConsulting from "@/Compoents/AIConsulting/Testimonail";
+// import TestimonialsSection from "@/Compoents/AIConsulting/Testimonail";
 import WhyChooseUsSection from "@/Compoents/AIConsulting/WhyChooseUs";
 
 export default function AIConsulting (){
@@ -18,7 +19,8 @@ export default function AIConsulting (){
         <BusinessBenefitsSection/>
         <WhyChooseUsSection/>
         <Industries/>
-        <TestimonialsSection/>
+        {/* <TestimonialsSection/> */}
+        <TestAIConsulting/>
         <AIConsultingcta/>
         </>
     )

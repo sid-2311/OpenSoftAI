@@ -7,7 +7,8 @@ import Industries from "@/Compoents/AiChatbot/Industries";
 import AIChatbotIntroSection from "@/Compoents/AiChatbot/Intro";
 import ChatbotArticleSections from "@/Compoents/AiChatbot/Intro";
 import ProcessSection from "@/Compoents/AiChatbot/Process";
-import TestimonialsSection from "@/Compoents/AiChatbot/Testimonail";
+import TestAIChatbot from "@/Compoents/AiChatbot/Testimonail";
+// import TestimonialsSection from "@/Compoents/AiChatbot/Testimonail";
 import CTASection from "@/Compoents/Blockchain/CTASection";
 
 export default function ChatBot(){
@@ -20,7 +21,8 @@ export default function ChatBot(){
         <TechnicalFeaturesSection/>
         <BusinessBenefitsSection/>
         <Industries/>
-        <TestimonialsSection/>
+        {/* <TestimonialsSection/> */}
+        <TestAIChatbot/>
         <ProcessSection/>
         <CTASection/>
 

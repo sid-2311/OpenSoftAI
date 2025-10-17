@@ -5,7 +5,8 @@ import HeroSection from "@/Compoents/WorkflowAutomation/Hero";
 import Industries from "@/Compoents/WorkflowAutomation/Industries";
 import AIWorkflowAutomationSection from "@/Compoents/WorkflowAutomation/Intro";
 import AIWorkflowAutomationCapabilities from "@/Compoents/WorkflowAutomation/Services";
-import TestimonialsSection from "@/Compoents/WorkflowAutomation/Testimonal";
+import TestAIAutomation from "@/Compoents/WorkflowAutomation/Testimonal";
+// import TestimonialsSection from "@/Compoents/WorkflowAutomation/Testimonal";
 import WhyChooseUsSection from "@/Compoents/WorkflowAutomation/WhyChoose";
 
 export default function AiWorkFlow(){
@@ -18,7 +19,8 @@ export default function AiWorkFlow(){
         <BusinessBenefits/>
         <WhyChooseUsSection/>
         <Industries/>
-        <TestimonialsSection/>
+        {/* <TestimonialsSection/> */}
+        <TestAIAutomation/>
         <CTASection/>
 
         </>
