@@ -49,10 +49,10 @@ export default function CoreServices() {
     <section className="container mx-auto px-4 py-12 bg-[#EAF5FF] flex flex-col items-center">
       {/* Heading */}
       <div className="text-center mb-8 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3">
+        <h2 className="text-2xl md:text-4xl font-bold mb-3">
           The Core Services OpenSoft AI Offer
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-sm">
           Explore our main offerings designed to transform your business with
           cutting-edge technology and innovation.
         </p>

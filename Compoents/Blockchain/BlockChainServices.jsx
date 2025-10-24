@@ -183,7 +183,7 @@ export default function BlockchainServices() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <header className="text-center mb-16">
-          <h2 id="blockchain-services-heading" className="text-4xl sm:text-4xl font-bold mb-6">
+          <h2 id="blockchain-services-heading" className="text-3xl sm:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
               Core Blockchain Development
             </span>

@@ -49,14 +49,14 @@ export default function HeroSection() {
             {/* Heading */}
             <h1
               id="hero-heading"
-              className="text-3xl md:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight"
             >
               Custom Software Development Services – Scalable, Secure, and
               Tailored to Your Business
             </h1>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+            <p className="text-md md:text-xl text-gray-300 mb-10 leading-relaxed">
               Build software that grows with your business. OpenSoft AI
               delivers custom web, mobile, and enterprise software solutions
               designed for your specific needs and industry requirements.
@@ -65,7 +65,7 @@ export default function HeroSection() {
             {/* CTA Button */}
             <Link
               href="/contact-us"
-              className="group w-fit inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
+              className="group w-fit inline-flex items-center px-8 py-4 text-md font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
               Book A Free Consultation
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

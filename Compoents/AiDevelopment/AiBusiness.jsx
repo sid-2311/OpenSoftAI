@@ -6,7 +6,7 @@ export default function AIBusinessSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
+          <h2 className="text-2xl sm:text-4xl font-bold text-blue-950 mb-4">
             Your Business Needs AI. <span className="text-blue-600">But Not Just Any AI.</span>
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>

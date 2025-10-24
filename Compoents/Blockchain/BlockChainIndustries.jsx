@@ -81,7 +81,7 @@ export default function BlockchainIndustries() {
     <section className="container mx-auto px-4 py-12 bg-[#EAF5FF] flex flex-col items-center" aria-labelledby="blockchain-industries-heading">
       {/* Heading */}
       <header className="text-center mb-8 max-w-3xl">
-        <h2 id="blockchain-industries-heading" className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+        <h2 id="blockchain-industries-heading" className="text-xl md:text-3xl font-bold mb-3 text-gray-900">
           Blockchain Services OpenSoft AI is Excelling In
         </h2>
         <p className="text-gray-600">

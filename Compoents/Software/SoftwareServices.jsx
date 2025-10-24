@@ -239,34 +239,34 @@ export default function SoftwareServices() {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <header className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+            <h2 className="text-xl md:text-4xl font-bold text-slate-800 mb-4">
               Core Software Solutions We Deliver
-            </h1>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            </h2>
+            <p className="text-md text-slate-600 max-w-3xl mx-auto">
               Comprehensive software solutions tailored to transform your
               business operations and drive growth across every industry.
             </p>
           </header>
 
           {/* Category Filter */}
-          <nav
-            className="flex flex-wrap justify-center gap-3 mb-12"
-            aria-label="Software Categories"
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                  activeCategory === cat.id
-                    ? "bg-blue-600 text-white shadow-lg scale-105"
-                    : "bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </nav>
+<nav
+  className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 justify-start sm:justify-center gap-3 mb-12 pb-2"
+  aria-label="Software Categories"
+>
+  {categories.map((cat) => (
+    <button
+      key={cat.id}
+      onClick={() => setActiveCategory(cat.id)}
+      className={`flex-shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+        activeCategory === cat.id
+          ? "bg-blue-600 text-white shadow-lg scale-105"
+          : "bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow"
+      }`}
+    >
+      {cat.label}
+    </button>
+  ))}
+</nav>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

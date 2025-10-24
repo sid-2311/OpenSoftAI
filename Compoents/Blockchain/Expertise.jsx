@@ -54,14 +54,14 @@ export default function BlockchainExpertise() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-16">
-          <h2 id="blockchain-expertise-heading" className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 id="blockchain-expertise-heading" className="text-2xl sm:text-4xl font-bold mb-6">
             <span className="text-white">Our Deep Blockchain Expertise</span>
-            <br />
+            {" "}
             <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">
               Across Technologies and Industries
             </span>
           </h2>
-          <p className="text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-justify text-blue-100 max-w-5xl mx-auto leading-relaxed">
             We've been in the blockchain space long enough to see multiple bull and bear cycles, regulatory changes, and technological evolution. This experience has taught us that successful blockchain projects require more than just technical skills.
           </p>
         </header>

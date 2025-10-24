@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
         <header className="text-center mb-16">
           <h2
             id="why-choose-us-heading"
-            className="text-4xl md:text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
             Why Industry Leaders Choose{" "}
             <span className="text-blue-600">OpenSoft AI</span>

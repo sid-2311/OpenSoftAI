@@ -52,7 +52,7 @@ export default function BlockchainBenefits() {
         <header className="text-center mb-16">
           <h2
             id="blockchain-benefits-heading"
-            className="text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl font-bold text-gray-900 mb-4"
           >
             The Business Benefits That Drive Real Value
           </h2>

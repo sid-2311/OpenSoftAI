@@ -97,50 +97,50 @@ export default function SoftwareIndustries() {
     >
       {/* SEO Heading */}
       <header className="text-center mb-10 max-w-3xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900">
+        <h2 className="text-xl md:text-4xl font-bold mb-3 text-slate-900">
           Industries We Transform Through Software
         </h2>
-        <p className="text-gray-600">
+        {/* <p className="text-gray-600">
           Explore how <strong>OpenSoft AI</strong> delivers innovative software
           solutions across industries — enhancing efficiency, customer
           engagement, and digital transformation.
-        </p>
+        </p> */}
       </header>
 
       {/* Card Wrapper */}
       <div className="bg-[#0B2542] rounded-2xl shadow-xl p-6 md:p-10 w-full max-w-6xl">
         {/* Tabs */}
-        <nav
-          role="tablist"
-          aria-label="Software Industries"
-          className="flex justify-start md:justify-start gap-4 mb-8 "
-        >
-          {SOFTWARE_TABS.map((tab) => {
-            const isActive = tab.id === active;
-            return (
-              <button
-                key={tab.id}
-                id={`tab-${tab.id}`}
-                role="tab"
-                aria-selected={isActive}
-                aria-controls={`panel-${tab.id}`}
-                onClick={() => setActive(tab.id)}
-                className={`flex flex-col items-center justify-center gap-2 px-6 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
-                  isActive
-                    ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
-                    : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
-                }`}
-              >
-                <div className="w-8 h-8 flex items-center justify-center">
-                  {tab.icon}
-                </div>
-                <span className="text-sm font-medium text-center">
-                  {tab.title}
-                </span>
-              </button>
-            );
-          })}
-        </nav>
+        {/* Tabs */}
+<nav
+  role="tablist"
+  aria-label="Software Industries"
+  className="flex overflow-x-auto mt-1 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-blue-100 justify-start gap-4 mb-8 pb-2 -mx-4 px-4"
+>
+  {SOFTWARE_TABS.map((tab) => {
+    const isActive = tab.id === active;
+    return (
+      <button
+        key={tab.id}
+        id={`tab-${tab.id}`}
+        role="tab"
+        aria-selected={isActive}
+        aria-controls={`panel-${tab.id}`}
+        onClick={() => setActive(tab.id)}
+        className={`flex-shrink-0 flex flex-col items-center justify-center gap-2 px-6 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
+          isActive
+            ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
+            : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
+        }`}
+      >
+        <div className="w-8 h-8 flex items-center justify-center">
+          {tab.icon}
+        </div>
+        <span className="text-sm font-medium text-center">{tab.title}</span>
+      </button>
+    );
+  })}
+</nav>
+
 
         {/* Panels */}
         {SOFTWARE_TABS.map((tab) => {

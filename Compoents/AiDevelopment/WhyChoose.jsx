@@ -50,11 +50,11 @@ export default function WhyChooseUs() {
         <header className="text-center mb-16">
           <h2
             id="why-choose-us-heading"
-            className="text-4xl md:text-5xl font-bold text-blue-900 mb-4"
+            className="text-2xl md:text-5xl font-bold text-blue-900 mb-4"
           >
             Why Our Clients Choose Us
           </h2>
-          <p className="text-xl text-blue-600">(And Keep Choosing Us)</p>
+         
         </header>
 
         {/* Features Grid */}
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" aria-hidden="true" />
                   </div>
-                  <h3 className="text-2xl font-bold text-blue-900 leading-tight">
+                  <h3 className="text-xl font-bold text-blue-900 leading-tight">
                     {feature.title}
                   </h3>
                 </div>

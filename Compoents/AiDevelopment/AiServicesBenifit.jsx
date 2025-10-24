@@ -129,9 +129,9 @@ export default function AIServicesBenefits() {
       <div className="max-w-7xl mx-auto">
         {/* SEO Heading */}
         <header className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             AI & Automation Solutions for Real Business Impact
-          </h1>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             From AI chatbots to automation systems, we design intelligent
             solutions that scale with your business and deliver measurable ROI.
@@ -155,7 +155,7 @@ export default function AIServicesBenefits() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h2 className="text-xl font-semibold text-gray-900 mb-4">
                   {service.title}
                 </h2>
 

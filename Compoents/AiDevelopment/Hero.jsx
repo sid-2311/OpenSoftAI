@@ -10,16 +10,17 @@ export default function HeroSection() {
     >
       {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
-          <Image
-            src="/images/artificial-intelligence-robot-using-futiristic-technology.webp"
-            alt="artificial intelligence robot using laptop futuristic technology"
-            fill
-            priority
-            quality={90}
-            style={{ objectFit: "cover" }}
-          />
-        </div>
+       <div className="absolute right-0 top-0 bottom-0 w-full h-[200px] sm:h-[400px] md:h-[600px] bg-center bg-no-repeat">
+  <Image
+    src="/images/artificial-intelligence-robot-using-futiristic-technology.webp"
+    alt="artificial intelligence robot using laptop futuristic technology"
+    fill
+    priority
+    quality={90}
+    style={{ objectFit: "cover", objectPosition: "center" }}
+  />
+</div>
+
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B0417] via-[#0B0417]/80 to-transparent"></div>

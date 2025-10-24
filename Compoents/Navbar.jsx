@@ -7,12 +7,26 @@ import Image from "next/image";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
+  const [aiMenuOpen, setAiMenuOpen] = useState(false);
 
   const mobileMenuItems = [
-    { key: "ai", label: "AI & Automation", to: "/ai-development-company" },
+    {
+      key: "ai",
+      label: "AI & Automation",
+      subItems: [
+        { label: "AI Development Services", to: "/ai-development-service" },
+        { label: "AI Calling Agent Development", to: "/ai-calling-agent-development-company" },
+        { label: "AI Chatbot Development", to: "/ai-chatbot-development-company" },
+        { label: "AI Copilot Development", to: "/ai-copilot-development-company" },
+        { label: "AI Consulting", to: "/ai-consulting-development-company" },
+        { label: "Generative AI", to: "/genrative-ai-development-company" },
+        { label: "AI Workflow Automation", to: "/ai-workflow-automation-development-company" },
+      ],
+    },
     { key: "blockchain", label: "BlockChain Development", to: "/blockchain-development-service" },
     { key: "software", label: "Software Development", to: "/software-development-company" },
     { key: "about", label: "About", to: "/about-us" },
+    { key: "portfolio", label: "Portfolio", to: "/portfolio" },
   ];
 
   return (
@@ -41,60 +55,31 @@ const Navbar = () => {
               </Link>
 
               {/* Dropdown Menu */}
-              <div
-                className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md p-6 w-[600px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out"
-              >
-                {/* Main Menu Title */}
+              <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md p-6 w-[600px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
                 <h3 className="text-lg font-bold text-[#016CD3] mb-4 border-b pb-2">
                   AI & Automation Services
                 </h3>
-
-                {/* Two Column Grid */}
                 <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                  <Link
-                    href="/ai-development-service"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
+                  <Link href="/ai-development-service" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
                     AI Development Services
                   </Link>
-                  <Link
-                    href="/ai-calling-agent-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
+                  <Link href="/ai-calling-agent-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
                     AI Calling Agent Development
                   </Link>
-                  <Link
-                    href="/ai-chatbot-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
+                  <Link href="/ai-chatbot-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
                     AI Chatbot Development
                   </Link>
-                   <Link
-                    href="/ai-copilot-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
+                  <Link href="/ai-copilot-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
                     AI Copilot Development
                   </Link>
-
-                  <Link
-                    href="/ai-consulting-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
-                    AI consulting
+                  <Link href="/ai-consulting-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
+                    AI Consulting
                   </Link>
-
-                  <Link
-                    href="/genrative-ai-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
-                  Genrative AI
+                  <Link href="/genrative-ai-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
+                    Generative AI
                   </Link>
-
-                  <Link
-                    href="/ai-workflow-automation-development-company"
-                    className="block px-4 py-2 hover:bg-gray-100 rounded transition"
-                  >
-                   AI workflow automation development
+                  <Link href="/ai-workflow-automation-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">
+                    AI Workflow Automation
                   </Link>
                 </div>
               </div>
@@ -102,34 +87,22 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link
-              href="/blockchain-development-service"
-              className="hover:text-[#016CD3] py-5 inline-block"
-            >
+            <Link href="/blockchain-development-service" className="hover:text-[#016CD3] py-5 inline-block">
               BlockChain Development
             </Link>
           </li>
           <li>
-            <Link
-              href="/software-development-company"
-              className="hover:text-[#016CD3] py-5 inline-block"
-            >
+            <Link href="/software-development-company" className="hover:text-[#016CD3] py-5 inline-block">
               Software Development
             </Link>
           </li>
           <li>
-            <Link
-              href="/about-us"
-              className="hover:text-[#016CD3] py-5 inline-block"
-            >
+            <Link href="/about-us" className="hover:text-[#016CD3] py-5 inline-block">
               About
             </Link>
           </li>
           <li>
-            <Link
-              href="/portfolio"
-              className="hover:text-[#016CD3] py-5 inline-block"
-            >
+            <Link href="/portfolio" className="hover:text-[#016CD3] py-5 inline-block">
               Portfolio
             </Link>
           </li>
@@ -164,11 +137,45 @@ const Navbar = () => {
           <ul className="space-y-4 mt-0 uppercase">
             {mobileMenuItems.map((item, idx) => (
               <React.Fragment key={item.key}>
-                <li>
-                  <Link href={item.to} onClick={() => setMobileMenuOpen(false)}>
-                    {item.label}
-                  </Link>
-                </li>
+                {/* Item with Submenu */}
+                {item.subItems ? (
+                  <div>
+                    <div
+                      onClick={() =>
+                        setAiMenuOpen(aiMenuOpen === item.key ? false : item.key)
+                      }
+                      className="flex justify-between items-center cursor-pointer font-semibold"
+                    >
+                      <span>{item.label}</span>
+                      {aiMenuOpen === item.key ? (
+                        <ChevronUp size={20} />
+                      ) : (
+                        <ChevronDown size={20} />
+                      )}
+                    </div>
+                    {aiMenuOpen === item.key && (
+                      <div className="pl-4 mt-2 flex flex-col gap-2 text-sm">
+                        {item.subItems.map((sub) => (
+                          <Link
+                            key={sub.to}
+                            href={sub.to}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="hover:text-blue-200 transition"
+                          >
+                            {sub.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <li>
+                    <Link href={item.to} onClick={() => setMobileMenuOpen(false)}>
+                      {item.label}
+                    </Link>
+                  </li>
+                )}
+
                 {idx < mobileMenuItems.length - 1 && (
                   <hr className="text-white/40 pb-0" />
                 )}

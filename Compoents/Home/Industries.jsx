@@ -129,11 +129,11 @@ export default function Industries() {
       <header className="text-center mb-8 max-w-3xl">
         <h2
           id="industries-heading"
-          className="text-3xl md:text-4xl font-bold mb-3 text-gray-900"
+          className="text-xl md:text-4xl font-bold mb-3 text-gray-900"
         >
           Industries OpenSoft AI is Working With
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-sm">
           Explore how we transform various industries with innovative technology.
         </p>
       </header>

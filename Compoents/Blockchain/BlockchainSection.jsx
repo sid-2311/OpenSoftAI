@@ -38,7 +38,7 @@ export default function BlockchainSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main heading */}
-        <h2 id="blockchain-section-heading" className="text-4xl sm:text-4xl font-bold text-center mb-6">
+        <h2 id="blockchain-section-heading" className="text-2xl sm:text-4xl font-bold text-center mb-6">
           <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
             Building the Decentralized Future,
           </span>
@@ -46,12 +46,12 @@ export default function BlockchainSection() {
         </h2>
 
         {/* Introduction */}
-        <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-16 leading-relaxed">
-          Blockchain isn't just a buzzword anymore – it's the foundation of a new digital economy.
-          Whether you're a fintech startup looking to disrupt traditional banking, an enterprise wanting to tokenize assets,
-          or a creative platform building the next generation of NFT marketplaces, blockchain technology offers
-          unprecedented opportunities for innovation.
-        </p>
+       <p className="text-lg text-gray-600 text-justify max-w-4xl mx-auto mb-16 leading-relaxed">
+  Blockchain isn't just a buzzword anymore – it's the foundation of a new digital economy.
+  Whether you're a fintech startup looking to disrupt traditional banking, an enterprise wanting to tokenize assets,
+  or a creative platform building the next generation of NFT marketplaces, blockchain technology offers
+  unprecedented opportunities for innovation.
+</p>
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
@@ -103,7 +103,7 @@ export default function BlockchainSection() {
 
         {/* Features grid */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">What We Build</h3>
+          <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">What We Build</h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;

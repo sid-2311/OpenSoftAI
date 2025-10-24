@@ -29,13 +29,13 @@ export default function BlockchainHero() {
           <div className="text-white space-y-8">
             <h1
               id="blockchain-hero-heading"
-              className="text-5xl lg:text-6xl font-bold leading-tight"
+              className="text-3xl lg:text-4xl font-bold leading-tight"
             >
               Blockchain Development Services – Secure, Scalable, and
               Future-Ready Solutions
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-200 max-w-3xl">
+            <p className="text-sm md:text-lg text-white max-w-3xl">
               Leverage blockchain technology to enhance transparency, security,
               and efficiency. We develop smart contracts, decentralized
               applications, and scalable blockchain systems tailored to your

@@ -14,7 +14,7 @@ export default function TestimonialSection() {
         <header className="text-center mb-16">
           <h2
             id="testimonial-heading"
-            className="text-5xl font-bold text-slate-900 mb-4"
+            className="text-2xl font-bold text-slate-900 mb-4"
           >
             Real Stories from Real Clients
           </h2>
@@ -35,7 +35,7 @@ export default function TestimonialSection() {
           </div>
 
           {/* Testimonial Text */}
-          <blockquote className="text-slate-700 text-lg leading-relaxed mb-8 relative z-10">
+          <blockquote className="text-slate-700 text-md leading-relaxed mb-8 relative z-10">
             "We were skeptical about chatbots because we'd tried them before with terrible results. 
             But OpenSoft AI's solution is completely different. It actually understands what customers 
             are trying to accomplish, and when it doesn't know something, it asks intelligent follow-up 

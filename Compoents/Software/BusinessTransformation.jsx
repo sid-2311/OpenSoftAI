@@ -58,12 +58,12 @@ export default function BusinessTransformationSection() {
                 Our Approach
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
               Transforming Business Operations Through{' '}
               <span className="text-blue-600">Smart Software Solutions</span>
             </h2>
             
-            <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+            <div className="space-y-6 text-slate-600 text-md leading-relaxed">
               <p>
                 At <span className="font-semibold text-slate-900">OpenSoft AI</span>, we understand that off-the-shelf software rarely fits perfectly. Every business has unique processes, specific challenges, and distinct goals that require customized solutions. That's why we specialize in building software that works exactly the way your business needs it to work.
               </p>

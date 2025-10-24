@@ -99,10 +99,10 @@ export default function DevelopmentApproach() {
       {/* Development Approach */}
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-xl md:text-4xl font-bold text-white mb-4">
             Our Proven Development Approach
           </h2>
-          <p className="text-blue-100 max-w-3xl mx-auto">
+          <p className="text-blue-100 max-w-4xl mx-auto">
             We follow best practices and modern development methodologies to
             deliver high-quality software solutions tailored to your business.
           </p>
@@ -122,10 +122,10 @@ export default function DevelopmentApproach() {
                   <div
                     className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${approach.color} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3">
+                    <h3 className="text-xl font-bold text-white mb-3">
                       {approach.title}
                     </h3>
                     <p className="text-blue-100 leading-relaxed">
@@ -150,7 +150,7 @@ export default function DevelopmentApproach() {
       {/* Why Choose Us */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-4">
             Why Choose OpenSoft AI for Software Development
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">

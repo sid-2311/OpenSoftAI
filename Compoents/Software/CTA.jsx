@@ -64,13 +64,13 @@ export default function FinalCTA() {
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <header className="text-center mb-16">
-          <h1 className="text-5xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
             Ready to Build Your Custom
-          </h1>
-          <h2 className="text-5xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-8">
+          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-8">
             Software Solution?
           </h2>
-          <p className="text-xl text-slate-600 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-5xl mx-auto leading-relaxed">
             Great software doesn't just automate processes – it transforms how your
             business operates and grows. Whether you need to streamline operations,
             improve customer experiences, or create new revenue opportunities, custom
@@ -101,10 +101,10 @@ export default function FinalCTA() {
         {/* Main CTA Box */}
         <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 rounded-3xl p-12 md:p-16 shadow-2xl mb-12">
           <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h3 className="text-xl md:text-4xl font-bold text-white mb-4">
               Let's build software that works exactly the way your business needs it to work.
             </h3>
-            <p className="text-xl text-blue-100">
+            <p className="text-md text-blue-100">
               Contact OpenSoft AI today to discuss your project requirements and discover how custom
               software development can accelerate your business success.
             </p>
