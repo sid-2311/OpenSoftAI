@@ -4,25 +4,51 @@ import HeroSection from "@/Compoents/AiCopoilot/Hero";
 import CopilotTypesSection from "@/Compoents/AiCopoilot/TypesSection";
 import TechnicalMagicSection from "@/Compoents/AiCopoilot/Technical";
 import HowTeamsWorkSection from "@/Compoents/AiCopoilot/HowteamWorks";
-// import TestimonialsSection from "@/Compoents/AiCopoilot/Testimonail";
 import BuildCopilotSection from "@/Compoents/AiCopoilot/Steps";
 import FinalCTACopilotSection from "@/Compoents/AiCopoilot/CTA";
 import AICopilotIntroSection from "@/Compoents/AiCopoilot/AiCopilotSection";
 import TestAICopilot from "@/Compoents/AiCopoilot/Testimonail";
-// import TechnicalFeaturesSection from "@/Compoents/AiChatbot/Feature";
 
-export default function AICopilot(){
-    return(
-        <>
-        <HeroSection/>
-       <AICopilotIntroSection/>
-        <AiCopilot/>
-        <CopilotTypesSection/>
-        <TechnicalMagicSection/>
-        <HowTeamsWorkSection/>
-       <TestAICopilot/>
-        <BuildCopilotSection/>
-        <FinalCTACopilotSection/>
-        </>
-    )
+// ✅ SEO Metadata with Canonical URL
+export const metadata = {
+  title: "AI Copilot Development Company | Automate & Optimize",
+  description: "Partner with OpenSoft AI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
+  keywords: [
+    "AI copilot",
+    "AI assistant",
+    "productivity automation",
+    "AI for teams",
+    "workflow automation",
+    "AI integration",
+    "intelligent copilot",
+    "AI business solutions",
+  ],
+  alternates: {
+    canonical: "https://opensoftai.com/ai-copilot-development-company", // ✅ Canonical URL
+  },
+  openGraph: {
+    title: "AI Copilot Development Company | Automate & Optimize",
+    description: "Partner with OpenSoft AI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
+    url: "https://opensoftai.com/ai-copilot-development-company",
+   
+    locale: "en_US",
+    type: "website",
+  },
+  
+};
+
+export default function AICopilot() {
+  return (
+    <>
+      <HeroSection />
+      <AICopilotIntroSection />
+      <AiCopilot />
+      <CopilotTypesSection />
+      <TechnicalMagicSection />
+      <HowTeamsWorkSection />
+      <TestAICopilot />
+      <BuildCopilotSection />
+      <FinalCTACopilotSection />
+    </>
+  );
 }

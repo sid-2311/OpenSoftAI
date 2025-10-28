@@ -8,23 +8,49 @@ import IndustriesWeKnow from "@/Compoents/AiCallingAgent/Industries";
 import AICallingIntroSection from "@/Compoents/AiCallingAgent/Intro";
 import OpenSoftAIPartner from "@/Compoents/AiCallingAgent/Partner";
 import TestAICalling from "@/Compoents/AiCallingAgent/Testimonail";
-// import ClientTestimonials from "@/Compoents/AiCallingAgent/Testimonail";
 
-export default function AiCallingAgent(){
-    return(
-        <>
-        <HeroSection/>
-        <AICallingIntroSection/>
-        <VoiceAIExpertiseSection/>
-        <InboundOutboundAgentsSection/>
-        <AdvancedFeaturesSection/>
-        <AICallingAgents/>
-        <OpenSoftAIPartner/>
-        <IndustriesWeKnow/>
-        <TestAICalling/>
-        {/* <ClientTestimonials/> */}
-        <GetStartedSection/>
+// ✅ SEO Metadata with Canonical URL
+export const metadata = {
+  title: "Next-Gen AI Calling Agent Development | OpenSoftAI Solutions",
+  description:"Transform your customer interactions with OpenSoftAI’s AI calling agents. Our intelligent, human-like AI handles calls efficiently, boosts engagement, and automates communication for businesses of all sizes.",
+  keywords: [
+    "AI calling agent",
+    "voice AI",
+    "AI voice assistant",
+    "automated calling",
+    "AI customer service",
+    "AI call center",
+    "conversational AI",
+    "AI phone bot",
+    "AI voice automation",
+  ],
+  alternates: {
+    canonical: "https://opensoftai.com/ai-calling-agent-development-company", // ✅ Canonical URL
+  },
+  openGraph: {
+    title: "Next-Gen AI Calling Agent Development | OpenSoftAI Solutions",
+    description: "Transform your customer interactions with OpenSoftAI’s AI calling agents. Our intelligent, human-like AI handles calls efficiently, boosts engagement, and automates communication for businesses of all sizes.",
+    url: "https://opensoftai.com/ai-calling-agent-development-company",
+   
+    locale: "en_US",
+    type: "website",
+  },
+ 
+};
 
-        </>
-    )
+export default function AiCallingAgent() {
+  return (
+    <>
+      <HeroSection />
+      <AICallingIntroSection />
+      <VoiceAIExpertiseSection />
+      <InboundOutboundAgentsSection />
+      <AdvancedFeaturesSection />
+      <AICallingAgents />
+      <OpenSoftAIPartner />
+      <IndustriesWeKnow />
+      <TestAICalling />
+      <GetStartedSection />
+    </>
+  );
 }

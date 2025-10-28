@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://opensoftai.com/sitemap.xml
+Host: https://opensoftai.com

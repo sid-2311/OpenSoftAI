@@ -5,22 +5,48 @@ import AIExpertiseSection from "@/Compoents/AiServices/Expertise";
 import HeroSection from "@/Compoents/AiServices/Hero";
 import IndustriesWeKnow from "@/Compoents/AiServices/Industries";
 import TestAIServices from "@/Compoents/AiServices/Testimonails";
-// import TestimonialsSection from "@/Compoents/AiServices/Testimonails";
 import WhyChooseSection from "@/Compoents/AiServices/WhyChoose";
 
-export default function AiServices(){
-    return(
-        <>
-        <HeroSection/>
-        <AISolutionsSection/>
-        <AIExpertiseSection/>
-        <BusinessImpactSection/>
-        <WhyChooseSection/>
-        <IndustriesWeKnow/>
-        {/* <TestimonialsSection/> */}
-        <TestAIServices/>
-        <CTAContactSection/>
-        
-        </>
-    )
+// ✅ SEO Metadata with Canonical URL
+export const metadata = {
+  title: "Next-Gen AI Development Services",
+  description:
+    "Elevate your business with OpenSoftAI’s AI expertise. Our team creates smart applications, machine learning models, and AI-driven solutions tailored to your goals.",
+  keywords: [
+    "AI services",
+    "artificial intelligence",
+    "machine learning",
+    "business automation",
+    "AI solutions",
+    "AI consulting",
+    "AI for business",
+  ],
+  alternates: {
+    canonical: "https://opensoftai.com/ai-services", // ✅ Canonical URL
+  },
+  openGraph: {
+    title: "Next-Gen AI Development Services",
+    description: "Elevate your business with OpenSoftAI’s AI expertise. Our team creates smart applications, machine learning models, and AI-driven solutions tailored to your goals.",
+    url: "https://opensoftai.com/ai-services",
+    siteName: "Your Company Name",
+    
+    locale: "en_US",
+    type: "website",
+  },
+  
+};
+
+export default function AiServices() {
+  return (
+    <>
+      <HeroSection />
+      <AISolutionsSection />
+      <AIExpertiseSection />
+      <BusinessImpactSection />
+      <WhyChooseSection />
+      <IndustriesWeKnow />
+      <TestAIServices />
+      <CTAContactSection />
+    </>
+  );
 }
