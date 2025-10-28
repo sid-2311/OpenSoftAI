@@ -22,13 +22,13 @@ export const metadata = {
     "AI for business",
   ],
   alternates: {
-    canonical: "https://opensoftai.com/ai-services", // ✅ Canonical URL
+    canonical: "https://opensoftai.com/ai-development-service", // ✅ Canonical URL
   },
   openGraph: {
     title: "Next-Gen AI Development Services",
     description: "Elevate your business with OpenSoftAI’s AI expertise. Our team creates smart applications, machine learning models, and AI-driven solutions tailored to your goals.",
-    url: "https://opensoftai.com/ai-services",
-    siteName: "Your Company Name",
+    url: "https://opensoftai.com/ai-development-service",
+   
     
     locale: "en_US",
     type: "website",
