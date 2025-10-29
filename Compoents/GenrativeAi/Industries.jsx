@@ -9,7 +9,7 @@ const TABS = [
     title: "Marketing & Advertising",
     heading: "Marketing & Advertising",
     text: `AI-powered campaign creation, personalized ad copy, visual asset generation, and content optimization that increases engagement and conversion rates.`,
-    img: "/images/marketing-advertising-ai.webp",
+    img: "/images/marketad.jpeg",
     alt: "AI in marketing and advertising",
     icon: (
       <svg
@@ -33,8 +33,8 @@ const TABS = [
     title: "eCommerce & Retail",
     heading: "eCommerce & Retail",
     text: `Product description generation, visual merchandising, personalized marketing content, and customer communication automation that drives sales and improves customer experience.`,
-    img: "/images/ecommerce-retail-ai.webp",
-    alt: "AI in eCommerce and retail",
+   img: "/images/ai-shopping-app-development.webp",
+   alt:"ai shopping app development",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const TABS = [
     title: "Media & Entertainment",
     heading: "Media & Entertainment",
     text: `Automated content creation, video production assistance, audio content generation, and creative asset development that accelerates production timelines.`,
-    img: "/images/media-entertainment-ai.webp",
+    img: "/images/mediaad.jpeg",
     alt: "AI in media and entertainment",
     icon: (
       <svg
@@ -86,8 +86,8 @@ const TABS = [
     title: "Education & Training",
     heading: "Education & Training",
     text: `Educational content creation, personalized learning materials, interactive course development, and training video production that enhances learning outcomes.`,
-    img: "/images/education-training-ai.webp",
-    alt: "AI in education and training",
+    img: "/images/creative-business-ideas-book.avif",
+    alt:"creative business ideas book",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,8 +110,8 @@ const TABS = [
     title: "Finance & Banking",
     heading: "Finance & Banking",
     text: `Compliance-friendly content generation, client communication automation, report creation, and marketing material development that maintains regulatory standards.`,
-    img: "/images/finance-banking-ai.webp",
-    alt: "AI in finance and banking",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt:"digital finance data analysis investment dashboard",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -134,8 +134,8 @@ const TABS = [
     title: "Healthcare & Life Sciences",
     heading: "Healthcare & Life Sciences",
     text: `Patient education materials, medical content creation, research documentation, and communication tools that improve patient care and operational efficiency.`,
-    img: "/images/healthcare-lifesciences-ai.webp",
-    alt: "AI in healthcare and life sciences",
+     img: "/images/doctor-using-digital-health-technology.avif",
+    alt: "doctor using digital health technology",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

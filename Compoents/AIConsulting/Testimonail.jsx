@@ -5,7 +5,7 @@ const testimonialsData = [
   {
     name: "Sarah Chen",
     company: "VP of Operations, TechFlow Solutions",
-    image: "/images/businesswoman-ai-discussion.jpg",
+    image: "/images/crop3.jpg",
     alt: "businesswoman discussing AI strategy",
     quote:
       "Working with OpenSoft AI transformed how we think about AI. Their strategic approach helped us identify the highest-impact AI opportunities and build a roadmap that's delivered 30% operational efficiency gains in our first year. They didn't just consult – they partnered with us for success.",
@@ -13,7 +13,7 @@ const testimonialsData = [
   {
     name: "Michael Rodriguez",
     company: "Chief Digital Officer, Regional Bank Network",
-    image: "/images/ai-digital-banking-team.jpg",
+    image: "/images/crop1.jpg",
     alt: "chief digital officer analyzing data on screen",
     quote:
       "OpenSoft AI's feasibility analysis saved us from making a costly mistake. They showed us why our initial AI plan wouldn't deliver the ROI we expected and guided us to a solution that's exceeded our expectations. Their expertise in ethical AI also helped us navigate compliance requirements we hadn't even considered.",
@@ -21,7 +21,7 @@ const testimonialsData = [
   {
     name: "Dr. Jennifer Park",
     company: "CTO, MedTech Innovations",
-    image: "/images/doctor-analyzing-ai-dashboard.jpg",
+    image: "/images/crop4.jpg",
     alt: "doctor CTO analyzing AI dashboard",
     quote:
       "The data assessment OpenSoft AI conducted revealed gaps in our infrastructure that would have derailed our AI initiatives. Their recommendations not only fixed these issues but positioned us for much more ambitious AI projects down the road.",

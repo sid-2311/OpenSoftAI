@@ -77,25 +77,7 @@ export default function CTAContactSection() {
   return (
     <>
       {/* SEO Optimization */}
-      <Head>
-        <title>Contact OpenSoft AI | Build Your AI Future</title>
-        <meta
-          name="description"
-          content="Book your free AI strategy consultation with OpenSoft AI. Let’s design, develop, and deploy intelligent solutions that drive business growth."
-        />
-        <meta
-          name="keywords"
-          content="AI development, AI consultation, OpenSoft AI, machine learning, business automation"
-        />
-        <meta property="og:title" content="OpenSoft AI - AI Consultation" />
-        <meta
-          property="og:description"
-          content="Book your free AI strategy consultation and start building intelligent systems for your business."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://opensoftai.com/contact" />
-      </Head>
-
+     
       <section
         className="relative bg-gradient-to-b from-slate-50 via-blue-50 to-slate-900 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
         id="contact"
@@ -114,9 +96,9 @@ export default function CTAContactSection() {
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ready to Build Your
-              <span className="block mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Ready to Build Your{" "}
+              <span className=" mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
                 Intelligent Future?
               </span>
             </h2>
@@ -124,13 +106,7 @@ export default function CTAContactSection() {
 
           {/* Process Steps */}
           <section aria-labelledby="process-steps">
-            <h3
-              id="process-steps"
-              className="text-3xl font-bold text-gray-900 text-center mb-12"
-            >
-              What Happens Next:
-            </h3>
-
+          
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
               {steps.map((step, index) => (
                 <div
@@ -191,11 +167,11 @@ export default function CTAContactSection() {
               <div className="relative z-10">
                 <h3
                   id="contact-options"
-                  className="text-3xl lg:text-4xl font-bold text-white mb-4"
+                  className="text-2xl lg:text-4xl font-bold text-white mb-4"
                 >
                   Ready to Get Started?
                 </h3>
-                <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
+                <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-12">
                   Choose your preferred way to connect with our AI experts
                 </p>
 

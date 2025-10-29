@@ -78,7 +78,7 @@ export default function VoiceAIExpertiseSection() {
         {/* Header */}
         <header className="text-center mb-16">
           <h2
-            className="text-4xl lg:text-4xl font-bold text-gray-900 mb-6"
+            className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6"
             itemProp="name"
           >
             Our Voice AI Expertise:

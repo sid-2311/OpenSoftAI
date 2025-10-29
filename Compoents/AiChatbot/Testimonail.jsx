@@ -2,37 +2,41 @@ import TestimonialsSection from "../ui/Testimonail";
 
 
 const testimonialsData = [
-    {
-      name: "Sarah Martinez",
-      role: "CEO",
-      company: "TechFlow Solutions",
-      image: "SM",
-      quote: "I was worried customers would hate talking to a bot. Instead, they love getting instant answers. Our support ticket volume dropped 65%, but customer satisfaction scores went up. I didn't think that was possible.",
-      metric: "65% fewer tickets",
-      // icon: TrendingUp,
-      color: "blue"
-    },
-    {
-      name: "Mark Thompson",
-      role: "Founder",
-      company: "E-commerce Brand",
-      image: "MT",
-      quote: "Your chatbot sells more products than some of our human staff. It never forgets to suggest accessories, never has a bad day, and works nights and weekends without complaining.",
-      metric: "24/7 sales boost",
-      // icon: Users,
-      color: "indigo"
-    },
-    {
-      name: "Dr. Linda Chen",
-      role: "Practice Manager",
-      company: "Medical Practice",
-      image: "LC",
-      quote: "The chatbot handles appointment scheduling better than our previous receptionist. That sounds harsh, but it never double-books, always confirms insurance, and patients actually prefer the convenience.",
-      metric: "Zero booking errors",
-      // icon: Calendar,
-      color: "sky"
-    }
-  ];
+  {
+    name: "Sarah Martinez",
+    role: "CEO",
+    company: "TechFlow Solutions",
+    image: "/images/crop3.jpg",
+    alt: "Portrait of Sarah Martinez, CEO of TechFlow Solutions",
+    quote:
+      "I was worried customers would hate talking to a bot. Instead, they love getting instant answers. Our support ticket volume dropped 65%, but customer satisfaction scores went up. I didn't think that was possible.",
+    metric: "65% fewer tickets",
+    color: "blue",
+  },
+  {
+    name: "Mark Thompson",
+    role: "Founder",
+    company: "E-commerce Brand",
+    image: "/images/crop1.jpg",
+    alt: "Portrait of Mark Thompson, Founder of E-commerce Brand",
+    quote:
+      "Your chatbot sells more products than some of our human staff. It never forgets to suggest accessories, never has a bad day, and works nights and weekends without complaining.",
+    metric: "24/7 sales boost",
+    color: "indigo",
+  },
+  {
+    name: "Dr. Linda Chen",
+    role: "Practice Manager",
+    company: "Medical Practice",
+    image: "/images/crop4.jpg",
+    alt: "Portrait of Dr. Linda Chen, Practice Manager at Medical Practice",
+    quote:
+      "The chatbot handles appointment scheduling better than our previous receptionist. That sounds harsh, but it never double-books, always confirms insurance, and patients actually prefer the convenience.",
+    metric: "Zero booking errors",
+    color: "sky",
+  },
+];
+
 
 
 export default function TestAIChatbot(){

@@ -90,7 +90,7 @@ export default function IndustriesWeKnow() {
       <header className="text-center mb-8 max-w-3xl">
         <h2
           id="industries-heading"
-          className="text-3xl md:text-4xl font-bold mb-3"
+          className="text-2xl md:text-4xl font-bold mb-3"
         >
           Industries We Transform with Custom AI
         </h2>

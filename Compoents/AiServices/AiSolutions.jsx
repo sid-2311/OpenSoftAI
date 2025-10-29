@@ -75,9 +75,9 @@ export default function AISolutionsSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
-            <h3 className="text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-              Transform Your Business with
-              <span className="block mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
+            <h3 className="text-3xl lg:text-6xl font-bold leading-tight text-gray-900">
+              Transform Your Business with {" "}
+              <span className=" mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
                 Intelligent AI
               </span>
             </h3>

@@ -124,7 +124,7 @@ export default function ExperienceSection() {
           {/* Header */}
           <div className="text-center mb-16 animate-fadeIn">
             
-            <h2 className="text-4xl md:text-5xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
               We've Been Building Conversational AI{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
                 Since People Thought It Was Science Fiction
@@ -223,10 +223,10 @@ export default function ExperienceSection() {
                   <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl">
                     <BarChart4 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white">The Numbers That Actually Matter</h3>
+                  <h3 className="text-3xl md:text-3xl font-bold text-white">The Numbers That Actually Matter</h3>
                 </div>
 
-                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                <p className="text-lg text-blue-100 mb-8 leading-relaxed">
                   Our chatbots typically reduce support ticket volume by 60-70%, but here's what's more interesting—customer satisfaction scores usually <span className="font-bold text-white">go up, not down</span>. Turns out people don't mind talking to bots when those bots actually understand what they're asking.
                 </p>
 

@@ -47,30 +47,17 @@ export default function AICallingAgents() {
   return (
     <>
       {/* ✅ SEO META TAGS */}
-      <Head>
-        <title>AI Calling Agents | Transform Your Business Operations</title>
-        <meta
-          name="description"
-          content="Revolutionize your business with AI calling agents. Achieve 24/7 availability, cost reduction, scalability, and enhanced customer satisfaction."
-        />
-        <meta
-          name="keywords"
-          content="AI calling agents, voice automation, AI customer service, call center automation, business optimization, conversational AI"
-        />
-        <meta name="robots" content="index, follow" />
-      </Head>
+     
 
       {/* ✅ MAIN CONTENT */}
       <section className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-6 py-16">
           {/* Header */}
-          <div className="text-center mb-20">
-            <h1 className="text-5xl font-bold text-blue-900 mb-4">
-              Transform Your Business Operations
-            </h1>
-            <h2 className="text-3xl font-semibold text-blue-700">
-              with AI Calling Agents
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+              Transform Your Business Operations with AI Calling Agents
             </h2>
+            
           </div>
 
           {/* Features Grid */}

@@ -75,28 +75,7 @@ export default function GetStartedSection() {
   return (
     <>
       {/* SEO Optimization */}
-      <Head>
-        <title>Get Started with OpenSoft AI | Voice Automation Solutions</title>
-        <meta
-          name="description"
-          content="Start your journey toward AI-powered voice automation with OpenSoft AI. Book a demo, talk to our experts, or claim your free pilot program today."
-        />
-        <meta
-          name="keywords"
-          content="OpenSoft AI, voice automation, AI calling agents, customer engagement, AI consultation, AI deployment"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Get Started with OpenSoft AI" />
-        <meta
-          property="og:description"
-          content="Book your free demo or claim your free pilot program today. Revolutionize your customer communication with OpenSoft AI calling agents."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://yourdomain.com/get-started"
-        />
-      </Head>
+     
 
       <main
         className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50"
@@ -105,15 +84,15 @@ export default function GetStartedSection() {
         <section className="max-w-7xl mx-auto px-6 py-20">
           {/* Hero Header */}
           <header className="text-center mb-16">
-            <h1
+            <h2
               id="get-started-heading"
-              className="text-5xl font-bold text-blue-900 mb-6"
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-6"
             >
-              Ready to Revolutionize Your
-              <br />
+              Ready to Revolutionize Your{" "}
+              
               <span className="text-blue-600">Voice Communications?</span>
-            </h1>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            </h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Stop losing opportunities to missed calls and overwhelmed staff.
               Let's build AI calling agents that work tirelessly for your
               business success.

@@ -62,18 +62,7 @@ export default function AIChatbotIntroSection() {
   return (
     <>
       {/* SEO Head */}
-      <Head>
-        <title>AI Chatbot Solutions | Conversational AI for Businesses | OpenSoft AI</title>
-        <meta
-          name="description"
-          content="Build intelligent AI chatbots that actually understand context and engage like humans. OpenSoft AI creates conversational systems that turn support into satisfaction."
-        />
-        <meta
-          name="keywords"
-          content="AI chatbot, conversational AI, customer support automation, context-aware chatbot, OpenSoft AI"
-        />
-      </Head>
-
+    
       <section
         className="relative bg-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
         aria-label="AI Chatbot Introduction"
@@ -101,7 +90,7 @@ export default function AIChatbotIntroSection() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="text-4xl lg:text-4xl font-bold leading-tight text-gray-900">
                 Ever Wonder Why Some Chatbots Feel Like Talking to a Wall?
                 <span className="block mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
                   Let’s Talk About the Ones That Don’t.

@@ -24,7 +24,6 @@ export default function TestimonialsSection({
     );
   };
 
-  // Prevent errors if testimonials is empty
   if (testimonials.length === 0) return null;
 
   const { name, company, image, alt, quote } = testimonials[currentIndex];
@@ -49,20 +48,34 @@ export default function TestimonialsSection({
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Side - Image */}
-          <div className="flex-1 relative">
-            <div className="absolute -left-16 -top-8 opacity-20">
+          <div className="flex-1 relative flex justify-center w-full">
+            {/* Decorative dots */}
+            <div className="absolute -left-10 -top-8 opacity-20 hidden sm:block">
               <div className="grid grid-cols-8 gap-2">
                 {[...Array(64)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="w-1 h-1 bg-blue-400 rounded-full"
-                  ></div>
+                  <div key={i} className="w-1 h-1 bg-blue-400 rounded-full"></div>
                 ))}
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 p-1">
-              <div className="relative rounded-xl overflow-hidden">
+            {/* Fixed-size, responsive container */}
+            <div
+              className="
+                relative 
+                w-full 
+                sm:max-w-md 
+                aspect-[3/2] 
+                sm:aspect-[4/3] 
+                rounded-2xl 
+                overflow-hidden 
+                bg-gradient-to-br 
+                from-blue-500 
+                via-indigo-500 
+                to-purple-600 
+                p-1
+              "
+            >
+              <div className="relative w-full h-full rounded-xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={currentIndex}
@@ -70,13 +83,13 @@ export default function TestimonialsSection({
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
                     transition={{ duration: 0.6 }}
+                    className="w-full h-full"
                   >
                     <Image
                       src={image}
                       alt={alt}
-                      width={600}
-                      height={400}
-                      className="w-full h-full object-cover rounded-xl"
+                      fill
+                      className="object-cover rounded-xl"
                       priority
                     />
                   </motion.div>
@@ -86,7 +99,7 @@ export default function TestimonialsSection({
           </div>
 
           {/* Right Side - Text */}
-          <div className="flex-1">
+          <div className="flex-1 w-full">
             {/* Arrows */}
             <div className="flex justify-end gap-4 mb-8">
               <button

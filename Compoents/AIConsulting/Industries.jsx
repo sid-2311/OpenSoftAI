@@ -9,8 +9,8 @@ const TABS = [
     title: "Finance & Banking",
     heading: "Finance & Banking",
     text: `AI for fraud detection, risk assessment, algorithmic trading, and customer service automation.`,
-    img: "/images/finance-banking-ai.webp",
-    alt: "AI in finance and banking industry",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt:"digital finance data analysis investment dashboard",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -29,8 +29,8 @@ const TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Clinical decision support, medical imaging analysis, patient care optimization, and administrative automation.`,
-    img: "/images/healthcare-ai.webp",
-    alt: "AI in healthcare industry",
+     img: "/images/doctor-using-digital-health-technology.avif",
+    alt:"doctor using digital health technology",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +49,8 @@ const TABS = [
     title: "Retail & eCommerce",
     heading: "Retail & eCommerce",
     text: `Personalization engines, demand forecasting, inventory optimization, and customer behavior analysis.`,
-    img: "/images/retail-ecommerce-ai.webp",
-    alt: "AI in retail and ecommerce",
+    img: "/images/ai-shopping-app-development.webp",
+    alt:"ai shopping app development",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +69,8 @@ const TABS = [
     title: "Manufacturing",
     heading: "Manufacturing",
     text: `Predictive maintenance, quality control, supply chain optimization, and production planning.`,
-    img: "/images/manufacturing-ai.webp",
-    alt: "AI in manufacturing industry",
+    img: "/images/ai-automation-manifacterng-software.jpg",
+    alt:"ai automation manifacterng software",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@ const TABS = [
     title: "SaaS & Technology",
     heading: "SaaS & Technology",
     text: `Product intelligence, user behavior analysis, automated customer support, and feature optimization.`,
-    img: "/images/saas-technology-ai.webp",
+    img: "/images/saas.jpg",
     alt: "AI in SaaS and technology",
     icon: (
       <svg
@@ -109,8 +109,8 @@ const TABS = [
     title: "Education",
     heading: "Education",
     text: `Personalized learning platforms, administrative automation, and student performance analytics.`,
-    img: "/images/education-ai.webp",
-    alt: "AI in education",
+    img: "/images/creative-business-ideas-book.avif",
+    alt:"creative business ideas book",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -129,8 +129,8 @@ const TABS = [
     title: "Logistics",
     heading: "Logistics",
     text: `Route optimization, demand forecasting, warehouse automation, and delivery prediction.`,
-    img: "/images/logistics-ai.webp",
-    alt: "AI in logistics industry",
+    img: "/images/global-logistics-and-supply-chain-transportation-network.jpg",
+    alt:"global logistics and supply chain transportation network",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,7 @@ const testimonialsData = [
   {
     name: "Maria Gonzalez",
     company: "Head of Marketing, TechFlow Solutions",
-    image: "/images/marketing-ai-team.jpg",
+    image: "/images/crop3.jpg",
     alt: "marketing team using AI tools",
     quote:
       "OpenSoft AI's generative AI solutions completely transformed our content marketing strategy. We're now producing 5x more content with half the team, and our engagement rates have increased by 40%. The AI perfectly captures our brand voice – sometimes I can't tell the difference between AI-generated and human-written content.",
@@ -12,7 +12,7 @@ const testimonialsData = [
   {
     name: "David Kim",
     company: "Creative Director, RetailMax",
-    image: "/images/creative-team-ai-design.jpg",
+    image: "/images/crop1.jpg",
     alt: "creative designer generating AI visuals",
     quote:
       "The custom image generation AI OpenSoft AI built for us has been a game-changer. We're creating product mockups and marketing visuals in minutes instead of days. Our design team can now focus on creative strategy while AI handles the production work. It's saved us over $50k in outsourcing costs this year alone.",
@@ -20,7 +20,7 @@ const testimonialsData = [
   {
     name: "Jennifer Walsh",
     company: "Learning & Development Manager, FinanceForward",
-    image: "/images/ai-video-generation-training.jpg",
+    image: "/images/crop4.jpg",
     alt: "AI-generated video training session",
     quote:
       "Working with OpenSoft AI on our video generation project exceeded all expectations. Their AI produces training videos that are indistinguishable from professionally produced content, and we've reduced our video production timeline from weeks to hours. The ROI has been incredible.",

@@ -1,37 +1,44 @@
 import TestimonialsSection from "../ui/Testimonail";
 
 const testimonialsData = [
-    {
-      quote: "OpenSoft AI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
-      author: "Sarah Chen",
-      position: "Operations Director",
-      company: "TechForward Retail",
-      // icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
-      metric: "$2.1M",
-      metricLabel: "Cost Savings",
-      gradient: "from-blue-400 to-blue-500"
-    },
-    {
-      quote: "The computer vision system OpenSoft AI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
-      author: "Marcus Rodriguez",
-      position: "Plant Manager",
-      company: "Precision Manufacturing Corp",
-      // icon: <Eye className="w-6 h-6" aria-hidden="true" />,
-      metric: "45%",
-      metricLabel: "Cost Reduction",
-      gradient: "from-blue-500 to-blue-600"
-    },
-    {
-      quote: "Working with OpenSoft AI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
-      author: "Dr. Amanda Foster",
-      position: "CTO",
-      company: "HealthTech Innovations",
-      // icon: <Heart className="w-6 h-6" aria-hidden="true" />,
-      metric: "5★",
-      metricLabel: "Partnership",
-      gradient: "from-blue-600 to-blue-700"
-    }
-  ];
+  {
+    quote:
+      "OpenSoft AI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
+    author: "Sarah Chen",
+    position: "Operations Director",
+    company: "TechForward Retail",
+    metric: "$2.1M",
+    metricLabel: "Cost Savings",
+    gradient: "from-blue-400 to-blue-500",
+    image: "/images/crop1.jpg",
+    alt: "Sarah Chen, Operations Director at TechForward Retail"
+  },
+  {
+    quote:
+      "The computer vision system OpenSoft AI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
+    author: "Marcus Rodriguez",
+    position: "Plant Manager",
+    company: "Precision Manufacturing Corp",
+    metric: "45%",
+    metricLabel: "Cost Reduction",
+    gradient: "from-blue-500 to-blue-600",
+    image: "/images/crop2.jpg",
+    alt: "Marcus Rodriguez, Plant Manager at Precision Manufacturing Corp"
+  },
+  {
+    quote:
+      "Working with OpenSoft AI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
+    author: "Dr. Amanda Foster",
+    position: "CTO",
+    company: "HealthTech Innovations",
+    metric: "5★",
+    metricLabel: "Partnership",
+    gradient: "from-blue-600 to-blue-700",
+    image: "/images/crop3.jpg",
+    alt: "Dr. Amanda Foster, CTO at HealthTech Innovations"
+  }
+];
+
 
 
   export default function TestAIServices(){

@@ -1,122 +1,135 @@
 "use client";
-
 import { useState } from "react";
 import Image from "next/image";
+import {
+  Landmark,
+  Stethoscope,
+  ShoppingBag,
+  Factory,
+  Truck,
+  Cpu,
+  GraduationCap,
+  Banknote,
+} from "lucide-react";
 
-const TABS = [
+const INDUSTRY_TABS = [
   {
     id: "Finance & Banking",
-    title: "Finance & Banking",
+    title: "Finance",
     heading: "Finance & Banking",
     text: `Automated loan processing, compliance monitoring, fraud detection workflows, and customer onboarding processes that reduce processing time while improving accuracy and regulatory compliance.`,
-    img: "/images/finance-banking-ai.webp",
-    alt: "AI in finance and banking",
+     img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    alt:"digital finance data analysis investment dashboard",
+    icon: <Banknote className="w-6 h-6" />,
   },
   {
     id: "Healthcare & Life Sciences",
-    title: "Healthcare & Life Sciences",
+    title: "Healthcare",
     heading: "Healthcare & Life Sciences",
     text: `Patient data management, appointment scheduling, billing automation, and clinical workflow optimization that improves patient care while reducing administrative burden on healthcare professionals.`,
-    img: "/images/healthcare-lifesciences-ai.webp",
-    alt: "AI in healthcare and life sciences",
+   img: "/images/doctor-using-digital-health-technology.avif",
+    alt:"doctor using digital health technology",
+    icon: <Stethoscope className="w-6 h-6" />,
   },
   {
     id: "Retail & eCommerce",
-    title: "Retail & eCommerce",
+    title: "Retail",
     heading: "Retail & eCommerce",
     text: `Inventory management, order processing, customer service automation, and supply chain optimization that enhance customer experience while reducing operational costs.`,
-    img: "/images/ecommerce-retail-ai.webp",
-    alt: "AI in retail and eCommerce",
+    img: "/images/ai-shopping-app-development.webp",
+    alt:"ai shopping app development",
+    icon: <ShoppingBag className="w-6 h-6" />,
   },
   {
     id: "Manufacturing & Production",
-    title: "Manufacturing & Production",
+    title: "Manufacturing",
     heading: "Manufacturing & Production",
     text: `Quality control automation, production scheduling, supply chain coordination, and predictive maintenance workflows that increase efficiency and reduce downtime.`,
-    img: "/images/manufacturing-ai.webp",
-    alt: "AI in manufacturing and production",
+   img: "/images/ai-automation-manifacterng-software.jpg",
+    alt:"ai automation manifacterng software",
+    icon: <Factory className="w-6 h-6" />,
   },
   {
     id: "Logistics & Transportation",
-    title: "Logistics & Transportation",
+    title: "Logistics",
     heading: "Logistics & Transportation",
     text: `Route optimization, shipment tracking, warehouse automation, and delivery coordination systems that improve service levels while reducing operational complexity.`,
-    img: "/images/logistics-ai.webp",
-    alt: "AI in logistics and transportation",
+    img: "/images/global-logistics-and-supply-chain-transportation-network.jpg",
+    alt:"global logistics and supply chain transportation network",
+    icon: <Truck className="w-6 h-6" />,
   },
   {
     id: "SaaS & Technology",
-    title: "SaaS & Technology",
+    title: "Technology",
     heading: "SaaS & Technology",
     text: `Customer onboarding automation, support ticket routing, product analytics, and user engagement workflows that scale customer success operations efficiently.`,
-    img: "/images/saas-tech-ai.webp",
+    img: "/images/saas.jpg",
     alt: "AI in SaaS and technology",
+    icon: <Cpu className="w-6 h-6" />,
   },
   {
     id: "Education & Training",
-    title: "Education & Training",
+    title: "Education",
     heading: "Education & Training",
     text: `Student enrollment processes, course management automation, performance tracking, and administrative workflow optimization that allows educators to focus on teaching.`,
-    img: "/images/education-training-ai.webp",
-    alt: "AI in education and training",
+     img: "/images/creative-business-ideas-book.avif",
+    alt:"creative business ideas book",
+    icon: <GraduationCap className="w-6 h-6" />,
   },
 ];
 
 export default function Industries() {
-  const [active, setActive] = useState(TABS[0].id);
+  const [active, setActive] = useState(INDUSTRY_TABS[0].id);
 
   return (
     <section
-      className="container mx-auto px-4 py-12 bg-[#EAF5FF] flex flex-col items-center"
-      aria-labelledby="industries-heading"
+      id="industries"
+      className="container mx-auto px-4 py-16 bg-[#EAF5FF] flex flex-col items-center"
     >
       {/* Section Header */}
-      <header className="text-center mb-8 max-w-3xl">
-        <h2
-          id="industries-heading"
-          className="text-3xl md:text-4xl font-bold mb-3 text-gray-900"
-        >
+      <header className="text-center mb-10 max-w-3xl">
+        <h2 className="text-xl md:text-4xl font-bold mb-3 text-slate-900">
           Industries We're Transforming with AI Automation
         </h2>
-        <p className="text-gray-600">
-          Discover how our AI workflow automation solutions streamline operations,
-          reduce costs, and enhance customer and employee experiences across
-          diverse sectors.
-        </p>
       </header>
 
-      {/* Tabs Container */}
-      <div className="bg-[#0B2542] rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-6xl">
-        {/* Tab Navigation */}
+      {/* Tabs + Panels Container */}
+      <div className="bg-[#0B2542] rounded-2xl shadow-xl p-6 md:p-10 w-full max-w-6xl">
+        {/* Tabs Navigation */}
         <nav
           role="tablist"
           aria-label="Industries"
-          className="flex justify-start gap-6 mb-8 overflow-x-auto"
+          className="flex overflow-x-auto mt-1 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-blue-100 justify-start gap-4 mb-8 pb-2 -mx-4 px-4"
         >
-          {TABS.map((tab) => {
+          {INDUSTRY_TABS.map((tab) => {
             const isActive = tab.id === active;
             return (
               <button
                 key={tab.id}
+                id={`tab-${tab.id}`}
                 role="tab"
                 aria-selected={isActive}
                 aria-controls={`panel-${tab.id}`}
-                id={`tab-${tab.id}`}
                 onClick={() => setActive(tab.id)}
-                className={`flex flex-col items-center justify-center gap-2 px-6 py-4 rounded-xl transition min-w-[100px] cursor-pointer ${
+                className={`flex-shrink-0 flex flex-col items-center justify-center gap-2 px-6 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
                   isActive
-                    ? "bg-[#15375F] text-white border-2 border-[#243B55] shadow-lg"
-                    : "text-gray-300 hover:text-white border border-[#0B2542]"
+                    ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
+                    : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
                 }`}
               >
-                <span className="text-sm font-medium text-center">{tab.title}</span>
+                <div className="w-8 h-8 flex items-center justify-center">
+                  {tab.icon}
+                </div>
+                <span className="text-sm font-medium text-center whitespace-nowrap">
+                  {tab.title}
+                </span>
               </button>
             );
           })}
         </nav>
 
-        {/* Tab Panels */}
-        {TABS.map((tab) => {
+        {/* Panels */}
+        {INDUSTRY_TABS.map((tab) => {
           const isActive = tab.id === active;
           return (
             <article
@@ -125,25 +138,35 @@ export default function Industries() {
               role="tabpanel"
               aria-labelledby={`tab-${tab.id}`}
               hidden={!isActive}
-              className={`${isActive ? "block" : "hidden"}`}
+              className={`${isActive ? "block" : "hidden"} transition-all`}
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-white">
-                {/* Left: Text */}
+                {/* Text Content */}
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">{tab.heading}</h3>
-                  <p className="mb-6 whitespace-pre-line">{tab.text}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-blue-300">
+                    {tab.heading}
+                  </h3>
+                  <p className="mb-6 text-gray-200 leading-relaxed">
+                    {tab.text}
+                  </p>
                 </div>
 
-                {/* Right: Image */}
-                <div className="w-full flex justify-center md:justify-end">
-                  <Image
-                    src={tab.img}
-                    alt={tab.alt}
-                    width={480}
-                    height={320}
-                    className="w-full max-w-[480px] rounded-lg object-cover"
-                    loading="lazy"
-                  />
+                {/* Image Section */}
+                <div className="flex justify-center md:justify-end">
+                  <div className="relative w-full max-w-[480px] h-[320px] rounded-lg overflow-hidden">
+                    <Image
+                      src={tab.img}
+                      alt={tab.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 480px"
+                      className="object-contain"
+                      priority={isActive}
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          "https://via.placeholder.com/480x320?text=Image+Unavailable";
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </article>

@@ -4,7 +4,7 @@ const testimonialsData = [
   {
     name: "Robert Chen",
     company: "CFO, GrowthTech Solutions",
-    image: "/images/finance-team-ai.jpg",
+    image: "/images/crop1.jpg",
     alt: "finance team using AI automation",
     quote:
       "OpenSoft AI's workflow automation transformed our entire operations. What used to take our finance team three days every month now happens automatically overnight. We've reduced processing errors by 85% and our team can focus on analysis instead of data entry. The ROI was apparent within the first month.",
@@ -12,7 +12,7 @@ const testimonialsData = [
   {
     name: "Dr. Sarah Martinez",
     company: "Practice Manager, Regional Medical Center",
-    image: "/images/healthcare-ai-automation.jpg",
+    image: "/images/crop4.jpg",
     alt: "healthcare staff using AI tools",
     quote:
       "The custom automation OpenSoft AI built for our healthcare practice has been incredible. Patient scheduling, insurance verification, and follow-up communications all happen automatically now. We're seeing 40% more patients without adding staff, and our patient satisfaction scores have never been higher.",
@@ -20,7 +20,7 @@ const testimonialsData = [
   {
     name: "Michael Rodriguez",
     company: "Operations Director, RetailMax",
-    image: "/images/retail-ai-automation.jpg",
+    image: "/images/crop2.jpg",
     alt: "retail team using AI for operations",
     quote:
       "We were drowning in manual processes before working with OpenSoft AI. Their intelligent workflow automation reduced our order processing time from hours to minutes, and our inventory accuracy improved dramatically. It's like having a super-efficient team member who never takes a break.",

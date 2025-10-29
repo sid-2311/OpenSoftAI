@@ -73,23 +73,7 @@ export default function WhyChooseSection() {
   return (
     <>
       {/* ✅ SEO Meta Tags */}
-      <Head>
-        <title>Why Choose OpenSoft AI | Trusted AI Development Partner</title>
-        <meta
-          name="description"
-          content="Discover why businesses trust OpenSoft AI for secure, transparent, and innovative AI development. ISO-certified, research-driven, and partnership-focused."
-        />
-        <meta
-          name="keywords"
-          content="AI development, OpenSoft AI, AI transparency, AI security, enterprise AI, ISO 27001, AI partner, AI innovation"
-        />
-        <meta property="og:title" content="Why Choose OpenSoft AI" />
-        <meta
-          property="og:description"
-          content="Explore how OpenSoft AI delivers transparency, security, innovation, and end-to-end partnership in AI development."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+      
 
       {/* ✅ Main Section */}
       <section
@@ -106,7 +90,7 @@ export default function WhyChooseSection() {
           <header className="text-center mb-16">
             <h2
               id="whychoose-heading"
-              className="text-4xl lg:text-4xl font-bold text-gray-900 mb-6"
+              className="text-2xl lg:text-4xl font-bold text-gray-900 mb-6"
             >
               Why Choose{" "}
               <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">

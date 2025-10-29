@@ -77,28 +77,7 @@ export default function BusinessImpactSection() {
   return (
     <>
       {/* ✅ SEO Optimization */}
-      <Head>
-        <title>
-          Business Impact of AI | Boost Efficiency, Cut Costs & Scale Growth
-        </title>
-        <meta
-          name="description"
-          content="Discover how custom AI solutions drive real business impact — from operational efficiency and cost reduction to scalable growth and market advantage."
-        />
-        <meta
-          name="keywords"
-          content="AI business impact, custom AI development, AI automation, cost reduction, efficiency improvement, predictive analytics, OpenSoft AI"
-        />
-        <meta
-          property="og:title"
-          content="The Business Impact of Custom AI Development"
-        />
-        <meta
-          property="og:description"
-          content="See how companies are achieving 30–50% efficiency gains, cost savings, and competitive advantages with tailored AI solutions."
-        />
-        <meta property="og:type" content="website" />
-      </Head>
+     
 
       {/* ✅ Main Section */}
       <section
@@ -122,13 +101,13 @@ export default function BusinessImpactSection() {
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <header className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              The Business Impact of
-              <span className="block mt-2 bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              The Business Impact of {" "}
+              <span className=" mt-2 bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                 Custom AI Development
               </span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto">
               See how businesses leverage AI to accelerate growth, improve
               efficiency, and unlock new market opportunities.
             </p>

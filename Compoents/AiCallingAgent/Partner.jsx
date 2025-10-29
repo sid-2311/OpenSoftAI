@@ -43,25 +43,7 @@ export default function OpenSoftAIPartner() {
   return (
     <>
       {/* SEO Optimization */}
-      <Head>
-        <title>OpenSoft AI | Trusted Voice AI Partner</title>
-        <meta
-          name="description"
-          content="Discover why OpenSoft AI is the trusted partner for intelligent voice solutions. Proven leadership, transparent AI development, and award-winning innovation."
-        />
-        <meta
-          name="keywords"
-          content="Voice AI, AI calling agents, OpenSoft AI, AI partner, conversational AI, AI automation, voice technology"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="OpenSoft AI | Trusted Voice AI Partner" />
-        <meta
-          property="og:description"
-          content="Empowering enterprises with intelligent voice AI solutions. Discover OpenSoft AI’s leadership and recognition in AI innovation."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://yourdomain.com/ai-partner" />
-      </Head>
+      
 
       <main
         className="min-h-screen bg-gradient-to-br from-blue-50 to-white text-gray-900"
@@ -70,15 +52,13 @@ export default function OpenSoftAIPartner() {
         <section className="max-w-7xl mx-auto px-6 py-20">
           {/* Header */}
           <header className="text-center mb-16">
-            <h1
+            <h2
               id="ai-partner-heading"
-              className="text-4xl font-bold text-blue-900 mb-4"
+              className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
             >
-              Why OpenSoft AI is Your
-            </h1>
-            <h2 className="text-4xl font-bold text-blue-700">
-              Trusted Voice AI Partner
+              Why OpenSoft AI is Your  Trusted Voice AI Partner
             </h2>
+          
           </header>
 
           {/* Features */}
