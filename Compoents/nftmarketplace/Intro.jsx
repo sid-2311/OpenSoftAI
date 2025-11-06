@@ -35,20 +35,16 @@ export default function NFTInfrastructureSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center p-2 bg-blue-100 rounded-full mb-6">
-            <span className="px-4 py-1 text-sm font-semibold text-blue-700 bg-white rounded-full shadow-sm">
-              Infrastructure That Powers Innovation
-            </span>
-          </div>
+         
           
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            The NFT Revolution Needs
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+            The NFT Revolution Needs{" "}
+            <span className=" mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
               Better Infrastructure
             </span>
-          </h1>
+          </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
             NFTs have fundamentally changed how we think about digital ownership, but the technology is only as good as the platforms that support it.
           </p>
         </div>

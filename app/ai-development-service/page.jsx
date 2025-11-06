@@ -9,9 +9,9 @@ import WhyChooseSection from "@/Compoents/AiServices/WhyChoose";
 
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
-  title: "Next-Gen AI Development Services",
+  title: "Custom AI Development Solutions | Build Smarter with Opensoft AI",
   description:
-    "Elevate your business with OpenSoftAI’s AI expertise. Our team creates smart applications, machine learning models, and AI-driven solutions tailored to your goals.",
+    "Accelerate innovation with Opensoft AI’s custom AI development solutions. We design intelligent software powered by automation, data, and machine learning.",
   keywords: [
     "AI services",
     "artificial intelligence",
@@ -25,8 +25,8 @@ export const metadata = {
     canonical: "https://opensoftai.com/ai-development-service", // ✅ Canonical URL
   },
   openGraph: {
-    title: "Next-Gen AI Development Services",
-    description: "Elevate your business with OpenSoftAI’s AI expertise. Our team creates smart applications, machine learning models, and AI-driven solutions tailored to your goals.",
+    title: "Custom AI Development Solutions | Build Smarter with Opensoft AI",
+    description: "Accelerate innovation with Opensoft AI’s custom AI development solutions. We design intelligent software powered by automation, data, and machine learning.",
     url: "https://opensoftai.com/ai-development-service",
    
     

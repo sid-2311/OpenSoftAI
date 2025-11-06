@@ -82,13 +82,13 @@ export default function DeFiCTASection() {
           
 
           <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            Ready to Build the Future of
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
+            Ready to Build the Future of{" "}
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
               Finance with OpenSoft AI?
             </span>
           </h2>
 
-          <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
+          <p className="text-md text-gray-700 max-w-4xl mx-auto leading-relaxed mb-4">
             DeFi isn't just about creating alternatives to traditional finance – it's about building better financial infrastructure that's more transparent, more accessible, and more innovative.
           </p>
 
@@ -107,10 +107,10 @@ export default function DeFiCTASection() {
                   <Sparkles className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Move Fast, Build Right
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md text-gray-700 leading-relaxed">
                     The DeFi space moves quickly, but that doesn't mean you should rush into development without proper planning and security considerations. We help you move fast while building right the first time.
                   </p>
                 </div>
@@ -206,25 +206,17 @@ export default function DeFiCTASection() {
           {/* Main CTA Statement */}
           <div className="mb-8">
             <div className="inline-block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
-              <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h3 className="text-xl sm:text-4xl font-bold text-white mb-4">
                 Launch Your DeFi Vision
               </h3>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
                 Contact OpenSoft AI today for a free consultation and development roadmap. We'll review your protocol concept, discuss technical requirements, and provide you with a clear path from idea to mainnet launch.
               </p>
             </div>
           </div>
 
           {/* Final Message */}
-          <div className="inline-flex items-center px-8 py-4 bg-white rounded-2xl shadow-xl border-2 border-blue-200">
-            <Shield className="w-6 h-6 text-blue-600 mr-3" />
-            <p className="text-lg font-bold text-gray-900">
-              Ready to build DeFi infrastructure that users can trust?{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                Let's create something groundbreaking together.
-              </span>
-            </p>
-          </div>
+        
         </div>
       </div>
 

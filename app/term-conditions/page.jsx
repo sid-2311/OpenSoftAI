@@ -2,8 +2,8 @@ import TermsPage from "@/Compoents/Terms/Terms";
 
 
 export const metadata = {
-  title: "Terms & Conditions | OpenSoftAI Software Development Agreement",
-  description: "Explore the Terms & Conditions for OpenSoftAI's software development services. Understand our role, your responsibilities, and legal compliance requirements. This agreement outlines our commitment to delivering quality technical solutions tailored to your business needs.",
+  title: "Opensoft AI Terms & Conditions | Legal Use Policy",
+  description: "Read the official Terms & Conditions of Opensoft AI. Learn about user rights, responsibilities, and our policies for AI and software development services.",
   keywords: [
     "OpenSoftAI Terms and Conditions",
     "software development agreement",
@@ -15,8 +15,8 @@ export const metadata = {
     "website development contract",
   ],
   openGraph: {
-    title: "Terms & Conditions | OpenSoftAI Software Development Agreement",
-    description:"Explore the Terms & Conditions for OpenSoftAI's software development services. Understand our role, your responsibilities, and legal compliance requirements. This agreement outlines our commitment to delivering quality technical solutions tailored to your business needs.",
+    title: "Opensoft AI Terms & Conditions | Legal Use Policy",
+    description:"Read the official Terms & Conditions of Opensoft AI. Learn about user rights, responsibilities, and our policies for AI and software development services.",
     url: "https://opensoftai.com/term-conditions",
     type: "website",
     

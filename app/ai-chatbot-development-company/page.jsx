@@ -11,8 +11,8 @@ import CTASection from "@/Compoents/Blockchain/CTASection";
 
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
-  title: "Custom AI Chatbots for Business Growth",
-  description: "Transform customer interactions with AI-powered chatbots. OpenSoftAI creates smart, responsive chatbots to boost engagement, streamline operations, and drive revenue.",
+  title: "Build Smart AI Chatbots for Business Growth | Opensoft AI",
+  description: "Enhance customer experience with Opensoft AI’s smart chatbot solutions. We design intelligent AI chatbots that boost engagement and automate conversations.",
   keywords: [
     "AI chatbot",
     "chatbot development",
@@ -27,8 +27,8 @@ export const metadata = {
     canonical: "https://opensoftai.com/ai-chatbot-development-company", // ✅ Canonical URL
   },
   openGraph: {
-    title: "Custom AI Chatbots for Business Growth",
-    description: "Transform customer interactions with AI-powered chatbots. OpenSoftAI creates smart, responsive chatbots to boost engagement, streamline operations, and drive revenue. ",
+    title: "Build Smart AI Chatbots for Business Growth | Opensoft AI",
+    description: "Enhance customer experience with Opensoft AI’s smart chatbot solutions. We design intelligent AI chatbots that boost engagement and automate conversations. ",
     url: "https://opensoftai.com/ai-chatbot-development-company",
    
     locale: "en_US",

@@ -98,19 +98,16 @@ export default function ExpertiseSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 text-blue-300 px-6 py-3 rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
-            <Award className="w-5 h-5" />
-            <span>Industry Leaders Since 2015</span>
-          </div>
+         
           
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
               10 Years
             </span>
             {' '}of Smart Contract Excellence
           </h2>
           
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-blue-200 max-w-3xl mx-auto leading-relaxed">
             We've built smart contracts across every major use case – from simple tokens to complex 
             DeFi protocols managing hundreds of millions in assets.
           </p>

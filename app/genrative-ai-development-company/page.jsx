@@ -10,8 +10,8 @@ import WhyChooseUsSection from "@/Compoents/GenrativeAi/WhyChoose";
 
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
-  title: "Generative AI Development Company | OpenSoftAI — Custom AI Solutions",
-  description: "Build smarter with OpenSoftAI. We design and deploy advanced generative AI models for automation, analytics, and next-gen product innovation.",
+  title: "Innovate with Generative AI Development Company in India | Opensoft AI",
+  description: "Unlock creativity and automation with Opensoft AI’s Generative AI development services. Build intelligent models that design, create, and innovate smarter.",
   keywords: [
     "Generative AI",
     "AI content generation",
@@ -26,8 +26,8 @@ export const metadata = {
     canonical: "https://opensoftai.com/genrative-ai-development-company", // ✅ Canonical URL
   },
   openGraph: {
-    title: "Generative AI Development Company | OpenSoftAI — Custom AI Solutions",
-    description: "Build smarter with OpenSoftAI. We design and deploy advanced generative AI models for automation, analytics, and next-gen product innovation.",
+    title: "Innovate with Generative AI Development Company in India | Opensoft AI",
+    description: "Unlock creativity and automation with Opensoft AI’s Generative AI development services. Build intelligent models that design, create, and innovate smarter.",
     url: "https://opensoftai.com/genrative-ai-development-company",
    
     locale: "en_US",

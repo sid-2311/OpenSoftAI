@@ -1,0 +1,171 @@
+"use client";
+import { useState, useEffect } from "react";
+import {
+  Boxes,
+  LineChart,
+  Plug,
+  Smartphone,
+  Factory,
+  Cloud,
+} from "lucide-react";
+
+export default function WhyChooseSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const reasons = [
+    {
+      icon: Factory,
+      title: "We Understand Supply Chain Complexity",
+      description:
+        "Our team has hands-on experience with diverse inventory challenges — from just-in-time manufacturing to seasonal retail demands. We design systems that handle real-world logistics complexity.",
+    },
+    {
+      icon: LineChart,
+      title: "Predictive Analytics Integration",
+      description:
+        "We build intelligent inventory management systems powered by machine learning for smarter demand forecasting and reorder recommendations that evolve with your business.",
+    },
+    {
+      icon: Plug,
+      title: "Flexible Integration Architecture",
+      description:
+        "Seamlessly connect with your existing ERP, accounting, e-commerce, and POS platforms. Our solutions ensure smooth data flow across all business systems.",
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile-First Design Philosophy",
+      description:
+        "Enable warehouse teams to manage inventory from anywhere. Our mobile-friendly tools simplify receiving, picking, and cycle counting with real-time updates.",
+    },
+    {
+      icon: Boxes,
+      title: "Industry-Specific Customization",
+      description:
+        "Every industry manages inventory differently. We tailor solutions for manufacturing, retail, distribution, and service-based operations to fit your exact needs.",
+    },
+    {
+      icon: Cloud,
+      title: "Scalable Cloud Infrastructure",
+      description:
+        "Built on modern cloud architecture, our systems scale effortlessly — whether you're managing inventory for a single site or a global network of warehouses.",
+    },
+  ];
+
+  return (
+    <section className="relative bg-gradient-to-b from-white via-blue-50 to-white py-24 px-4 overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 left-0 w-96 h-96 bg-blue-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-0 w-96 h-96 bg-blue-300/30 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
+        <div
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+          }`}
+        >
+          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+            Why Choose{" "}
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              OpenSoft AI
+            </span>{" "}
+            for Inventory Management Development
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We build intelligent, integrated, and scalable inventory management
+            systems designed for your business reality.
+          </p>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {reasons.map((reason, index) => {
+            const Icon = reason.icon;
+
+            return (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                {/* Icon */}
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                  <Icon className="w-8 h-8 text-white" />
+                </div>
+
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  {reason.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 leading-relaxed">
+                  {reason.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Stats Section */}
+        <div
+          className={`grid md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-500 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          {[
+            { value: "20+", label: "Industries Served" },
+            { value: "99%", label: "System Uptime" },
+            { value: "24/7", label: "Support Coverage" },
+            { value: "∞", label: "Scalability" },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
+            >
+              <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-600 font-semibold">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div
+          className={`text-center transition-all duration-1000 delay-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <button className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+            Start Your Inventory Project
+            <svg
+              className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+

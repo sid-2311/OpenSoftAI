@@ -10,9 +10,9 @@ import ValuesSection from "@/Compoents/About-us/ValuesSection";
 import WhyChoose from "@/Compoents/About-us/WhyChoose";
 
 export const metadata = {
-  title: "About OpenSoftAI | Innovating with Intelligent Software Solutions",
+  title: "About Our Company | AI & Software Development Experts",
   description:
-    "Discover OpenSoftAI mission, vision, and team behind the next-generation AI & software solutions. Learn how we blend innovation and expertise to transform ideas into intelligent digital products.",
+    "Opensoft AI is a professional AI and software development company dedicated to innovation, reliability, and building technology that drives business success.",
   keywords: [
     "About OpenSoftAI",
     "OpenSoftAI team",
@@ -24,9 +24,9 @@ export const metadata = {
     "our mission",
   ],
   openGraph: {
-    title: "About OpenSoftAI | Innovating with Intelligent Software Solutions",
+    title: "About Our Company | AI & Software Development Experts",
     description:
-      "Discover OpenSoftAI mission, vision, and team behind the next-generation AI & software solutions. Learn how we blend innovation and expertise to transform ideas into intelligent digital products.",
+      "Opensoft AI is a professional AI and software development company dedicated to innovation, reliability, and building technology that drives business success.",
     url: "https://opensoftai.com/about-us",
     type: "website",
    

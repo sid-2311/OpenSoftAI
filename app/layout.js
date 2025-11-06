@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "OpenSoftAI — Innovating with AI, Blockchain & Custom Software",
-  description: "OpenSoftAI specializes in AI, blockchain, and custom software solutions that drive efficiency, growth, and competitive advantage. Based in Jaipur, India, we transform ideas into intelligent digital products.",
+  title: "Leading AI Software & Automation Company in India | Opensoft AI",
+  description: "Opensoft AI delivers innovative AI software development and automation solutions in India. Empower your business with intelligent, scalable technology systems.",
 };
 
 export default function RootLayout({ children }) {

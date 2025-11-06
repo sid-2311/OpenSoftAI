@@ -10,8 +10,8 @@ import WhyChooseUsSection from "@/Compoents/AIConsulting/WhyChooseUs";
 
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
-  title: "OpenSoftAI | AI Consulting & Custom AI Development Services",
-  description: "Transform your business with OpenSoftAI’s expert AI consulting and development services. From strategy to deployment, we build scalable AI, automations, and intelligent solutions tailored to your industry.",
+  title: "Transform with AI Consulting & Development | Opensoft AI",
+  description: "Unlock innovation with Opensoft AI’s consulting and development expertise. We design intelligent AI solutions that optimize workflows and boost business growth.",
   keywords: [
     "AI consulting",
     "artificial intelligence consulting",
@@ -26,8 +26,8 @@ export const metadata = {
     canonical: "https://opensoftai.com/ai-consulting-development-company", // ✅ Canonical URL
   },
   openGraph: {
-    title: "OpenSoftAI | AI Consulting & Custom AI Development Services",
-    description: "Transform your business with OpenSoftAI’s expert AI consulting and development services. From strategy to deployment, we build scalable AI, automations, and intelligent solutions tailored to your industry.",
+    title: "Transform with AI Consulting & Development | Opensoft AI",
+    description: "Unlock innovation with Opensoft AI’s consulting and development expertise. We design intelligent AI solutions that optimize workflows and boost business growth.",
     url: "https://opensoftai.com/ai-consulting-development-company",
   
     locale: "en_US",

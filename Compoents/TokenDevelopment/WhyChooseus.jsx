@@ -97,7 +97,7 @@ export default function WhyChooseUsSection() {
               OpenSoft AI
             </span>
           </h2>
-          <p className="max-w-3xl mx-auto text-slate-600 text-lg">
+          <p className="max-w-3xl mx-auto text-slate-600 text-md">
             OpenSoft AI has been building in the blockchain space since before it
             was cool. We combine technical depth with strategic insight — building
             blockchain and AI solutions that actually move your business forward.
@@ -156,11 +156,11 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">
                     {reason.title}
                   </h3>
 
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                  <p className="text-slate-600 text-md leading-relaxed mb-6">
                     {reason.description}
                   </p>
 

@@ -2,9 +2,9 @@ import PrivacyPolicy from "@/Compoents/privacy/Privacy";
 
 
 export const metadata = {
-  title: "OpenSoftAI Privacy Policy | Data Protection & Your Rights",
+  title: "Privacy Policy | Opensoft AI – Data Security & Protection",
   description:
-    "At OpenSoftAI, your privacy is our priority. Discover our policies on personal data collection, cookies, analytics, security, and how you can control your information.",
+    "Read Opensoft AI’s Privacy Policy to understand how we collect, use, and protect your personal data. We ensure full transparency and data security compliance.",
   keywords: [
     "privacy policy",
     "data protection",

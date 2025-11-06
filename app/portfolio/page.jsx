@@ -1,9 +1,9 @@
 import Portfolio from "@/Compoents/Portfolio/Portfolio";
 
 export const metadata = {
-  title: "Portfolio | OpenSoftAI Work in Action",
+  title: "Explore Our AI & Software Project Portfolio | Opensoft AI",
   description:
-    "Browse portfolio from OpenSoftAI to learn how we’ve helped clients achieve their goals with intelligent solutions, seamless user experiences, and scalable software.",
+    "Discover Opensoft AI’s successful AI and automation projects. See how we build intelligent, high-performance software solutions that drive business growth.",
   keywords: [
     "web development company",
     "blockchain development",
@@ -20,9 +20,9 @@ export const metadata = {
   authors: [{ name: "OpenSoftAI" }],
   robots: "index, follow",
   openGraph: {
-    title: "OpenSoftAI - Leading Web Development & Blockchain Solutions",
+    title: "Explore Our AI & Software Project Portfolio | Opensoft AI",
     description:
-      "Transform your business with our expert web development, blockchain, AI, and mobile app solutions. Trusted by 35+ clients globally.",
+      "Discover Opensoft AI’s successful AI and automation projects. See how we build intelligent, high-performance software solutions that drive business growth.",
     type: "website",
     url: "https://opensoftai.com/portfolio",
     images: ["/opensoftai-og-image.jpg"],

@@ -133,7 +133,7 @@ export default function DeFiDEXIntroSection() {
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-8 text-white shadow-2xl transform hover:scale-105 transition-transform duration-500">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-transparent bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
                   <AlertCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">The Reality</h3>

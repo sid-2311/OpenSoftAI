@@ -208,21 +208,7 @@ export default function CryptoCapabilitiesSection() {
 
   return (
     <>
-      <Head>
-        <title>Core Crypto Development Capabilities | OpenSoft AI</title>
-        <meta 
-          name="description" 
-          content="OpenSoft AI offers comprehensive crypto development capabilities: secure wallets, exchanges (CEX & DEX), KYC/AML compliance, multi-asset support, and scalable architecture." 
-        />
-        <meta 
-          name="keywords" 
-          content="crypto wallet development, crypto exchange platform, KYC AML compliance, multi-asset support, DEX development, CEX platform, blockchain architecture" 
-        />
-        <meta property="og:title" content="Core Crypto Development Capabilities | OpenSoft AI" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourdomain.com/capabilities" />
-      </Head>
-
+      
       <section className="relative py-24 px-4 bg-gradient-to-b from-white via-blue-50 to-white overflow-hidden">
         {/* Background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -235,7 +221,7 @@ export default function CryptoCapabilitiesSection() {
           <div className="text-center mb-16">
             
             
-            <h2 className="text-4xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight">
               Core Crypto Development
              {" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600">
@@ -243,7 +229,7 @@ export default function CryptoCapabilitiesSection() {
               </span>
             </h2>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-md text-gray-600 max-w-3xl mx-auto">
               Comprehensive solutions covering every aspect of crypto platform development
             </p>
           </div>
@@ -270,10 +256,10 @@ export default function CryptoCapabilitiesSection() {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-6">
                             <div className={`w-16 h-16 bg-gradient-to-br ${capability.gradient} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>
-                              <Icon className="w-8 h-8 text-white" />
+                              <Icon className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <h3 className="text-xl md:text-xl font-bold text-gray-900 mb-2">
+                              <h3 className="text-xl md:text-lg font-bold text-gray-900 mb-2">
                                 {capability.title}
                               </h3>
                               <p className="text-gray-600">{capability.subtitle}</p>

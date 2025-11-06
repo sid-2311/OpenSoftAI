@@ -3,8 +3,8 @@ import ContactSection from "@/Compoents/contact-us/ContactSection";
 import ConsultationPage from "@/Compoents/contact-us/CTA";
 
 export const metadata = {
-  title: "Contact OpenSoftAI — Get in Touch with Our Team",
-  description:"Have a question or want to start a project? Reach out to OpenSoftAI today. We're here to help you with AI, software solutions, and custom development needs.",
+  title: "Contact Us | AI Development & Automation Experts – Opensoft AI",
+  description:"Contact Opensoft AI for professional AI development and automation services. Partner with our experts to innovate and scale your digital business solutions.",
   keywords: [
     "Contact OpenSoftAI",
     "OpenSoftAI contact",
@@ -15,9 +15,9 @@ export const metadata = {
     "custom software consultation",
   ],
   openGraph: {
-    title: "Contact OpenSoftAI — Get in Touch with Our Team",
+    title: "Contact Us | AI Development & Automation Experts – Opensoft AI",
     description:
-      "Reach out to OpenSoftAI for custom AI, blockchain, and software solutions. Let's collaborate to bring your ideas to life with innovation and technology.",
+      "Contact Opensoft AI for professional AI development and automation services. Partner with our experts to innovate and scale your digital business solutions.",
     url: "https://opensoftai.com/contact-us",
     type: "website",
     images: [

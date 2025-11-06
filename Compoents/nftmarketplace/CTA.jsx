@@ -82,25 +82,20 @@ export default function NFTCTASection() {
         {/* Main Content */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {/* Badge */}
-          <div className="inline-flex items-center justify-center mb-6">
-            <div className="flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
-              <Sparkles className="w-5 h-5 text-white" />
-              <span className="text-white font-semibold">Let's Build Together</span>
-            </div>
-          </div>
+         
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Ready to Build the Next Generation
-            <span className="block mt-2">NFT Marketplace?</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            Ready to Build the Next Generation{" "}
+            <span className=" mt-2">NFT Marketplace?</span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-blue-50 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl md:text-lg text-blue-50 max-w-4xl mx-auto mb-8 leading-relaxed">
             The NFT space is still evolving, and there's room for platforms that genuinely serve creators and collectors better than what exists today.
           </p>
 
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-blue-100 max-w-3xl mx-auto leading-relaxed">
             If you're ready to build an NFT marketplace that combines cutting-edge technology with exceptional user experience, let's create something that matters.
           </p>
         </div>

@@ -80,12 +80,12 @@ export default function WhyChooseSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">
                   {reason.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 text-md leading-relaxed">
                   {reason.description}
                 </p>
               </div>

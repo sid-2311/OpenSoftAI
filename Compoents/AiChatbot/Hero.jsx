@@ -31,7 +31,7 @@ export default function HeroSection() {
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-20 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 space-y-4">
-            <h1 className="text-4xl md:text-4xl font-bold leading-tight">
+            <h1 className="text-3xl md:text-4xl font-bold leading-tight">
            AI Chatbot Development Services Smarter Conversations, Better Customer Experiences
 
             </h1>

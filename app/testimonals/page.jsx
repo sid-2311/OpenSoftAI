@@ -2,9 +2,9 @@ import TestimonialHero from "@/Compoents/Testimonail/Hero";
 import TestimonialsSection from "@/Compoents/Testimonail/TestimonialsSection";
 
 export const metadata = {
-  title: "Client Testimonials | OpenSoftAI Success Stories & Reviews",
+  title: "OpenSoftAI Testimonials – Client Success Stories from Jaipur’s AI & Blockchain Innovator",
   description:
-    "Explore real client testimonials and success stories about OpenSoftAI’s AI, blockchain, and software development services. See how our innovative solutions help businesses grow and succeed.",
+    "Discover how OpenSoftAI’s AI‑, Blockchain‑ and custom software solutions have transformed businesses. Read real client testimonials from our Jaipur‑based team.",
   keywords: [
     "OpenSoftAI testimonials",
     "client reviews",
@@ -16,9 +16,9 @@ export const metadata = {
     "blockchain development reviews",
   ],
   openGraph: {
-    title: "Client Testimonials | See What Our Clients Say - OpenSoftAI",
+    title: "OpenSoftAI Testimonials – Client Success Stories from Jaipur’s AI & Blockchain Innovator",
     description:
-      "Discover client feedback and success stories from businesses that partnered with OpenSoftAI for AI, blockchain, and software development solutions.",
+      "Discover how OpenSoftAI’s AI‑, Blockchain‑ and custom software solutions have transformed businesses. Read real client testimonials from our Jaipur‑based team.",
     url: "https://opensoftai.com/testimonials",
     type: "website",
     // images: [

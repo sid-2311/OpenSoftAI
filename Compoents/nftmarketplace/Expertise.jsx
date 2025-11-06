@@ -86,20 +86,16 @@ export default function NFTExpertiseSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'}`}>
-          <div className="inline-flex items-center justify-center p-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-6">
-            <span className="px-6 py-2 text-sm font-semibold text-white bg-slate-900 rounded-full">
-              Proven Track Record
-            </span>
-          </div>
+         
           
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">Our NFT Marketplace</span>
-            <span className="block mt-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+            <span className="text-white">Our NFT Marketplace{" "}</span>
+            <span className=" mt-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Development Expertise
             </span>
           </h2>
           
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md text-blue-100 max-w-3xl mx-auto leading-relaxed">
             We've built NFT marketplaces across every vertical, creating community-driven ecosystems that deliver real value.
           </p>
         </div>

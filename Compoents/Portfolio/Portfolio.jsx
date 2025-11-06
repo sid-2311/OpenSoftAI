@@ -518,13 +518,13 @@ export default function Portfolio() {
           <div className="relative z-10 max-w-6xl">
             <div className="mb-8 flex justify-center">
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 shadow-2xl border-2 border-white/30 transform hover:scale-110 transition-all duration-300">
-                <Cpu className="w-20 h-20 text-white" aria-label="Technology Icon" />
+                <Cpu className="w-10 h-10 text-white" aria-label="Technology Icon" />
               </div>
             </div>
-            <h1 className="text-7xl md:text-9xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl">
+            <h1 className="text-7xl md:text-5xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl">
               OpenSoftAI
             </h1>
-            <h2 className="mt-6 text-2xl md:text-3xl max-w-4xl mx-auto text-white/95 font-light leading-relaxed">
+            <h2 className="mt-6 text-2xl md:text-2xl max-w-4xl mx-auto text-white/95 font-light leading-relaxed">
               Leading Web Development, Blockchain & AI Solutions Company
             </h2>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/80">
@@ -533,7 +533,7 @@ export default function Portfolio() {
             <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center">
               <a
                 href="#projects"
-                className="inline-flex items-center gap-3 bg-white text-blue-900 px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:bg-blue-50 hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-3 bg-white text-blue-900 px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300"
                 aria-label="View our portfolio projects"
               >
                 <Package className="w-6 h-6" />
@@ -550,9 +550,7 @@ export default function Portfolio() {
             </div>
           </div>
 
-          <div className="absolute bottom-10 animate-bounce">
-            <ArrowRight className="w-8 h-8 rotate-90 text-white/70" aria-hidden="true" />
-          </div>
+          
         </section>
 
         {/* STATS SECTION - Trust Indicators for SEO */}
@@ -564,7 +562,7 @@ export default function Portfolio() {
                   <div className="flex justify-center mb-4 text-blue-300" aria-hidden="true">
                     {stat.icon}
                   </div>
-                  <div className="text-5xl font-black mb-2">{stat.value}</div>
+                  <div className="text-3xl font-black mb-2">{stat.value}</div>
                   <div className="text-xl text-white font-semibold mb-1">{stat.label}</div>
                   <div className="text-sm text-blue-200">{stat.desc}</div>
                 </article>
@@ -577,10 +575,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-white" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="services-heading" className="text-5xl md:text-6xl font-black text-blue-950 mb-4">
+              <h2 id="services-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
                 Our Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Comprehensive IT solutions for digital transformation and business growth
               </p>
             </header>
@@ -590,7 +588,7 @@ export default function Portfolio() {
                   <div className="mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
+                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                   <p className="text-white/90 leading-relaxed mb-4">{service.desc}</p>
                   <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, idx) => (
@@ -609,31 +607,41 @@ export default function Portfolio() {
         <section id="projects" className="py-24 px-6 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="projects-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="projects-heading" className="text-5xl md:text-6xl font-black text-blue-950 mb-4">
+              <h2 id="projects-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
                 Our Portfolio
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Showcasing 50+ successful projects across diverse industries and cutting-edge technologies
               </p>
             </header>
 
             {/* Category Filter */}
-            <nav className="flex flex-wrap justify-center gap-3 mb-12" aria-label="Project categories">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    activeCategory === cat
-                      ? "bg-blue-900 text-white shadow-lg scale-105"
-                      : "bg-white text-blue-900 border-2 border-blue-200 hover:border-blue-400 hover:shadow-md"
-                  }`}
-                  aria-pressed={activeCategory === cat}
-                >
-                  {cat === "all" ? "All Projects" : cat}
-                </button>
-              ))}
-            </nav>
+            <nav
+  className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12"
+  aria-label="Project categories"
+>
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setActiveCategory(cat)}
+      aria-pressed={activeCategory === cat}
+      className={`relative px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
+        ${
+          activeCategory === cat
+            ? "bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg ring-2 ring-blue-300 scale-105"
+            : "bg-white text-blue-900 border border-blue-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md"
+        }`}
+    >
+      {activeCategory === cat && (
+        <span className="absolute inset-0 rounded-full bg-blue-400/10 animate-pulse"></span>
+      )}
+      <span className="relative z-10">
+        {cat === "all" ? "All Projects" : cat}
+      </span>
+    </button>
+  ))}
+</nav>
+
 
             {/* Projects Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -682,10 +690,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-gradient-to-br from-blue-950 to-blue-900 text-white" aria-labelledby="why-choose-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="why-choose-heading" className="text-5xl md:text-6xl font-black mb-4">
+              <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-black mb-4">
                 Why Choose OpenSoftAI
               </h2>
-              <p className="text-xl text-blue-200 max-w-3xl mx-auto">
+              <p className="text-lg text-blue-200 max-w-3xl mx-auto">
                 What makes us the preferred IT partner for businesses worldwide
               </p>
             </header>
@@ -695,7 +703,7 @@ export default function Portfolio() {
                   <div className="text-blue-300 mb-4" aria-hidden="true">
                     {item.icon}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-blue-200 mb-3">{item.desc}</p>
                   <div className="inline-flex items-center gap-2 text-sm font-semibold text-blue-300">
                     <Sparkles className="w-4 h-4" aria-hidden="true" />
@@ -711,10 +719,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-white" aria-labelledby="tech-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="tech-heading" className="text-5xl md:text-6xl font-black text-blue-950 mb-4">
+              <h2 id="tech-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
                 Technologies We Master
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Leveraging cutting-edge technology stack for optimal performance and scalability
               </p>
             </header>
@@ -741,10 +749,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="process-heading" className="text-5xl md:text-6xl font-black text-blue-950 mb-4">
+              <h2 id="process-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
                 Our Development Process
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 A proven methodology that ensures quality delivery and client satisfaction
               </p>
             </header>
@@ -756,7 +764,7 @@ export default function Portfolio() {
                       {step.icon}
                     </div>
                     <div className="text-sm font-bold text-blue-600 mb-2">Step {i + 1}</div>
-                    <h3 className="text-xl font-bold text-blue-950 mb-2">{step.title}</h3>
+                    <h3 className="text-lg font-bold text-blue-950 mb-2">{step.title}</h3>
                     <p className="text-sm text-gray-600">{step.desc}</p>
                   </div>
                   {i < processSteps.length - 1 && (
@@ -772,14 +780,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-gradient-to-r from-blue-900 to-blue-950 text-white" aria-labelledby="testimonial-heading">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">
-              <div className="flex gap-1" aria-label="5 star rating">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-8 h-8 fill-yellow-400 text-yellow-400" aria-hidden="true" />
-                ))}
-              </div>
+            
             </div>
             <blockquote>
-              <p className="text-2xl md:text-3xl font-light italic mb-6 leading-relaxed">
+              <p className="text-2xl md:text-xl font-light italic mb-6 leading-relaxed">
                 "I tried a few developers, but none were able to deliver the project on time. Then I came across OpenSoftAI; they were able to complete the project on time. Not to mention there were no bugs when they delivered the project."
               </p>
               <footer>
@@ -795,13 +799,11 @@ export default function Portfolio() {
         {/* CTA SECTION - Conversion Optimized */}
         <section id="contact" className="py-24 px-6 bg-gradient-to-br from-blue-600 to-blue-950 text-white" aria-labelledby="cta-heading">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <Rocket className="w-16 h-16 text-blue-200" aria-hidden="true" />
-            </div>
-            <h2 id="cta-heading" className="text-5xl md:text-6xl font-black mb-6">
+            
+            <h2 id="cta-heading" className="text-3xl md:text-4xl font-black mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-2xl text-blue-200 mb-4">Let's build something amazing together</p>
+            <p className="text-xl text-blue-200 mb-4">Let's build something amazing together</p>
             <p className="text-lg text-blue-300 mb-12">
               Get a free consultation • Quick response time • Transparent pricing
             </p>

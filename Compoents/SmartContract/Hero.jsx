@@ -31,7 +31,7 @@ export default function BlockchainHero() {
               id="blockchain-hero-heading"
               className="text-3xl lg:text-4xl font-bold leading-tight"
             >
-              Crypto Wallet & Exchange Platform Development – Secure, Scalable, and Future-Ready
+             Smart Contract Development Services  Secure, Auditable, and Business-Ready
             </h1>
 
            

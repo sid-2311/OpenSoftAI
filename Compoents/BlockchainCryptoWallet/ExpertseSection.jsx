@@ -48,20 +48,7 @@ export default function CryptoExpertiseSection() {
 
   return (
     <>
-      <Head>
-        <title>Deep Expertise in Crypto Infrastructure Development | OpenSoft AI</title>
-        <meta 
-          name="description" 
-          content="OpenSoft AI specializes in building secure crypto wallets and exchange platforms. Billions in transactions, millions of users, and flawless operation through market cycles." 
-        />
-        <meta 
-          name="keywords" 
-          content="crypto infrastructure, blockchain development, crypto wallet development, exchange platform, institutional trading, custodial wallet, DeFi platform" 
-        />
-        <meta property="og:title" content="Deep Expertise in Crypto Infrastructure Development | OpenSoft AI" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourdomain.com/expertise" />
-      </Head>
+     
 
       <section className="relative py-24 px-4 bg-gradient-to-b from-white via-blue-50 to-white overflow-hidden">
         {/* Animated background elements */}
@@ -78,7 +65,7 @@ export default function CryptoExpertiseSection() {
           <div className="text-center mb-20">
             
             
-            <h2 className="text-4xl md:text-5xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight">
               Deep Expertise in
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600">
@@ -86,7 +73,7 @@ export default function CryptoExpertiseSection() {
               </span>
             </h2>
             
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Building secure crypto wallets and exchange platforms isn't just our business – it's our specialty
             </p>
           </div>

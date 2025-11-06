@@ -3,8 +3,8 @@ import RefundPolicy from "@/Compoents/refund/Refund";
 
 
 export const metadata = {
-  title: "OpenSoftAI Refund Policy | Cancellations & Payment Terms",
-  description:"Review OpenSoftAI’s refund and cancellation policy for software and AI services. Learn when refunds apply, non-refundable cases, and company-initiated cancellation terms.",
+  title: "Refund Policy | Opensoft AI – Secure & Transparent Services",
+  description:"Read Opensoft AI’s Refund Policy to learn how we handle payments, cancellations, and service refunds with transparency and customer satisfaction in mind.",
   keywords: [
     "OpenSoftAI refund policy",
     "OpenSoftAI cancellation policy",
@@ -16,8 +16,8 @@ export const metadata = {
     "project cancellation OpenSoftAI",
   ],
   openGraph: {
-    title: "OpenSoftAI Refund Policy | Cancellations & Payment Terms",
-    description:"Review OpenSoftAI’s refund and cancellation policy for software and AI services. Learn when refunds apply, non-refundable cases, and company-initiated cancellation terms.",
+    title: "Refund Policy | Opensoft AI – Secure & Transparent Services",
+    description:"Read Opensoft AI’s Refund Policy to learn how we handle payments, cancellations, and service refunds with transparency and customer satisfaction in mind.",
     url: "https://opensoftai.com/refund-policy",
     type: "website",
     

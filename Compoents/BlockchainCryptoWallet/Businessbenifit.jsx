@@ -59,11 +59,11 @@ export default function BusinessBenefits() {
         <header className="text-center mb-16">
           <h2
             id="business-benefits-heading"
-            className="text-4xl font-bold text-gray-900 mb-4"
+            className="text-4xl md:text-4xl font-bold text-gray-900 mb-4"
           >
             The Business Benefits That Drive Success
           </h2>
-          <p className="max-w-3xl mx-auto text-lg text-gray-600 mb-6">
+          <p className="max-w-4xl mx-auto text-md text-gray-600 mb-6">
             Our crypto platform solutions are built to deliver unmatched
             security, scalability, compliance, and growth potential — empowering
             you to build trust, expand globally, and stay ahead of the

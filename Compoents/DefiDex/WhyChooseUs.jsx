@@ -116,7 +116,7 @@ export default function WhyChooseUsSection() {
             </span>{" "}
             for DeFi Development
           </h2>
-          <p className="max-w-4xl mx-auto text-slate-600 text-lg">
+          <p className="max-w-4xl mx-auto text-slate-600 text-md">
             We’ve been building in DeFi since before it became a movement.
             OpenSoft AI brings deep technical expertise and real-world security
             experience to create transparent, sustainable, and user-friendly
@@ -174,11 +174,11 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">
                     {reason.title}
                   </h3>
 
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                  <p className="text-slate-600 text-md leading-relaxed mb-6">
                     {reason.description}
                   </p>
 

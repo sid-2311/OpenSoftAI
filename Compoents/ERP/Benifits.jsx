@@ -70,8 +70,7 @@ export default function ERPBenefitsSection() {
         <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50 to-transparent"></div>
         
         {/* Animated circles */}
-        <div className="absolute top-20 right-20 w-64 h-64 border-2 border-blue-200 rounded-full animate-pulse opacity-30"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 border-2 border-blue-300 rounded-full animate-pulse opacity-20" style={{ animationDelay: '1s' }}></div>
+       
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -138,7 +137,7 @@ export default function ERPBenefitsSection() {
                       </span>
                     </div>
                     
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h3 className="text-xl md:text-xl font-bold text-gray-900 mb-6 leading-tight">
                       {benefit.title}
                     </h3>
                     

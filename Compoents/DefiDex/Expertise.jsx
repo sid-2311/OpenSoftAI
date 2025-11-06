@@ -119,7 +119,7 @@ export default function DeFiExpertiseSection() {
             </span>
           </h2>
 
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Battle-tested development process across different DeFi verticals with proven results
           </p>
         </div>
@@ -199,12 +199,12 @@ export default function DeFiExpertiseSection() {
         {/* What We've Learned Section */}
         <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-10 mb-16 shadow-2xl">
           <div className="flex items-start mb-6">
-            <div className="flex-shrink-0 w-14 h-14 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+            <div className="flex-shrink-0 w-14 h-14 bg-transparent bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
               <TrendingUp className="w-7 h-7 text-white" />
             </div>
             <div>
               <h3 className="text-3xl font-bold text-white mb-4">What We've Learned</h3>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-lg text-blue-100 leading-relaxed">
                 The most successful DeFi projects aren't necessarily the most complex ones – they're the ones that solve real problems elegantly while maintaining the highest security standards.
               </p>
             </div>
@@ -214,7 +214,7 @@ export default function DeFiExpertiseSection() {
             {principles.map((principle, idx) => {
               const Icon = principle.icon;
               return (
-                <div key={idx} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
+                <div key={idx} className="bg-transparent bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:bg-opacity-20 transition-all duration-300">
                   <Icon className="w-8 h-8 text-blue-200 mb-4" />
                   <h4 className="text-lg font-bold text-white mb-2">{principle.title}</h4>
                   <p className="text-blue-100 text-sm">{principle.description}</p>

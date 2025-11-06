@@ -8,8 +8,8 @@ import WhyChooseUs from "@/Compoents/AiDevelopment/WhyChoose";
 
 
 export const metadata = {
-  title: "AI Software Development Services | Custom AI Company",
-  description:"Unlock the power of artificial intelligence with our custom AI software development services. Build smart, scalable, and secure AI solutions for your business.",
+  title: "Enterprise AI Development & Automation Services| opensoft AI",
+  description:"Opensoft AI provides enterprise-grade AI development and automation solutions, empowering businesses with advanced technology and intelligent innovation.",
   keywords: [
     "AI development",
     "machine learning",
@@ -19,8 +19,8 @@ export const metadata = {
     "AI solutions",
   ],
   openGraph: {
-    title: "AI Software Development Services | Custom AI Company",
-    description: "Unlock the power of artificial intelligence with our custom AI software development services. Build smart, scalable, and secure AI solutions for your business.",
+    title: "Enterprise AI Development & Automation Services| opensoft AI",
+    description: "Opensoft AI provides enterprise-grade AI development and automation solutions, empowering businesses with advanced technology and intelligent innovation.",
     url: "https://opensoftai.com/ai-development-company",
     images: [
       {

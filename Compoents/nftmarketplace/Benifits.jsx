@@ -82,16 +82,11 @@ export default function BusinessBenefitsSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-5 py-2 rounded-full bg-blue-50 border border-blue-200 mb-6">
-            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></div>
-            <span className="text-blue-700 text-sm font-semibold">
-              NFT Marketplace Impact
-            </span>
-          </div>
+         
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 mb-6">
             Business Benefits That Drive{" "}
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
               Real Results
             </span>
           </h2>

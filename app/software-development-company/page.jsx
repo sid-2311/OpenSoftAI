@@ -6,8 +6,8 @@ import SoftwareIndustries from "@/Compoents/Software/SoftwareIndustries";
 import SoftwareServices from "@/Compoents/Software/SoftwareServices";
 
 export const metadata = {
-  title: "Custom AI Software Development Company",
-  description: "At OpenSoft AI, we provide custom software development services tailored to your business — web apps, mobile apps, enterprise systems, SaaS, ERP, inventory & HR software. Build solutions that scale, integrate, and deliver measurable value.",
+  title: "Software Development Solution Company in India | Opensoft AI",
+  description: "Opensoft AI is a leading software development  solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
   keywords: [
     "custom software development",
     "enterprise software solutions",
@@ -19,8 +19,8 @@ export const metadata = {
     "software engineering",
   ],
   openGraph: {
-    title: "Custom AI Software Development Company",
-    description: "At OpenSoft AI, we provide custom software development services tailored to your business — web apps, mobile apps, enterprise systems, SaaS, ERP, inventory & HR software. Build solutions that scale, integrate, and deliver measurable value.",
+    title: "Software Development Solution Company in India | Opensoft AI",
+    description: "Opensoft AI is a leading software development  solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
     url: "https://opensoftai.com/software-development-company",
     type: "website",
     images: [

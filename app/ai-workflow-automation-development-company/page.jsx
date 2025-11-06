@@ -10,8 +10,8 @@ import WhyChooseUsSection from "@/Compoents/WorkflowAutomation/WhyChoose";
 
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
-  title: "AI Workflow Automation Development Company",
-  description: "OpenSoftAI is a leading AI workflow automation development company helping businesses streamline operations, reduce manual tasks, and boost productivity with intelligent automation solutions",
+  title: "Automate Smarter with AI Workflow Solutions | Opensoft AI",
+  description: "Boost your business efficiency with Opensoft AI’s workflow automation services. Harness AI to streamline operations, reduce costs, and enhance productivity.",
   keywords: [
     "AI workflow automation",
     "intelligent automation",
@@ -26,8 +26,8 @@ export const metadata = {
     canonical: "https://opensoftai.com/ai-workflow-automation-development-company", // ✅ Canonical URL
   },
   openGraph: {
-    title: "AI Workflow Automation Development Company",
-    description: "OpenSoftAI is a leading AI workflow automation development company helping businesses streamline operations, reduce manual tasks, and boost productivity with intelligent automation solutions",
+    title: "Automate Smarter with AI Workflow Solutions | Opensoft AI",
+    description: "Boost your business efficiency with Opensoft AI’s workflow automation services. Harness AI to streamline operations, reduce costs, and enhance productivity.",
     url: "https://opensoftai.com/ai-workflow-automation-development-company",
    
     locale: "en_US",

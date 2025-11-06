@@ -38,24 +38,7 @@ export default function CryptoTrustSection() {
 
   return (
     <>
-      <Head>
-        <title>Building Trust in the Digital Asset Economy | OpenSoft AI</title>
-        <meta 
-          name="description" 
-          content="OpenSoft AI develops secure crypto wallets and exchange platforms with fortress-level security, regulatory compliance, and seamless user experience. Trusted since Bitcoin's early days." 
-        />
-        <meta 
-          name="keywords" 
-          content="crypto wallet development, cryptocurrency exchange platform, blockchain security, digital asset management, crypto compliance, secure wallet solution" 
-        />
-        <meta property="og:title" content="Building Trust in the Digital Asset Economy | OpenSoft AI" />
-        <meta 
-          property="og:description" 
-          content="Expert crypto wallet and exchange development with enterprise-grade security and compliance since Bitcoin's early days." 
-        />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourdomain.com/crypto-solutions" />
-      </Head>
+      
 
       <section className="relative min-h-screen py-20 px-4 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 overflow-hidden">
         {/* Animated gradient orbs */}
@@ -73,7 +56,7 @@ export default function CryptoTrustSection() {
           <div className="text-center mb-20">
            
             
-            <h1 className="text-5xl md:text-4xl lg:text-5xl font-black text-white mb-8 leading-tight">
+            <h1 className="text-5xl md:text-4xl lg:text-4xl font-black text-white mb-8 leading-tight">
               Building Trust in the {" "}
             
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-gradient">
@@ -81,7 +64,7 @@ export default function CryptoTrustSection() {
               </span>
             </h1>
             
-            <p className="text-lg text-blue-200 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-blue-200 max-w-3xl mx-auto leading-relaxed">
               Where cutting-edge technology meets bulletproof security to create the future of cryptocurrency platforms
             </p>
           </div>

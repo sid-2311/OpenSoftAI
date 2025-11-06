@@ -58,7 +58,7 @@ export default function TestimonialsSection({
               </div>
             </div>
 
-            {/* Fixed-size, responsive container */}
+            {/* Image container */}
             <div
               className="
                 relative 
@@ -85,13 +85,19 @@ export default function TestimonialsSection({
                     transition={{ duration: 0.6 }}
                     className="w-full h-full"
                   >
-                    <Image
-                      src={image}
-                      alt={alt}
-                      fill
-                      className="object-cover rounded-xl"
-                      priority
-                    />
+                    {image ? (
+                      <Image
+                        src={image}
+                        alt={alt || name || "Client image"}
+                        fill
+                        className="object-cover rounded-xl"
+                        priority
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-800 text-gray-300 text-sm">
+                        No image available
+                      </div>
+                    )}
                   </motion.div>
                 </AnimatePresence>
               </div>
@@ -143,13 +149,19 @@ export default function TestimonialsSection({
 
             {/* Author */}
             <div className="flex items-center gap-4">
-              <Image
-                src={image}
-                alt={alt}
-                width={48}
-                height={48}
-                className="w-12 h-12 rounded-full object-cover"
-              />
+              {image ? (
+                <Image
+                  src={image}
+                  alt={alt || name || "Client image"}
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+              ) : (
+                <div className="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white text-xs">
+                  No Img
+                </div>
+              )}
               <div>
                 <h4 className="font-semibold text-lg">{name}</h4>
                 <p className="text-gray-400">{company}</p>

@@ -10,8 +10,8 @@ import WhyChooseUs from "@/Compoents/Blockchain/WhyChoose";
 
 
 export const metadata = {
-  title: "Enterprise Blockchain Development Company | Custom DLT Solutions",
-  description: "We provide enterprise-grade custom blockchain development services. From DeFi apps to supply chain and identity, we build secure, scalable blockchain solutions.",
+  title: "Build Secure Blockchain Solutions for Business | Opensoft AI",
+  description: "Transform your business with Opensoft AI’s blockchain solutions. We build secure, decentralized, and scalable systems to power trust and innovation.",
   keywords: [
     "blockchain development",
     "smart contracts",
@@ -23,8 +23,8 @@ export const metadata = {
     "distributed ledger",
   ],
   openGraph: {
-  title: "Enterprise Blockchain Development Company | Custom DLT Solutions",
-     description: "We provide enterprise-grade custom blockchain development services. From DeFi apps to supply chain and identity, we build secure, scalable blockchain solutions.",
+  title: "Build Secure Blockchain Solutions for Business | Opensoft AI",
+     description: "Transform your business with Opensoft AI’s blockchain solutions. We build secure, decentralized, and scalable systems to power trust and innovation.",
 
     url: "https://opensoftai.com/blockchain-development-service",
     

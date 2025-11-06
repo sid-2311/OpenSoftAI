@@ -110,14 +110,14 @@ export default function WhyChooseUsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               OpenSoft AI
             </span>{" "}
             for Smart Contract Development
           </h2>
-          <p className="max-w-3xl mx-auto text-slate-600 text-lg">
+          <p className="max-w-3xl mx-auto text-slate-600 text-md">
             We've been building smart contracts since before the term “DeFi”
             existed, and our experience shows in the quality and security of our
             work. We've navigated blockchain upgrades, market cycles, and
@@ -178,11 +178,11 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">
                     {reason.title}
                   </h3>
 
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                  <p className="text-slate-600 text-md leading-relaxed mb-6">
                     {reason.description}
                   </p>
 

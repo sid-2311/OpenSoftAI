@@ -67,17 +67,14 @@ export default function SmartContractCTA() {
             </div>
 
             <div className="relative z-10">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm font-semibold mb-6">
-                <Rocket className="w-4 h-4" />
-                <span>Let's Build Together</span>
-              </div>
+             
 
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                Ready to Build Smart Contracts<br />
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+                Ready to Build Smart Contracts
                 That <span className="text-blue-200">Actually Work?</span>
               </h2>
 
-              <p className="text-blue-100 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+              <p className="text-blue-100 text-lg md:text-md max-w-3xl mx-auto leading-relaxed">
                 Smart contracts are the foundation of every successful blockchain project, but they're also 
                 the most critical point of failure if not done correctly.
               </p>
@@ -200,22 +197,7 @@ export default function SmartContractCTA() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-8 text-center">
-          <div className="inline-flex items-center gap-6 text-gray-600 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>Comprehensive Smart Contract Development</span>
-            </div>
-            <div className="hidden md:flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>Professional Auditing Services</span>
-            </div>
-            <div className="hidden lg:flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span>10+ Years of Expertise</span>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
