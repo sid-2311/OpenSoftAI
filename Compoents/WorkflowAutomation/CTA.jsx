@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -25,29 +26,23 @@ export default function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <a
-            href="#process-assessment"
+          <Link
+            href="/contact-us"
             className="group relative inline-flex items-center justify-center px-8 py-4 rounded-3xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
           >
             <span className="relative z-10">Get Free Process Assessment</span>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
+          </Link>
 
-          <a
-            href="#schedule-demo"
+          <Link
+            href="/contact-us"
             className="group relative inline-flex items-center justify-center px-8 py-4 rounded-3xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 overflow-hidden"
           >
             <span className="relative z-10">Schedule Automation Demo</span>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
+          </Link>
 
-          <a
-            href="#download-guide"
-            className="group relative inline-flex items-center justify-center px-8 py-4 rounded-3xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 overflow-hidden"
-          >
-            <span className="relative z-10">Download Workflow Guide</span>
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
-          </a>
+        
         </div>
 
         {/* Optional Footer CTA Text */}

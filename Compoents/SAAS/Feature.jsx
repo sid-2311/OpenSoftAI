@@ -112,16 +112,14 @@ export default function SaaSFeaturesSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             What Makes{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
               SaaS Development
             </span>{" "}
             Different
           </h2>
-          <p className="text-lg text-indigo-200 mb-4">
-            (And Why It Matters)
-          </p>
+        
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto rounded-full"></div>
         </div>
 

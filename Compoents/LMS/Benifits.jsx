@@ -123,7 +123,7 @@ export default function LMSImpactSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Business Benefits for{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Educational Organizations
@@ -204,7 +204,7 @@ export default function LMSImpactSection() {
 
         {/* Pitfalls Section */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold mb-4">
             Why Most Online Learning Platforms{" "}
             <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               Miss the Mark

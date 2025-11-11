@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { Calendar, MessageSquare, Smartphone, ArrowRight, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ADSCTASection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,13 +22,13 @@ export default function ADSCTASection() {
       icon: MessageSquare,
       title: 'Discuss Your App Concept',
       description: 'Share your ideas with us',
-      gradient: 'from-indigo-600 to-purple-700'
+      gradient: 'from-blue-600 to-blue-700'
     },
     {
       icon: Smartphone,
       title: 'View Our Mobile Portfolio',
       description: 'Explore previous projects',
-      gradient: 'from-purple-600 to-pink-700'
+      gradient: 'from-blue-600 to-blue-700'
     }
   ];
 
@@ -57,27 +58,20 @@ export default function ADSCTASection() {
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></div>
 
             {/* Sparkle icon */}
-            <div className="flex justify-center mb-8">
-              <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-xl animate-pulse">
-                  <Sparkles className="w-10 h-10 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-600 rounded-2xl blur-xl opacity-50"></div>
-              </div>
-            </div>
+           
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
               Ready to Build Your{' '}
-              <span className="bg-gradient-to-r from-indigo-300 to-purple-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
                 Mobile App?
               </span>
             </h2>
 
-            <p className="text-xl text-indigo-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
+            <p className="text-lg text-indigo-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
               The mobile app landscape is competitive, but there's always room for applications that solve real problems elegantly and provide genuine value to users.
             </p>
 
-            <p className="text-lg text-indigo-200 text-center max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-indigo-200 text-center max-w-3xl mx-auto leading-relaxed">
               Turn your idea into a powerful mobile app with <span className="text-indigo-300 font-semibold">OpenSoft AI</span>. Contact us today to discover how expert mobile development can bring your vision to life and build sustainable business value.
             </p>
           </div>
@@ -125,7 +119,7 @@ export default function ADSCTASection() {
                         {button.description}
                       </p>
                       <div className="flex items-center gap-2 text-indigo-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <span className="text-sm">Get Started</span>
+                        <Link href="/contact-us" className="text-sm">Get Started</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>
@@ -135,26 +129,12 @@ export default function ADSCTASection() {
             </div>
 
             {/* Trust Badge */}
-            <div className="flex justify-center">
-              <div className="flex items-center gap-3 bg-indigo-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-indigo-400/30">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 border-2 border-white/20"></div>
-                  ))}
-                </div>
-                <span className="text-sm text-indigo-100 font-semibold">Trusted by 500+ startups & enterprises</span>
-              </div>
-            </div>
+           
           </div>
         </div>
 
         {/* Online Badge */}
-        <div className={`text-center mt-8 transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 bg-indigo-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-indigo-400/30">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm text-indigo-100 font-semibold">Our app development team is online and ready to help</span>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

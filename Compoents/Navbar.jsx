@@ -1,14 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Link from "next/link";
-import { Send, Menu, X, ChevronDown, ChevronUp } from "lucide-react";
-import Image from "next/image";
+import { Send, Menu, X, ChevronRight, Plus, Minus } from "lucide-react";
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    const [privacyOpen, setPrivacyOpen] = useState(false);
-    const [aiMenuOpen, setAiMenuOpen] = useState(false);
-    const [blockchainMenuOpen, setBlockchainMenuOpen] = useState(false);
+    const [expandedMenu, setExpandedMenu] = useState(null);
 
     const mobileMenuItems = [
         {
@@ -28,12 +24,11 @@ const Navbar = () => {
             key: "blockchain",
             label: "Blockchain Development",
             subItems: [
-                { label: "Smart Contract Development", to: "/smart-contract-development-company" },
-                { label: "DApp Development", to: "/dapp-development-company" },
-                { label: "NFT Marketplace Development", to: "/nft-marketplace-development-company" },
-                { label: "Crypto Exchange Development", to: "/crypto-exchange-development-company" },
-                { label: "DeFi Development", to: "/defi-development-company" },
-                { label: "Blockchain Consulting", to: "/blockchain-consulting-company" },
+                { label: "Crypto Wallet & Exchange Platform", to: "/crypto-wallet-exchange-platform-development" },
+                { label: "Token Development", to: "/token-development" },
+                { label: "DeFi DEX Development", to: "/defi-dex-development" },
+                { label: "Smart Contract Development", to: "/smart-contract-development" },
+                { label: "NFT Marketplace Development", to: "/nft-marketplace-development" },
             ],
         },
         { key: "software", label: "Software Development", to: "/software-development-company" },
@@ -41,306 +36,229 @@ const Navbar = () => {
         { key: "portfolio", label: "Portfolio", to: "/portfolio" },
     ];
 
+    const handleMenuToggle = (key) => {
+        setExpandedMenu(expandedMenu === key ? null : key);
+    };
+
     return (
         <nav className="w-full bg-white sticky top-0 z-50 shadow">
-            <div className="flex items-center justify-between mx-auto max-md:px-2 max-md:py-2 py-0">
+            <div className="flex items-center justify-between mx-auto max-md:px-4 max-md:py-3 py-0">
                 {/* Logo */}
-                <Link href="/" className="flex items-center space-x-2 ml-2">
-                    <Image src="/images/opensoftai-logo.svg" height={100} width={100} alt="OpenSoftAI Logo" />
-                </Link>
+                <a href="/" className="flex items-center space-x-2 ml-2">
+                    <img src="/images/opensoftai-logo.svg" height={100} width={100} alt="OpenSoftAI Logo" />
+                </a>
 
                 {/* Desktop Menu */}
                 <ul className="hidden lg:flex items-center space-x-8 font-semibold text-gray-800 uppercase relative">
                     {/* AI & Automation Dropdown */}
-                    {/* <li className="group relative">
-            <Link href="/ai-development-company" className="hover:text-[#016CD3] inline-block py-5">
-              AI & Automation
-            </Link>
-            <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md p-6 w-[600px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
-              <h3 className="text-lg font-bold text-[#016CD3] mb-4 border-b pb-2">
-                AI & Automation Services
-              </h3>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                <Link href="/ai-development-service" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Development Services</Link>
-                <Link href="/ai-calling-agent-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Calling Agent Development</Link>
-                <Link href="/ai-chatbot-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Chatbot Development</Link>
-                <Link href="/ai-copilot-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Copilot Development</Link>
-                <Link href="/ai-consulting-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Consulting</Link>
-                <Link href="/genrative-ai-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">Generative AI</Link>
-                <Link href="/ai-workflow-automation-development-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">AI Workflow Automation</Link>
-              </div>
-            </div>
-          </li> */}
-
-                    {/* AI & Automation Dropdown */}
                     <li className="group relative">
-                        <Link
+                        <a
                             href="/ai-development-company"
                             className="hover:text-[#016CD3] inline-block py-5"
                         >
                             AI & Automation
-                        </Link>
+                        </a>
 
-                        {/* Dropdown Panel */}
                         <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md w-[750px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
                             <div className="flex">
-
-                                {/* Left Vertical Label */}
                                 <div className="bg-gray-100 w-16 flex items-center justify-center rounded-l-md">
                                     <h3 className="text-gray-400 font-semibold text-[18px] tracking-widest rotate-[-90deg] whitespace-nowrap">
                                         AI & AUTOMATION
                                     </h3>
                                 </div>
-
-                                {/* Right Links Section */}
                                 <div className="p-8 grid grid-cols-2 gap-x-12 gap-y-5 flex-1">
-                                    <Link href="/ai-development-service" className="hover:text-[#016CD3] transition">AI Development Services</Link>
-                                    <Link href="/ai-calling-agent-development-company" className="hover:text-[#016CD3] transition">AI Calling Agent Development</Link>
-                                    <Link href="/ai-chatbot-development-company" className="hover:text-[#016CD3] transition">AI Chatbot Development</Link>
-                                    <Link href="/ai-copilot-development-company" className="hover:text-[#016CD3] transition">AI Copilot Development</Link>
-                                    <Link href="/ai-consulting-development-company" className="hover:text-[#016CD3] transition">AI Consulting</Link>
-                                    <Link href="/genrative-ai-development-company" className="hover:text-[#016CD3] transition">Generative AI</Link>
-                                    <Link href="/ai-workflow-automation-development-company" className="hover:text-[#016CD3] transition">AI Workflow Automation</Link>
+                                    <a href="/ai-development-service" className="hover:text-[#016CD3] transition">AI Development Services</a>
+                                    <a href="/ai-calling-agent-development-company" className="hover:text-[#016CD3] transition">AI Calling Agent Development</a>
+                                    <a href="/ai-chatbot-development-company" className="hover:text-[#016CD3] transition">AI Chatbot Development</a>
+                                    <a href="/ai-copilot-development-company" className="hover:text-[#016CD3] transition">AI Copilot Development</a>
+                                    <a href="/ai-consulting-development-company" className="hover:text-[#016CD3] transition">AI Consulting</a>
+                                    <a href="/genrative-ai-development-company" className="hover:text-[#016CD3] transition">Generative AI</a>
+                                    <a href="/ai-workflow-automation-development-company" className="hover:text-[#016CD3] transition">AI Workflow Automation</a>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-
-
                     {/* Blockchain Dropdown */}
-                    {/* <li className="group relative">
-                        <Link href="/blockchain-development-service" className="hover:text-[#016CD3] inline-block py-5">
-                            Blockchain Development
-                        </Link>
-                        <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md p-6 w-[600px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
-                            <h3 className="text-lg font-bold text-[#016CD3] mb-4 border-b pb-2">
-                                Blockchain Services
-                            </h3>
-                            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                                <Link href="/crypto-wallet-exchange-platform-development" className="block px-4 py-2 hover:bg-gray-100 rounded transition">Crypto Wallet & exchange platform</Link>
-                                <Link href="/token-development" className="block px-4 py-2 hover:bg-gray-100 rounded transition">Token Development</Link>
-                                <Link href="/defi-dex-development" className="block px-4 py-2 hover:bg-gray-100 rounded transition">defi dex Development</Link>
-                                <Link href="/smart-contract-development" className="block px-4 py-2 hover:bg-gray-100 rounded transition">Smart contract Development</Link>
-                                <Link href="/nft-marketplace-development" className="block px-4 py-2 hover:bg-gray-100 rounded transition">nft marketplace Development</Link>
-                                <Link href="/blockchain-consulting-company" className="block px-4 py-2 hover:bg-gray-100 rounded transition">Blockchain Consulting</Link>
-                            </div>
-                        </div>
-                    </li> */}
-
                     <li className="group relative">
-                        <Link
+                        <a
                             href="/blockchain-development-service"
                             className="hover:text-[#016CD3] inline-block py-5"
                         >
                             Blockchain Development
-                        </Link>
+                        </a>
 
-                        {/* Dropdown Panel */}
                         <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md w-[750px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
                             <div className="flex">
-
-                                {/* Left Vertical Label */}
                                 <div className="bg-gray-100 w-16 flex items-center justify-center rounded-l-md">
                                     <h3 className="text-gray-400 font-semibold text-[18px] tracking-widest rotate-[-90deg] whitespace-nowrap">
                                         BLOCKCHAIN
                                     </h3>
                                 </div>
-
-                                {/* Right Content Section */}
                                 <div className="p-8 flex-1">
-                                    {/* <h3 className="text-lg font-bold text-[#016CD3] mb-6 border-b pb-2">
-                                        Blockchain Services
-                                    </h3> */}
-
                                     <div className="grid grid-cols-2 gap-x-12 gap-y-4">
-                                        <Link
-                                            href="/crypto-wallet-exchange-platform-development"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
+                                        <a href="/crypto-wallet-exchange-platform-development" className="block hover:text-[#016CD3] transition">
                                             Crypto Wallet & Exchange Platform
-                                        </Link>
-
-                                        <Link
-                                            href="/token-development"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
+                                        </a>
+                                        <a href="/token-development" className="block hover:text-[#016CD3] transition">
                                             Token Development
-                                        </Link>
-
-                                        <Link
-                                            href="/defi-dex-development"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
+                                        </a>
+                                        <a href="/defi-dex-development" className="block hover:text-[#016CD3] transition">
                                             DeFi DEX Development
-                                        </Link>
-
-                                        <Link
-                                            href="/smart-contract-development"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
+                                        </a>
+                                        <a href="/smart-contract-development" className="block hover:text-[#016CD3] transition">
                                             Smart Contract Development
-                                        </Link>
-
-                                        <Link
-                                            href="/nft-marketplace-development"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
+                                        </a>
+                                        <a href="/nft-marketplace-development" className="block hover:text-[#016CD3] transition">
                                             NFT Marketplace Development
-                                        </Link>
-
-                                        {/* Uncomment if needed */}
-                                        {/* <Link
-                                            href="/blockchain-consulting-company"
-                                            className="block hover:text-[#016CD3] transition"
-                                        >
-                                            Blockchain Consulting
-                                        </Link> */}
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </li>
 
-
                     <li>
-                        <Link href="/software-development-company" className="hover:text-[#016CD3] py-5 inline-block">
+                        <a href="/software-development-company" className="hover:text-[#016CD3] py-5 inline-block">
                             Software Development
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link href="/about-us" className="hover:text-[#016CD3] py-5 inline-block">
+                        <a href="/about-us" className="hover:text-[#016CD3] py-5 inline-block">
                             About
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link href="/portfolio" className="hover:text-[#016CD3] py-5 inline-block">
+                        <a href="/portfolio" className="hover:text-[#016CD3] py-5 inline-block">
                             Portfolio
-                        </Link>
+                        </a>
                     </li>
                 </ul>
 
                 {/* Desktop Contact Button */}
                 <div className="hidden lg:flex relative bg-[#016CD3] px-10 py-8 items-center justify-center clip-slant">
-                    <Link
+                    <a
                         href="/contact-us"
                         className="group flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#016CD3] font-semibold shadow-md hover:bg-gray-100 transition whitespace-nowrap"
                     >
                         CONTACT US{" "}
                         <Send size={16} className="group-hover:translate-x-3 transition-all duration-300 text-[#107EFF]" />
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Hamburger */}
                 <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="lg:hidden cursor-pointer"
+                    className="lg:hidden cursor-pointer z-50 relative"
                 >
-                    {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    {mobileMenuOpen ? (
+                        <X size={28} className="text-[#016CD3]" />
+                    ) : (
+                        <Menu size={28} className="text-[#016CD3]" />
+                    )}
                 </button>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile Menu Overlay */}
             {mobileMenuOpen && (
-                <div className="lg:hidden fixed top-0 left-0 w-[80vw] h-full bg-[#016CD3] text-white z-50 p-4 overflow-y-auto transition-transform transform translate-x-0">
-                    <ul className="space-y-4 mt-0 uppercase">
-                        {mobileMenuItems.map((item, idx) => (
-                            <React.Fragment key={item.key}>
-                                {item.subItems ? (
-                                    <div>
-                                        <div
-                                            onClick={() =>
-                                                item.key === "ai"
-                                                    ? setAiMenuOpen(aiMenuOpen === item.key ? false : item.key)
-                                                    : setBlockchainMenuOpen(
-                                                        blockchainMenuOpen === item.key ? false : item.key
-                                                    )
-                                            }
-                                            className="flex justify-between items-center cursor-pointer font-semibold"
+                <div
+                    className="lg:hidden fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
+                    onClick={() => setMobileMenuOpen(false)}
+                />
+            )}
+
+            {/* Modern Mobile Menu */}
+            <div
+                className={`lg:hidden fixed top-0 right-0 w-[85vw] max-w-[400px] h-full bg-gradient-to-br from-[#016CD3] to-[#0152a8] z-40 shadow-2xl transition-transform duration-300 ease-out ${
+                    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                }`}
+            >
+                <div className="h-full flex flex-col">
+                    {/* Header */}
+                    <div className="px-6 py-8 border-b border-white/10">
+                        <h2 className="text-2xl font-bold text-white">Menu</h2>
+                        <p className="text-white/70 text-sm mt-1">Explore our services</p>
+                    </div>
+
+                    {/* Menu Items */}
+                    <div className="flex-1 overflow-y-auto px-6 py-4">
+                        <ul className="space-y-2">
+                            {mobileMenuItems.map((item) => (
+                                <li key={item.key}>
+                                    {item.subItems ? (
+                                        <div className="bg-white/5 rounded-lg overflow-hidden backdrop-blur-sm">
+                                            <button
+                                                onClick={() => handleMenuToggle(item.key)}
+                                                className="w-full flex items-center justify-between px-4 py-4 text-white font-semibold hover:bg-white/10 transition-all"
+                                            >
+                                                <span className="text-left">{item.label}</span>
+                                                {expandedMenu === item.key ? (
+                                                    <Minus size={20} className="flex-shrink-0 ml-2" />
+                                                ) : (
+                                                    <Plus size={20} className="flex-shrink-0 ml-2" />
+                                                )}
+                                            </button>
+
+                                            <div
+                                                className={`overflow-hidden transition-all duration-300 ${
+                                                    expandedMenu === item.key ? "max-h-[500px]" : "max-h-0"
+                                                }`}
+                                            >
+                                                <div className="px-4 pb-3 space-y-1 bg-black/10">
+                                                    {item.subItems.map((sub) => (
+                                                        <a
+                                                            key={sub.to}
+                                                            href={sub.to}
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                            className="flex items-center gap-2 px-3 py-2.5 text-white/90 text-sm hover:text-white hover:bg-white/10 rounded-md transition-all group"
+                                                        >
+                                                            <ChevronRight size={16} className="flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                                                            <span>{sub.label}</span>
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <a
+                                            href={item.to}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="flex items-center justify-between px-4 py-4 text-white font-semibold bg-white/5 rounded-lg hover:bg-white/10 transition-all backdrop-blur-sm group"
                                         >
                                             <span>{item.label}</span>
-                                            {(item.key === "ai" && aiMenuOpen === item.key) ||
-                                                (item.key === "blockchain" && blockchainMenuOpen === item.key) ? (
-                                                <ChevronUp size={20} />
-                                            ) : (
-                                                <ChevronDown size={20} />
-                                            )}
-                                        </div>
+                                            <ChevronRight size={20} className="flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                                        </a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
 
-                                        {(aiMenuOpen === item.key || blockchainMenuOpen === item.key) && (
-                                            <div className="pl-4 mt-2 flex flex-col gap-2 text-sm">
-                                                {item.subItems.map((sub) => (
-                                                    <Link
-                                                        key={sub.to}
-                                                        href={sub.to}
-                                                        onClick={() => setMobileMenuOpen(false)}
-                                                        className="hover:text-blue-200 transition"
-                                                    >
-                                                        {sub.label}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <li>
-                                        <Link href={item.to} onClick={() => setMobileMenuOpen(false)}>
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                )}
-                                {idx < mobileMenuItems.length - 1 && <hr className="text-white/40 pb-0" />}
-                            </React.Fragment>
-                        ))}
-                    </ul>
-
-                    {/* Contact Button */}
-                    <div className="mt-10 space-y-3 text-sm">
-                        <Link
+                    {/* Footer - Contact & Privacy */}
+                    <div className="px-6 py-6 border-t border-white/10 space-y-4 bg-black/10">
+                        <a
                             href="/contact-us"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="block w-full text-center bg-transparent border-2 text-white rounded-md py-2 font-semibold"
+                            className="flex items-center justify-center gap-2 w-full bg-white text-[#016CD3] rounded-lg py-3.5 font-bold shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all group"
                         >
                             CONTACT US
-                        </Link>
-                    </div>
+                            <Send size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </a>
 
-                    {/* Privacy Mobile */}
-                    <div className="flex flex-col gap-2 text-sm text-white mt-8">
-                        <div className="flex items-center">
-                            <button
-                                onClick={() => setPrivacyOpen(!privacyOpen)}
-                                className="flex-1 font-semibold text-left hover:text-blue-300 transition"
-                                aria-label={privacyOpen ? "Close submenu" : "Open submenu"}
-                            >
-                                Privacy Policy
-                            </button>
-                            <button onClick={() => setPrivacyOpen(!privacyOpen)} className="ml-2 text-white">
-                                {privacyOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                            </button>
+                        <div className="flex gap-3 text-xs text-white/80">
+                            <a href="/term-conditions" className="hover:text-white transition">Terms</a>
+                            <span>•</span>
+                            <a href="/refund-policy" className="hover:text-white transition">Refund Policy</a>
                         </div>
-
-                        {privacyOpen && (
-                            <div className="flex flex-col pl-6 gap-3 mt-2">
-                                <Link
-                                    href="/term-conditions"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="hover:text-blue-300 transition py-2 pb-3 border-b border-white/20 font-medium"
-                                >
-                                    Terms and Conditions
-                                </Link>
-                                <Link
-                                    href="/refund-policy"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="hover:text-blue-300 transition pb-2 font-medium"
-                                >
-                                    Refund Policy
-                                </Link>
-                            </div>
-                        )}
                     </div>
                 </div>
-            )}
+            </div>
+
+            <style jsx>{`
+                .clip-slant {
+                    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+                }
+            `}</style>
         </nav>
     );
 };

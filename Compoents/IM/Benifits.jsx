@@ -138,7 +138,7 @@ export default function IMImpactSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Business Benefits of{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Smart Inventory Management
@@ -220,9 +220,9 @@ export default function IMImpactSection() {
 
         {/* Pitfalls Section */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold mb-4">
             The Hidden Costs of{" "}
-            <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               Poor Inventory Management
             </span>
           </h3>
@@ -241,7 +241,7 @@ export default function IMImpactSection() {
                 className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-6 mb-4">
-                  <div className="bg-gradient-to-br from-red-400 to-orange-500 w-14 h-14 rounded-xl flex items-center justify-center shadow-md">
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-20 h-12 rounded-xl flex items-center justify-center shadow-md">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <div>

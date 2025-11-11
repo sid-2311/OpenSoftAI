@@ -183,11 +183,11 @@ export default function BlockchainServices() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <header className="text-center mb-16">
-          <h2 id="blockchain-services-heading" className="text-3xl sm:text-4xl font-bold mb-6">
+          <h2 id="blockchain-services-heading" className="text-2xl md:text-4xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              Core Blockchain Development
+              Core Blockchain Development{" "}
             </span>
-            <br />
+            
             <span className="text-gray-900">Offerings</span>
           </h2>
         </header>
@@ -217,7 +217,7 @@ export default function BlockchainServices() {
                   </div>
 
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                     <p className="text-gray-600 leading-relaxed">{service.description}</p>
                   </div>
 
@@ -265,23 +265,24 @@ export default function BlockchainServices() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 shadow-2xl">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            Ready to Build Your Blockchain Solution?
-          </h3>
-          <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss how our blockchain expertise can transform your business
-          </p>
-          <Link
-            href="/contact-us"
-            className="group px-8 py-4 bg-white text-blue-700 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
-          >
-            Schedule a Consultation
-            <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-300">
-              →
-            </span>
-          </Link>
-        </div>
+       <div className="mt-16 text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl">
+  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4">
+    Ready to Build Your Blockchain Solution?
+  </h3>
+  <p className="text-blue-100 text-base sm:text-lg mb-6 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto px-2">
+    Let's discuss how our blockchain expertise can transform your business
+  </p>
+  <Link
+    href="/contact-us"
+    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 bg-white text-blue-700 rounded-full font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+  >
+    Schedule a Consultation
+    <span className="group-hover:translate-x-1 transition-transform duration-300">
+      →
+    </span>
+  </Link>
+</div>
+
       </div>
     </section>
   );

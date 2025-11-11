@@ -40,6 +40,7 @@ export default function SoftwareServices() {
       description:
         "Comprehensive enterprise resource planning systems that integrate all your business processes – from finance and HR to inventory and customer management.",
       category: "enterprise",
+      link: "/erp-software-development",
     },
     {
       icon: Cloud,
@@ -47,6 +48,7 @@ export default function SoftwareServices() {
       description:
         "Cloud-based software platforms that generate recurring revenue while serving your customers efficiently with subscription management and multi-tenancy.",
       category: "enterprise",
+      link: "/saas-software-development",
     },
     {
       icon: Package,
@@ -54,6 +56,7 @@ export default function SoftwareServices() {
       description:
         "Optimize inventory tracking, order fulfillment, and logistics operations with custom warehouse management systems that reduce costs and improve accuracy.",
       category: "business",
+      link: "/services/warehouse-management",
     },
     {
       icon: Users,
@@ -61,6 +64,7 @@ export default function SoftwareServices() {
       description:
         "Streamline human resource management with integrated systems covering recruitment, payroll, performance management, and compliance reporting.",
       category: "business",
+      link: "/hospital-management-system",
     },
     {
       icon: Package,
@@ -68,6 +72,7 @@ export default function SoftwareServices() {
       description:
         "Real-time inventory tracking, automated reordering, supplier management, and comprehensive reporting systems that prevent stockouts.",
       category: "business",
+      link: "/inventory-management-software-development",
     },
     {
       icon: FileText,
@@ -75,6 +80,7 @@ export default function SoftwareServices() {
       description:
         "Automated financial management systems with invoicing, expense tracking, tax compliance, and financial reporting that integrate seamlessly.",
       category: "business",
+      link: "/services/accounting-billing",
     },
     {
       icon: ShoppingCart,
@@ -82,6 +88,7 @@ export default function SoftwareServices() {
       description:
         "Modern point-of-sale solutions for retail and hospitality businesses, featuring payment processing, inventory integration, and sales analytics.",
       category: "retail",
+      link: "/pos-system-software-development",
     },
     {
       icon: Clock,
@@ -89,6 +96,7 @@ export default function SoftwareServices() {
       description:
         "Monitor productivity, project progress, and resource allocation with time tracking, task management, and performance analytics.",
       category: "business",
+      link: "/services/employee-tracking",
     },
     {
       icon: Calendar,
@@ -96,6 +104,7 @@ export default function SoftwareServices() {
       description:
         "Automated attendance tracking with biometric integration, shift scheduling, overtime calculation, and compliance reporting.",
       category: "business",
+      link: "/services/attendance-system",
     },
     {
       icon: BookOpen,
@@ -103,6 +112,7 @@ export default function SoftwareServices() {
       description:
         "Complete digital library solutions with cataloging, circulation management, member services, and digital resource access.",
       category: "education",
+      link: "/services/library-management",
     },
     {
       icon: GraduationCap,
@@ -110,6 +120,7 @@ export default function SoftwareServices() {
       description:
         "Learning management platforms with interactive online classrooms, content delivery, student assessment, and progress tracking.",
       category: "education",
+      link: "/lms-software-development",
     },
     {
       icon: School,
@@ -117,6 +128,7 @@ export default function SoftwareServices() {
       description:
         "Comprehensive academic administration systems covering admissions, student records, course management, and fee collection.",
       category: "education",
+      link: "/services/university-management",
     },
     {
       icon: HelpCircle,
@@ -124,6 +136,7 @@ export default function SoftwareServices() {
       description:
         "Interactive assessment platforms with question banks, automated grading, performance analytics, and customizable testing environments.",
       category: "education",
+      link: "/services/quiz-system",
     },
     {
       icon: Star,
@@ -131,6 +144,7 @@ export default function SoftwareServices() {
       description:
         "Specialized astrology applications with chart calculations, prediction systems, consultation management, and client portals.",
       category: "specialized",
+      link: "/services/astrology-software",
     },
     {
       icon: Plane,
@@ -138,6 +152,7 @@ export default function SoftwareServices() {
       description:
         "End-to-end travel management platforms with booking engines, inventory management, payment processing, and customer service tools.",
       category: "specialized",
+      link: "/services/travel-booking",
     },
     {
       icon: Heart,
@@ -145,6 +160,7 @@ export default function SoftwareServices() {
       description:
         "Comprehensive matchmaking platforms with profile management, compatibility matching, communication tools, and privacy controls.",
       category: "specialized",
+      link: "/services/matrimonial",
     },
     {
       icon: Utensils,
@@ -152,6 +168,7 @@ export default function SoftwareServices() {
       description:
         "Integrated restaurant operations software covering order management, kitchen workflows, inventory tracking, and customer loyalty programs.",
       category: "hospitality",
+      link: "/restaurant-management-system",
     },
     {
       icon: Building,
@@ -159,6 +176,7 @@ export default function SoftwareServices() {
       description:
         "Complete hospitality management solutions with reservation systems, guest services, housekeeping coordination, and billing capabilities.",
       category: "hospitality",
+      link: "/services/hotel-management",
     },
     {
       icon: PartyPopper,
@@ -166,6 +184,7 @@ export default function SoftwareServices() {
       description:
         "Plan and execute successful events with registration management, venue coordination, vendor management, and attendee communication.",
       category: "specialized",
+      link: "/services/event-management",
     },
     {
       icon: Hospital,
@@ -173,6 +192,7 @@ export default function SoftwareServices() {
       description:
         "Healthcare administration platforms integrating patient records, appointment scheduling, billing, inventory management, and clinical workflows.",
       category: "healthcare",
+      link: "/services/hospital-management",
     },
     {
       icon: Home,
@@ -180,6 +200,7 @@ export default function SoftwareServices() {
       description:
         "Property management and sales platforms with listing management, client relationship tools, transaction tracking, and market analysis.",
       category: "specialized",
+      link: "/services/real-estate",
     },
     {
       icon: Stethoscope,
@@ -187,6 +208,7 @@ export default function SoftwareServices() {
       description:
         "Healthcare practice management with appointment scheduling, patient records, billing integration, and prescription management.",
       category: "healthcare",
+      link: "/services/clinic-management",
     },
     {
       icon: TrendingUp,
@@ -194,6 +216,7 @@ export default function SoftwareServices() {
       description:
         "Financial trading platforms with real-time market data, portfolio management, risk analysis, and automated trading capabilities.",
       category: "finance",
+      link: "/services/trading-software",
     },
     {
       icon: Briefcase,
@@ -201,6 +224,7 @@ export default function SoftwareServices() {
       description:
         "Employment platforms connecting employers and job seekers with advanced search capabilities, application management, and candidate tracking.",
       category: "specialized",
+      link: "/services/job-portal",
     },
   ];
 
@@ -249,50 +273,49 @@ export default function SoftwareServices() {
           </header>
 
           {/* Category Filter */}
-<nav
-  className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 justify-start sm:justify-center gap-3 mb-12 pb-2"
-  aria-label="Software Categories"
->
-  {categories.map((cat) => (
-    <button
-      key={cat.id}
-      onClick={() => setActiveCategory(cat.id)}
-      className={`flex-shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-        activeCategory === cat.id
-          ? "bg-blue-600 text-white shadow-lg scale-105"
-          : "bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow"
-      }`}
-    >
-      {cat.label}
-    </button>
-  ))}
-</nav>
+          <nav
+            className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 justify-start sm:justify-center gap-3 mb-12 pb-2"
+            aria-label="Software Categories"
+          >
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`flex-shrink-0 px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                  activeCategory === cat.id
+                    ? "bg-blue-600 text-white shadow-lg scale-105"
+                    : "bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-600 shadow"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
+          </nav>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service, index) => {
               const Icon = service.icon;
               return (
-                <article
-                  key={index}
-                  className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-slate-100 hover:border-blue-300 group hover:-translate-y-1"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <Icon className="w-6 h-6 text-white" />
+                <Link key={index} href={service.link} className="group">
+                  <article className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-slate-100 hover:border-blue-300 group-hover:-translate-y-1">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="w-6 h-6 text-white" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h2 className="text-lg font-semibold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
+                          {service.title}
+                        </h2>
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {service.description}
+                        </p>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <h2 className="text-lg font-semibold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors">
-                        {service.title}
-                      </h2>
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {service.description}
-                      </p>
-                    </div>
-                  </div>
-                </article>
+                  </article>
+                </Link>
               );
             })}
           </div>

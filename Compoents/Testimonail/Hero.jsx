@@ -7,15 +7,7 @@ import Head from 'next/head';
 export default function TestimonialHero() {
   return (
     <>
-      <Head>
-        <title>Happy Clients | The OpenSoftAI Testimonials</title>
-        <meta
-          name="description"
-          content="Read what our happy employees and clients have to say about working with The OpenSoftAI. 100% satisfaction and a culture built on respect and collaboration."
-        />
-        <meta name="keywords" content="OpenSoftAI, testimonials, happy clients, employee reviews, company culture" />
-      </Head>
-
+    
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 overflow-hidden">
         {/* Background overlay */}
         <div className="absolute inset-0 bg-black/40" />
@@ -32,7 +24,7 @@ export default function TestimonialHero() {
           <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
             {/* Left Content */}
             <article className="text-white space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">
                 We are Proud to have these{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
                   Happy Clients

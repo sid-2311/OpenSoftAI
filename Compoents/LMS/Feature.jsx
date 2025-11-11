@@ -112,7 +112,7 @@ export default function LMSFeaturesSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-4xl font-bold mb-6 text-white">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 text-white">
             Features That Make{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-indigo-600 bg-clip-text text-transparent">
               Learning Actually Happen

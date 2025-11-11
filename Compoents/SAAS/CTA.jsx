@@ -7,6 +7,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function SaaSCTASection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -111,7 +112,7 @@ export default function SaaSCTASection() {
           
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
               Ready to Build a{" "}
               <span className="bg-gradient-to-r from-indigo-300 to-indigo-500 bg-clip-text text-transparent">
                 SaaS Business That Actually Works?
@@ -190,7 +191,7 @@ export default function SaaSCTASection() {
 
                       {/* Arrow */}
                       <div className="flex items-center gap-2 text-indigo-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <span className="text-sm">Get Started</span>
+                        <Link href="/contact-us" className="text-sm">Get Started</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>

@@ -76,7 +76,7 @@ export default function WDSBenefitsSection() {
         <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-blue-50 to-transparent"></div>
 
         {/* Animated circles */}
-        <div className="absolute top-20 right-20 w-64 h-64 border-2 border-blue-200 rounded-full animate-pulse opacity-30"></div>
+        
         <div
           className="absolute bottom-20 left-20 w-80 h-80 border-2 border-blue-300 rounded-full animate-pulse opacity-20"
           style={{ animationDelay: '1s' }}
@@ -90,13 +90,13 @@ export default function WDSBenefitsSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Business Benefits That{' '}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Drive Real Results
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto">
             Empower your business growth through intelligent design, automation, and digital credibility.
           </p>
         </div>
@@ -165,7 +165,7 @@ export default function WDSBenefitsSection() {
                       </span>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h3 className="text-2xl md:text-xl font-bold text-gray-900 mb-6 leading-tight">
                       {benefit.title}
                     </h3>
 

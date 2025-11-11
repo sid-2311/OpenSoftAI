@@ -99,7 +99,7 @@ export default function DevelopmentApproach() {
       {/* Development Approach */}
       <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="text-xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
             Our Proven Development Approach
           </h2>
           <p className="text-blue-100 max-w-4xl mx-auto">

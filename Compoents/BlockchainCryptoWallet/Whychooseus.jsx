@@ -8,6 +8,7 @@ import {
   Clock,
   ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function   WhyChooseUsSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -223,10 +224,10 @@ export default function   WhyChooseUsSection() {
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <button className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+                <Link href="/contact-us" className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

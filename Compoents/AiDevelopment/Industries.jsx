@@ -35,8 +35,8 @@ Our healthcare AI helps predict which patients need early intervention, streamli
       "Automated scheduling that handles complex requirements and preferences",
       "Clinical decision support that provides insights without overriding professional judgment",
     ],
-    img: "/images/healthcare.avif",
-    alt:"",
+    img: "/images/doctor-using-digital-health-technology.avif",
+    alt:"doctor using digital health technology",
     icon: <Stethoscope className="w-6 h-6" />,
   },
   {

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-20 px-4">
@@ -37,15 +39,15 @@ export default function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-          <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto">
+          <Link href="/contact-us" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto">
             Get Free Demo
-          </button>
-          <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-900 transition-all duration-300 border-2 border-white/30 hover:border-white/50 w-full sm:w-auto">
+          </Link>
+          {/* <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-900 transition-all duration-300 border-2 border-white/30 hover:border-white/50 w-full sm:w-auto">
             Download AI Content Guide
-          </button>
-          <button className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 border-2 border-white w-full sm:w-auto">
+          </button> */}
+          <Link href="/contact-us" className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 border-2 border-white w-full sm:w-auto">
             Schedule Strategy Session
-          </button>
+          </Link>
         </div>
 
         {/* Final CTA */}
@@ -57,12 +59,12 @@ export default function CTASection() {
             Let's discuss how generative AI can revolutionize your creative processes and drive 
             unprecedented growth. Our AI specialists are standing by to show you what's possible.
           </p>
-          <div className="flex items-center justify-center gap-2 text-blue-600">
+          {/* <div className="flex items-center justify-center gap-2 text-blue-600">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             <span className="font-semibold text-lg">Contact us today to get started</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

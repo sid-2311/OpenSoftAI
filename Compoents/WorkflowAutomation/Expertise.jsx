@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Cpu,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function IntelligentAutomationExpertiseSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -208,9 +209,9 @@ export default function IntelligentAutomationExpertiseSection() {
             <p className="text-2xl font-semibold text-blue-700 mb-10">
               Let’s reimagine how your business works — intelligently.
             </p>
-            <button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
+            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
               Start Your Automation Journey
-            </button>
+            </Link>
           </div>
         </div>
       </div>

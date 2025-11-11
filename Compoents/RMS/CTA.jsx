@@ -7,6 +7,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function RMSCTASection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -109,28 +110,26 @@ export default function RMSCTASection() {
             {/* Sparkle icon */}
             <div className="flex justify-center mb-8">
               <div className="relative">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-xl animate-pulse">
-                  <Sparkles className="w-10 h-10 text-white" />
-                </div>
+                
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl blur-xl opacity-50"></div>
               </div>
             </div>
 
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 text-white leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
               Transform Your{" "}
               <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
                 Restaurant Operations
               </span>
             </h2>
 
-            <p className="text-xl text-blue-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
+            <p className="text-md text-blue-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
               Great restaurant management software doesn't just automate tasks –
               it gives you the insights and control you need to run a more
               profitable, efficient operation while delivering better customer
               experiences.
             </p>
 
-            <p className="text-lg text-blue-200 text-center max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-blue-200 text-center max-w-3xl mx-auto leading-relaxed">
               The best technology fades into the background, letting your staff
               focus on what they do best — creating great food and memorable
               dining experiences.
@@ -190,7 +189,7 @@ export default function RMSCTASection() {
                         {button.description}
                       </p>
                       <div className="flex items-center gap-2 text-blue-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <span className="text-sm">Get Started</span>
+                        <Link href="/contact-us" className="text-sm">Get Started</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>
@@ -200,37 +199,12 @@ export default function RMSCTASection() {
             </div>
 
             {/* Decorative footer */}
-            <div className="flex justify-center">
-              <div className="flex items-center gap-3 bg-blue-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-400/30">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/20"
-                    ></div>
-                  ))}
-                </div>
-                <span className="text-sm text-blue-100 font-semibold">
-                  Trusted by 500+ restaurants worldwide
-                </span>
-              </div>
-            </div>
+           
           </div>
         </div>
 
         {/* Floating badge */}
-        <div
-          className={`text-center mt-8 transition-all duration-1000 delay-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-400/30">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-sm text-blue-100 font-semibold">
-              Our restaurant tech team is online and ready to help
-            </span>
-          </div>
-        </div>
+       
       </div>
     </section>
   );

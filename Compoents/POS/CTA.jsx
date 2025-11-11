@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { CalendarCheck2, ShoppingBag, FileBarChart, ArrowRight, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function POSCTASection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -92,7 +93,7 @@ export default function POSCTASection() {
             {/* Spark icon */}
           
 
-            <h2 className="text-4xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
               Modernize Your{' '}
               <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
                 Sales Operations
@@ -161,7 +162,7 @@ export default function POSCTASection() {
                       </p>
 
                       <div className="flex items-center gap-2 text-blue-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <span className="text-sm">Get Started</span>
+                        <Link href="/contact-us" className="text-sm">Get Started</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>

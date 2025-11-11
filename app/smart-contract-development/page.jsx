@@ -7,6 +7,23 @@ import SmartContractSection from "@/Compoents/SmartContract/Intro";
 import TestSmartContractDevelopment from "@/Compoents/SmartContract/Testimonial";
 import WhyChooseUsSection from "@/Compoents/SmartContract/WhyChooseUs";
 
+
+export const metadata = {
+  title: "Smart Contract Development & Auditing | OpenSoftAI",
+  description:
+    "Develop secure, gas-optimized smart contracts with OpenSoftAI. We offer auditing, custom logic, and bug-free deployment across Ethereum, BSC, Polygon, and more.",
+  alternates: {
+    canonical: "https://opensoftai.com/smart-contract-development/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
+
+
 export default function SmartContract(){
     return(
         <>

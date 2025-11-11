@@ -521,10 +521,10 @@ export default function Portfolio() {
                 <Cpu className="w-10 h-10 text-white" aria-label="Technology Icon" />
               </div>
             </div>
-            <h1 className="text-7xl md:text-5xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl">
+            <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white drop-shadow-2xl">
               OpenSoftAI
             </h1>
-            <h2 className="mt-6 text-2xl md:text-2xl max-w-4xl mx-auto text-white/95 font-light leading-relaxed">
+            <h2 className="mt-6 text-xl md:text-2xl max-w-4xl mx-auto text-white/95 font-light leading-relaxed">
               Leading Web Development, Blockchain & AI Solutions Company
             </h2>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-white/80">
@@ -610,14 +610,15 @@ export default function Portfolio() {
               <h2 id="projects-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
                 Our Portfolio
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-md text-gray-600 max-w-3xl mx-auto">
                 Showcasing 50+ successful projects across diverse industries and cutting-edge technologies
               </p>
             </header>
 
             {/* Category Filter */}
-            <nav
-  className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10 sm:mb-12"
+           {/* Category Filter */}
+<nav
+  className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory justify-start sm:justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-2 sm:px-0"
   aria-label="Project categories"
 >
   {categories.map((cat) => (
@@ -625,7 +626,7 @@ export default function Portfolio() {
       key={cat}
       onClick={() => setActiveCategory(cat)}
       aria-pressed={activeCategory === cat}
-      className={`relative px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
+      className={`relative flex-shrink-0 snap-start px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
         ${
           activeCategory === cat
             ? "bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg ring-2 ring-blue-300 scale-105"
@@ -641,6 +642,7 @@ export default function Portfolio() {
     </button>
   ))}
 </nav>
+
 
 
             {/* Projects Grid */}
@@ -690,10 +692,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-gradient-to-br from-blue-950 to-blue-900 text-white" aria-labelledby="why-choose-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="why-choose-heading" className="text-3xl md:text-4xl font-black mb-4">
+              <h2 id="why-choose-heading" className="text-2xl md:text-4xl font-black mb-4">
                 Why Choose OpenSoftAI
               </h2>
-              <p className="text-lg text-blue-200 max-w-3xl mx-auto">
+              <p className="text-md text-blue-200 max-w-3xl mx-auto">
                 What makes us the preferred IT partner for businesses worldwide
               </p>
             </header>
@@ -719,10 +721,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-white" aria-labelledby="tech-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="tech-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
+              <h2 id="tech-heading" className="text-2xl md:text-4xl font-black text-blue-950 mb-4">
                 Technologies We Master
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-md text-gray-600 max-w-3xl mx-auto">
                 Leveraging cutting-edge technology stack for optimal performance and scalability
               </p>
             </header>
@@ -749,10 +751,10 @@ export default function Portfolio() {
         <section className="py-24 px-6 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="process-heading">
           <div className="max-w-7xl mx-auto">
             <header className="text-center mb-16">
-              <h2 id="process-heading" className="text-3xl md:text-4xl font-black text-blue-950 mb-4">
+              <h2 id="process-heading" className="text-2xl md:text-4xl font-black text-blue-950 mb-4">
                 Our Development Process
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-md text-gray-600 max-w-3xl mx-auto">
                 A proven methodology that ensures quality delivery and client satisfaction
               </p>
             </header>
@@ -783,7 +785,7 @@ export default function Portfolio() {
             
             </div>
             <blockquote>
-              <p className="text-2xl md:text-xl font-light italic mb-6 leading-relaxed">
+              <p className="text-xl md:text-xl font-light italic mb-6 leading-relaxed">
                 "I tried a few developers, but none were able to deliver the project on time. Then I came across OpenSoftAI; they were able to complete the project on time. Not to mention there were no bugs when they delivered the project."
               </p>
               <footer>
@@ -800,11 +802,11 @@ export default function Portfolio() {
         <section id="contact" className="py-24 px-6 bg-gradient-to-br from-blue-600 to-blue-950 text-white" aria-labelledby="cta-heading">
           <div className="max-w-4xl mx-auto text-center">
             
-            <h2 id="cta-heading" className="text-3xl md:text-4xl font-black mb-6">
+            <h2 id="cta-heading" className="text-2xl md:text-4xl font-black mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-200 mb-4">Let's build something amazing together</p>
-            <p className="text-lg text-blue-300 mb-12">
+            <p className="text-lg text-blue-200 mb-4">Let's build something amazing together</p>
+            <p className="text-md text-blue-300 mb-12">
               Get a free consultation • Quick response time • Transparent pricing
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">

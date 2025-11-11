@@ -1,6 +1,7 @@
 "use client";
 import Head from 'next/head';
 import { Shield, Lock, TrendingUp, CheckCircle, Zap, Award, Users, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CryptoTrustSection() {
   const features = [
@@ -152,10 +153,10 @@ export default function CryptoTrustSection() {
                 Join the platforms that trust OpenSoft AI with their digital assets and user security
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
+                <Link href="/contact-us" className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
                   Start Building Your Platform
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
                 <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all">
                   View Case Studies
                 </button>

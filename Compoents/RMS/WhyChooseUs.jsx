@@ -65,14 +65,14 @@ export default function WhyChooseOpenSoftRMS() {
               : "opacity-0 -translate-y-10"
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-xl md:text-3xl font-bold mb-6">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               OpenSoft AI
             </span>{" "}
             for Restaurant Management Systems
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto">
             Built by restaurant professionals, engineered by experts — we create
             software that truly understands your business.
           </p>
@@ -98,7 +98,7 @@ export default function WhyChooseOpenSoftRMS() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className="text-xl font-bold text-gray-800 mb-4">
                   {reason.title}
                 </h3>
 

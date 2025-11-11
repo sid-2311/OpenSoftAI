@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Brain, CheckCircle, TrendingUp, Sparkles, Briefcase, HeartPulse, ShoppingBag, Factory, Cpu } from 'lucide-react';
+import Link from 'next/link';
 
 export default function AIConsultingExpertiseSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -140,9 +141,9 @@ export default function AIConsultingExpertiseSection() {
               It's this business-first, technology-second approach that consistently delivers results for our clients.
             </p>
             
-            <button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
+            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
               Start Your AI Journey Today
-            </button>
+            </Link>
           </div>
         </div>
       </div>

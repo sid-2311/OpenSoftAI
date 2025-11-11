@@ -63,7 +63,7 @@ export default function WhyChooseLMSSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Why Choose{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">
               OpenSoft AI
@@ -129,7 +129,7 @@ export default function WhyChooseLMSSection() {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <button className="group bg-gradient-to-r from-indigo-600 to-indigo-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+          <button className="group bg-gradient-to-r from-indigo-600 to-indigo-800 text-white px-10 py-5 rounded-full font-bold text-sm shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
             Build Your LMS with OpenSoft AI
             <svg
               className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"

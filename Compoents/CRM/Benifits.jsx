@@ -131,13 +131,13 @@ export default function CRMImpactSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
           }`}
         >
-          <h2 className="text-5xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Business Benefits That{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Impact Your Bottom Line
             </span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto">
             Empower your sales, improve retention, and achieve predictable
             revenue growth through smarter CRM systems.
           </p>
@@ -198,7 +198,7 @@ export default function CRMImpactSection() {
                     <span className="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-full mb-4 inline-block">
                       Benefit {index + 1}
                     </span>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight">
+                    <h3 className="text-2xl md:text-2xl font-bold text-gray-900 mb-6 leading-tight">
                       {benefit.title}
                     </h3>
                     <p className="text-md text-gray-600 leading-relaxed">
@@ -213,9 +213,9 @@ export default function CRMImpactSection() {
 
         {/* Pitfalls Section */}
         <div className="text-center mb-16">
-          <h3 className="text-4xl font-bold mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold mb-4">
             Why Generic CRMs{" "}
-            <span className="bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
               Don’t Work for Growing Businesses
             </span>
           </h3>
@@ -234,7 +234,7 @@ export default function CRMImpactSection() {
                 className="bg-gradient-to-br from-slate-50 to-white border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex items-start gap-6 mb-4">
-                  <div className="bg-gradient-to-br from-red-400 to-orange-500 w-14 h-14 rounded-xl flex items-center justify-center shadow-md">
+                  <div className="bg-gradient-to-br from-blue-400 to-blue-500 w-20 h-12 rounded-xl flex items-center justify-center shadow-md">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <div>
