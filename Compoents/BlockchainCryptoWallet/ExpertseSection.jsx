@@ -40,8 +40,8 @@ export default function CryptoExpertiseSection() {
   ];
 
   const stats = [
-    { value: "$5B+", label: "Transaction Volume", suffix: "" },
-    { value: "10M+", label: "Users Served", suffix: "" },
+    { value: "$1B+", label: "Transaction Volume", suffix: "" },
+    { value: "500+", label: "Users Served", suffix: "" },
     { value: "100%", label: "Uptime Record", suffix: "" },
     { value: "50+", label: "Platforms Launched", suffix: "" }
   ];

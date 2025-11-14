@@ -12,13 +12,28 @@ import {
 export default function RMSSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [radius, setRadius] = useState(160); // ✅ safe default
 
   useEffect(() => {
     setIsVisible(true);
+
     const interval = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % 6);
     }, 3000);
-    return () => clearInterval(interval);
+
+    const updateRadius = () => {
+      if (window.innerWidth < 640) setRadius(120);
+      else if (window.innerWidth < 1024) setRadius(150);
+      else setRadius(180);
+    };
+
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", updateRadius);
+    };
   }, []);
 
   const features = [
@@ -31,10 +46,10 @@ export default function RMSSection() {
   ];
 
   const benefits = [
-    { title: "Reduce Chaos", desc: "Connect kitchen, staff, and service in one seamless flow" },
-    { title: "Control Costs", desc: "Track ingredients, waste, and profit margins in real-time" },
-    { title: "Improve Efficiency", desc: "Automate routine tasks like orders and scheduling" },
-    { title: "Delight Customers", desc: "Deliver consistent, faster, and higher-quality service" },
+    { title: "Reduce Chaos", desc: "Connect kitchen, staff, and service in one seamless flow." },
+    { title: "Control Costs", desc: "Track ingredients, waste, and profit margins in real-time." },
+    { title: "Improve Efficiency", desc: "Automate routine tasks like orders and scheduling." },
+    { title: "Delight Customers", desc: "Deliver consistent, faster, and higher-quality service." },
   ];
 
   return (
@@ -58,14 +73,14 @@ export default function RMSSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent px-2">
             Running a Restaurant Shouldn’t Feel Like Juggling Fire
           </h2>
-          <p className="text-sm sm:text-base md:text-md text-gray-700 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-2">
-            Anyone who's worked in a restaurant knows the chaos — lost orders, missing inventory, 
-            ever-changing schedules, and customer complaints about wait times. Meanwhile, you’re 
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 max-w-2xl sm:max-w-3xl mx-auto leading-relaxed px-2">
+            Anyone who's worked in a restaurant knows the chaos — lost orders, missing inventory,
+            changing schedules, and customer complaints about wait times. Meanwhile, you’re
             balancing food quality, costs, and razor-thin margins.
           </p>
         </div>
 
-        {/* Main Content */}
+        {/* Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16 sm:mb-20">
           {/* Left Text Section */}
           <div
@@ -75,28 +90,29 @@ export default function RMSSection() {
           >
             <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-blue-100">
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                We’ve built restaurant management systems for everything from food trucks to multi-location 
-                restaurant chains. Great restaurant software doesn’t just digitize your chaos — it reimagines it.
+                We’ve built restaurant management systems for everything from food trucks to
+                multi-location restaurant chains. Great restaurant software doesn’t just digitize
+                your chaos — it reimagines it.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                At <span className="font-semibold text-blue-700">OpenSoft AI</span>, we design systems that bring 
-                order to the back of house, clarity to the front of house, and data that helps you make smarter 
-                business decisions.
+                At <span className="font-semibold text-blue-700">OpenSoft AI</span>, we design systems
+                that bring order to the back of house, clarity to the front of house, and insights
+                that help you make smarter business decisions.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                The restaurants that thrive use technology to remove friction between great food and great service — 
-                not add to it.
+                The restaurants that thrive use technology to remove friction between great food and
+                great service — not add to it.
               </p>
             </div>
           </div>
 
-          {/* Right Interactive Orbit */}
+          {/* Right Orbit Section */}
           <div
-            className={`transition-all duration-1000 delay-400 transform ${
+            className={`transition-all duration-1000 delay-400 transform flex justify-center ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="relative h-[360px] sm:h-[400px] md:h-[440px] flex items-center justify-center">
+            <div className="relative h-[360px] sm:h-[400px] md:h-[440px] w-[360px] sm:w-[400px] md:w-[440px] flex items-center justify-center">
               {/* Center Circle */}
               <div className="absolute w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center shadow-2xl z-10">
                 <span className="text-white font-bold text-base sm:text-lg">RMS</span>
@@ -105,7 +121,6 @@ export default function RMSSection() {
               {/* Orbiting Features */}
               {features.map((feature, index) => {
                 const angle = (index * 60) * (Math.PI / 180);
-                const radius = window.innerWidth < 640 ? 127 : window.innerWidth < 768 ? 130 : 170;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 const Icon = feature.icon;
@@ -120,6 +135,7 @@ export default function RMSSection() {
                     }}
                   >
                     <div
+                      aria-label={feature.title}
                       className={`w-14 sm:w-16 md:w-20 h-14 sm:h-16 md:h-20 bg-gradient-to-br ${feature.color} rounded-full flex items-center justify-center shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-110 ${
                         isActive ? "ring-4 ring-blue-300" : ""
                       }`}
@@ -147,7 +163,7 @@ export default function RMSSection() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className={`bg-white rounded-xl p-5 sm:p-6 shadow-lg border border-blue-100 transform transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+              className={`bg-white rounded-xl p-6 sm:p-8 shadow-lg border border-blue-100 transform transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${600 + index * 100}ms` }}
@@ -155,7 +171,7 @@ export default function RMSSection() {
               <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center mb-4">
                 <div className="w-5 sm:w-6 h-5 sm:h-6 bg-white rounded-full"></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-2">
                 {benefit.title}
               </h3>
               <p className="text-sm sm:text-base text-gray-600">{benefit.desc}</p>
@@ -163,7 +179,7 @@ export default function RMSSection() {
           ))}
         </div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <div
           className={`text-center mt-12 sm:mt-16 transition-all duration-1000 delay-1000 transform ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"

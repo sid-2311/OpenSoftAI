@@ -1,16 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  Globe,
-  Monitor,
-  ShoppingCart,
-  Code,
-  LayoutDashboard,
-} from "lucide-react";
+import { Globe, Monitor, ShoppingCart, Code, LayoutDashboard } from "lucide-react";
 
 export default function WDSSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [radius, setRadius] = useState(170); // ✅ Default safe radius
 
   useEffect(() => {
     setIsVisible(true);
@@ -18,6 +13,19 @@ export default function WDSSection() {
       setActiveFeature((prev) => (prev + 1) % 5);
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  // ✅ Handle responsive orbit radius safely on client
+  useEffect(() => {
+    const updateRadius = () => {
+      const width = window.innerWidth;
+      if (width < 640) setRadius(132);
+      else if (width < 1024) setRadius(140);
+      else setRadius(170);
+    };
+    updateRadius();
+    window.addEventListener("resize", updateRadius);
+    return () => window.removeEventListener("resize", updateRadius);
   }, []);
 
   const features = [
@@ -91,7 +99,7 @@ export default function WDSSection() {
             </div>
           </div>
 
-          {/* Right - Interactive feature icons */}
+          {/* Right - Orbiting icons */}
           <div
             className={`transition-all duration-1000 delay-400 transform flex justify-center ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
@@ -106,7 +114,6 @@ export default function WDSSection() {
               {/* Orbiting Icons */}
               {features.map((feature, index) => {
                 const angle = (index * (360 / features.length)) * (Math.PI / 180);
-                const radius = window.innerWidth < 640 ? 132 : window.innerWidth < 1024 ? 140 : 170;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 const Icon = feature.icon;
@@ -132,7 +139,9 @@ export default function WDSSection() {
                         isActive ? "opacity-100" : "opacity-0"
                       }`}
                     >
-                      <span className="text-xs sm:text-sm font-semibold text-blue-700">{feature.title}</span>
+                      <span className="text-xs sm:text-sm font-semibold text-blue-700">
+                        {feature.title}
+                      </span>
                     </div>
                   </div>
                 );
@@ -154,7 +163,9 @@ export default function WDSSection() {
               <div className="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-blue-500 to-indigo-700 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                 <div className="w-5 sm:w-6 h-5 sm:h-6 bg-white rounded-full"></div>
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">{benefit.title}</h3>
+              <h3 className="text-base sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2">
+                {benefit.title}
+              </h3>
               <p className="text-sm sm:text-base text-gray-600">{benefit.desc}</p>
             </div>
           ))}

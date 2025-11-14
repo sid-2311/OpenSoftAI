@@ -56,7 +56,7 @@ export default function CryptoCTA() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-white">
-                Why Partner with OpenSoft AI?
+                Why Partner with OpenSoftAI?
               </h2>
               <p className="text-blue-100 leading-relaxed">
                 We've helped dozens of companies successfully launch crypto platforms that users trust and regulators approve. From startup exchanges handling millions in daily volume to enterprise wallet solutions managing billions in assets.

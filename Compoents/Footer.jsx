@@ -268,7 +268,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-gray-600">
-              Copyright © 2025 OpenSoftAI.com, All Rights Reserved.
+              Copyright © 2025 OpenSoftAI. All Rights Reserved.
             </p>
           </div>
         </div>

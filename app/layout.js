@@ -18,14 +18,16 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Leading AI Software & Automation Company in India | Opensoft AI",
-  description: "Opensoft AI delivers innovative AI software development and automation solutions in India. Empower your business with intelligent, scalable technology systems.",
+  description:
+    "Opensoft AI delivers innovative AI software development and automation solutions in India. Empower your business with intelligent, scalable technology systems.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-         <Script
+        {/* ✅ Google Tag Manager Script */}
+        <Script
           id="gtm-script"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -38,15 +40,37 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <link rel="icon" href="/images/opensoftai-logo.svg" type="image/png" />
-        <link rel="canonical" herf= "https://opensoftai.com"/>
 
+        {/* ✅ Google Ads Conversion Tracking Script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17642664566"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-ads-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17642664566');
+            `,
+          }}
+        />
+
+        {/* ✅ Fixed typo: `herf` → `href` */}
+        <link rel="canonical" href="https://opensoftai.com" />
+        <link rel="icon" href="/images/opensoftai-logo.svg" type="image/png" />
       </head>
-      <link rel="icon" href="/opensoftai logo.svg" type="image/png"/>
+
+      {/* ✅ Added suppressHydrationWarning to prevent React mismatch */}
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-         <noscript>
+        <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-K8655BT2"
             height="0"
@@ -54,12 +78,13 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <ScrollToTop/>
 
-        <Navbar/>
-        <FloatingIcons/>
+        {/* ✅ Keep order clean and consistent */}
+        <ScrollToTop />
+        <Navbar />
+        <FloatingIcons />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

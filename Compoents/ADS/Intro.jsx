@@ -16,13 +16,29 @@ import Link from "next/link";
 export default function ADSSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [radius, setRadius] = useState(170); // ✅ Safe default radius
 
   useEffect(() => {
     setIsVisible(true);
+
     const interval = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % 8);
     }, 3000);
-    return () => clearInterval(interval);
+
+    // ✅ Handle window resizing safely
+    const updateRadius = () => {
+      if (typeof window !== "undefined") {
+        setRadius(window.innerWidth < 640 ? 127 : 170);
+      }
+    };
+
+    updateRadius(); // Initial call
+    window.addEventListener("resize", updateRadius);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", updateRadius);
+    };
   }, []);
 
   const features = [
@@ -111,7 +127,6 @@ export default function ADSSection() {
               {/* Orbiting feature circles */}
               {features.map((feature, index) => {
                 const angle = (index * 45) * (Math.PI / 180);
-                const radius = window.innerWidth < 640 ? 127 : 170; // smaller radius on mobile
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 const Icon = feature.icon;

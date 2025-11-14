@@ -31,11 +31,11 @@ export default function CryptoTrustSection() {
     }
   ];
 
-  const stats = [
-    { icon: Zap, value: "10+", label: "Years Experience" },
-    { icon: Award, value: "$5B+", label: "Assets Secured" },
-    { icon: Users, value: "100+", label: "Platforms Built" }
-  ];
+  // const stats = [
+  //   { icon: Zap, value: "10+", label: "Years Experience" },
+  //   { icon: Award, value: "$5B+", label: "Assets Secured" },
+  //   { icon: Users, value: "100+", label: "Platforms Built" }
+  // ];
 
   return (
     <>
@@ -71,7 +71,7 @@ export default function CryptoTrustSection() {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
@@ -88,7 +88,7 @@ export default function CryptoTrustSection() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Main Content Glass Card */}
           <div className="relative group mb-16">

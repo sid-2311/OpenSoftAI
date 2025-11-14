@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
             <Image
-              src="/images/token.avif"
+              src="/images/token.png"
               alt="AI Calling Agent Development"
               fill
               className="object-cover"

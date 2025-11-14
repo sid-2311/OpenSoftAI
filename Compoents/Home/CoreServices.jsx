@@ -13,7 +13,7 @@ const TABS = [
     text: `Remember when you had that brilliant idea? The one that could change everything if only you had the right software to make it happen?
 That's where we come in. We build websites that don't just look pretty – they convert visitors into customers. Mobile apps that people actually want to use. Enterprise systems that make your team's life easier, not harder.
 No cookie-cutter solutions here. Your business is unique, and your software should be too.`,
-    img: "/images/custom-software-development.png",
+    img: "/images/custom-software-development.webp",
     imgAlt: "custom software development", // ✅ ALT added
     icon: <Code2 className="w-6 h-6" />,
     link: "/software-development-company",
@@ -129,6 +129,7 @@ export default function CoreServices() {
                       src={tab.img}
                       alt={tab.imgAlt} // ✅ using the new alt text
                       fill
+                      priority={false}
                       className="object-contain rounded-lg"
                       sizes="(max-width: 768px) 100vw, 480px"
                       onError={(e) => {

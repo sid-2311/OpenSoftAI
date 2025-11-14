@@ -52,379 +52,98 @@ export default function Portfolio() {
   ];
 
   const projects = [
-    // React/React Native Projects
-    { 
-      name: "Boatflex", 
-      link: "https://apps.apple.com/dk/app/boatflex/id1563762907", 
-      type: "react", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Boat rental and management platform",
-      tech: ["React Native", "iOS", "Booking System"]
-    },
-    { 
-      name: "Boatflex Android", 
-      link: "https://play.google.com/store/apps/details?id=com.boatflexaps", 
-      type: "react", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Android boat booking application",
-      tech: ["React Native", "Android", "Real-time"]
-    },
-    { 
-      name: "Zevio", 
-      link: "https://play.google.com/store/apps/details?id=com.zevio", 
-      type: "react", 
-      category: "E-Commerce", 
-      icon: <ShoppingCart className="w-6 h-6" />,
-      desc: "Multi-vendor e-commerce mobile app",
-      tech: ["React Native", "E-commerce", "Payment Gateway"]
-    },
-    { 
-      name: "Tjenerteamet", 
-      link: "https://www.tjenerteamet.dk", 
-      type: "react", 
-      category: "Web Application", 
-      icon: <Globe className="w-6 h-6" />,
-      desc: "Service management platform",
-      tech: ["React.js", "Web App", "Dashboard"]
-    },
-    { 
-      name: "Actee Gaming", 
-      link: "https://actee.com", 
-      type: "react", 
-      category: "Gaming", 
-      icon: <Gamepad2 className="w-6 h-6" />,
-      desc: "Online gaming and entertainment platform",
-      tech: ["React", "Gaming", "Multiplayer"]
-    },
-    
-    // Angular Projects
-    { 
-      name: "Evolution360", 
-      link: "http://evolution360.com", 
-      type: "angular", 
-      category: "ERP & Reporting", 
-      icon: <BarChart3 className="w-6 h-6" />,
-      desc: "360-degree business analytics platform",
-      tech: ["Angular", "ERP", "Analytics"]
-    },
-    
-    // Umbraco Websites
-    { 
-      name: "Sproglar", 
-      link: "http://sproglar.dk", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Globe className="w-6 h-6" />,
-      desc: "Language learning platform",
-      tech: ["Umbraco CMS", "SEO", "Responsive"]
-    },
-    { 
-      name: "Boatflex Web", 
-      link: "http://boatflex.com", 
-      type: "umbraco", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Boat rental web platform",
-      tech: ["Umbraco", "Booking", "CMS"]
-    },
-    { 
-      name: "Robotowork", 
-      link: "http://robotowork.com", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Briefcase className="w-6 h-6" />,
-      desc: "Recruitment and workforce platform",
-      tech: ["Umbraco", "HR Tech", "Portal"]
-    },
-    { 
-      name: "Zenegy", 
-      link: "https://zenegy.com", 
-      type: "umbraco", 
-      category: "B2B Domain", 
-      icon: <Building2 className="w-6 h-6" />,
-      desc: "Payroll and HR management system",
-      tech: ["Umbraco", "B2B", "SaaS"]
-    },
-    { 
-      name: "Probusfyn", 
-      link: "http://probusfyn.dk", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Users className="w-6 h-6" />,
-      desc: "Community management platform",
-      tech: ["Umbraco", "Community", "Portal"]
-    },
-    { 
-      name: "Tscherning", 
-      link: "http://tscherning.dk", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Briefcase className="w-6 h-6" />,
-      desc: "Corporate business website",
-      tech: ["Umbraco", "Corporate", "SEO"]
-    },
-    { 
-      name: "Vattenfall", 
-      link: "http://vattenfall.com", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Zap className="w-6 h-6" />,
-      desc: "Energy company website",
-      tech: ["Umbraco", "Enterprise", "CMS"]
-    },
-    { 
-      name: "TPC Management", 
-      link: "http://tpcmanagement.dk", 
-      type: "umbraco", 
-      category: "Web Application", 
-      icon: <Building2 className="w-6 h-6" />,
-      desc: "Property management system",
-      tech: ["Umbraco", "Property", "Management"]
-    },
-    
-    // E-Commerce
-    { 
-      name: "FYE", 
-      link: "https://www.fye.com", 
-      type: "ecommerce", 
-      category: "E-Commerce", 
-      icon: <ShoppingCart className="w-6 h-6" />,
-      desc: "Entertainment merchandise store",
-      tech: ["E-commerce", "Payment", "Inventory"]
-    },
-    { 
-      name: "FindItEZ", 
-      link: "https://www.finditez.com", 
-      type: "ecommerce", 
-      category: "E-Commerce", 
-      icon: <Search className="w-6 h-6" />,
-      desc: "Product discovery platform",
-      tech: ["Search Engine", "E-commerce", "AI"]
-    },
-    { 
-      name: "Intelihot", 
-      link: "https://www.intelihot.com", 
-      type: "ecommerce", 
-      category: "E-Commerce", 
-      icon: <ShoppingCart className="w-6 h-6" />,
-      desc: "Smart water heating solutions",
-      tech: ["E-commerce", "IoT", "Smart Home"]
-    },
-    { 
-      name: "Fairhope Store", 
-      link: "https://www.fairhopedirectstore.com", 
-      type: "ecommerce", 
-      category: "E-Commerce", 
-      icon: <Package className="w-6 h-6" />,
-      desc: "Direct-to-consumer retail store",
-      tech: ["E-commerce", "Retail", "Shipping"]
-    },
-    { 
-      name: "Garaaz App", 
-      link: "https://play.google.com/store/apps/details?id=com.garaaz", 
-      type: "ecommerce", 
-      category: "E-Commerce", 
-      icon: <ShoppingCart className="w-6 h-6" />,
-      desc: "Automotive e-commerce app",
-      tech: ["Mobile App", "E-commerce", "Auto Parts"]
-    },
-    
-    // Healthcare
-    { 
-      name: "America Medic", 
-      link: "http://americamedic.com", 
-      type: "healthcare", 
-      category: "Healthcare", 
-      icon: <Heart className="w-6 h-6" />,
-      desc: "Medical services management",
-      tech: ["Healthcare", "EMR", "Appointments"]
-    },
-    { 
-      name: "DCPA", 
-      link: "http://www.dcpa.com.au", 
-      type: "healthcare", 
-      category: "Healthcare", 
-      icon: <Heart className="w-6 h-6" />,
-      desc: "Dental care practice platform",
-      tech: ["Healthcare", "Dental", "Patient Portal"]
-    },
-    { 
-      name: "Divya Ayurveda", 
-      link: "http://divyaayurveda.com", 
-      type: "healthcare", 
-      category: "Healthcare", 
-      icon: <Heart className="w-6 h-6" />,
-      desc: "Ayurvedic healthcare portal",
-      tech: ["Healthcare", "E-commerce", "Wellness"]
-    },
-    { 
-      name: "Induction Healthcare", 
-      link: "http://inductionhealthcare.com", 
-      type: "healthcare", 
-      category: "Healthcare", 
-      icon: <Heart className="w-6 h-6" />,
-      desc: "Clinical communication platform",
-      tech: ["Healthcare", "Communication", "HIPAA"]
-    },
-    
-    // Real Estate
-    { 
-      name: "HomeOptima", 
-      link: "https://www.homeoptima.com", 
-      type: "realestate", 
-      category: "Real Estate", 
-      icon: <Building2 className="w-6 h-6" />,
-      desc: "Property listings and ratings",
-      tech: ["Real Estate", "Listings", "Reviews"]
-    },
-    { 
-      name: "HomeOptima App", 
-      link: "https://apps.apple.com/us/app/homeoptima-listings-ratings/id886930132", 
-      type: "realestate", 
-      category: "Real Estate", 
-      icon: <Building2 className="w-6 h-6" />,
-      desc: "Mobile property search app",
-      tech: ["iOS", "Real Estate", "Search"]
-    },
-    
-    // Food & Delivery
-    { 
-      name: "Pasfalls", 
-      link: "http://thepasfalls.dk", 
-      type: "food", 
-      category: "Food & Delivery", 
-      icon: <Utensils className="w-6 h-6" />,
-      desc: "Food ordering and delivery",
-      tech: ["Food Tech", "Delivery", "Orders"]
-    },
-    { 
-      name: "Gourministeriet", 
-      link: "http://www.gourministeriet.dk", 
-      type: "food", 
-      category: "Food & Delivery", 
-      icon: <Utensils className="w-6 h-6" />,
-      desc: "Gourmet food delivery platform",
-      tech: ["Food Delivery", "Restaurant", "Mobile"]
-    },
-    
-    // Gaming
-    { 
-      name: "All Play Arena", 
-      link: "http://www.allplayarena.appdevelopment.shop", 
-      type: "gaming", 
-      category: "Gaming", 
-      icon: <Gamepad2 className="w-6 h-6" />,
-      desc: "Multi-game entertainment platform",
-      tech: ["Gaming", "Multiplayer", "Tournaments"]
-    },
-    
-    // Travel & Tourism
-    { 
-      name: "Tropiclink", 
-      link: "https://www.tropiclink.net", 
-      type: "travel", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Travel booking and management",
-      tech: ["Travel", "Booking", "Tours"]
-    },
-    { 
-      name: "iTransfer Tourist", 
-      link: "https://www.itransfertourist.net", 
-      type: "travel", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Tourist transfer services",
-      tech: ["Travel", "Transportation", "Booking"]
-    },
-    { 
-      name: "Harivansh Tours", 
-      link: "https://www.harivanshtours.com", 
-      type: "travel", 
-      category: "Travel & Tourism", 
-      icon: <Plane className="w-6 h-6" />,
-      desc: "Tour packages and travel services",
-      tech: ["Travel", "Tours", "Packages"]
-    },
-    
-    // ERP & B2B
-    { 
-      name: "Centrl AI", 
-      link: "http://www.centrl.ai", 
-      type: "erp", 
-      category: "ERP & Reporting", 
-      icon: <Database className="w-6 h-6" />,
-      desc: "AI-powered business intelligence",
-      tech: ["AI", "ERP", "Analytics"]
-    },
-    { 
-      name: "Specsources", 
-      link: "https://www.specsources.com", 
-      type: "erp", 
-      category: "ERP & Reporting", 
-      icon: <FileCode className="w-6 h-6" />,
-      desc: "Specification management system",
-      tech: ["ERP", "Document", "Management"]
-    },
-    { 
-      name: "Katalyst Tech", 
-      link: "http://www.katalysttech.com", 
-      type: "erp", 
-      category: "ERP & Reporting", 
-      icon: <Server className="w-6 h-6" />,
-      desc: "Technology solutions platform",
-      tech: ["ERP", "Enterprise", "Cloud"]
-    },
-    { 
-      name: "Appian Road", 
-      link: "https://www.appianroad.com", 
-      type: "b2b", 
-      category: "B2B Domain", 
-      icon: <Briefcase className="w-6 h-6" />,
-      desc: "B2B consulting services",
-      tech: ["B2B", "Consulting", "Enterprise"]
-    },
-    { 
-      name: "Kamal Cogent", 
-      link: "https://www.kamalcogentenergy.com", 
-      type: "b2b", 
-      category: "B2B Domain", 
-      icon: <Zap className="w-6 h-6" />,
-      desc: "Energy solutions provider",
-      tech: ["Energy", "B2B", "Enterprise"]
-    },
-    { 
-      name: "Gartner", 
-      link: "https://www.gartner.com/en", 
-      type: "b2b", 
-      category: "B2B Domain", 
-      icon: <BarChart3 className="w-6 h-6" />,
-      desc: "Research and advisory services",
-      tech: ["B2B", "Analytics", "Research"]
-    },
-    
-    // Blockchain
-    { 
-      name: "Zuraverse", 
-      link: "https://zuraverse.xyz/", 
-      type: "blockchain", 
-      category: "Blockchain", 
-      icon: <Layers className="w-6 h-6" />,
-      desc: "Metaverse blockchain platform",
-      tech: ["Blockchain", "Metaverse", "NFT"]
-    },
-    { 
-      name: "DeFi Institute", 
-      link: "https://decentralizedfinance.institute/", 
-      type: "blockchain", 
-      category: "Blockchain", 
-      icon: <Lock className="w-6 h-6" />,
-      desc: "Decentralized finance platform",
-      tech: ["DeFi", "Blockchain", "Crypto"]
-    },
-  ];
+  { 
+    name: "Boatflex", 
+    link: "https://apps.apple.com/dk/app/boatflex/id1563762907", 
+    type: "react", 
+    category: "Travel & Tourism", 
+    icon: <Plane className="w-6 h-6" />,
+    desc: "Boat rental and management platform",
+    tech: ["React Native", "iOS", "Booking System"]
+  },
+  { 
+    name: "Zevio", 
+    link: "https://play.google.com/store/apps/details?id=com.zevio", 
+    type: "react", 
+    category: "E-Commerce", 
+    icon: <ShoppingCart className="w-6 h-6" />,
+    desc: "Multi-vendor e-commerce mobile app",
+    tech: ["React Native", "E-commerce", "Payment Gateway"]
+  },
+  { 
+    name: "Evolution360", 
+    link: "http://evolution360.com", 
+    type: "angular", 
+    category: "ERP & Reporting", 
+    icon: <BarChart3 className="w-6 h-6" />,
+    desc: "360-degree business analytics platform",
+    tech: ["Angular", "ERP", "Analytics"]
+  },
+  { 
+    name: "Zenegy", 
+    link: "https://zenegy.com", 
+    type: "umbraco", 
+    category: "B2B Domain", 
+    icon: <Building2 className="w-6 h-6" />,
+    desc: "Payroll and HR management system",
+    tech: ["Umbraco", "B2B", "SaaS"]
+  },
+  { 
+    name: "FYE", 
+    link: "https://www.fye.com", 
+    type: "ecommerce", 
+    category: "E-Commerce", 
+    icon: <ShoppingCart className="w-6 h-6" />,
+    desc: "Entertainment merchandise store",
+    tech: ["E-commerce", "Payment", "Inventory"]
+  },
+  { 
+    name: "America Medic", 
+    link: "http://americamedic.com", 
+    type: "healthcare", 
+    category: "Healthcare", 
+    icon: <Heart className="w-6 h-6" />,
+    desc: "Medical services management",
+    tech: ["Healthcare", "EMR", "Appointments"]
+  },
+  { 
+    name: "HomeOptima", 
+    link: "https://www.homeoptima.com", 
+    type: "realestate", 
+    category: "Real Estate", 
+    icon: <Building2 className="w-6 h-6" />,
+    desc: "Property listings and ratings",
+    tech: ["Real Estate", "Listings", "Reviews"]
+  },
+  { 
+    name: "Gourministeriet", 
+    link: "http://www.gourministeriet.dk", 
+    type: "food", 
+    category: "Food & Delivery", 
+    icon: <Utensils className="w-6 h-6" />,
+    desc: "Gourmet food delivery platform",
+    tech: ["Food Delivery", "Restaurant", "Mobile"]
+  },
+  { 
+    name: "Appian Road", 
+    link: "https://www.appianroad.com", 
+    type: "b2b", 
+    category: "B2B Domain", 
+    icon: <Briefcase className="w-6 h-6" />,
+    desc: "B2B consulting services",
+    tech: ["B2B", "Consulting", "Enterprise"]
+  },
+  { 
+    name: "Zuraverse", 
+    link: "https://zuraverse.xyz/", 
+    type: "blockchain", 
+    category: "Blockchain", 
+    icon: <Layers className="w-6 h-6" />,
+    desc: "Metaverse blockchain platform",
+    tech: ["Blockchain", "Metaverse", "NFT"]
+  }
+];
+
 
   const categories = ["all", "E-Commerce", "Healthcare", "Real Estate", "Food & Delivery", "Gaming", "Travel & Tourism", "ERP & Reporting", "B2B Domain", "Blockchain", "Web Application"];
 
@@ -615,76 +334,86 @@ export default function Portfolio() {
               </p>
             </header>
 
-            {/* Category Filter */}
-           {/* Category Filter */}
-<nav
-  className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory justify-start sm:justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-2 sm:px-0"
-  aria-label="Project categories"
->
-  {categories.map((cat) => (
-    <button
-      key={cat}
-      onClick={() => setActiveCategory(cat)}
-      aria-pressed={activeCategory === cat}
-      className={`relative flex-shrink-0 snap-start px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
-        ${
-          activeCategory === cat
-            ? "bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg ring-2 ring-blue-300 scale-105"
-            : "bg-white text-blue-900 border border-blue-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md"
-        }`}
-    >
-      {activeCategory === cat && (
-        <span className="absolute inset-0 rounded-full bg-blue-400/10 animate-pulse"></span>
-      )}
-      <span className="relative z-10">
-        {cat === "all" ? "All Projects" : cat}
-      </span>
-    </button>
-  ))}
-</nav>
+       <div className="relative -mx-2 sm:mx-0 px-2 sm:px-0">
+  <nav
+    className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory justify-start sm:justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-2 sm:px-0"
+    aria-label="Project categories"
+  >
+    {categories.map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setActiveCategory(cat)}
+        aria-pressed={activeCategory === cat}
+        className={`relative flex-shrink-0 snap-start px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
+          ${
+            activeCategory === cat
+              ? "bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg ring-2 ring-blue-300 scale-105"
+              : "bg-white text-blue-900 border border-blue-200 hover:border-blue-400 hover:bg-blue-50 hover:shadow-md"
+          }`}
+      >
+        {activeCategory === cat && (
+          <span className="absolute inset-0 rounded-full bg-blue-400/10 animate-pulse"></span>
+        )}
+        <span className="relative z-10">
+          {cat === "all" ? "All Projects" : cat}
+        </span>
+      </button>
+    ))}
+  </nav>
+</div>
+
 
 
 
             {/* Projects Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredProjects.map((project, i) => (
-                <article
-                  key={i}
-                  className="group bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border-2 border-blue-100 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2"
-                >
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                    aria-label={`Visit ${project.name} - ${project.desc}`}
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-start gap-3 flex-1">
-                        <div className="text-blue-600 group-hover:text-blue-700 mt-1 flex-shrink-0" aria-hidden="true">
-                          {project.icon}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="text-xl font-bold text-blue-950 group-hover:text-blue-700 transition-colors mb-1">
-                            {project.name}
-                          </h3>
-                          <p className="text-sm text-gray-500 mb-2">{project.category}</p>
-                          <p className="text-sm text-gray-600 leading-relaxed mb-3">{project.desc}</p>
-                          <div className="flex flex-wrap gap-1">
-                            {project.tech.map((tech, idx) => (
-                              <span key={idx} className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium">
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform flex-shrink-0 mt-1" aria-hidden="true" />
-                    </div>
-                  </a>
-                </article>
-              ))}
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {filteredProjects.map((project, i) => (
+    <article
+      key={i}
+      className="group bg-white p-6 rounded-2xl shadow-md hover:shadow-2xl border-2 border-blue-100 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2"
+    >
+      <div
+        className="block cursor-default"
+        aria-label={`${project.name} - ${project.desc}`}
+      >
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-start gap-3 flex-1">
+            <div
+              className="text-blue-600 group-hover:text-blue-700 mt-1 flex-shrink-0"
+              aria-hidden="true"
+            >
+              {project.icon}
             </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-blue-950 group-hover:text-blue-700 transition-colors mb-1">
+                {project.name}
+              </h3>
+              <p className="text-sm text-gray-500 mb-2">{project.category}</p>
+              <p className="text-sm text-gray-600 leading-relaxed mb-3">
+                {project.desc}
+              </p>
+              <div className="flex flex-wrap gap-1">
+                {project.tech.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <ArrowRight
+            className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform flex-shrink-0 mt-1"
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+
           </div>
         </section>
 

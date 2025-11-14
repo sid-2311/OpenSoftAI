@@ -69,12 +69,7 @@ export default function WhyChoose() {
         </div>
 
         {/* Credentials Placeholder */}
-        <div className="mt-14 text-center">
-          <p className="text-sm text-gray-500 italic">
-            Recognized development partner for [Technology Platform/Foundation] ·
-            Certified by [Cloud Provider] · Featured in [Industry Publication]
-          </p>
-        </div>
+       
       </div>
     </section>
   );
