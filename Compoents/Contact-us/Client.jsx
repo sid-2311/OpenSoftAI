@@ -1,3 +1,4 @@
+// Updated ClientsPage with world map and animated India pin
 'use client';
 
 import Head from 'next/head';
@@ -16,8 +17,6 @@ export default function ClientsPage() {
 
   return (
     <>
-      {/* ✅ SEO Meta Setup */}
-           {/* ✅ Page Section */}
       <main className="min-h-screen bg-gradient-to-b from-white to-gray-50" aria-labelledby="clients-heading">
         {/* Header Section */}
         <header className="text-center py-16 px-4">
@@ -40,10 +39,7 @@ export default function ClientsPage() {
               Our <span className="font-normal">Esteemed Clients</span>
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              We’ve collaborated with some of the world’s most recognized
-              brands. Our team crafts exceptional experiences that help
-              enterprises and startups alike achieve their goals. Don’t wait —
-              leverage our expertise and build something extraordinary today!
+              We’ve collaborated with some of the world’s most recognized brands. Our team crafts exceptional experiences that help enterprises and startups alike achieve their goals. Don’t wait — leverage our expertise and build something extraordinary today!
             </p>
 
             <Link
@@ -68,8 +64,25 @@ export default function ClientsPage() {
             </Link>
           </div>
 
-          {/* Right Side — Client Logos */}
-         
+          {/* Right Side — World Map with India Pin */}
+          <div className="relative w-full h-[420px] flex items-center justify-center">
+            {/* World Map */}
+            <Image
+              src="/images/worldmap.png" // <-- Add your world map image
+              alt="World map"
+              fill
+              className="object-contain opacity-90 select-none"
+            />
+
+            {/* Animated India Pin */}
+            <div className="absolute animate-bounce" style={{ top: '50%', left: '66%' }}>
+              <div className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-400"></div>
+              <span className="text-xs mt-1 block text-red-700 font-semibold">India</span>
+
+              {/* Pulse ring */}
+              <span className="absolute inset-0 w-5 h-5 rounded-full bg-red-400 opacity-40 animate-ping"></span>
+            </div>
+          </div>
         </section>
       </main>
     </>
