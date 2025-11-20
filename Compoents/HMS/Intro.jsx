@@ -94,7 +94,7 @@ export default function HMSSection() {
                 patient outcomes, reduces administrative burden, and ensures regulatory compliance.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                <span className="font-semibold text-blue-700">OpenSoft AI</span>'s healthcare software
+                <span className="font-semibold text-blue-700">OpenSoftAI</span>'s healthcare software
                 solutions are designed by understanding real-world healthcare workflows and
                 challenges. We build systems that support{" "}
                 <span className="font-semibold text-blue-600">clinical decision-making</span> while

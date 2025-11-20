@@ -76,7 +76,7 @@ export default function WhyChooseSection() {
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              OpenSoft AI
+              OpenSoftAI
             </span>{" "}
             for Custom CRM Development
           </h2>

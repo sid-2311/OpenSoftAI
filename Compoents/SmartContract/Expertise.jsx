@@ -246,7 +246,7 @@ export default function ExpertiseSection() {
           </h3>
           <p className="text-blue-100 text-lg max-w-3xl mx-auto leading-relaxed">
             Elegant solutions that do exactly what they need to do without unnecessary complexity 
-            that creates attack vectors. That's the OpenSoft AI difference.
+            that creates attack vectors. That's the OpenSoftAI difference.
           </p>
         </div>
       </div>

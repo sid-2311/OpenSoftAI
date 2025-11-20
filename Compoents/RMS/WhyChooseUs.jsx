@@ -68,7 +68,7 @@ export default function WhyChooseOpenSoftRMS() {
           <h2 className="text-xl md:text-3xl font-bold mb-6">
             Why Choose{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              OpenSoft AI
+              OpenSoftAI
             </span>{" "}
             for Restaurant Management Systems
           </h2>

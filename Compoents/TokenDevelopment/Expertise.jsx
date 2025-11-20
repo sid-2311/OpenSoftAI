@@ -56,7 +56,7 @@ export default function ExpertiseSection() {
           
           
           <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-white mb-6">
-            OpenSoft AI Token Development {" "}
+            OpenSoftAI Token Development {" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-white mt-2">
               Expertise
             </span>

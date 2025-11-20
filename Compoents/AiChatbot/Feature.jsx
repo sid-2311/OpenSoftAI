@@ -169,13 +169,13 @@ export default function TechnicalFeaturesSection() {
           {/* Header */}
           <header className="text-center mb-20 animate-slideUp">
            
-            <h2 className="text-5xl md:text-5xl font-medium text-gray-900 mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-8 leading-tight">
               The Technical Stuff That {" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                 Actually Works
               </span>
             </h2>
-            <p className="text-xl md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md  md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Advanced AI technology and enterprise integrations working together to create chatbots that feel remarkably human.
             </p>
           </header>
@@ -256,7 +256,7 @@ export default function TechnicalFeaturesSection() {
                         <div className="text-sm text-blue-600 font-black mb-2 uppercase tracking-wider">
                           {feature.subtitle}
                         </div>
-                        <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-3">
+                        <h3 className="text-xl md:text-3xl font-black text-gray-900 mb-3">
                           {feature.title}
                         </h3>
                         <p className="text-gray-600 text-lg">{feature.problem}</p>
@@ -316,7 +316,7 @@ export default function TechnicalFeaturesSection() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-60 transition duration-500 animate-glow"></div>
               <div className="relative bg-white rounded-3xl p-12 shadow-2xl border-2 border-blue-100">
-                <h3 className="text-4xl font-black text-gray-900 mb-12 text-center">
+                <h3 className="text-2xl md:text-4xl font-black text-gray-900 mb-12 text-center">
                   Connected to Your Entire Tech Stack
                 </h3>
                 
@@ -325,7 +325,7 @@ export default function TechnicalFeaturesSection() {
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl blur-2xl opacity-50 animate-glow"></div>
                       <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-10 rounded-3xl shadow-2xl">
-                        <MessageSquare className="w-20 h-20 text-white" />
+                        <MessageSquare className="w-10 h-10 text-white" />
                         <div className="absolute -top-3 -right-3 w-8 h-8 bg-green-500 rounded-full border-4 border-white animate-pulse shadow-lg"></div>
                       </div>
                     </div>

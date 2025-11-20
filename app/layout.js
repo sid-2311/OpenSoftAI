@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Fixed typo: `herf` → `href` */}
         <link rel="canonical" href="https://opensoftai.com" />
-        <link rel="icon" href="/images/opensoftai-logo.svg" type="image/png" />
+        <link rel="icon" href="/images/opensoftai-logo.jpg" type="image/jpeg" />
       </head>
 
       {/* ✅ Added suppressHydrationWarning to prevent React mismatch */}

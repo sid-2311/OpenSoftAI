@@ -13,8 +13,8 @@ export default function BlockchainHero() {
     >
       {/* Background image with overlay */}
       <Image
-        src="/images/smart.jpg"
-        alt="Earth from space with glowing city lights at night"
+        src="/images/Digital-illustration-of-blockchain-smart-contract-technology-on-a-virtual-interface.jpg"
+        alt="Digital illustration of blockchain smart contract technology on a virtual interface"
         fill
         priority
         className="object-cover"

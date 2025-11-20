@@ -112,13 +112,13 @@ export default function WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              OpenSoft AI
+              OpenSoftAI
             </span>{" "}
             for DeFi Development
           </h2>
           <p className="max-w-4xl mx-auto text-slate-600 text-md">
             We’ve been building in DeFi since before it became a movement.
-            OpenSoft AI brings deep technical expertise and real-world security
+            OpenSoftAI brings deep technical expertise and real-world security
             experience to create transparent, sustainable, and user-friendly
             financial ecosystems that stand the test of time.
           </p>
@@ -227,7 +227,7 @@ export default function WhyChooseUsSection() {
                 </h3>
                 <p className="text-blue-100 text-lg">
                   Join 50+ DeFi protocols and fintech innovators who trust
-                  OpenSoft AI to deliver secure, compliant, and scalable
+                  OpenSoftAI to deliver secure, compliant, and scalable
                   blockchain systems.
                 </p>
               </div>

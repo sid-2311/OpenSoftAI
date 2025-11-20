@@ -18,7 +18,7 @@ export default function CapabilitiesSection() {
       icon: Activity,
       title: "Decentralized Exchange (DEX) Development",
       description:
-        "OpenSoft AI builds complete trading platforms that give users the speed and features they expect while maintaining true decentralization. Whether you need an AMM-based swap platform, a professional order book system, or a hybrid approach, we create DEX platforms optimized for your specific market and user base. Our DEX solutions include advanced features like limit orders, cross-chain compatibility, and integrated yield opportunities. We design experiences that feel familiar to users of centralized exchanges while delivering the transparency and security advantages of DeFi.",
+        "OpenSoftAI builds complete trading platforms that give users the speed and features they expect while maintaining true decentralization. Whether you need an AMM-based swap platform, a professional order book system, or a hybrid approach, we create DEX platforms optimized for your specific market and user base. Our DEX solutions include advanced features like limit orders, cross-chain compatibility, and integrated yield opportunities. We design experiences that feel familiar to users of centralized exchanges while delivering the transparency and security advantages of DeFi.",
       gradient: "from-blue-500 to-blue-600",
       bgGradient: "from-blue-50 to-blue-100",
     },
@@ -26,7 +26,7 @@ export default function CapabilitiesSection() {
       icon: Layers,
       title: "Liquidity Pool Creation & Management",
       description:
-        "Liquidity is everything in DeFi, and we help you create sustainable liquidity solutions that attract and retain capital. We build customizable liquidity pools with fair reward distribution, impermanent loss mitigation strategies, and governance mechanisms that keep liquidity providers engaged long-term. OpenSoft AI’s approach goes beyond basic AMM pools – we design incentive structures that bootstrap liquidity efficiently and create sustainable tokenomics that benefit both traders and liquidity providers.",
+        "Liquidity is everything in DeFi, and we help you create sustainable liquidity solutions that attract and retain capital. We build customizable liquidity pools with fair reward distribution, impermanent loss mitigation strategies, and governance mechanisms that keep liquidity providers engaged long-term. OpenSoftAI’s approach goes beyond basic AMM pools – we design incentive structures that bootstrap liquidity efficiently and create sustainable tokenomics that benefit both traders and liquidity providers.",
       gradient: "from-blue-600 to-indigo-600",
       bgGradient: "from-blue-100 to-indigo-50",
     },
@@ -42,7 +42,7 @@ export default function CapabilitiesSection() {
       icon: LineChart,
       title: "DeFi Lending & Borrowing Solutions",
       description:
-        "OpenSoft AI builds peer-to-peer lending protocols that compete with traditional finance on accessibility and transparency while offering better rates for both lenders and borrowers. Our lending platforms include sophisticated risk assessment, automated liquidation mechanisms, and flexible collateral management. We support both overcollateralized and undercollateralized lending, with smart contract-based credit scoring and automated risk management. Each protocol is optimized to balance capital efficiency with robust security.",
+        "OpenSoftAI builds peer-to-peer lending protocols that compete with traditional finance on accessibility and transparency while offering better rates for both lenders and borrowers. Our lending platforms include sophisticated risk assessment, automated liquidation mechanisms, and flexible collateral management. We support both overcollateralized and undercollateralized lending, with smart contract-based credit scoring and automated risk management. Each protocol is optimized to balance capital efficiency with robust security.",
       gradient: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-50 to-cyan-50",
     },
@@ -50,7 +50,7 @@ export default function CapabilitiesSection() {
       icon: BarChart3,
       title: "Custom DeFi Protocol Development",
       description:
-        "Every DeFi innovation starts with someone asking, 'what if we could do this differently?' We collaborate with visionary teams building novel DeFi primitives — from new derivatives instruments and stablecoin mechanisms to entirely new financial architectures. OpenSoft AI specializes in transforming complex financial concepts into secure, auditable smart contracts through rigorous economic modeling, security analysis, and user testing, ensuring your innovative idea works in practice.",
+        "Every DeFi innovation starts with someone asking, 'what if we could do this differently?' We collaborate with visionary teams building novel DeFi primitives — from new derivatives instruments and stablecoin mechanisms to entirely new financial architectures. OpenSoftAI specializes in transforming complex financial concepts into secure, auditable smart contracts through rigorous economic modeling, security analysis, and user testing, ensuring your innovative idea works in practice.",
       gradient: "from-cyan-500 to-blue-500",
       bgGradient: "from-cyan-50 to-blue-100",
     },
@@ -86,7 +86,7 @@ export default function CapabilitiesSection() {
           </h2>
 
           <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From decentralized trading to liquidity and lending, OpenSoft AI
+            From decentralized trading to liquidity and lending, OpenSoftAI
             builds secure, high-performance DeFi systems that drive real value
             and sustainability across your ecosystem.
           </p>

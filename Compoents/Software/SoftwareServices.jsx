@@ -248,14 +248,14 @@ export default function SoftwareServices() {
   return (
     <>
       <Head>
-        <title>Custom Software Development Services | OpenSoft AI</title>
+        <title>Custom Software Development Services | OpenSoftAI</title>
         <meta
           name="description"
-          content="Explore our core software solutions across enterprise, healthcare, education, and business sectors. Build scalable, secure, and custom software with OpenSoft AI."
+          content="Explore our core software solutions across enterprise, healthcare, education, and business sectors. Build scalable, secure, and custom software with OpenSoftAI."
         />
         <meta
           name="keywords"
-          content="custom software development, ERP software, SaaS platform, LMS, HRMS, POS, healthcare software, OpenSoft AI"
+          content="custom software development, ERP software, SaaS platform, LMS, HRMS, POS, healthcare software, OpenSoftAI"
         />
       </Head>
 

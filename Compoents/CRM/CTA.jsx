@@ -133,7 +133,7 @@ export default function CRMCTASection() {
                 Ready to strengthen your customer relationships with a custom CRM?
               </p>
               <p className="text-lg text-blue-200">
-                Partner with <span className="text-blue-300 font-bold">OpenSoft AI</span> to build a CRM system
+                Partner with <span className="text-blue-300 font-bold">OpenSoftAI</span> to build a CRM system
                 tailored to your business growth goals.
               </p>
             </div>

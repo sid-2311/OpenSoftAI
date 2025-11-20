@@ -77,11 +77,11 @@ export default function Industries() {
     >
       {/* SEO Heading */}
       <header className="text-center mb-10 max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-slate-900">
+        <h2 className="text-2xl md:text-4xl font-bold mb-3 text-slate-900">
           Industries We Transform Through AI Chatbots
         </h2>
-        <p className="text-gray-600">
-          Discover how <strong>OpenSoft AI</strong> helps businesses across
+        <p className="text-gray-600 text-md">
+          Discover how <strong>OpenSoftAI</strong> helps businesses across
           sectors automate support, improve customer experience, and increase
           operational efficiency with intelligent chat solutions.
         </p>
@@ -90,37 +90,38 @@ export default function Industries() {
       {/* Card Wrapper */}
       <div className="bg-[#0B2542] rounded-2xl shadow-xl p-6 md:p-10 w-full max-w-6xl">
         {/* Tabs */}
-        <nav
-          role="tablist"
-          aria-label="Software Industries"
-          className="flex flex-wrap justify-start gap-3 mb-8"
-        >
-          {SOFTWARE_TABS.map((tab) => {
-            const isActive = tab.id === active;
-            return (
-              <button
-                key={tab.id}
-                id={`tab-${tab.id}`}
-                role="tab"
-                aria-selected={isActive}
-                aria-controls={`panel-${tab.id}`}
-                onClick={() => setActive(tab.id)}
-                className={`flex flex-col items-center justify-center gap-2 px-5 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
-                  isActive
-                    ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
-                    : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
-                }`}
-              >
-                <div className="w-8 h-8 flex items-center justify-center">
-                  {tab.icon}
-                </div>
-                <span className="text-sm font-medium text-center">
-                  {tab.title}
-                </span>
-              </button>
-            );
-          })}
-        </nav>
+       <nav
+  role="tablist"
+  aria-label="Software Industries"
+  className="flex flex-nowrap overflow-x-auto whitespace-nowrap gap-3 mb-8 py-2 px-1 no-scrollbar"
+>
+  {SOFTWARE_TABS.map((tab) => {
+    const isActive = tab.id === active;
+    return (
+      <button
+        key={tab.id}
+        id={`tab-${tab.id}`}
+        role="tab"
+        aria-selected={isActive}
+        aria-controls={`panel-${tab.id}`}
+        onClick={() => setActive(tab.id)}
+        className={`flex flex-col items-center justify-center gap-2 px-5 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
+          isActive
+            ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
+            : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
+        }`}
+      >
+        <div className="w-8 h-8 flex items-center justify-center">
+          {tab.icon}
+        </div>
+        <span className="text-sm font-medium text-center">
+          {tab.title}
+        </span>
+      </button>
+    );
+  })}
+</nav>
+
 
         {/* Panels */}
         {SOFTWARE_TABS.map((tab) => {

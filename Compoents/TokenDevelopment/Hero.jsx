@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-20 flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 space-y-4">
             <h1 className="text-4xl md:text-4xl font-bold leading-tight">
-      Launch Secure and Scalable Crypto Tokens with OpenSoft AI
+      Launch Secure and Scalable Crypto Tokens with OpenSoftAI
 
 
 

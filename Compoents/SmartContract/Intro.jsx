@@ -132,13 +132,13 @@ export default function SmartContractSection() {
               </div>
             </div>
 
-            {/* OpenSoft AI Expertise */}
+            {/* OpenSoftAI Expertise */}
             <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="bg-blue-500 p-2 rounded-lg">
                   <Shield className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-bold">OpenSoft AI Expertise</h3>
+                <h3 className="text-xl font-bold">OpenSoftAI Expertise</h3>
               </div>
               <p className="text-gray-300 leading-relaxed">
                 We've been developing smart contracts since the early days of Ethereum. Our approach isn't 

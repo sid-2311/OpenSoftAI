@@ -64,7 +64,7 @@ export default function WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Forward-Thinking Companies {" "}
             <span className=" mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              Choose OpenSoft AI
+              Choose OpenSoftAI
             </span>
           </h2>
 
@@ -164,7 +164,7 @@ export default function WhyChooseUsSection() {
                   Ready to Transform Your Business with AI?
                 </h3>
                 <p className="text-blue-100 text-lg">
-                  Join forward-thinking companies who trust OpenSoft AI for their AI transformation journey.
+                  Join forward-thinking companies who trust OpenSoftAI for their AI transformation journey.
                 </p>
               </div>
               

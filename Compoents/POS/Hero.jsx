@@ -13,8 +13,8 @@ export default function HeroSection() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/pos.jpg"
-            alt="Digital Tablet with Stethoscope"
+            src="/images/Restaurant-POS-system-with-digital-menu.jpg"
+            alt="Restaurant POS system with digital menu"
             fill
             className="object-cover"
             priority

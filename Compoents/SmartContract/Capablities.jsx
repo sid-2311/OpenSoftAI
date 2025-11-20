@@ -51,7 +51,7 @@ export default function CapabilitiesSection() {
       icon: Shield,
       title: "Smart Contract Auditing & Security Testing",
       description:
-        "Security isn’t an afterthought — it’s the foundation. Our internal audit process includes static analysis, manual code review, automated testing, and formal verification. We also simulate economic scenarios to uncover vulnerabilities. OpenSoft AI prepares comprehensive audit documentation to streamline external audits, saving time and cost while improving overall code quality.",
+        "Security isn’t an afterthought — it’s the foundation. Our internal audit process includes static analysis, manual code review, automated testing, and formal verification. We also simulate economic scenarios to uncover vulnerabilities. OpenSoftAI prepares comprehensive audit documentation to streamline external audits, saving time and cost while improving overall code quality.",
       gradient: "from-indigo-600 to-blue-700",
       bgGradient: "from-indigo-50 to-blue-100",
     },
@@ -59,7 +59,7 @@ export default function CapabilitiesSection() {
       icon: Cpu,
       title: "Business Process Automation",
       description:
-        "Smart contracts excel at automating complex business processes — from escrow and supply chain management to insurance claims and logistics. We build automation systems that integrate with real-world data through reliable oracles, featuring error handling and dispute resolution. OpenSoft AI helps you identify which parts of your operations can benefit most from blockchain-powered transparency and automation.",
+        "Smart contracts excel at automating complex business processes — from escrow and supply chain management to insurance claims and logistics. We build automation systems that integrate with real-world data through reliable oracles, featuring error handling and dispute resolution. OpenSoftAI helps you identify which parts of your operations can benefit most from blockchain-powered transparency and automation.",
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-100",
     },
@@ -86,7 +86,7 @@ export default function CapabilitiesSection() {
             </span>
           </h2>
           <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            OpenSoft AI delivers secure, scalable, and audit-ready smart
+            OpenSoftAI delivers secure, scalable, and audit-ready smart
             contract solutions across DeFi, NFTs, and enterprise blockchain
             automation — built for the next generation of decentralized
             innovation.

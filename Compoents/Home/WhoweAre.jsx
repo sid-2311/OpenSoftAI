@@ -42,7 +42,7 @@ export default function WhoWeAre() {
   needed websites that didn't crash every Tuesday. Fast forward to
   today? We're building AI systems for Fortune 500 companies and
   blockchain platforms that handle millions in transactions. <br /><br />
-  OpenSoft AI team isn't just a bunch of developers hiding behind
+  OpenSoftAI team isn't just a bunch of developers hiding behind
   computers. We're certified in all the big platforms – AWS, Microsoft
   Azure, Google Cloud, you name it. But more importantly, we actually
   understand business. Finance, healthcare, retail, manufacturing –

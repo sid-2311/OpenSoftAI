@@ -96,7 +96,7 @@ export default function LMSSection() {
                 . But real education requires interactive experiences and a sense of connection.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
-                At <span className="font-semibold text-indigo-700">OpenSoft AI</span>, we’ve built LMS platforms
+                At <span className="font-semibold text-indigo-700">OpenSoftAI</span>, we’ve built LMS platforms
                 for universities pivoting to online learning overnight, companies transforming training, and
                 creators launching world-class courses.
               </p>

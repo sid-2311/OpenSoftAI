@@ -18,8 +18,8 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full h-full">
             <Image
-              src="/images/download.jpg"
-              alt="AI technology background"
+              src="/images/Person-interacting-with-futuristic-AI-interface-on-a-digital-screen.jpg"
+              alt="Person interacting with futuristic AI interface on a digital screen"
               fill
               style={{ objectFit: "cover", objectPosition: "center" }}
               priority

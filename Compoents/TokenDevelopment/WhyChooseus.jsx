@@ -26,7 +26,7 @@ export default function WhyChooseUsSection() {
       icon: Code2,
       title: "Built by Blockchain Pioneers",
       description:
-        "OpenSoft AI has been building in the blockchain space since before it was cool. We've seen what works — and what doesn’t. Our team combines deep technical expertise with real-world business understanding to help you build solutions that last.",
+        "OpenSoftAI has been building in the blockchain space since before it was cool. We've seen what works — and what doesn’t. Our team combines deep technical expertise with real-world business understanding to help you build solutions that last.",
       highlights: ["Smart Contracts", "DeFi", "NFTs", "Web3 Infrastructure"],
       stats: "Blockchain Experts",
     },
@@ -94,11 +94,11 @@ export default function WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              OpenSoft AI
+              OpenSoftAI
             </span>
           </h2>
           <p className="max-w-3xl mx-auto text-slate-600 text-md">
-            OpenSoft AI has been building in the blockchain space since before it
+            OpenSoftAI has been building in the blockchain space since before it
             was cool. We combine technical depth with strategic insight — building
             blockchain and AI solutions that actually move your business forward.
           </p>
@@ -209,7 +209,7 @@ export default function WhyChooseUsSection() {
                 </h3>
                 <p className="text-blue-100 text-lg">
                   Join 50+ successful token projects and enterprises who trust
-                  OpenSoft AI to deliver secure, scalable, and audit-ready
+                  OpenSoftAI to deliver secure, scalable, and audit-ready
                   blockchain solutions.
                 </p>
               </div>

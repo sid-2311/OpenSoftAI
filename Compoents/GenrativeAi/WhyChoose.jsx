@@ -115,7 +115,7 @@ export default function WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Creative Teams{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              Choose OpenSoft AI
+              Choose OpenSoftAI
             </span>
           </h2>
         </div>
@@ -222,7 +222,7 @@ export default function WhyChooseUsSection() {
                   Ready to Empower Your Creative Team with AI?
                 </h3>
                 <p className="text-blue-100 text-lg">
-                  Join innovative teams who trust OpenSoft AI to elevate their
+                  Join innovative teams who trust OpenSoftAI to elevate their
                   creative capabilities through intelligent automation.
                 </p>
               </div>

@@ -63,14 +63,14 @@ export default function AICopilotIntroSection() {
     <>
       {/* SEO Head */}
       <Head>
-        <title>AI Work Copilot | Smart Digital Assistant | OpenSoft AI</title>
+        <title>AI Work Copilot | Smart Digital Assistant | OpenSoftAI</title>
         <meta
           name="description"
-          content="Meet your AI work copilot — an intelligent assistant that automates tasks, generates insights, and helps your team focus on creativity and strategy. Built by OpenSoft AI."
+          content="Meet your AI work copilot — an intelligent assistant that automates tasks, generates insights, and helps your team focus on creativity and strategy. Built by OpenSoftAI."
         />
         <meta
           name="keywords"
-          content="AI work assistant, AI copilot, digital assistant, workflow automation, OpenSoft AI, smart productivity tools"
+          content="AI work assistant, AI copilot, digital assistant, workflow automation, OpenSoftAI, smart productivity tools"
         />
       </Head>
 
@@ -135,7 +135,7 @@ export default function AICopilotIntroSection() {
               {/* Description */}
               <p className="text-lg text-gray-600 leading-relaxed">
                 At{" "}
-                <span className="font-bold text-blue-600">OpenSoft AI</span>, we
+                <span className="font-bold text-blue-600">OpenSoftAI</span>, we
                 create digital teammates that help businesses focus on{" "}
                 <span className="font-semibold">strategy and creativity</span>{" "}
                 instead of repetitive work. Think of an AI copilot as your personal
@@ -233,7 +233,7 @@ export default function AICopilotIntroSection() {
                 </div>
 
                 <div
-                  className="absolute bottom-12 right-8 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-12 right-2 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "1s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -248,7 +248,7 @@ export default function AICopilotIntroSection() {
                 </div>
 
                 <div
-                  className="absolute top-1/2 right-8 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-0 left-2 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "2s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">

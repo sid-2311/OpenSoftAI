@@ -9,8 +9,8 @@ const TABS = [
     title: "Marketing & Advertising",
     heading: "Marketing & Advertising",
     text: `AI-powered campaign creation, personalized ad copy, visual asset generation, and content optimization that increases engagement and conversion rates.`,
-    img: "/images/marketad.jpeg",
-    alt: "AI in marketing and advertising",
+    img: "/images/Advertising-and-marketing-word-cloud-with-related-terms-like-media-publicity-sales-and-awareness.jpeg",
+    alt: "Advertising and marketing word cloud with related terms like media publicity sales and awareness",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const TABS = [
     title: "Media & Entertainment",
     heading: "Media & Entertainment",
     text: `Automated content creation, video production assistance, audio content generation, and creative asset development that accelerates production timelines.`,
-    img: "/images/mediaad.jpeg",
+    img: "/images/Advertising-channels-concept-diagram.jpeg",
     alt: "AI in media and entertainment",
     icon: (
       <svg

@@ -96,7 +96,7 @@ export default function ERPSection() {
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
                 At{" "}
-                <span className="font-semibold text-blue-700">OpenSoft AI</span>
+                <span className="font-semibold text-blue-700">OpenSoftAI</span>
                 , we build custom ERP solutions that eliminate data silos,
                 reduce manual work, and provide the insights you need to make
                 informed business decisions.

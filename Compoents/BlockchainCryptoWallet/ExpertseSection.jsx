@@ -119,7 +119,7 @@ export default function CryptoExpertiseSection() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Holistic Development Approach</h3>
                 <p className="text-blue-50 leading-relaxed">
-                  What sets OpenSoft AI apart is our <strong>holistic approach</strong> to crypto platform development. We don't just focus on the technical architecture – we consider user experience, regulatory compliance, security protocols, and business model sustainability from day one.
+                  What sets OpenSoftAI apart is our <strong>holistic approach</strong> to crypto platform development. We don't just focus on the technical architecture – we consider user experience, regulatory compliance, security protocols, and business model sustainability from day one.
                 </p>
               </div>
             </div>

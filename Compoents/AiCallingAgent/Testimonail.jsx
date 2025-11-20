@@ -4,11 +4,11 @@ import TestimonialsSection from "../ui/Testimonail";
 const testimonialsData = [
   {
     quote:
-      "OpenSoft AI's outbound calling agent transformed our lead qualification process. We went from our sales team spending 60% of their time on cold calls to focusing entirely on warm, qualified prospects. Our conversion rate improved by 38% in the first quarter.",
+      "OpenSoftAI's outbound calling agent transformed our lead qualification process. We went from our sales team spending 60% of their time on cold calls to focusing entirely on warm, qualified prospects. Our conversion rate improved by 38% in the first quarter.",
     name: "Michael Thompson",
     position: "Sales Director",
     company: "TechStart Solutions",
-    image: "/images/crop1.jpg",
+    image: "/images/Smiling-man-in-black-and-white-portrait.jpg",
     alt: "Michael Thompson from TechStart Solutions",
   },
   {
@@ -17,7 +17,7 @@ const testimonialsData = [
     name: "Laura Martinez",
     position: "Customer Success Manager",
     company: "FlowCommerce",
-    image: "/images/crop3.jpg",
+    image: "/images/Professional-woman-in-office-chair.jpg",
     alt: "Laura Martinez from FlowCommerce",
   },
   {

@@ -24,7 +24,7 @@ export default function CTASection() {
           
           <div className="bg-blue-800/50 rounded-xl p-6 mb-6">
             <p className="text-base md:text-lg text-white leading-relaxed">
-              At <span className="font-semibold text-blue-200">OpenSoft AI</span>, we've helped dozens of 
+              At <span className="font-semibold text-blue-200">OpenSoftAI</span>, we've helped dozens of 
               companies successfully implement generative AI solutions that deliver measurable results. 
               From small startups looking to compete with larger competitors to enterprise organizations 
               scaling content operations globally, we build AI solutions that work.

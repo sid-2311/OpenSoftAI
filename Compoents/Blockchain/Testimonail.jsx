@@ -7,7 +7,7 @@ export default function Testimonials() {
     {
       icon: TrendingUp,
       quote:
-        "OpenSoft AI didn't just build our DeFi platform – they architected an entire financial ecosystem. Their deep understanding of tokenomics and security helped us launch with confidence. We've processed over $50M in transactions with zero security incidents, and our total value locked has grown to $100M in just six months.",
+        "OpenSoftAI didn't just build our DeFi platform – they architected an entire financial ecosystem. Their deep understanding of tokenomics and security helped us launch with confidence. We've processed over $50M in transactions with zero security incidents, and our total value locked has grown to $100M in just six months.",
       name: "David Chen",
       title: "Founder & CEO",
       company: "YieldMax Protocol",
@@ -16,7 +16,7 @@ export default function Testimonials() {
     {
       icon: Gamepad2,
       quote:
-        "The NFT marketplace OpenSoft AI developed for our gaming platform has been phenomenal. The custom features they built for gaming NFTs, including dynamic metadata and cross-game compatibility, have given us a significant competitive advantage. Our daily transaction volume has increased 300% since launch.",
+        "The NFT marketplace OpenSoftAI developed for our gaming platform has been phenomenal. The custom features they built for gaming NFTs, including dynamic metadata and cross-game compatibility, have given us a significant competitive advantage. Our daily transaction volume has increased 300% since launch.",
       name: "Maria Rodriguez",
       title: "CTO",
       company: "MetaGaming Studios",
@@ -25,7 +25,7 @@ export default function Testimonials() {
     {
       icon: Package,
       quote:
-        "Working with OpenSoft AI on our enterprise blockchain solution was exceptional. They navigated complex regulatory requirements while building a system that streamlined our supply chain operations. We've reduced verification time by 80% and saved millions in operational costs.",
+        "Working with OpenSoftAI on our enterprise blockchain solution was exceptional. They navigated complex regulatory requirements while building a system that streamlined our supply chain operations. We've reduced verification time by 80% and saved millions in operational costs.",
       name: "Robert Kim",
       title: "VP of Technology",
       company: "Global Supply Solutions",
@@ -34,7 +34,7 @@ export default function Testimonials() {
     {
       icon: Shield,
       quote:
-        "OpenSoft AI's smart contract development expertise saved our token launch. Their security audit caught critical vulnerabilities that could have cost us everything. The final contracts are bulletproof, and our token has maintained perfect security throughout multiple bull market cycles.",
+        "OpenSoftAI's smart contract development expertise saved our token launch. Their security audit caught critical vulnerabilities that could have cost us everything. The final contracts are bulletproof, and our token has maintained perfect security throughout multiple bull market cycles.",
       name: "Jennifer Walsh",
       title: "Co-founder",
       company: "InnovateToken",
@@ -53,7 +53,7 @@ export default function Testimonials() {
             What Our Clients Are Saying
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover how businesses worldwide are scaling with OpenSoft AI’s blockchain,
+            Discover how businesses worldwide are scaling with OpenSoftAI’s blockchain,
             DeFi, and enterprise solutions.
           </p>
         </header>

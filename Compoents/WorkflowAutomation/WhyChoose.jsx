@@ -113,7 +113,7 @@ export default function WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Growing Companies{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              Trust OpenSoft AI
+              Trust OpenSoftAI
             </span>
           </h2>
         </div>
@@ -218,7 +218,7 @@ export default function WhyChooseUsSection() {
                   Ready to Empower Your Team with AI?
                 </h3>
                 <p className="text-blue-100 text-lg">
-                  Join innovative companies who trust OpenSoft AI to transform
+                  Join innovative companies who trust OpenSoftAI to transform
                   operations, improve efficiency, and drive long-term growth.
                 </p>
               </div>

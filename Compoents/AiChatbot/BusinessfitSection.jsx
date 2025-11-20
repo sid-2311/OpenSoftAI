@@ -69,11 +69,11 @@ export default function BusinessBenefitsSection() {
           {/* Header */}
           <div className="text-center mb-16">
            
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why This Actually Helps{' '}
               <span className="text-blue-600">Your Business</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
               Real benefits that impact your bottom line, not just technical features.
             </p>
           </div>

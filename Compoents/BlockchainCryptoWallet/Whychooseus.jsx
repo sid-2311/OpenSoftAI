@@ -113,7 +113,7 @@ export default function   WhyChooseUsSection() {
           <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Fintech Leaders{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-              Choose OpenSoft AI
+              Choose OpenSoftAI
             </span>
           </h2>
         </div>
@@ -218,7 +218,7 @@ export default function   WhyChooseUsSection() {
                   Ready to Build the Future of Fintech?
                 </h3>
                 <p className="text-blue-100 text-lg">
-                  Join industry leaders who trust OpenSoft AI to power secure,
+                  Join industry leaders who trust OpenSoftAI to power secure,
                   compliant, and high-performing financial platforms.
                 </p>
               </div>

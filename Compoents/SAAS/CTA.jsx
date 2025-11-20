@@ -146,7 +146,7 @@ export default function SaaSCTASection() {
               </p>
               <p className="text-lg text-indigo-200">
                 Partner with{" "}
-                <span className="text-indigo-300 font-bold">OpenSoft AI</span>{" "}
+                <span className="text-indigo-300 font-bold">OpenSoftAI</span>{" "}
                 to design, develop, and scale your SaaS product.
               </p>
             </div>

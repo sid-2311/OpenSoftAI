@@ -61,14 +61,7 @@ export default function AIChatbotIntroSection() {
 
   return (
     <>
-      {/* SEO Head */}
-      <Head>
-        <title>AI Chatbot Development | Smarter Conversations</title>
-        <meta
-          name="description"
-          content="Build intelligent AI chatbots that understand context and improve with every interaction."
-        />
-      </Head>
+      
 
       <section
         className="relative bg-white overflow-hidden py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
@@ -97,7 +90,7 @@ export default function AIChatbotIntroSection() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="text-2xl  lg:text-5xl font-bold leading-tight text-gray-900">
                 Ever Wonder Why Some Chatbots Feel Like Talking to a Wall?
                 <span className="block mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
                   Let’s Talk About the Ones That Don’t.
@@ -126,7 +119,7 @@ export default function AIChatbotIntroSection() {
               {/* Description */}
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 At{" "}
-                <span className="font-bold text-blue-600">OpenSoft AI</span>, we’ve
+                <span className="font-bold text-blue-600">OpenSoftAI</span>, we’ve
                 been building chatbots that *actually help* for over six years.
                 The difference lies in{" "}
                 <span className="font-semibold">understanding context</span> — because

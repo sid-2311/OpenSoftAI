@@ -131,7 +131,7 @@ export default function Industries() {
           id="industries-heading"
           className="text-xl md:text-4xl font-bold mb-3 text-gray-900"
         >
-          Industries OpenSoft AI is Working With
+          Industries OpenSoftAI is Working With
         </h2>
         <p className="text-gray-600 text-sm">
           Explore how we transform various industries with innovative technology.
@@ -144,7 +144,7 @@ export default function Industries() {
         <nav
           role="tablist"
           aria-label="Industries"
-          className="flex justify-start gap-6 mb-8 overflow-x-auto"
+          className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar"
         >
           {TABS.map((tab) => {
             const isActive = tab.id === active;

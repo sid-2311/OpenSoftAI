@@ -54,10 +54,10 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             How We Actually Build These Things
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto">
             No shortcuts, no generic templates. Just a proven process that creates chatbots people actually want to use.
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function ProcessSection() {
                         <Icon className="w-20 h-20 text-white" strokeWidth={1.5} />
                       </div>
                       <div className="absolute -top-4 -right-4 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg border-4 border-blue-100">
-                        <span className="text-2xl font-bold text-blue-600">{step.number}</span>
+                        <span className="text-xl font-bold text-blue-600">{step.number}</span>
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ export default function ProcessSection() {
                       <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                         {step.title}
                       </h3>
-                      <p className="text-gray-700 leading-relaxed mb-6 text-lg">
+                      <p className="text-gray-700 leading-relaxed mb-6 text-md md:text-lg">
                         {step.description}
                       </p>
                       
@@ -135,9 +135,15 @@ export default function ProcessSection() {
             <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
               Let's analyze your customer conversations and create a chatbot that actually works for your business.
             </p>
-            <Link href="/contact-us" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
-              Schedule a Discovery Call
-            </Link>
+           
+
+<Link
+  href="/contact-us"
+  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl inline-block"
+>
+  Schedule a Discovery Call
+</Link>
+
           </div>
         </div>
       </div>

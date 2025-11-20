@@ -124,13 +124,13 @@ export default function ExperienceSection() {
           {/* Header */}
           <div className="text-center mb-16 animate-fadeIn">
             
-            <h2 className="text-4xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
               We've Been Building Conversational AI{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
                 Since People Thought It Was Science Fiction
               </span>
             </h2>
-            <p className="text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-md md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Six years ago, when we told people we were building AI chatbots, they'd picture that paperclip from Microsoft Office. Now everyone expects their chatbots to understand them perfectly. The learning curve has been steep, but that's exactly why our current systems work so well.
             </p>
           </div>
@@ -150,8 +150,8 @@ export default function ExperienceSection() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${metric.color} rounded-2xl mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                     <metric.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-5xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-blue-300 font-medium text-lg">{metric.label}</div>
+                  <div className="text-3xl md:text-3xl font-bold text-white mb-2">{metric.value}</div>
+                  <div className="text-blue-300 font-medium md:text-lg text-md">{metric.label}</div>
                 </div>
               </div>
             ))}
@@ -164,7 +164,7 @@ export default function ExperienceSection() {
                 <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-4 rounded-2xl shadow-lg">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold text-white">What We've Learned from 200+ Projects</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">What We've Learned from 200+ Projects</h3>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
@@ -223,10 +223,10 @@ export default function ExperienceSection() {
                   <div className="bg-white/20 backdrop-blur-sm p-4 rounded-2xl">
                     <BarChart4 className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-3xl md:text-3xl font-bold text-white">The Numbers That Actually Matter</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">The Numbers That Actually Matter</h3>
                 </div>
 
-                <p className="text-lg text-blue-100 mb-8 leading-relaxed">
+                <p className="text-md text-blue-100 mb-8 leading-relaxed">
                   Our chatbots typically reduce support ticket volume by 60-70%, but here's what's more interesting—customer satisfaction scores usually <span className="font-bold text-white">go up, not down</span>. Turns out people don't mind talking to bots when those bots actually understand what they're asking.
                 </p>
 
@@ -239,7 +239,7 @@ export default function ExperienceSection() {
                   ].map((stat, idx) => (
                     <div key={idx} className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300">
                       <stat.icon className="w-8 h-8 text-white mx-auto mb-3" />
-                      <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                      <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
                       <div className="text-sm text-blue-200">{stat.label}</div>
                     </div>
                   ))}
@@ -259,16 +259,16 @@ export default function ExperienceSection() {
                   <div className="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold mb-3">
                     Success Story
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Real Impact, Real Results</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Real Impact, Real Results</h3>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-6">
                     A SaaS company we worked with last year saw their first-response time drop from <span className="font-bold text-red-600">4 hours</span> to <span className="font-bold text-green-600">30 seconds</span>.
                   </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md md:text-lg text-gray-700 leading-relaxed">
                     Their support team went from drowning in repetitive questions to focusing on complex problems that actually needed human expertise.
                   </p>
                 </div>

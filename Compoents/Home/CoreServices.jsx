@@ -50,7 +50,7 @@ export default function CoreServices() {
       {/* Heading */}
       <div className="text-center mb-8 max-w-3xl">
         <h2 className="text-2xl md:text-4xl font-bold mb-3">
-          The Core Services OpenSoft AI Offer
+          The Core Services OpenSoftAI Offer
         </h2>
         <p className="text-gray-600 text-sm">
           Explore our main offerings designed to transform your business with

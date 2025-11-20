@@ -215,7 +215,7 @@ export default function GetStartedSection() {
               answer.
             </p>
             <p className="text-xl font-bold text-blue-900 mb-8">
-              Contact OpenSoft AI today and never miss another opportunity.
+              Contact OpenSoftAI today and never miss another opportunity.
             </p>
             <Link
               href="/contact-us"

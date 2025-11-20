@@ -81,7 +81,7 @@ export default function WhyChooseOpenSoftAI() {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Why Choose OpenSoft AI
+            Why Choose OpenSoftAI
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
         </div>

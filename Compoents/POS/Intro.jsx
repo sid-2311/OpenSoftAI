@@ -91,7 +91,7 @@ export default function POSSection() {
                 integrate sales processing with inventory management, customer relationship tools, and business analytics to help you serve customers better while optimizing operations.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
-                <span className="font-semibold text-indigo-700">OpenSoft AI</span> develops POS systems specifically designed for your business model — whether you're running a retail store, restaurant, hotel, or service business. Our solutions work seamlessly across devices and integrate with your existing business systems for effortless management.
+                <span className="font-semibold text-indigo-700">OpenSoftAI</span> develops POS systems specifically designed for your business model — whether you're running a retail store, restaurant, hotel, or service business. Our solutions work seamlessly across devices and integrate with your existing business systems for effortless management.
               </p>
             </div>
           </div>

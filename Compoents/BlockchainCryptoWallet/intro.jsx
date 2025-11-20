@@ -103,13 +103,13 @@ export default function CryptoTrustSection() {
                   <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                   
                   <p className="text-lg">
-                    That's the reality of <strong className="text-cyan-300">crypto wallet and exchange development</strong> – it's not just about building functional software, it's about creating fortress-level security while maintaining the seamless user experience that drives adoption. At <strong className="text-white">OpenSoft AI</strong>, we understand that successful crypto platforms require a perfect balance of cutting-edge technology, bulletproof security, and regulatory compliance.
+                    That's the reality of <strong className="text-cyan-300">crypto wallet and exchange development</strong> – it's not just about building functional software, it's about creating fortress-level security while maintaining the seamless user experience that drives adoption. At <strong className="text-white">OpenSoftAI</strong>, we understand that successful crypto platforms require a perfect balance of cutting-edge technology, bulletproof security, and regulatory compliance.
                   </p>
                   
                   <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                   
                   <p className="text-lg">
-                    OpenSoft AI has been developing <strong className="text-cyan-300">crypto wallets and exchange platforms</strong> since the early days of Bitcoin, and we've seen what works and what doesn't. We've watched exchanges handle billions in volume, witnessed security breaches that could have been prevented, and learned from regulatory changes that caught many platforms off guard. This experience has taught us that building successful crypto infrastructure requires more than just coding skills – it requires deep understanding of cryptography, blockchain technology, financial regulations, and user behavior.
+                    OpenSoftAI has been developing <strong className="text-cyan-300">crypto wallets and exchange platforms</strong> since the early days of Bitcoin, and we've seen what works and what doesn't. We've watched exchanges handle billions in volume, witnessed security breaches that could have been prevented, and learned from regulatory changes that caught many platforms off guard. This experience has taught us that building successful crypto infrastructure requires more than just coding skills – it requires deep understanding of cryptography, blockchain technology, financial regulations, and user behavior.
                   </p>
                 </div>
               </article>
@@ -150,7 +150,7 @@ export default function CryptoTrustSection() {
                 Ready to Build the Future?
               </h2>
               <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-                Join the platforms that trust OpenSoft AI with their digital assets and user security
+                Join the platforms that trust OpenSoftAI with their digital assets and user security
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href="/contact-us" className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2">

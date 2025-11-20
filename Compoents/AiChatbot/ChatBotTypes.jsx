@@ -181,34 +181,35 @@ export default function ChatbotTypesSection() {
           {/* Section Header */}
           <div className="text-center mb-16" data-animate id="header">
             
-            <h2 className={`text-4xl md:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight ${isVisible.header ? 'animate-fadeInUp delay-100' : 'opacity-0'}`}>
+            <h2 className={`text-3xl md:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight ${isVisible.header ? 'animate-fadeInUp delay-100' : 'opacity-0'}`}>
               The Different Types of Chatbots{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
                 We Actually Build
               </span>
             </h2>
-            <p className={`text-lg text-gray-600 max-w-3xl mx-auto ${isVisible.header ? 'animate-fadeInUp delay-200' : 'opacity-0'}`}>
+            <p className={`text-md md:text-lg text-gray-600 max-w-3xl mx-auto ${isVisible.header ? 'animate-fadeInUp delay-200' : 'opacity-0'}`}>
               Each chatbot type is purpose-built for specific business needs, combining intelligent automation with human-like understanding.
             </p>
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {chatbotTypes.map((bot, idx) => (
-              <button
-                key={bot.id}
-                onClick={() => setActiveBot(idx)}
-                className={`group px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
-                  activeBot === idx
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-blue-50 border border-blue-200'
-                }`}
-              >
-                <bot.icon className="w-5 h-5 inline mr-2" />
-                {bot.subtitle}
-              </button>
-            ))}
-          </div>
+         <div className="flex overflow-x-auto whitespace-nowrap gap-3 mb-12 py-2 px-1 no-scrollbar">
+  {chatbotTypes.map((bot, idx) => (
+    <button
+      key={bot.id}
+      onClick={() => setActiveBot(idx)}
+      className={`inline-flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+        activeBot === idx
+          ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-lg'
+          : 'bg-white text-gray-700 hover:bg-blue-50 border border-blue-200'
+      }`}
+    >
+      <bot.icon className="w-5 h-5 inline mr-2" />
+      {bot.subtitle}
+    </button>
+  ))}
+</div>
+
 
           {/* Active Chatbot Display */}
           {chatbotTypes.map((bot, idx) => (
@@ -226,10 +227,10 @@ export default function ChatbotTypesSection() {
                           </div>
                           <div>
                             <div className="text-sm text-blue-100 font-medium">{bot.subtitle}</div>
-                            <h3 className="text-3xl md:text-4xl font-bold">{bot.title}</h3>
+                            <h3 className="text-2xl md:text-4xl font-bold">{bot.title}</h3>
                           </div>
                         </div>
-                        <p className="text-lg text-blue-50 leading-relaxed max-w-3xl">
+                        <p className="text-md md:text-lg text-blue-50 leading-relaxed max-w-3xl">
                           {bot.description}
                         </p>
                       </div>
@@ -279,7 +280,7 @@ export default function ChatbotTypesSection() {
                         </div>
                         
                         <div className="bg-white rounded-xl p-6 mb-4 shadow-md">
-                          <div className="text-5xl font-bold text-blue-600 mb-2">{bot.caseStudy.stat}</div>
+                          <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{bot.caseStudy.stat}</div>
                           <div className="text-gray-700 font-medium">{bot.caseStudy.detail}</div>
                         </div>
 

@@ -65,7 +65,7 @@ export default function BusinessTransformationSection() {
             
             <div className="space-y-6 text-slate-600 text-md leading-relaxed">
               <p>
-                At <span className="font-semibold text-slate-900">OpenSoft AI</span>, we understand that off-the-shelf software rarely fits perfectly. Every business has unique processes, specific challenges, and distinct goals that require customized solutions. That's why we specialize in building software that works exactly the way your business needs it to work.
+                At <span className="font-semibold text-slate-900">OpenSoftAI</span>, we understand that off-the-shelf software rarely fits perfectly. Every business has unique processes, specific challenges, and distinct goals that require customized solutions. That's why we specialize in building software that works exactly the way your business needs it to work.
               </p>
               <p>
                 Our software development expertise spans web applications that drive customer engagement, mobile apps that connect you with users anywhere, and enterprise software systems that streamline complex business operations. We've helped startups launch their first products, enabled growing companies to scale efficiently, and supported enterprises in digital transformation initiatives that deliver measurable results.

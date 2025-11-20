@@ -84,7 +84,7 @@ export default function DeFiCTASection() {
           <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             Ready to Build the Future of{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
-              Finance with OpenSoft AI?
+              Finance with OpenSoftAI?
             </span>
           </h2>
 
@@ -210,7 +210,7 @@ export default function DeFiCTASection() {
                 Launch Your DeFi Vision
               </h3>
               <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
-                Contact OpenSoft AI today for a free consultation and development roadmap. We'll review your protocol concept, discuss technical requirements, and provide you with a clear path from idea to mainnet launch.
+                Contact OpenSoftAI today for a free consultation and development roadmap. We'll review your protocol concept, discuss technical requirements, and provide you with a clear path from idea to mainnet launch.
               </p>
             </div>
           </div>

@@ -122,7 +122,7 @@ export default function IndustriesWeKnow() {
       <header className="text-center mb-8 max-w-3xl">
         <h2
           id="industries-heading"
-          className="text-xl md:text-4xl font-bold mb-3"
+          className="text-2xl md:text-4xl font-bold mb-3"
         >
           Industries We Know Inside and Out
         </h2>
@@ -131,7 +131,7 @@ export default function IndustriesWeKnow() {
       {/* Card wrapper */}
       <div className="bg-[#0B2542] rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-6xl">
         {/* Tabs Row */}
-        <div className="flex justify-start gap-6 mb-8 overflow-x-auto">
+        <div className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar">
           {INDUSTRIES.map((tab) => {
             const isActive = tab.id === active;
             return (

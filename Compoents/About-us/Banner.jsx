@@ -8,7 +8,7 @@ export default function Banner() {
   return (
     <section
       className="relative w-full overflow-hidden bg-[#000c55] flex items-center justify-center"
-      aria-label="OpenSoft AI Banner Section"
+      aria-label="OpenSoftAI Banner Section"
     >
       {/* Left background shape */}
       <div
@@ -33,7 +33,7 @@ export default function Banner() {
         {/* Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="mt-4 text-3xl md:text-5xl font-bold leading-tight">
-            Know more about OpenSoft AI – Driving Innovation with AI, Blockchain,
+            Know more about OpenSoftAI – Driving Innovation with AI, Blockchain,
             and Custom Software
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg opacity-90">
@@ -44,7 +44,7 @@ export default function Banner() {
           <Link
             href="/contact-us"
             className="mt-6 inline-flex items-center gap-2 rounded bg-[#016CD3] px-6 py-3 hover:text-black font-semibold shadow hover:bg-gray-100 transition"
-            aria-label="Contact OpenSoft AI"
+            aria-label="Contact OpenSoftAI"
           >
             Contact Us
             <ArrowRightIcon size={20} />

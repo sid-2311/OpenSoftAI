@@ -70,12 +70,12 @@ export default function WhyChooseUs() {
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                     <Icon className="w-6 h-6 text-white" aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl font-bold text-blue-900 leading-tight">
+                  <h3 className="text-lg md:text-xl font-bold text-blue-900 leading-tight">
                     {feature.title}
                   </h3>
                 </div>
 
-                <p className="text-gray-700 leading-relaxed mb-4">
+                <p className="text-gray-700 leading-relaxed mb-4 text-md">
                   {feature.description}
                 </p>
 

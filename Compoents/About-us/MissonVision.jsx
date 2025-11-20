@@ -24,7 +24,7 @@ export default function MissionVisionSection() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
             <p>
-              At <strong>OpenSoft AI</strong>, our mission is to help businesses
+              At <strong>OpenSoftAI</strong>, our mission is to help businesses
               scale and innovate using cutting-edge Artificial Intelligence,
               Blockchain, and custom software development solutions. We don’t
               just build technology — we build competitive advantages that help

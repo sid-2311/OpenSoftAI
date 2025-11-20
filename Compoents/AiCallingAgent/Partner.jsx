@@ -56,14 +56,14 @@ export default function OpenSoftAIPartner() {
               id="ai-partner-heading"
               className="text-3xl md:text-4xl font-bold text-blue-900 mb-4"
             >
-              Why OpenSoft AI is Your  Trusted Voice AI Partner
+              Why OpenSoftAI is Your  Trusted Voice AI Partner
             </h2>
           
           </header>
 
           {/* Features */}
           <section
-            aria-label="Key reasons to choose OpenSoft AI"
+            aria-label="Key reasons to choose OpenSoftAI"
             className="grid lg:grid-cols-3 gap-8 mb-20"
           >
             {features.map((feature, index) => {

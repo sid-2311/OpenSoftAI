@@ -120,7 +120,7 @@ export default function HMSCTASection() {
                 Ready to transform your healthcare facility with a comprehensive management system?
               </p>
               <p className="text-md text-blue-200">
-                Contact <span className="text-blue-300 font-bold">OpenSoft AI</span> today and discover how our hospital management solutions can improve patient care and operational efficiency.
+                Contact <span className="text-blue-300 font-bold">OpenSoftAI</span> today and discover how our hospital management solutions can improve patient care and operational efficiency.
               </p>
             </div>
 

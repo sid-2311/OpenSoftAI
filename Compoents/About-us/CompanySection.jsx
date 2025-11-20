@@ -22,7 +22,7 @@ export default function CompanySection() {
           </h2>
           <div className="bg-[#016CD3] w-20 h-0.5 mb-3" />
           <p className="text-gray-600 leading-relaxed">
-            At <strong>OpenSoft AI</strong>, we believe the future isn’t just
+            At <strong>OpenSoftAI</strong>, we believe the future isn’t just
             about having the latest technology — it’s about using that
             technology to solve real problems for real people. We're not here to
             build solutions just because they're technically impressive. We're
@@ -31,7 +31,7 @@ export default function CompanySection() {
           </p>
           <p className="text-gray-600 leading-relaxed my-4">
             Founded on the principle that great technology should make business
-            easier, not more complicated, OpenSoft AI has grown into a trusted
+            easier, not more complicated, OpenSoftAI has grown into a trusted
             partner for companies ready to embrace AI, blockchain, and custom
             software solutions. We work with everyone from ambitious startups
             launching their first product to established enterprises reimagining
@@ -64,7 +64,7 @@ export default function CompanySection() {
             <div className="flex justify-center mb-4">
               <Image
                 src="/images/customer-service-representatives-on-call.webp"
-                alt="Team collaboration at OpenSoft AI"
+                alt="Team collaboration at OpenSoftAI"
                 width={300}
                 height={200}
                 className="rounded"
@@ -75,7 +75,7 @@ export default function CompanySection() {
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#0A66C2] text-white px-5 py-2 rounded inline-flex items-center gap-2 text-xl font-medium hover:bg-blue-600 transition"
-              aria-label="Follow OpenSoft AI on LinkedIn"
+              aria-label="Follow OpenSoftAI on LinkedIn"
             >
               LinkedIn
               <div className="bg-white rounded-full p-2">
@@ -106,7 +106,7 @@ export default function CompanySection() {
         <div>
           <h2 className="text-3xl font-bold mb-4">Our Story</h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            <strong>OpenSoft AI</strong> started with a simple observation: too
+            <strong>OpenSoftAI</strong> started with a simple observation: too
             many businesses were struggling to bridge the gap between emerging
             technologies and practical business applications. AI was becoming
             mainstream, blockchain was moving beyond crypto speculation, and

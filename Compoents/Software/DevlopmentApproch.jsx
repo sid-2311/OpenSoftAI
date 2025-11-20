@@ -151,7 +151,7 @@ export default function DevelopmentApproach() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-blue-50">
         <div className="max-w-7xl mx-auto text-center mb-16">
           <h2 className="text-2xl md:text-4xl font-bold text-slate-800 mb-4">
-            Why Choose OpenSoft AI for Software Development
+            Why Choose OpenSoftAI for Software Development
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
             From expertise to long-term partnerships, we ensure your software

@@ -49,9 +49,9 @@ export default function TokenDevelopmentSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">The OpenSoft AI Difference</h3>
+            <h3 className="text-2xl font-bold mb-4">The OpenSoftAI Difference</h3>
             <p className="text-blue-50 leading-relaxed mb-4">
-              At OpenSoft AI, we've been in the trenches with crypto startups, fintech companies, and enterprises who needed more than just basic token creation.
+              At OpenSoftAI, we've been in the trenches with crypto startups, fintech companies, and enterprises who needed more than just basic token creation.
             </p>
             <p className="text-blue-50 leading-relaxed">
               They needed partners who understand that a successful token isn't just about the code – it's about creating something that actually works for your business goals, complies with regulations, and can scale as you grow.

@@ -66,7 +66,7 @@ export default function WhyChooseLMSSection() {
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
             Why Choose{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">
-              OpenSoft AI
+              OpenSoftAI
             </span>{' '}
             for LMS Development
           </h2>
@@ -130,7 +130,7 @@ export default function WhyChooseLMSSection() {
           }`}
         >
           <button className="group bg-gradient-to-r from-indigo-600 to-indigo-800 text-white px-10 py-5 rounded-full font-bold text-sm shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
-            Build Your LMS with OpenSoft AI
+            Build Your LMS with OpenSoftAI
             <svg
               className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
               fill="none"

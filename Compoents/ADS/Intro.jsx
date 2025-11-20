@@ -99,7 +99,7 @@ export default function ADSSection() {
                 problems or create experiences people want to come back to.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                At <span className="font-semibold text-indigo-600">OpenSoft AI</span>, we’ve built
+                At <span className="font-semibold text-indigo-600">OpenSoftAI</span>, we’ve built
                 mobile apps with millions of downloads, from consumer platforms to enterprise mobility
                 solutions. We know what makes an app successful: purpose-driven design, strong technical
                 foundations, and user behavior insights.

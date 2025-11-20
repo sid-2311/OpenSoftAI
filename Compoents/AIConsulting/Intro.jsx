@@ -67,14 +67,14 @@ export default function AIConsultingSection() {
     <>
       {/* SEO Metadata */}
       <Head>
-        <title>AI Consulting Services | Strategic AI Adoption | OpenSoft AI</title>
+        <title>AI Consulting Services | Strategic AI Adoption | OpenSoftAI</title>
         <meta
           name="description"
-          content="OpenSoft AI helps businesses adopt AI strategically — building data-driven roadmaps, avoiding costly mistakes, and maximizing ROI. Partner with experts who make AI work for your goals."
+          content="OpenSoftAI helps businesses adopt AI strategically — building data-driven roadmaps, avoiding costly mistakes, and maximizing ROI. Partner with experts who make AI work for your goals."
         />
         <meta
           name="keywords"
-          content="AI consulting, AI strategy, business transformation, artificial intelligence roadmap, OpenSoft AI"
+          content="AI consulting, AI strategy, business transformation, artificial intelligence roadmap, OpenSoftAI"
         />
       </Head>
 
@@ -127,7 +127,7 @@ export default function AIConsultingSection() {
                 That’s exactly why{" "}
                 <span className="font-bold text-blue-600">AI consulting</span> has
                 become so crucial. At{" "}
-                <span className="font-bold text-blue-600">OpenSoft AI</span>, we help
+                <span className="font-bold text-blue-600">OpenSoftAI</span>, we help
                 organizations cut through the hype and build AI strategies that
                 actually work — grounded in your business needs, data reality, and
                 growth goals. Think of us as your{" "}
@@ -157,7 +157,7 @@ export default function AIConsultingSection() {
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40"
               >
                 <Target className="w-5 h-5" />
-                <span>Book Your AI Strategy Session</span>
+                <span className="text-sm md:text-md">Book Your AI Strategy Session</span>
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -222,7 +222,7 @@ export default function AIConsultingSection() {
                 </div>
 
                 <div
-                  className="absolute bottom-12 right-8 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-12 right-2 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "1s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -237,7 +237,7 @@ export default function AIConsultingSection() {
                 </div>
 
                 <div
-                  className="absolute top-1/2 right-8 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-0 left-2 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "2s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">

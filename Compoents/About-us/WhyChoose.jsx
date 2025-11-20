@@ -39,7 +39,7 @@ export default function WhyChoose() {
             id="why-choose-heading"
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
-            Why Choose <span className="text-indigo-600">OpenSoft AI</span>
+            Why Choose <span className="text-indigo-600">OpenSoftAI</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             From startups to enterprises, we deliver secure, scalable, and

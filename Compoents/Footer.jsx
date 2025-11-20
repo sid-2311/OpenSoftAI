@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <Link href="/">
               <img
-                src="/images/opensoftai-logo.svg"
+                src="/images/opensoftai-logo.jpg"
                 alt="OpenSoftAI Logo"
                 className="h-14 md:h-16 w-auto"
               />

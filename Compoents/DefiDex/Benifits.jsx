@@ -109,7 +109,7 @@ export default function BusinessBenefitsSection() {
           <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-10">
             Business Benefits That Drive Real Results for{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
-              OpenSoft AI Clients
+              OpenSoftAI Clients
             </span>
           </h2>
         </div>

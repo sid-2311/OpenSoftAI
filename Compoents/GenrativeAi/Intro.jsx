@@ -68,15 +68,15 @@ export default function GenerativeAISection() {
     <>
       <Head>
         <title>
-          Generative AI Solutions | Transform Creative Workflows | OpenSoft AI
+          Generative AI Solutions | Transform Creative Workflows | OpenSoftAI
         </title>
         <meta
           name="description"
-          content="OpenSoft AI builds custom generative AI solutions to automate and amplify creative workflows — from content writing to visuals, videos, and audio."
+          content="OpenSoftAI builds custom generative AI solutions to automate and amplify creative workflows — from content writing to visuals, videos, and audio."
         />
         <meta
           name="keywords"
-          content="generative AI, AI content generation, AI design, AI video production, creative automation, OpenSoft AI"
+          content="generative AI, AI content generation, AI design, AI video production, creative automation, OpenSoftAI"
         />
       </Head>
 
@@ -117,7 +117,7 @@ export default function GenerativeAISection() {
                     businesses approach creative production.
                   </p>
                   <p className="text-sm text-gray-600 italic">
-                    At OpenSoft AI, we specialize in custom generative AI solutions
+                    At OpenSoftAI, we specialize in custom generative AI solutions
                     that empower teams to create, scale, and optimize their workflows
                     like never before.
                   </p>
@@ -218,7 +218,7 @@ export default function GenerativeAISection() {
                 </div>
 
                 <div
-                  className="absolute bottom-12 right-8 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-12 right-2 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "1s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -231,7 +231,7 @@ export default function GenerativeAISection() {
                 </div>
 
                 <div
-                  className="absolute top-1/2 right-8 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-0 left-2 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "2s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">

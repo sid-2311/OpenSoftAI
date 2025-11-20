@@ -111,7 +111,7 @@ export default function ERPCTASection() {
                 Ready to integrate your business operations with a custom ERP solution?
               </p>
               <p className="text-md text-blue-200">
-                Contact <span className="text-blue-300 font-bold">OpenSoft AI</span> today for a comprehensive consultation and discover how our ERP development expertise can streamline your business processes.
+                Contact <span className="text-blue-300 font-bold">OpenSoftAI</span> today for a comprehensive consultation and discover how our ERP development expertise can streamline your business processes.
               </p>
             </div>
 

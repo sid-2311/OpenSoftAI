@@ -109,7 +109,7 @@ export default function WebsiteCTASection() {
             </p>
 
             <p className="text-md text-blue-200 text-center max-w-3xl mx-auto leading-relaxed">
-              From professional portfolios to advanced eCommerce stores, <span className="text-blue-300 font-bold">OpenSoft AI</span> builds websites that deliver real business results.
+              From professional portfolios to advanced eCommerce stores, <span className="text-blue-300 font-bold">OpenSoftAI</span> builds websites that deliver real business results.
             </p>
           </div>
 
@@ -122,7 +122,7 @@ export default function WebsiteCTASection() {
           <div className="p-12 pt-10">
             <div className="text-center mb-10">
               <p className="text-2xl text-white font-semibold mb-2">
-                Build your business website with OpenSoft AI today.
+                Build your business website with OpenSoftAI today.
               </p>
               <p className="text-lg text-blue-200">
                 From simple static sites to powerful eCommerce platforms — let’s create a website that accelerates your business growth.

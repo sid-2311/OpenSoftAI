@@ -23,7 +23,7 @@ export default function AIConsultingcta() {
             </p>
             
             <p>
-              At <span className="text-white font-bold">OpenSoft AI</span>, we've helped dozens of companies navigate this journey successfully. We know what works, what doesn't, and how to avoid the expensive mistakes that derail AI initiatives.
+              At <span className="text-white font-bold">OpenSoftAI</span>, we've helped dozens of companies navigate this journey successfully. We know what works, what doesn't, and how to avoid the expensive mistakes that derail AI initiatives.
             </p>
             
             <p>
@@ -34,7 +34,7 @@ export default function AIConsultingcta() {
           {/* CTA Section */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl mb-12">
             <p className="text-lg font-semibold mb-6 text-white">
-              Start your AI journey with expert guidance. Contact OpenSoft AI today for a free strategic consultation.
+              Start your AI journey with expert guidance. Contact OpenSoftAI today for a free strategic consultation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

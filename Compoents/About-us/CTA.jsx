@@ -24,7 +24,7 @@ export default function CallToActionCard() {
           </p>
           <p className="text-base text-gray-500 max-w-2xl mx-auto mb-10">
             Partner with{" "}
-            <span className="font-semibold text-blue-700">OpenSoft AI</span>{" "}
+            <span className="font-semibold text-blue-700">OpenSoftAI</span>{" "}
             and let’s build the future together. Great technology should make
             your business stronger, more efficient, and more capable of
             achieving your vision.

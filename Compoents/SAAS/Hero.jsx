@@ -10,10 +10,10 @@ export default function HeroSection() {
     <>
       {/* SEO Head */}
       <Head>
-        <title>SaaS Software Development | OpenSoft AI</title>
+        <title>SaaS Software Development | OpenSoftAI</title>
         <meta
           name="description"
-          content="Build scalable SaaS solutions and grow recurring revenue with OpenSoft AI’s cloud-first software development services."
+          content="Build scalable SaaS solutions and grow recurring revenue with OpenSoftAI’s cloud-first software development services."
         />
       </Head>
 

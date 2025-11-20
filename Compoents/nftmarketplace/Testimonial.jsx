@@ -9,7 +9,7 @@ const testimonialsData = [
     image: "/images/nft-marketplace-launch.jpg",
     alt: "creators launching NFT marketplace",
     quote:
-      "OpenSoft AI built our NFT marketplace with custom minting and auction features. We onboarded 5,000 creators in our first month and processed over $2M in sales.",
+      "OpenSoftAI built our NFT marketplace with custom minting and auction features. We onboarded 5,000 creators in our first month and processed over $2M in sales.",
   },
   {
     name: "Liam Chen",
@@ -35,7 +35,7 @@ export default function TestNFTDevelopment(){
   return(
    <main>
       <TestimonialsSection
-        title="What people say about OpenSoft AI"
+        title="What people say about OpenSoftAI"
         testimonials={testimonialsData}
         darkMode={true}
       />

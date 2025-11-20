@@ -94,7 +94,7 @@ export default function WhyChooseSection() {
             >
               Why Choose{" "}
               <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
-                OpenSoft AI
+                OpenSoftAI
               </span>{" "}
               for Your AI Development Project
             </h2>
@@ -128,12 +128,12 @@ export default function WhyChooseSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                     {reason.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-gray-600 leading-relaxed text-md md:text-lg">
                     {reason.description}
                   </p>
 
@@ -182,7 +182,7 @@ export default function WhyChooseSection() {
                     </div>
 
                     {/* Text */}
-                    <h4 className="text-base font-bold text-gray-900 mb-2 leading-snug">
+                    <h4 className="text-sm font-bold text-gray-900 mb-2 leading-snug">
                       {signal.title}
                     </h4>
                     <p className="text-sm text-gray-600 leading-relaxed">

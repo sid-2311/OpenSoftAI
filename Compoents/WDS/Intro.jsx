@@ -81,7 +81,7 @@ export default function WDSSection() {
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                 Your website isn’t just a digital brochure — it’s your{" "}
                 <span className="font-semibold text-blue-600">most powerful business tool</span>.
-                At <span className="font-semibold text-blue-700">OpenSoft AI</span>, we design and
+                At <span className="font-semibold text-blue-700">OpenSoftAI</span>, we design and
                 build websites that connect design, functionality, and business strategy.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">

@@ -55,7 +55,7 @@ export default function CTASection() {
       {/* Information Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <p className="text-lg text-gray-700 leading-relaxed mb-8">
-          At <strong>OpenSoft AI</strong>, we've helped dozens of companies
+          At <strong>OpenSoftAI</strong>, we've helped dozens of companies
           successfully navigate the blockchain landscape and build solutions that
           create real value for users and businesses. From crypto startups that
           have raised millions in funding to enterprises revolutionizing their
@@ -85,7 +85,7 @@ export default function CTASection() {
             Build Secure, Scalable & Innovative Blockchain Solutions
           </h3>
           <p className="text-xl text-gray-600 mb-12">
-            Contact OpenSoft AI today for a free consultation and discover what’s
+            Contact OpenSoftAI today for a free consultation and discover what’s
             possible in the decentralized world.
           </p>
 

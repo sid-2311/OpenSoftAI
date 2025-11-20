@@ -101,7 +101,7 @@ export default function BusinessImpactSection() {
         <div className="relative max-w-7xl mx-auto">
           {/* Header */}
           <header className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-6">
               The Business Impact of {" "}
               <span className=" mt-2 bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                 Custom AI Development
@@ -145,7 +145,7 @@ export default function BusinessImpactSection() {
 
                 {/* Stat Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-4">
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-xl font-bold text-blue-600">
                     {impact.stat}
                   </span>
                   <span className="text-xs text-gray-600">
@@ -154,7 +154,7 @@ export default function BusinessImpactSection() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                   {impact.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4">

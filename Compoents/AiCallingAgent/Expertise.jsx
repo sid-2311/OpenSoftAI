@@ -106,7 +106,7 @@ export default function VoiceAIExpertiseSection() {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-50 rounded-xl mb-4 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   {stat.icon}
                 </div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-3xl md:text-3xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-sm text-gray-600 font-medium">
@@ -150,7 +150,7 @@ export default function VoiceAIExpertiseSection() {
 
         {/* Results Section */}
         <section>
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-12">
             Proven Results Across Industries
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
@@ -167,7 +167,7 @@ export default function VoiceAIExpertiseSection() {
 
                 <div className="mb-4">
                   <div
-                    className={`text-5xl font-bold bg-gradient-to-r ${result.gradient} bg-clip-text text-transparent mb-2`}
+                    className={`text-3xl font-bold bg-gradient-to-r ${result.gradient} bg-clip-text text-transparent mb-2`}
                   >
                     {result.metric}
                   </div>
@@ -197,7 +197,7 @@ export default function VoiceAIExpertiseSection() {
 
             <div className="relative z-10 grid lg:grid-cols-3 gap-8 items-center">
               <div className="lg:col-span-2">
-                <p className="text-xl lg:text-2xl text-white leading-relaxed mb-6">
+                <p className="text-lg md:text-2xl lg:text-2xl text-white leading-relaxed mb-6">
                   A regional healthcare network deployed our inbound AI calling
                   agents and reduced patient wait times from{" "}
                   <span className="font-bold text-blue-300">

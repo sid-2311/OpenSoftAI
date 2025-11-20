@@ -8,7 +8,7 @@ const testimonialsData = [
     image: "/images/defi-smart-contracts.jpg",
     alt: "developers auditing DeFi smart contracts",
     quote:
-      "OpenSoft AI built and audited our DeFi smart contracts, ensuring zero vulnerabilities and a seamless launch. Their attention to economic attack vectors saved our protocol from potential exploits.",
+      "OpenSoftAI built and audited our DeFi smart contracts, ensuring zero vulnerabilities and a seamless launch. Their attention to economic attack vectors saved our protocol from potential exploits.",
   },
   {
     name: "Sophia Nguyen",
@@ -24,7 +24,7 @@ const testimonialsData = [
     image: "/images/smart-contract-architecture.jpg",
     alt: "blockchain team reviewing smart contract architecture",
     quote:
-      "Working with OpenSoft AI felt like having senior smart contract architects on our team. They anticipated edge cases we never would have thought of.",
+      "Working with OpenSoftAI felt like having senior smart contract architects on our team. They anticipated edge cases we never would have thought of.",
   },
 ];
 

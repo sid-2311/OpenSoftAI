@@ -105,7 +105,7 @@ export default function FinalCTA() {
               Let's build software that works exactly the way your business needs it to work.
             </h3>
             <p className="text-md text-blue-100">
-              Contact OpenSoft AI today to discuss your project requirements and discover how custom
+              Contact OpenSoftAI today to discuss your project requirements and discover how custom
               software development can accelerate your business success.
             </p>
           </div>

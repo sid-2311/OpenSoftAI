@@ -4,8 +4,8 @@ const testimonialsData = [
     name: "Jennifer",
     company: "Fintech Startup",
     image:
-      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80",
-    alt: "Professional woman from fintech startup",
+      "/images/Portrait-of-a-young-woman-with-brown-hair-standing-near-turquoise-wall-frame.webp",
+    alt: "Portrait of a young woman with brown hair standing near turquoise wall frame",
     quote:
       "I was skeptical because I'd tried other AI tools that promised everything and delivered headaches. Your copilot actually makes my day easier. I spend 80% less time on reports and have way more time for actual analysis.",
   },
@@ -13,7 +13,7 @@ const testimonialsData = [
     name: "Marcus",
     company: "Healthcare Practice",
     image:
-      "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80",
+      "/images/crop6.webp",
     alt: "Healthcare professional smiling at clinic",
     quote:
       "The copilot handles all the insurance verification and appointment scheduling stuff that used to take hours. Our staff can actually focus on patient care instead of paperwork.",
@@ -22,7 +22,7 @@ const testimonialsData = [
     name: "Sarah",
     company: "E-commerce Company",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+      "/images/crop8.webp",
     alt: "E-commerce team member smiling in office",
     quote:
       "It's like having the world's most organized, never-tired colleague. The copilot remembers everything, connects patterns I would have missed, and never has Monday morning brain fog.",

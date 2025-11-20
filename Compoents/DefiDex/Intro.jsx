@@ -167,7 +167,7 @@ export default function DeFiDEXIntroSection() {
               </div>
 
               <p className="text-gray-700 leading-relaxed mb-6">
-                At OpenSoft AI, we've been building DeFi protocols and DEX platforms since the space was just getting started. We've witnessed the complete evolution of decentralized finance.
+                At OpenSoftAI, we've been building DeFi protocols and DEX platforms since the space was just getting started. We've witnessed the complete evolution of decentralized finance.
               </p>
 
               {/* Evolution Progress Bars */}

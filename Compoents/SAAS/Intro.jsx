@@ -91,7 +91,7 @@ export default function SaaSSection() {
                 handles subscriptions, growth, and customer retention.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                At <span className="font-semibold text-indigo-700">OpenSoft AI</span>, we’ve learned
+                At <span className="font-semibold text-indigo-700">OpenSoftAI</span>, we’ve learned
                 that successful SaaS platforms require thinking like both a{" "}
                 <span className="font-semibold text-indigo-600">software architect</span> and a{" "}
                 <span className="font-semibold text-indigo-600">business strategist</span> from day

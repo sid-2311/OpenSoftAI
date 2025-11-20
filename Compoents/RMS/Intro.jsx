@@ -95,7 +95,7 @@ export default function RMSSection() {
                 your chaos — it reimagines it.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
-                At <span className="font-semibold text-blue-700">OpenSoft AI</span>, we design systems
+                At <span className="font-semibold text-blue-700">OpenSoftAI</span>, we design systems
                 that bring order to the back of house, clarity to the front of house, and insights
                 that help you make smarter business decisions.
               </p>

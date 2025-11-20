@@ -99,7 +99,7 @@ export default function CRMSection() {
                 <span className="font-semibold text-blue-600">generic businesses</span> with one-size-fits-all processes.
               </p>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-                At <span className="font-semibold text-blue-700">OpenSoft AI</span>, we build CRM systems that fit naturally
+                At <span className="font-semibold text-blue-700">OpenSoftAI</span>, we build CRM systems that fit naturally
                 into how your team already works — whether you run a B2B enterprise with long sales cycles,
                 an e-commerce store handling thousands of interactions, or a service business nurturing long-term clients.
               </p>
@@ -188,7 +188,7 @@ export default function CRMSection() {
             href="/contact-us"
             className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-blue-800 text-white text-sm sm:text-base font-semibold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden inline-block"
           >
-            <span className="relative z-10">Build Your Custom CRM with OpenSoft AI</span>
+            <span className="relative z-10">Build Your Custom CRM with OpenSoftAI</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
           </Link>
         </div>

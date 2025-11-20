@@ -3,19 +3,19 @@ import TestimonialsSection from "../ui/Testimonail";
 const testimonialsData = [
   {
     quote:
-      "OpenSoft AI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
+      "OpenSoftAI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
     author: "Sarah Chen",
     position: "Operations Director",
     company: "TechForward Retail",
     metric: "$2.1M",
     metricLabel: "Cost Savings",
     gradient: "from-blue-400 to-blue-500",
-    image: "/images/crop1.jpg",
+    image: "/images/Smiling-man-in-black-and-white-portrait.jpg",
     alt: "Sarah Chen, Operations Director at TechForward Retail"
   },
   {
     quote:
-      "The computer vision system OpenSoft AI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
+      "The computer vision system OpenSoftAI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
     author: "Marcus Rodriguez",
     position: "Plant Manager",
     company: "Precision Manufacturing Corp",
@@ -27,14 +27,14 @@ const testimonialsData = [
   },
   {
     quote:
-      "Working with OpenSoft AI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
+      "Working with OpenSoftAI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
     author: "Dr. Amanda Foster",
     position: "CTO",
     company: "HealthTech Innovations",
     metric: "5★",
     metricLabel: "Partnership",
     gradient: "from-blue-600 to-blue-700",
-    image: "/images/crop3.jpg",
+    image: "/images/Professional-woman-in-office-chair.jpg",
     alt: "Dr. Amanda Foster, CTO at HealthTech Innovations"
   }
 ];
@@ -69,7 +69,7 @@ const testimonialsData = [
 
 //   const testimonials = [
 //     {
-//       quote: "OpenSoft AI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
+//       quote: "OpenSoftAI didn't just build us an AI solution—they built us a competitive advantage. Their custom demand forecasting AI helped us reduce inventory costs by $2.1M in the first year while improving customer satisfaction through better stock availability.",
 //       author: "Sarah Chen",
 //       position: "Operations Director",
 //       company: "TechForward Retail",
@@ -79,7 +79,7 @@ const testimonialsData = [
 //       gradient: "from-blue-400 to-blue-500"
 //     },
 //     {
-//       quote: "The computer vision system OpenSoft AI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
+//       quote: "The computer vision system OpenSoftAI developed for our manufacturing line has been a game-changer. We've reduced quality control costs by 45% while catching defects we used to miss entirely.",
 //       author: "Marcus Rodriguez",
 //       position: "Plant Manager",
 //       company: "Precision Manufacturing Corp",
@@ -89,7 +89,7 @@ const testimonialsData = [
 //       gradient: "from-blue-500 to-blue-600"
 //     },
 //     {
-//       quote: "Working with OpenSoft AI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
+//       quote: "Working with OpenSoftAI felt like having AI experts embedded in our team. They understood our business challenges and built solutions that actually work in our real-world environment.",
 //       author: "Dr. Amanda Foster",
 //       position: "CTO",
 //       company: "HealthTech Innovations",
@@ -141,7 +141,7 @@ const testimonialsData = [
 //             What Our <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Clients Say</span>
 //           </h2>
 //           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-//             Real stories from businesses transforming with OpenSoft AI's custom solutions.
+//             Real stories from businesses transforming with OpenSoftAI's custom solutions.
 //           </p>
 //         </div>
 

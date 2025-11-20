@@ -212,7 +212,7 @@ export default function AICallingIntroSection() {
               </div>
 
               <div
-                className="absolute top-1/2 right-4 sm:right-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                className="absolute bottom-0 left-4 sm:right-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                 style={{ animationDuration: "4s", animationDelay: "2s" }}
               >
                 <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">

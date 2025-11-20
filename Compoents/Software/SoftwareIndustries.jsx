@@ -101,7 +101,7 @@ export default function SoftwareIndustries() {
           Industries We Transform Through Software
         </h2>
         {/* <p className="text-gray-600">
-          Explore how <strong>OpenSoft AI</strong> delivers innovative software
+          Explore how <strong>OpenSoftAI</strong> delivers innovative software
           solutions across industries — enhancing efficiency, customer
           engagement, and digital transformation.
         </p> */}

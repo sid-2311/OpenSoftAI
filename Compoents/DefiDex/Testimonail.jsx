@@ -7,7 +7,7 @@ const testimonialsData = [
     image: "/images/defi-exchange-yield-farming.jpg",
     alt: "decentralized exchange platform interface",
     quote:
-      "OpenSoft AI built our decentralized exchange with integrated yield farming, and we reached $10M TVL within three months of launch. Their economic modeling was crucial for our sustainable tokenomics.",
+      "OpenSoftAI built our decentralized exchange with integrated yield farming, and we reached $10M TVL within three months of launch. Their economic modeling was crucial for our sustainable tokenomics.",
   },
   {
     name: "Sophia Nguyen",
@@ -23,7 +23,7 @@ const testimonialsData = [
     image: "/images/defi-architecture-team.jpg",
     alt: "defi architects collaborating on project",
     quote:
-      "Working with OpenSoft AI felt like having a senior DeFi architect on our team. They understood our vision and built exactly what we needed to compete in the market.",
+      "Working with OpenSoftAI felt like having a senior DeFi architect on our team. They understood our vision and built exactly what we needed to compete in the market.",
   },
 ];
 
@@ -32,7 +32,7 @@ export default function TestDefiDexDevelopment(){
   return(
    <main>
       <TestimonialsSection
-        title="What Clients Experience says about OpenSoft AI"
+        title="What Clients Experience says about OpenSoftAI"
         testimonials={testimonialsData}
         darkMode={true}
       />

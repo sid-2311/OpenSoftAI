@@ -27,8 +27,8 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
             <Image
-              src="/images/genrative.jpg"
-              alt="AI Calling Agent Development"
+              src="/images/AI-text-on-a-digital-blue-background-with-pixel-pattern.jpg"
+              alt="AI text on a digital blue background with pixel pattern"
               fill
               className="object-cover"
               priority

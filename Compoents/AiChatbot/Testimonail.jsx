@@ -6,7 +6,7 @@ const testimonialsData = [
     name: "Sarah Martinez",
     role: "CEO",
     company: "TechFlow Solutions",
-    image: "/images/crop3.jpg",
+    image: "/images/Professional-woman-in-office-chair.jpg",
     alt: "Portrait of Sarah Martinez, CEO of TechFlow Solutions",
     quote:
       "I was worried customers would hate talking to a bot. Instead, they love getting instant answers. Our support ticket volume dropped 65%, but customer satisfaction scores went up. I didn't think that was possible.",
@@ -17,7 +17,7 @@ const testimonialsData = [
     name: "Mark Thompson",
     role: "Founder",
     company: "E-commerce Brand",
-    image: "/images/crop1.jpg",
+    image: "/images/Smiling-man-in-black-and-white-portrait.jpg",
     alt: "Portrait of Mark Thompson, Founder of E-commerce Brand",
     quote:
       "Your chatbot sells more products than some of our human staff. It never forgets to suggest accessories, never has a bad day, and works nights and weekends without complaining.",

@@ -12,7 +12,7 @@ import TestAICopilot from "@/Compoents/AiCopoilot/Testimonail";
 // ✅ SEO Metadata with Canonical URL
 export const metadata = {
   title: "Build Smarter AI Copilot Solutions for Business | Opensoft AI",
-  description: "Partner with OpenSoft AI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
+  description: "Partner with OpenSoftAI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
   keywords: [
     "AI copilot",
     "AI assistant",
@@ -28,7 +28,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Build Smarter AI Copilot Solutions for Business | Opensoft AI",
-    description: "Partner with OpenSoft AI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
+    description: "Partner with OpenSoftAI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
     url: "https://opensoftai.com/ai-copilot-development-company",
    
     locale: "en_US",

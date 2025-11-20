@@ -13,8 +13,8 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
             <Image
-              src="/images/inventory.png"
-              alt="Inventory Management Software"
+              src="/images/Person-using-tablet-for-supply-chain-management.png"
+              alt="Person using tablet for supply chain management"
               fill
               className="object-cover"
               priority

@@ -122,7 +122,7 @@ export default function POSCTASection() {
                 Ready to upgrade your business with a custom POS system?
               </p>
               <p className="text-md text-blue-200">
-                Contact <span className="text-blue-300 font-bold">OpenSoft AI</span> today and discover how our POS development expertise can accelerate your business success.
+                Contact <span className="text-blue-300 font-bold">OpenSoftAI</span> today and discover how our POS development expertise can accelerate your business success.
               </p>
             </div>
 

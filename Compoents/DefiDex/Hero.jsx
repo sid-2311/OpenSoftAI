@@ -31,7 +31,7 @@ export default function BlockchainHero() {
               id="blockchain-hero-heading"
               className="text-3xl lg:text-4xl font-bold leading-tight"
             >
-             OpenSoft AI Build Secure, Scalable, and Decentralized Finance Platforms
+             OpenSoftAI Build Secure, Scalable, and Decentralized Finance Platforms
             </h1>
 
            

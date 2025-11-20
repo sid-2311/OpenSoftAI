@@ -4,18 +4,18 @@ const testimonialsData = [
   {
     name: "Maria Gonzalez",
     company: "Head of Marketing, TechFlow Solutions",
-    image: "/images/crop3.jpg",
+    image: "/images/Professional-woman-in-office-chair.jpg",
     alt: "marketing team using AI tools",
     quote:
-      "OpenSoft AI's generative AI solutions completely transformed our content marketing strategy. We're now producing 5x more content with half the team, and our engagement rates have increased by 40%. The AI perfectly captures our brand voice – sometimes I can't tell the difference between AI-generated and human-written content.",
+      "OpenSoftAI's generative AI solutions completely transformed our content marketing strategy. We're now producing 5x more content with half the team, and our engagement rates have increased by 40%. The AI perfectly captures our brand voice – sometimes I can't tell the difference between AI-generated and human-written content.",
   },
   {
     name: "David Kim",
     company: "Creative Director, RetailMax",
-    image: "/images/crop1.jpg",
+    image: "/images/Smiling-man-in-black-and-white-portrait.jpg",
     alt: "creative designer generating AI visuals",
     quote:
-      "The custom image generation AI OpenSoft AI built for us has been a game-changer. We're creating product mockups and marketing visuals in minutes instead of days. Our design team can now focus on creative strategy while AI handles the production work. It's saved us over $50k in outsourcing costs this year alone.",
+      "The custom image generation AI OpenSoftAI built for us has been a game-changer. We're creating product mockups and marketing visuals in minutes instead of days. Our design team can now focus on creative strategy while AI handles the production work. It's saved us over $50k in outsourcing costs this year alone.",
   },
   {
     name: "Jennifer Walsh",
@@ -23,7 +23,7 @@ const testimonialsData = [
     image: "/images/crop4.jpg",
     alt: "AI-generated video training session",
     quote:
-      "Working with OpenSoft AI on our video generation project exceeded all expectations. Their AI produces training videos that are indistinguishable from professionally produced content, and we've reduced our video production timeline from weeks to hours. The ROI has been incredible.",
+      "Working with OpenSoftAI on our video generation project exceeded all expectations. Their AI produces training videos that are indistinguishable from professionally produced content, and we've reduced our video production timeline from weeks to hours. The ROI has been incredible.",
   },
   {
     name: "Alex Chen",
@@ -31,7 +31,7 @@ const testimonialsData = [
     image: "/images/podcast-ai-voice-generation.jpg",
     alt: "AI voice generation for podcast studio",
     quote:
-      "The voice generation AI OpenSoft AI developed for our podcast network is remarkable. We can now create multilingual content, produce episodes faster, and maintain consistent audio quality across all our shows. It's opened up entirely new possibilities for content creation.",
+      "The voice generation AI OpenSoftAI developed for our podcast network is remarkable. We can now create multilingual content, produce episodes faster, and maintain consistent audio quality across all our shows. It's opened up entirely new possibilities for content creation.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function TestAIGenrative(){
 //     image: "/images/marketing-ai-team.jpg",
 //     alt: "marketing team using AI tools",
 //     quote:
-//       "OpenSoft AI's generative AI solutions completely transformed our content marketing strategy. We're now producing 5x more content with half the team, and our engagement rates have increased by 40%. The AI perfectly captures our brand voice – sometimes I can't tell the difference between AI-generated and human-written content.",
+//       "OpenSoftAI's generative AI solutions completely transformed our content marketing strategy. We're now producing 5x more content with half the team, and our engagement rates have increased by 40%. The AI perfectly captures our brand voice – sometimes I can't tell the difference between AI-generated and human-written content.",
 //   },
 //   {
 //     name: "David Kim",
@@ -74,7 +74,7 @@ export default function TestAIGenrative(){
 //     image: "/images/creative-team-ai-design.jpg",
 //     alt: "creative designer generating AI visuals",
 //     quote:
-//       "The custom image generation AI OpenSoft AI built for us has been a game-changer. We're creating product mockups and marketing visuals in minutes instead of days. Our design team can now focus on creative strategy while AI handles the production work. It's saved us over $50k in outsourcing costs this year alone.",
+//       "The custom image generation AI OpenSoftAI built for us has been a game-changer. We're creating product mockups and marketing visuals in minutes instead of days. Our design team can now focus on creative strategy while AI handles the production work. It's saved us over $50k in outsourcing costs this year alone.",
 //   },
 //   {
 //     name: "Jennifer Walsh",
@@ -82,7 +82,7 @@ export default function TestAIGenrative(){
 //     image: "/images/ai-video-generation-training.jpg",
 //     alt: "AI-generated video training session",
 //     quote:
-//       "Working with OpenSoft AI on our video generation project exceeded all expectations. Their AI produces training videos that are indistinguishable from professionally produced content, and we've reduced our video production timeline from weeks to hours. The ROI has been incredible.",
+//       "Working with OpenSoftAI on our video generation project exceeded all expectations. Their AI produces training videos that are indistinguishable from professionally produced content, and we've reduced our video production timeline from weeks to hours. The ROI has been incredible.",
 //   },
 //   {
 //     name: "Alex Chen",
@@ -90,7 +90,7 @@ export default function TestAIGenrative(){
 //     image: "/images/podcast-ai-voice-generation.jpg",
 //     alt: "AI voice generation for podcast studio",
 //     quote:
-//       "The voice generation AI OpenSoft AI developed for our podcast network is remarkable. We can now create multilingual content, produce episodes faster, and maintain consistent audio quality across all our shows. It's opened up entirely new possibilities for content creation.",
+//       "The voice generation AI OpenSoftAI developed for our podcast network is remarkable. We can now create multilingual content, produce episodes faster, and maintain consistent audio quality across all our shows. It's opened up entirely new possibilities for content creation.",
 //   },
 // ];
 

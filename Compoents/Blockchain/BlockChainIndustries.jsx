@@ -82,7 +82,7 @@ export default function BlockchainIndustries() {
       {/* Heading */}
       <header className="text-center mb-8 max-w-3xl">
         <h2 id="blockchain-industries-heading" className="text-xl md:text-3xl font-bold mb-3 text-gray-900">
-          Blockchain Services OpenSoft AI is Excelling In
+          Blockchain Services OpenSoftAI is Excelling In
         </h2>
         <p className="text-gray-600">
           Discover our blockchain solutions transforming industries with decentralization and security.

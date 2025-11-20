@@ -14,7 +14,7 @@ export default function AIBusinessSection() {
 
         {/* Main Content Card */}
         <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 sm:p-12 shadow-xl border border-blue-100 mb-12">
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+          <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-8">
             Here's the thing about artificial intelligence—everyone's talking about it, but most businesses are still waiting on the sidelines. Meanwhile, the companies already using AI?
           </p>
           
@@ -34,17 +34,17 @@ export default function AIBusinessSection() {
             </div>
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-md md:text-lg text-gray-700 leading-relaxed">
             You don't want to be left behind. But you also don't want to jump into AI just because everyone else is doing it. You want AI that actually <span className="font-semibold text-blue-900">works for your business</span>—AI that solves real problems, makes your team more effective, and shows up on your bottom line.
           </p>
         </div>
 
-        {/* OpenSoft AI Section */}
+        {/* OpenSoftAI Section */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="bg-blue-900 rounded-2xl p-10 text-white">
             <h3 className="text-2xl font-bold mb-4">That's Where We Come In</h3>
             <p className="text-blue-100 leading-relaxed text-lg">
-              At <span className="font-bold text-white">OpenSoft AI</span>, we build intelligent systems that feel less like science fiction and more like the natural evolution of how business should work.
+              At <span className="font-bold text-white">OpenSoftAI</span>, we build intelligent systems that feel less like science fiction and more like the natural evolution of how business should work.
             </p>
           </div>
 

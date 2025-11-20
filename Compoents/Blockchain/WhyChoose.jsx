@@ -54,7 +54,7 @@ export default function WhyChooseUs() {
             className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
             Why Industry Leaders Choose{" "}
-            <span className="text-blue-600">OpenSoft AI</span>
+            <span className="text-blue-600">OpenSoftAI</span>
           </h2>
         </header>
 

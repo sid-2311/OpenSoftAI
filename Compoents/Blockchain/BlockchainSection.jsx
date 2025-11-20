@@ -85,7 +85,7 @@ export default function BlockchainSection() {
               <h3 className="text-2xl font-bold text-gray-900">Our Solution</h3>
             </div>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              <span className="font-semibold text-blue-700">OpenSoft AI</span> isn't just another dev team – we've been in the blockchain space since Ethereum's early days.
+              <span className="font-semibold text-blue-700">OpenSoftAI</span> isn't just another dev team – we've been in the blockchain space since Ethereum's early days.
             </p>
             <p className="text-gray-700 mb-6 leading-relaxed">
               Our team combines cutting-edge technical skills with real-world experience to deliver blockchain solutions that are innovative, secure, and scalable.

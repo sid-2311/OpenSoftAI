@@ -218,7 +218,7 @@ export default function CTAContactSection() {
                   </p>
                   <p className="text-blue-200">
                     Contact{" "}
-                    <span className="font-bold text-white">OpenSoft AI</span> today and turn your data into your competitive advantage.
+                    <span className="font-bold text-white">OpenSoftAI</span> today and turn your data into your competitive advantage.
                   </p>
                 </div>
               </div>

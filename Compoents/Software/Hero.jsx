@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 
 // ✅ SEO Metadata (server-side rendered)
 export const metadata = {
-  title: "Custom Software Development Services | OpenSoft AI",
+  title: "Custom Software Development Services | OpenSoftAI",
   description:
-    "OpenSoft AI delivers scalable, secure, and custom software development services tailored to your business needs. Build web, mobile, and enterprise software with expert precision.",
+    "OpenSoftAI delivers scalable, secure, and custom software development services tailored to your business needs. Build web, mobile, and enterprise software with expert precision.",
   keywords:
-    "custom software development, web app development, enterprise software, mobile app solutions, OpenSoft AI",
-  authors: [{ name: "OpenSoft AI" }],
+    "custom software development, web app development, enterprise software, mobile app solutions, OpenSoftAI",
+  authors: [{ name: "OpenSoftAI" }],
   openGraph: {
-    title: "Custom Software Development Services | OpenSoft AI",
+    title: "Custom Software Development Services | OpenSoftAI",
     description:
-      "Partner with OpenSoft AI to build scalable, secure, and innovative software solutions that grow with your business.",
+      "Partner with OpenSoftAI to build scalable, secure, and innovative software solutions that grow with your business.",
     url: "https://opensoftai.com/software-development-company/",
     type: "website",
    
@@ -57,7 +57,7 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-md md:text-xl text-gray-300 mb-10 leading-relaxed">
-              Build software that grows with your business. OpenSoft AI
+              Build software that grows with your business. OpenSoftAI
               delivers custom web, mobile, and enterprise software solutions
               designed for your specific needs and industry requirements.
             </p>

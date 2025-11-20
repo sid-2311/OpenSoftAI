@@ -123,7 +123,7 @@ export default function CTASection() {
                     Get started today
                   </h3>
                   <p className="text-blue-100">
-                    Contact OpenSoft AI for a free consultation and token
+                    Contact OpenSoftAI for a free consultation and token
                     strategy session. We’ll review your project, discuss the
                     technical roadmap, and guide you every step of the way.
                   </p>

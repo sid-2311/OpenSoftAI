@@ -74,7 +74,7 @@ export default function NFTInfrastructureSection() {
                 
                 <h3 className="text-2xl font-bold mb-4 relative z-10">Our Experience</h3>
                 <p className="text-blue-50 leading-relaxed relative z-10">
-                  At OpenSoft AI, we've been building NFT marketplace infrastructure since before the 2021 NFT boom. We've learned that successful marketplaces aren't just about listing and selling digital assets.
+                  At OpenSoftAI, we've been building NFT marketplace infrastructure since before the 2021 NFT boom. We've learned that successful marketplaces aren't just about listing and selling digital assets.
                 </p>
                 <div className="mt-6 pt-6 border-t border-blue-400 relative z-10">
                   <p className="text-blue-50 font-medium">

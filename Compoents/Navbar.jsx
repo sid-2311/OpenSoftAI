@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className="flex items-center justify-between mx-auto max-md:px-4 max-md:py-3 py-0">
                 {/* Logo */}
                 <Link href="/" className="flex items-center space-x-2 ml-2">
-                    <Image src="/images/opensoftai-logo.svg" height={100} width={100} alt="OpenSoftAI Logo" />
+                    <Image src="/images/opensoftai-logo.jpg" height={100} width={100} alt="OpenSoftAI Logo" />
                 </Link>
 
                 {/* Desktop Menu */}
@@ -108,7 +108,7 @@ const Navbar = () => {
                             AI & Automation
                         </Link>
 
-                        <div className="absolute left-0 top-full mt-0 bg-white shadow-lg rounded-md w-[750px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
+                        <div className="absolute -right-56 top-full mt-0 bg-white shadow-lg rounded-md w-[750px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-out">
                             <div className="flex">
                                 <div className="bg-gray-100 w-16 flex items-center justify-center rounded-l-md">
                                     <h3 className="text-gray-400 font-semibold text-[18px] tracking-widest rotate-[-90deg] whitespace-nowrap">
@@ -158,7 +158,7 @@ const Navbar = () => {
                     className="lg:hidden cursor-pointer z-50 relative"
                 >
                     {mobileMenuOpen ? (
-                        <X size={28} className="text-[#016CD3]" />
+                        <X size={28} className="text-white" />
                     ) : (
                         <Menu size={28} className="text-[#016CD3]" />
                     )}

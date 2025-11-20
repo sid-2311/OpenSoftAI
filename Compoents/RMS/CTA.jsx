@@ -150,7 +150,7 @@ export default function RMSCTASection() {
               <p className="text-lg text-blue-200">
                 Let's discuss your goals and build a management system that
                 supports your restaurant’s success with{" "}
-                <span className="text-blue-300 font-bold">OpenSoft AI</span>.
+                <span className="text-blue-300 font-bold">OpenSoftAI</span>.
               </p>
             </div>
 

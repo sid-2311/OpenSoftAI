@@ -13,13 +13,13 @@ export default function AIExpertiseSection() {
         <header className="mb-16">
           <h2
             id="ai-expertise-heading"
-            className="text-3xl sm:text-5xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
           >
             Why We Know AI Better Than Most:
             <br />
             <span className="text-blue-300">A Decade of Getting It Right</span>
           </h2>
-          <p className="text-xl text-blue-100 leading-relaxed max-w-4xl">
+          <p className="text-lg md:text-lg text-blue-100 leading-relaxed max-w-4xl">
             We've been doing this for over ten years — not ten years of talking
             about AI, but ten years of actually building it, deploying it, and
             watching it transform businesses from the inside out.
@@ -31,7 +31,7 @@ export default function AIExpertiseSection() {
           className="bg-blue-800/50 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-blue-400/20"
           aria-label="Team Expertise"
         >
-          <p className="text-lg text-blue-50 leading-relaxed">
+          <p className="text-md md:text-lg text-blue-50 leading-relaxed">
             Our team of{" "}
             <span className="font-bold text-white text-2xl">
               25+ certified AI engineers
@@ -82,7 +82,7 @@ export default function AIExpertiseSection() {
                 className="bg-white rounded-xl p-6 transform hover:-translate-y-2 transition-all duration-300 shadow-xl"
               >
                 <div
-                  className={`text-5xl font-bold ${item.color} mb-3`}
+                  className={`text-3xl md:text-4xl font-bold ${item.color} mb-3`}
                 >
                   {item.number}
                 </div>
@@ -100,7 +100,7 @@ export default function AIExpertiseSection() {
           className="bg-blue-600 rounded-3xl p-10 mb-12 shadow-2xl"
         >
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block bg-white/20 rounded-full px-6 py-2 mb-6">
+            <div className="inline-block bg-white/20 rounded-full px-8 py-2 mb-6">
               <p
                 id="why-clients-stay"
                 className="text-white font-semibold"
@@ -108,7 +108,7 @@ export default function AIExpertiseSection() {
                 Why Companies Stick With Us
               </p>
             </div>
-            <p className="text-2xl text-white font-medium leading-relaxed">
+            <p className="text-xl text-white font-medium leading-relaxed">
               Our AI keeps getting{" "}
               <span className="font-bold underline decoration-blue-300">
                 better
@@ -127,7 +127,7 @@ export default function AIExpertiseSection() {
             <h3 className="text-2xl font-bold text-white mb-4">
               Beyond The Numbers
             </h3>
-            <p className="text-blue-100 text-lg leading-relaxed">
+            <p className="text-blue-100 text-md md:text-lg leading-relaxed">
               Numbers only tell you so much. The real story is simpler: we
               understand that great AI isn't about the algorithm—it's about
               understanding{" "}
@@ -146,7 +146,7 @@ export default function AIExpertiseSection() {
             <h3 className="text-2xl font-bold text-white mb-4">
               A Decade of Learning
             </h3>
-            <p className="text-blue-50 text-lg leading-relaxed">
+            <p className="text-blue-50 text-md md:text-lg leading-relaxed">
               The best solutions don't feel like technology at all — they feel
               like your business just got{" "}
               <span className="font-bold text-white">

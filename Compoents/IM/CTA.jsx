@@ -120,7 +120,7 @@ export default function IMCTASection() {
                 Ready to optimize your inventory management system?
               </p>
               <p className="text-lg text-blue-200">
-                Let <span className="text-blue-300 font-bold">OpenSoft AI</span> help you build intelligent software that streamlines operations, improves cash flow, and keeps your customers happy.
+                Let <span className="text-blue-300 font-bold">OpenSoftAI</span> help you build intelligent software that streamlines operations, improves cash flow, and keeps your customers happy.
               </p>
             </div>
 

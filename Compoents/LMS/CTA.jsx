@@ -121,7 +121,7 @@ export default function LMSCTASection() {
                 Ready to build an LMS students actually complete and remember?
               </p>
               <p className="text-md text-indigo-200">
-                Let <span className="text-indigo-300 font-bold">OpenSoft AI</span> help you create online learning experiences that truly engage modern learners and support your educational mission.
+                Let <span className="text-indigo-300 font-bold">OpenSoftAI</span> help you create online learning experiences that truly engage modern learners and support your educational mission.
               </p>
             </div>
 

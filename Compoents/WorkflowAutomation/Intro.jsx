@@ -71,15 +71,15 @@ export default function AIWorkflowAutomationSection() {
     <>
       <Head>
         <title>
-          AI Workflow Automation | Scale Smarter with OpenSoft AI
+          AI Workflow Automation | Scale Smarter with OpenSoftAI
         </title>
         <meta
           name="description"
-          content="OpenSoft AI builds intelligent workflow automation systems that eliminate repetitive work, boost productivity, and make your business operate smarter and faster."
+          content="OpenSoftAI builds intelligent workflow automation systems that eliminate repetitive work, boost productivity, and make your business operate smarter and faster."
         />
         <meta
           name="keywords"
-          content="AI workflow automation, process automation, intelligent automation, business AI, OpenSoft AI"
+          content="AI workflow automation, process automation, intelligent automation, business AI, OpenSoftAI"
         />
       </Head>
 
@@ -124,7 +124,7 @@ export default function AIWorkflowAutomationSection() {
                   </p>
                   <p className="text-sm text-gray-600 italic">
                     That’s where AI workflow automation changes everything.
-                    At OpenSoft AI, we develop intelligent automation systems
+                    At OpenSoftAI, we develop intelligent automation systems
                     that don’t just eliminate manual tasks — they make your
                     entire business operate smarter, faster, and more efficiently.
                   </p>
@@ -225,7 +225,7 @@ export default function AIWorkflowAutomationSection() {
                 </div>
 
                 <div
-                  className="absolute bottom-12 right-8 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-12 right-2 w-44 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "1s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">
@@ -238,7 +238,7 @@ export default function AIWorkflowAutomationSection() {
                 </div>
 
                 <div
-                  className="absolute top-1/2 right-8 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
+                  className="absolute bottom-0 left-2 w-40 bg-white rounded-2xl p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce"
                   style={{ animationDuration: "4s", animationDelay: "2s" }}
                 >
                   <div className="flex items-center gap-3 mb-2">

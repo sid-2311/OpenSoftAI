@@ -93,11 +93,11 @@ export default function CapabilitiesSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
               Capabilities
             </span>{" "}
-            that OpenSoft AI Offer
+            that OpenSoftAI Offer
           </h2>
 
           <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            From minting to multi-chain integration, OpenSoft AI builds custom
+            From minting to multi-chain integration, OpenSoftAI builds custom
             NFT marketplaces that empower creators, engage collectors, and scale
             securely across ecosystems.
           </p>

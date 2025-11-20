@@ -92,7 +92,7 @@ export default function AdvancedFeaturesSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
               Advanced Features
             </span>

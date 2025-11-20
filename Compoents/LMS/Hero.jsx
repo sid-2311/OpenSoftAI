@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
             <Image
-              src="/images/lms.png"
+              src="/images/Students-studying-together-for-education-concept.png"
               alt="AI Calling Agent Development"
               fill
               className="object-cover"

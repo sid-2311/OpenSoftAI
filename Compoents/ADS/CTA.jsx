@@ -72,7 +72,7 @@ export default function ADSCTASection() {
             </p>
 
             <p className="text-md text-indigo-200 text-center max-w-3xl mx-auto leading-relaxed">
-              Turn your idea into a powerful mobile app with <span className="text-indigo-300 font-semibold">OpenSoft AI</span>. Contact us today to discover how expert mobile development can bring your vision to life and build sustainable business value.
+              Turn your idea into a powerful mobile app with <span className="text-indigo-300 font-semibold">OpenSoftAI</span>. Contact us today to discover how expert mobile development can bring your vision to life and build sustainable business value.
             </p>
           </div>
 
@@ -88,7 +88,7 @@ export default function ADSCTASection() {
                 Let's turn your app concept into reality.
               </p>
               <p className="text-lg text-indigo-200">
-                Partner with <span className="text-indigo-300 font-bold">OpenSoft AI</span> to develop an app that stands out and creates real business impact.
+                Partner with <span className="text-indigo-300 font-bold">OpenSoftAI</span> to develop an app that stands out and creates real business impact.
               </p>
             </div>
 
