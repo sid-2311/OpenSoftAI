@@ -10,13 +10,13 @@ export default function CallToActionCard() {
         {/* Card Container */}
         <div className="bg-white shadow-2xl rounded-3xl p-10 md:p-14 text-center border border-blue-100">
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Ready to{" "}
             <span className="text-blue-600">Transform Your Business?</span>
           </h2>
 
           {/* Description */}
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
+          <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto mb-6">
             The future belongs to businesses that adapt, innovate, and leverage
             technology to create real value. Whether it’s AI automation,
             blockchain solutions, or custom software – we’re here to help you

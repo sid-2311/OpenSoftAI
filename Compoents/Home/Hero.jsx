@@ -10,13 +10,15 @@ export default function Hero() {
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <video
+     
         className="absolute inset-0 w-full h-full object-cover"
         loop
         autoPlay
         muted
         playsInline
+        aria-label="AI automation background video showing futuristic animations"
       >
-        <source src="/images/video_0 (1) .mp4" type="video/mp4" />
+        <source src="/images/ai-automation.mp4"  type="video/mp4" />
         {/* <source src="/video/video_0.webm" type="video/webm" /> */}
         {/* <source src="/video/video_0.ogg" type="video/ogg" /> */}
       </video>

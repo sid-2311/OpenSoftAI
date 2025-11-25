@@ -46,7 +46,7 @@ export default function BlockchainSection() {
         </h2>
 
         {/* Introduction */}
-       <p className="text-lg text-gray-600 text-justify max-w-4xl mx-auto mb-16 leading-relaxed">
+       <p className="text-md md:text-lg text-gray-600 text-justify max-w-4xl mx-auto mb-16 leading-relaxed">
   Blockchain isn't just a buzzword anymore – it's the foundation of a new digital economy.
   Whether you're a fintech startup looking to disrupt traditional banking, an enterprise wanting to tokenize assets,
   or a creative platform building the next generation of NFT marketplaces, blockchain technology offers
@@ -124,9 +124,9 @@ export default function BlockchainSection() {
 
         {/* Bottom CTA */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-12 shadow-2xl">
-          <p className="text-xl text-white mb-8 font-medium">
-            From crypto wallets and exchange platforms to DeFi protocols and NFT marketplaces,
-            <br className="hidden sm:block" />
+          <p className="text-lg md:text-xl text-white mb-8 font-medium">
+            From crypto wallets and exchange platforms to DeFi protocols and NFT marketplaces,{" "}
+            {/* <br className="hidden sm:block" /> */}
             we build blockchain solutions that power the next generation of digital businesses.
           </p>
           <Link

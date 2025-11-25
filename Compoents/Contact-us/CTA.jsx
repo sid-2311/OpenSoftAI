@@ -26,7 +26,7 @@ export default function ConsultationPage() {
           {/* Heading */}
           <h2
             id="consultation-heading"
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-2xl md:text-4xl font-bold mb-4"
           >
             Get your Free Consultation today!
           </h2>

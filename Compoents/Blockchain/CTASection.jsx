@@ -16,11 +16,11 @@ export default function CTASection() {
 
         {/* Hero Content */}
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold text-white mb-6 leading-tight">
             Ready to Build Your <br /> Blockchain-Powered Future?
           </h2>
 
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             The blockchain revolution is happening now — and the companies that
             embrace this technology today will be the market leaders of tomorrow.
           </p>
@@ -54,7 +54,7 @@ export default function CTASection() {
 
       {/* Information Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+        <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-8">
           At <strong>OpenSoftAI</strong>, we've helped dozens of companies
           successfully navigate the blockchain landscape and build solutions that
           create real value for users and businesses. From crypto startups that
@@ -70,7 +70,7 @@ export default function CTASection() {
           </p>
         </blockquote>
 
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-md md:text-lg text-gray-700 leading-relaxed">
           Whether you have a detailed blockchain plan or just an innovative idea,
           our blockchain specialists can help you turn that vision into reality.
           We’ll explore possibilities and show how decentralized technology can
@@ -84,7 +84,7 @@ export default function CTASection() {
           <h3 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Build Secure, Scalable & Innovative Blockchain Solutions
           </h3>
-          <p className="text-xl text-gray-600 mb-12">
+          <p className="text-lg md:text-xl text-gray-600 mb-12">
             Contact OpenSoftAI today for a free consultation and discover what’s
             possible in the decentralized world.
           </p>

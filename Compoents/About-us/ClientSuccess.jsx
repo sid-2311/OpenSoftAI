@@ -40,10 +40,10 @@ export default function IndustryProjectShowcase() {
     <section className="bg-gradient-to-b from-white to-blue-50 py-20">
       <div className="container mx-auto px-6 lg:px-16 text-center">
         {/* Section Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Our <span className="text-blue-600">Industry Expertise</span> & Project Portfolio
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-14">
+        <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto mb-14">
           Take a closer look at how OpenSoftAI empowers industries with innovative,
           scalable, and business-driven technology solutions.
         </p>

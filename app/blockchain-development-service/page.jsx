@@ -5,6 +5,7 @@ import BlockchainServices from "@/Compoents/Blockchain/BlockChainServices";
 import CTASection from "@/Compoents/Blockchain/CTASection";
 import BlockchainExpertise from "@/Compoents/Blockchain/Expertise";
 import BlockchainHero from "@/Compoents/Blockchain/Hero";
+import TestBlockChain from "@/Compoents/Blockchain/Testimonail";
 import Testimonials from "@/Compoents/Blockchain/Testimonail";
 import WhyChooseUs from "@/Compoents/Blockchain/WhyChoose";
 
@@ -51,7 +52,7 @@ export default function BlockChain(){
         <BlockchainBenefits/>
         <WhyChooseUs/>
         <BlockchainTabs/>
-        <Testimonials/>
+       <TestBlockChain/>
         <CTASection/>
         </>
     )

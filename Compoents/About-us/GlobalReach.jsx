@@ -16,7 +16,7 @@ export default function GlobalReach() {
         {/* Heading */}
         <h2
           id="global-reach-heading"
-          className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+          className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
         >
           Our <span className="text-indigo-600">Global Reach</span>
         </h2>

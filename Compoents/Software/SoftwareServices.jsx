@@ -274,7 +274,7 @@ export default function SoftwareServices() {
 
           {/* Category Filter */}
           <nav
-            className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 justify-start sm:justify-center gap-3 mb-12 pb-2"
+            className="flex overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 justify-start sm:justify-center gap-3 mb-12 pb-2 no-scrollbar"
             aria-label="Software Categories"
           >
             {categories.map((cat) => (

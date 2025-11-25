@@ -61,14 +61,14 @@ export default function BlockchainExpertise() {
               Across Technologies and Industries
             </span>
           </h2>
-          <p className="text-lg text-justify text-blue-100 max-w-5xl mx-auto leading-relaxed">
+          <p className="text-md md:text-lg text-justify text-blue-100 max-w-5xl mx-auto leading-relaxed">
             We've been in the blockchain space long enough to see multiple bull and bear cycles, regulatory changes, and technological evolution. This experience has taught us that successful blockchain projects require more than just technical skills.
           </p>
         </header>
 
         {/* Main content card */}
         <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 lg:p-12 border border-white/10 mb-12 shadow-2xl">
-          <p className="text-blue-50 text-lg leading-relaxed mb-8">
+          <p className="text-blue-50 text-md md:text-lg leading-relaxed mb-8">
             Our team includes <span className="text-blue-400 font-semibold">certified blockchain developers, smart contract auditors, and decentralized finance specialists</span> who have built solutions on multiple blockchain networks. We've developed everything from simple token contracts to complex multi-chain DeFi protocols that handle millions in transaction volume.
           </p>
 

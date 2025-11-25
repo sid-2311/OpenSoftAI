@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
                 {/* Description Block */}
                 <div className="w-full md:w-2/3">
                   <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200 group-hover:border-blue-300 transition-all duration-300 group-hover:shadow-lg">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
                       {reason.title}
                     </h3>
                     <p className="text-gray-700 leading-relaxed">

@@ -334,9 +334,9 @@ export default function Portfolio() {
               </p>
             </header>
 
-       <div className="relative -mx-2 sm:mx-0 px-2 sm:px-0">
+       <div className="relative w-full max-w-6xl mx-auto px-4">
   <nav
-    className="flex overflow-x-auto no-scrollbar snap-x snap-mandatory justify-start sm:justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 px-2 sm:px-0"
+    className="flex overflow-x-auto no-scrollbar gap-3 sm:gap-4 mb-10 sm:mb-12 py-2"
     aria-label="Project categories"
   >
     {categories.map((cat) => (
@@ -344,7 +344,7 @@ export default function Portfolio() {
         key={cat}
         onClick={() => setActiveCategory(cat)}
         aria-pressed={activeCategory === cat}
-        className={`relative flex-shrink-0 snap-start px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
+        className={`relative flex-shrink-0 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300
           ${
             activeCategory === cat
               ? "bg-gradient-to-r from-blue-900 to-blue-700 text-white shadow-lg ring-2 ring-blue-300 scale-105"
@@ -361,6 +361,7 @@ export default function Portfolio() {
     ))}
   </nav>
 </div>
+
 
 
 

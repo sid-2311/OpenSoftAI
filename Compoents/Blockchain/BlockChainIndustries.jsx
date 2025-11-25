@@ -92,7 +92,7 @@ export default function BlockchainIndustries() {
       {/* Tabs Container */}
       <div className="bg-[#0B2542] rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-6xl">
         {/* Tabs Navigation */}
-        <nav role="tablist" aria-label="Blockchain Industries" className="flex justify-start gap-6 mb-8 overflow-x-auto">
+        <nav role="tablist" aria-label="Blockchain Industries" className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar">
           {BLOCKCHAIN_TABS.map((tab) => {
             const isActive = tab.id === active;
             return (

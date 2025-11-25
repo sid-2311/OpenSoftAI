@@ -114,7 +114,7 @@ export default function SoftwareIndustries() {
 <nav
   role="tablist"
   aria-label="Software Industries"
-  className="flex overflow-x-auto mt-1 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-blue-100 justify-start gap-4 mb-8 pb-2 -mx-4 px-4"
+  className="flex overflow-x-auto mt-1 no-scrollbar  scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-blue-100 justify-start gap-4 mb-8 pb-2 -mx-4 px-4"
 >
   {SOFTWARE_TABS.map((tab) => {
     const isActive = tab.id === active;
@@ -128,8 +128,8 @@ export default function SoftwareIndustries() {
         onClick={() => setActive(tab.id)}
         className={`flex-shrink-0 flex flex-col items-center justify-center gap-2 px-6 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
           isActive
-            ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
-            : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
+            ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-100"
+            : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400 scale-95"
         }`}
       >
         <div className="w-8 h-8 flex items-center justify-center">

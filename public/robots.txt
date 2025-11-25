@@ -1,5 +1,102 @@
+# robots.txt for https://opensoftai.com
+# Last updated: 2025-11-21
+
+############################################################
+#  Global rules — allow full site crawling
+############################################################
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /config/
+Disallow: /core/
+Disallow: /private/
+Disallow: /server-status/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /*.php$
+Disallow: /*.env$
 
+# Allow key public directories explicitly
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Allow: /api/
+
+############################################################
+#  Googlebot
+############################################################
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /images/
+Disallow: /admin/
+Disallow: /config/
+Crawl-delay: 1
+
+############################################################
+#  Googlebot-Image
+############################################################
+User-agent: Googlebot-Image
+Allow: /images/
+
+############################################################
+#  Bingbot
+############################################################
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Crawl-delay: 2
+
+############################################################
+#  Yandex
+############################################################
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Crawl-delay: 2
+
+############################################################
+#  DuckDuckBot
+############################################################
+User-agent: DuckDuckBot
+Allow: /
+
+############################################################
+#  Baiduspider
+############################################################
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Crawl-delay: 3
+
+############################################################
+#  Sogou Spider
+############################################################
+User-agent: Sogou web spider
+Allow: /
+Disallow: /admin/
+
+############################################################
+#  Bad / aggressive bots (blocked)
+############################################################
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+############################################################
+#  Sitemap
+############################################################
 Sitemap: https://opensoftai.com/sitemap.xml
-Host: https://opensoftai.com

@@ -64,7 +64,7 @@ export default function CoreServices() {
         <div
           role="tablist"
           aria-label="Core Services"
-          className="flex justify-start md:justify-start gap-6 mb-8 overflow-x-auto"
+          className="flex justify-start md:justify-start gap-6 mb-8 overflow-x-auto no-scrollbar"
         >
           {TABS.map((tab) => {
             const isActive = tab.id === active;

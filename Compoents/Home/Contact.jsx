@@ -70,22 +70,22 @@ const ContactSection = () => {
               <p className="text-blue-400 font-semibold tracking-wider mb-4 uppercase text-sm">
                 GET IN TOUCH
               </p>
-              <h2 className="text-5xl font-bold mb-6 leading-tight">For Work Inquiry</h2>
-              <p className="text-blue-300 text-lg mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">For Work Inquiry</h2>
+              <p className="text-blue-300 text-md md:text-lg mb-8">
                 Mail to our sales department
               </p>
             </div>
 
             <div className="space-y-6">
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-md md:text-lg leading-relaxed">
                 Look, we could keep talking about how great we are. But you probably have actual work to do.
               </p>
 
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-md md:text-lg leading-relaxed">
                 Here's what happens when you call us. No sales pitch. No pressure. Just an honest conversation about what you're trying to build and whether we're the right team to help you build it.
               </p>
 
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-md md:text-lg leading-relaxed">
                 We'll look at what you've got now. Figure out what you actually need (not what someone told you you need). Map out a plan that makes sense. Give you real numbers with no hidden surprises.
               </p>
             </div>
