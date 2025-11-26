@@ -39,14 +39,14 @@ export default function GenerativeAIExpertiseSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
-            Our Deep Expertise in
-            <span className="block mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
+            Our Deep Expertise in{" "}
+            <span className=" mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               Generative AI Technologies
             </span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full mb-10"></div>
-          <p className="text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
+          <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
             We're not newcomers to generative AI – we've been building and deploying AI-powered creative solutions since the early days. Our team combines deep technical expertise in <span className="font-semibold text-blue-700">NLP, computer vision, and neural networks</span> with a real understanding of creative workflows and business needs.
           </p>
         </div>
@@ -61,11 +61,11 @@ export default function GenerativeAIExpertiseSection() {
                 <span className="text-blue-900 font-semibold">Hands-On Expertise</span>
               </div>
 
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-md md:text-lg text-slate-600 leading-relaxed">
                 From fine-tuning large language models to building custom diffusion models, we tackle complex AI challenges across industries. We've helped teams generate thousands of personalized campaigns, automate video production, and create visuals at unprecedented scale.
               </p>
 
-              <p className="text-xl text-slate-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
                 Our solutions are not generic – they are <span className="font-semibold text-blue-700">tailored to your brand voice, visual style, and business requirements</span>, ensuring consistency and quality across all content touchpoints.
               </p>
 
@@ -98,7 +98,7 @@ export default function GenerativeAIExpertiseSection() {
                 <div className="absolute top-0 right-0 w-48 h-48 bg-white rounded-full filter blur-3xl opacity-10"></div>
 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-6">What Makes Us Unique</h3>
+                  <h3 className="text-xl font-bold text-white mb-6">What Makes Us Unique</h3>
                   <div className="space-y-5">
                     {highlights.map((highlight, index) => (
                       <div key={index} className="flex items-start gap-4 group">
@@ -123,16 +123,16 @@ export default function GenerativeAIExpertiseSection() {
             <div className="inline-block mb-6">
               <Sparkles className="w-12 h-12 text-blue-700" />
             </div>
-            <h3 className="text-4xl font-bold text-slate-900 mb-6">
+            <h3 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
               Amplifying Creativity with Generative AI
             </h3>
-            <p className="text-xl text-slate-700 leading-relaxed mb-6">
+            <p className="text-lg text-justify md:text-xl text-slate-700 leading-relaxed mb-6">
               We go beyond existing AI tools – creating models that match your brand and workflow, unlocking content, visuals, and media at scale without compromising quality.
             </p>
-            <p className="text-2xl font-semibold text-blue-700 mb-10">
+            <p className="text-xl md:text-2xl font-semibold text-blue-700 mb-10">
               Let us help your business transform creative workflows and reach new heights.
             </p>
-            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
+            <Link href="/contact-us" className="bg-gradient-to-r md:inline block from-blue-600 to-blue-800 text-white px-6 py-3 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
               Start Your AI Journey Today
             </Link>
           </div>

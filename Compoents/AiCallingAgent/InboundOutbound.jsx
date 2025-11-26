@@ -69,12 +69,15 @@ export default function InboundOutboundAgentsSection() {
       <div className="absolute bottom-20 right-10 w-64 sm:w-96 h-64 sm:h-96 bg-blue-500 rounded-full blur-3xl opacity-10" />
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Tab Selector */}
+
+        {/* ---------------- TAB SELECTOR UPDATED ---------------- */}
         <div className="flex flex-col sm:flex-row justify-center mb-12 sm:mb-16 items-center gap-4 sm:gap-0">
-          <div className="inline-flex flex-wrap justify-center gap-3 p-2 bg-white rounded-2xl shadow-lg border border-blue-100">
+          <div className="inline-flex flex-wrap justify-center gap-3 p-2 bg-transparent rounded-2xl ">
+
+            {/* Inbound */}
             <button
               onClick={() => setActiveTab("inbound")}
-              className={`flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+              className={`flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                 activeTab === "inbound"
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
                   : "text-gray-600 hover:bg-blue-50"
@@ -84,9 +87,11 @@ export default function InboundOutboundAgentsSection() {
               <PhoneIncoming className="w-5 h-5" />
               <span>Inbound Agents</span>
             </button>
+
+            {/* Outbound */}
             <button
               onClick={() => setActiveTab("outbound")}
-              className={`flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
+              className={`flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 ${
                 activeTab === "outbound"
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-500/30"
                   : "text-gray-600 hover:bg-blue-50"
@@ -96,10 +101,11 @@ export default function InboundOutboundAgentsSection() {
               <PhoneOutgoing className="w-5 h-5" />
               <span>Outbound Agents</span>
             </button>
+
           </div>
         </div>
+        {/* ------------------------------------------------------- */}
 
-        {/* Conditional Tabs */}
         {activeTab === "inbound" ? (
           <InboundSection capabilities={inboundCapabilities} advantages={inboundAdvantages} />
         ) : (
@@ -246,6 +252,7 @@ function OutboundSection({ useCases, benefits }) {
           ))}
         </div>
       </div>
+
     </div>
   );
 }

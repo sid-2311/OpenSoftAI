@@ -37,10 +37,10 @@ export default function TechnicalMagicSection() {
       className="bg-gradient-to-br from-white via-blue-50 to-blue-100 py-24 px-6 text-slate-800"
     >
       <div className="max-w-7xl mx-auto text-center mb-16">
-        <h2 className="text-5xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           The Technical Magic That Makes Them Feel Human
         </h2>
-        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
+        <p className="text-md  md:text-lg text-slate-600 max-w-4xl mx-auto">
           These aren't just tools — they're intelligent partners that understand you, learn from you, and grow with your team.
         </p>
       </div>

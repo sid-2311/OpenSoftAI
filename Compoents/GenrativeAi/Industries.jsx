@@ -167,7 +167,7 @@ export default function Industries() {
       <header className="text-center mb-8 max-w-3xl">
         <h2
           id="industries-heading"
-          className="text-3xl md:text-4xl font-bold mb-3 text-gray-900"
+          className="text-2xl md:text-4xl font-bold mb-3 text-gray-900"
         >
           Industries We Transform with Generative AI
         </h2>
@@ -183,7 +183,7 @@ export default function Industries() {
         <nav
           role="tablist"
           aria-label="Industries"
-          className="flex justify-start gap-6 mb-8 overflow-x-auto"
+          className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar"
         >
           {TABS.map((tab) => {
             const isActive = tab.id === active;

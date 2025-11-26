@@ -69,20 +69,7 @@ export default function AIWorkflowAutomationSection() {
 
   return (
     <>
-      <Head>
-        <title>
-          AI Workflow Automation | Scale Smarter with OpenSoftAI
-        </title>
-        <meta
-          name="description"
-          content="OpenSoftAI builds intelligent workflow automation systems that eliminate repetitive work, boost productivity, and make your business operate smarter and faster."
-        />
-        <meta
-          name="keywords"
-          content="AI workflow automation, process automation, intelligent automation, business AI, OpenSoftAI"
-        />
-      </Head>
-
+      
       <section className="relative bg-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -99,7 +86,7 @@ export default function AIWorkflowAutomationSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
                 Stop Wrestling with Repetitive Tasks and{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 bg-clip-text text-transparent">
                   Start Scaling Your Business
@@ -132,7 +119,7 @@ export default function AIWorkflowAutomationSection() {
               </div>
 
               {/* Description */}
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-md md:text-lg text-gray-600 leading-relaxed">
                 The beauty of modern AI workflow automation is that it goes far
                 beyond simple task automation. We build intelligent workflows
                 that can make decisions, adapt to changing conditions, and
@@ -159,7 +146,7 @@ export default function AIWorkflowAutomationSection() {
               {/* CTA */}
               <Link
                 href="/contact-us"
-                className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40"
+                className="group inline-flex items-center gap-3 px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40"
               >
                 <Target className="w-5 h-5" />
                 <span>Request an Automation Demo</span>

@@ -41,16 +41,16 @@ export default function AIConsultingExpertiseSection() {
         <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           
-          <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
-            Our Deep Expertise in
-            <span className="block mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
+            Our Deep Expertise in{" "}
+            <span className=" mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               AI Strategy & Implementation
             </span>
           </h2>
           
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full mb-10"></div>
           
-          <p className="text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
+          <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
             We're not just consultants who read about AI trends – we're <span className="font-semibold text-blue-700">practitioners</span> who've been in the trenches, building and deploying AI solutions across industries for years.
           </p>
         </div>
@@ -69,7 +69,7 @@ export default function AIConsultingExpertiseSection() {
                 Our team combines technical AI expertise with real-world business strategy experience, which means we understand both the <span className="text-blue-700 font-semibold">"what's possible"</span> and the <span className="text-blue-700 font-semibold">"what actually works"</span> sides of AI adoption.
               </p>
 
-              <p className="text-xl text-slate-600 leading-relaxed">
+              <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
                 Over the past several years, we've helped companies develop AI strategies that have delivered measurable results. From startups looking to integrate their first AI capabilities to enterprise organizations scaling AI across multiple departments.
               </p>
 
@@ -102,7 +102,7 @@ export default function AIConsultingExpertiseSection() {
                 <div className="absolute top-0 right-0 w-48 h-48 bg-white rounded-full filter blur-3xl opacity-10"></div>
                 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-6">Why We're Different</h3>
+                  <h3 className="text-2xl font-bold text-white mb-6">Why We're Different</h3>
                   
                   <div className="space-y-5">
                     {highlights.map((highlight, index) => (
@@ -129,19 +129,19 @@ export default function AIConsultingExpertiseSection() {
               <TrendingUp className="w-12 h-12 text-blue-700" />
             </div>
             
-            <h3 className="text-4xl font-bold text-slate-900 mb-6">
+            <h3 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
               Our Approach: Business First, Technology Second
             </h3>
             
-            <p className="text-xl text-slate-700 leading-relaxed mb-6">
+            <p className="text-lg text-justify  md:text-xl text-slate-700 leading-relaxed mb-6">
               What sets our approach apart is that we don't start with the technology – we start with your business. We dig deep into your operations, understand your challenges, and then map out how AI can solve real problems and create genuine value.
             </p>
             
-            <p className="text-2xl font-semibold text-blue-700 mb-10">
+            <p className="text-xl font-semibold text-blue-700 mb-10">
               It's this business-first, technology-second approach that consistently delivers results for our clients.
             </p>
             
-            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
+            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-2xl font-bold text-lg md:inline block shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
               Start Your AI Journey Today
             </Link>
           </div>

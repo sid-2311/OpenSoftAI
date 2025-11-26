@@ -202,7 +202,7 @@ export default function AIChatbotIntroSection() {
                 </div>
 
                 {/* Floating Cards */}
-                <div className="hidden sm:block absolute top-8 left-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce">
+                <div className=" sm:block absolute top-8 left-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce">
                   <div className="flex items-center gap-2 sm:gap-3 mb-2">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                       <Brain className="w-4 h-4 text-white" />
@@ -214,7 +214,7 @@ export default function AIChatbotIntroSection() {
                   <p className="text-xs text-gray-600">Knows what you mean</p>
                 </div>
 
-                <div className="hidden sm:block absolute bottom-10 right-8 w-36 sm:w-44 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce delay-1000">
+                <div className=" sm:block absolute bottom-10 right-6 w-36 sm:w-44 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce delay-1000">
                   <div className="flex items-center gap-2 sm:gap-3 mb-2">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                       <Lightbulb className="w-4 h-4 text-white" />
@@ -226,7 +226,7 @@ export default function AIChatbotIntroSection() {
                   <p className="text-xs text-gray-600">Gets smarter over time</p>
                 </div>
 
-                <div className="hidden sm:block absolute top-1/2 right-6 sm:right-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce delay-2000">
+                <div className=" sm:block absolute bottom-0 left-6 sm:right-8 w-32 sm:w-40 bg-white rounded-2xl p-3 sm:p-4 shadow-lg shadow-blue-500/20 border border-blue-100 animate-bounce delay-2000">
                   <div className="flex items-center gap-2 sm:gap-3 mb-2">
                     <div className="w-7 h-7 sm:w-8 sm:h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                       <Sparkles className="w-4 h-4 text-white" />

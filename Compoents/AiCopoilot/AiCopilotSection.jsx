@@ -62,17 +62,7 @@ export default function AICopilotIntroSection() {
   return (
     <>
       {/* SEO Head */}
-      <Head>
-        <title>AI Work Copilot | Smart Digital Assistant | OpenSoftAI</title>
-        <meta
-          name="description"
-          content="Meet your AI work copilot — an intelligent assistant that automates tasks, generates insights, and helps your team focus on creativity and strategy. Built by OpenSoftAI."
-        />
-        <meta
-          name="keywords"
-          content="AI work assistant, AI copilot, digital assistant, workflow automation, OpenSoftAI, smart productivity tools"
-        />
-      </Head>
+      
 
       <section
         className="relative bg-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8"
@@ -101,7 +91,7 @@ export default function AICopilotIntroSection() {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
                 Remember When Having a Work Assistant Was a Luxury?
                 <span className="block mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
                   Not Anymore — Meet Your AI Copilot

@@ -6,17 +6,17 @@ export default function CTASection() {
       <div className="max-w-6xl mx-auto">
         {/* Main Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold mb-6">
             Ready to Revolutionize Your Creative Process?
           </h2>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
             The future of content creation is here, and it's powered by generative AI.
           </p>
         </div>
 
         {/* Value Proposition */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 mb-12 border border-white/20">
-          <p className="text-lg md:text-xl text-blue-50 mb-6 leading-relaxed">
+          <p className="text-md md:text-xl text-blue-50 mb-6 leading-relaxed">
             Companies that embrace these technologies today will have a significant competitive advantage 
             as the market evolves. The question isn't whether generative AI will transform your industry – 
             it's whether you'll be leading that transformation or catching up to competitors who got there first.
@@ -39,23 +39,23 @@ export default function CTASection() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-          <Link href="/contact-us" className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto">
+          <Link href="/contact-us" className="bg-white text-blue-700 px-8 py-4 rounded-2xl text-center font-semibold text-md md:text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 w-full sm:w-auto">
             Get Free Demo
           </Link>
           {/* <button className="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-900 transition-all duration-300 border-2 border-white/30 hover:border-white/50 w-full sm:w-auto">
             Download AI Content Guide
           </button> */}
-          <Link href="/contact-us" className="bg-transparent text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 border-2 border-white w-full sm:w-auto">
+          <Link href="/contact-us" className="bg-transparent text-white px-8 py-4 rounded-2xl font-semibold text-md text-center md:text-lg hover:bg-white/10 transition-all duration-300 border-2 border-white w-full sm:w-auto">
             Schedule Strategy Session
           </Link>
         </div>
 
         {/* Final CTA */}
         <div className="text-center bg-white rounded-2xl p-8 md:p-10 shadow-2xl">
-          <h3 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
+          <h3 className="text-xl md:text-3xl font-bold text-blue-900 mb-4">
             Ready to see your content creation transform overnight?
           </h3>
-          <p className="text-lg text-blue-700 mb-6 max-w-3xl mx-auto">
+          <p className="text-md md:text-lg text-blue-700 mb-6 max-w-3xl mx-auto">
             Let's discuss how generative AI can revolutionize your creative processes and drive 
             unprecedented growth. Our AI specialists are standing by to show you what's possible.
           </p>

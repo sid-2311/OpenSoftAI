@@ -66,18 +66,7 @@ export default function AIConsultingSection() {
   return (
     <>
       {/* SEO Metadata */}
-      <Head>
-        <title>AI Consulting Services | Strategic AI Adoption | OpenSoftAI</title>
-        <meta
-          name="description"
-          content="OpenSoftAI helps businesses adopt AI strategically — building data-driven roadmaps, avoiding costly mistakes, and maximizing ROI. Partner with experts who make AI work for your goals."
-        />
-        <meta
-          name="keywords"
-          content="AI consulting, AI strategy, business transformation, artificial intelligence roadmap, OpenSoftAI"
-        />
-      </Head>
-
+     
       <section className="relative bg-white overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
@@ -94,7 +83,7 @@ export default function AIConsultingSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
                 Why Every Business Needs{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-500 to-blue-400 bg-clip-text text-transparent">
                   Strategic AI Consulting Today
@@ -123,7 +112,7 @@ export default function AIConsultingSection() {
               </div>
 
               {/* Description */}
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-md md:text-lg text-gray-600 leading-relaxed">
                 That’s exactly why{" "}
                 <span className="font-bold text-blue-600">AI consulting</span> has
                 become so crucial. At{" "}

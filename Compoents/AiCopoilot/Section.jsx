@@ -32,10 +32,10 @@ export default function AiCopilot() {
         <div className={`text-center mb-20 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
-          <h2 className="text-5xl md:text-6xl lg:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent leading-tight">
             We've Been Building AI That Actually Helps People Get Work Done
           </h2>
-          <p className="text-xl md:text-md  text-blue-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-md md:text-md  text-blue-200 max-w-4xl mx-auto leading-relaxed">
             Five years ago, when we started talking about AI copilots, people looked at us like we were describing flying cars. Now, teams can't imagine working without them. The journey from "that sounds impossible" to "how did we ever work without this?" has been wild to watch.
           </p>
         </div>
@@ -50,10 +50,10 @@ export default function AiCopilot() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl font-bold text-blue-400 mb-3">
+              <div className="text-3xl md:text:5xl font-bold text-blue-400 mb-3">
                 {stat.number}
               </div>
-              <div className="text-lg text-blue-100">
+              <div className="text-md md:text-lg text-blue-100">
                 {stat.label}
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function AiCopilot() {
         <div className={`bg-white/5 border-l-4 border-blue-400 rounded-xl p-12 mb-20 transition-all duration-1000 delay-500 ${
           isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
         }`}>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-8">
             What Five Years of Building AI Assistants Taught Us
           </h2>
           <ul className="space-y-6">
@@ -76,7 +76,7 @@ export default function AiCopilot() {
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-400 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-white">
                   ✓
                 </div>
-                <div className="text-lg text-blue-100 leading-relaxed">
+                <div className="text-md md:text-lg text-blue-100 leading-relaxed">
                   {insight}
                 </div>
               </li>
@@ -93,17 +93,17 @@ export default function AiCopilot() {
                style={{ animation: 'rotate 20s linear infinite' }}></div>
           
           <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold text-blue-400 mb-6">
+            <h3 className="text-2xl md:text-4xl font-bold text-blue-400 mb-6">
               Real Results That Matter
             </h3>
-            <p className="text-xl text-blue-100 leading-relaxed mb-6">
+            <p className="text-md md:text-xl text-blue-100 leading-relaxed mb-6">
               A financial services team we worked with saw their report generation time drop from{' '}
               <span className="inline-block px-3 py-1 bg-blue-400/20 rounded-lg font-semibold text-white">
                 8 hours to 45 minutes
               </span>
               . But the real win? Their analysts started finding insights they'd never noticed before because the AI copilot highlighted patterns in the data they would have missed while manually crunching numbers.
             </p>
-            <p className="text-xl text-blue-100 leading-relaxed">
+            <p className="text-md md:text-xl text-blue-100 leading-relaxed">
               Teams using our AI copilots typically save 3-5 hours per week on routine tasks. But here's what's more interesting—they report being more creative and strategic because they're not spending mental energy on repetitive work.
             </p>
           </div>

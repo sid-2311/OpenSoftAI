@@ -110,9 +110,9 @@ export default function WhyChooseUsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Growing Companies{" "}
-            <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+            <span className=" bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               Trust OpenSoftAI
             </span>
           </h2>
@@ -166,11 +166,11 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-4 leading-tight">
                     {reason.title}
                   </h3>
 
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                  <p className="text-slate-600 text-md md:text-lg leading-relaxed mb-6">
                     {reason.description}
                   </p>
 
@@ -214,17 +214,17 @@ export default function WhyChooseUsSection() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center md:text-left md:col-span-2">
-                <h3 className="text-3xl font-bold text-white mb-3">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
                   Ready to Empower Your Team with AI?
                 </h3>
-                <p className="text-blue-100 text-lg">
+                <p className="text-blue-100 text-md md:text-lg">
                   Join innovative companies who trust OpenSoftAI to transform
                   operations, improve efficiency, and drive long-term growth.
                 </p>
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <Link href="/contact-us" className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+                <Link href="/contact-us" className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-md md:text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>

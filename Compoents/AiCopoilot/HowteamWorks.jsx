@@ -40,7 +40,7 @@ export default function HowTeamsWorkSection() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-700 to-cyan-500 bg-clip-text text-transparent">
           How This Changes How Teams Actually Work
         </h2>
-        <p className="text-lg md:text-lg text-slate-600 max-w-3xl mx-auto">
+        <p className="text-md md:text-lg text-slate-600 max-w-3xl mx-auto">
           AI copilots transform daily operations, freeing teams from routine work and letting them focus on what truly matters.
         </p>
       </div>

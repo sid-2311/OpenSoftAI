@@ -173,7 +173,7 @@ export default function Industries() {
         <nav
           role="tablist"
           aria-label="Industries"
-          className="flex justify-start gap-6 mb-8 overflow-x-auto"
+          className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar"
         >
           {TABS.map((tab) => {
             const isActive = tab.id === active;

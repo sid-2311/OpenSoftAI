@@ -8,7 +8,7 @@ export default function CTASection() {
     <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 py-20 px-6">
       <div className="max-w-7xl mx-auto text-center text-white">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Transform Your Business Operations Today
         </h2>
 
@@ -28,7 +28,7 @@ export default function CTASection() {
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <Link
             href="/contact-us"
-            className="group relative inline-flex items-center justify-center px-8 py-4 rounded-3xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+            className="group relative inline-flex items-center justify-center px-6 py-3 rounded-3xl bg-white text-blue-700 font-bold text-lg shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
           >
             <span className="relative z-10">Get Free Process Assessment</span>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />
@@ -36,7 +36,7 @@ export default function CTASection() {
 
           <Link
             href="/contact-us"
-            className="group relative inline-flex items-center justify-center px-8 py-4 rounded-3xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 overflow-hidden"
+            className="group relative inline-flex items-center justify-center px-6 py-3 rounded-3xl border-2 border-white text-white font-bold text-lg hover:bg-white hover:text-blue-700 transition-all duration-300 overflow-hidden"
           >
             <span className="relative z-10">Schedule Automation Demo</span>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform duration-300" />

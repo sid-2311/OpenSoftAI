@@ -139,7 +139,7 @@ export default function ProcessSection() {
 
 <Link
   href="/contact-us"
-  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl inline-block"
+  className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-6 py-3 rounded-xl transition-colors duration-300 shadow-lg hover:shadow-xl inline-block"
 >
   Schedule a Discovery Call
 </Link>

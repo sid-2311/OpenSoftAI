@@ -83,7 +83,7 @@ export default function CopilotTypesSection() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-5xl md:text-5xl font-bold mb-6 bg-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-xl md:text-4xl font-bold mb-6 bg-blue-600 bg-clip-text text-transparent">
             The Different Types of AI Copilots We Build
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">

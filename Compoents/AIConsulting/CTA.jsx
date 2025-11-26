@@ -13,11 +13,11 @@ export default function AIConsultingcta() {
       <div className="relative max-w-7xl mx-auto px-6 py-20 sm:py-28">
         {/* Main content */}
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl sm:text-5xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
+          <h2 className="text-3xl  md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-200">
             Ready to Build Your AI-Powered Future?
           </h2>
           
-          <div className="space-y-6 text-lg sm:text-lg text-blue-50 leading-relaxed mb-8">
+          <div className="space-y-6 text-md md:text-lg text-blue-50 leading-relaxed mb-8">
             <p className="font-semibold">
               The AI revolution isn't coming – it's here. The question isn't whether your business should adopt AI, but how to do it strategically, effectively, and responsibly.
             </p>

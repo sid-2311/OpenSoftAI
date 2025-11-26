@@ -55,14 +55,14 @@ export default function IntelligentAutomationExpertiseSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight">
-            Our Deep Expertise in
-            <span className="block mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
+            Our Deep Expertise in{" "}
+            <span className=" mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               Intelligent Process Automation
             </span>
           </h2>
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full mb-10"></div>
-          <p className="text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
+          <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-4xl font-light">
             We've been building AI-powered automation solutions since machine
             learning first started showing real business promise, and we've seen
             firsthand how the right automation strategy can transform entire
@@ -91,7 +91,7 @@ export default function IntelligentAutomationExpertiseSection() {
                 </span>
               </div>
 
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-md md:text-lg text-slate-600 leading-relaxed">
                 What makes our approach unique is that we don’t just automate
                 existing processes –{" "}
                 <span className="font-semibold text-blue-700">
@@ -104,7 +104,7 @@ export default function IntelligentAutomationExpertiseSection() {
                 resilient business processes.
               </p>
 
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-md md:text-lg text-slate-600 leading-relaxed">
                 Our experience spans everything from simple task automation for
                 small businesses to complex, multi-department workflow
                 orchestration for enterprise organizations. We've automated
@@ -118,7 +118,7 @@ export default function IntelligentAutomationExpertiseSection() {
                 digits.
               </p>
 
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-md md:text-lg text-slate-600 leading-relaxed">
                 The key to our success is understanding that every business is
                 different. We don't believe in cookie-cutter automation
                 solutions. Instead, we take the time to understand your unique
@@ -162,7 +162,7 @@ export default function IntelligentAutomationExpertiseSection() {
                 <div className="absolute top-0 right-0 w-48 h-48 bg-white rounded-full filter blur-3xl opacity-10"></div>
 
                 <div className="relative z-10">
-                  <h3 className="text-3xl font-bold text-white mb-6">
+                  <h3 className="text-xl md:text-3xl font-bold text-white mb-6">
                     What Makes Us Unique
                   </h3>
                   <div className="space-y-5">
@@ -196,20 +196,20 @@ export default function IntelligentAutomationExpertiseSection() {
             <div className="inline-block mb-6">
               <Brain className="w-12 h-12 text-blue-700" />
             </div>
-            <h3 className="text-4xl font-bold text-slate-900 mb-6">
+            <h3 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6">
               Transforming Workflows with AI-Powered Automation
             </h3>
-            <p className="text-xl text-slate-700 leading-relaxed mb-6">
+            <p className="text-lg text-justify md:text-xl text-slate-700 leading-relaxed mb-6">
               We help organizations move beyond manual processes into a new era
               of intelligent, data-driven efficiency. From automating everyday
               tasks to reengineering entire operations — we help businesses
               unlock measurable ROI with automation that thinks, learns, and
               improves.
             </p>
-            <p className="text-2xl font-semibold text-blue-700 mb-10">
+            <p className="text-xl md:text-2xl font-semibold text-blue-700 mb-10">
               Let’s reimagine how your business works — intelligently.
             </p>
-            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
+            <Link href="/contact-us" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 md:inline block rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:from-blue-700 hover:to-blue-900">
               Start Your Automation Journey
             </Link>
           </div>

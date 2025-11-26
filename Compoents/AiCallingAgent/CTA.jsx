@@ -219,7 +219,7 @@ export default function GetStartedSection() {
             </p>
             <Link
               href="/contact-us"
-              className="bg-blue-600 text-white px-12 py-5 rounded-xl font-bold text-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3"
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold text-md md:text-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3"
             >
               Get Started Now
               <ArrowRight className="w-6 h-6" />

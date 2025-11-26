@@ -59,7 +59,7 @@ export default function AIConsultingServices() {
         <header className="text-center mb-16">
           <h2
             id="ai-consulting-services-heading"
-            className="text-4xl font-bold text-gray-900 mb-4"
+            className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
           >
             Our Core AI Consulting Services
           </h2>

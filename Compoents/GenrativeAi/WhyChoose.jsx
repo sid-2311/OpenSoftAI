@@ -112,7 +112,7 @@ export default function WhyChooseUsSection() {
               : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Creative Teams{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               Choose OpenSoftAI
@@ -170,11 +170,11 @@ export default function WhyChooseUsSection() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-slate-900 mb-4 leading-tight">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 leading-tight">
                     {reason.title}
                   </h3>
 
-                  <p className="text-slate-600 text-lg leading-relaxed mb-6">
+                  <p className="text-slate-600 text-md md:text-lg leading-relaxed mb-6">
                     {reason.description}
                   </p>
 
@@ -218,7 +218,7 @@ export default function WhyChooseUsSection() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center md:text-left md:col-span-2">
-                <h3 className="text-3xl font-bold text-white mb-3">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
                   Ready to Empower Your Creative Team with AI?
                 </h3>
                 <p className="text-blue-100 text-lg">

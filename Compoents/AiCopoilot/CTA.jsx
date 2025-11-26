@@ -14,12 +14,12 @@ export default function FinalCTACopilotSection() {
 
       <div className="relative max-w-6xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight bg-gradient-to-r from-cyan-300 via-white to-blue-200 bg-clip-text text-transparent">
+        <h2 className="text-2xl md:text-4xl font-bold mb-8 leading-tight bg-gradient-to-r from-cyan-300 via-white to-blue-200 bg-clip-text text-transparent">
           Ready to Give Your Team Their AI Assistant?
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-lg text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
+        <p className="text-md md:text-lg text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed">
           You already know your team is spending too much time on routine work
           instead of the strategic stuff that actually moves your business
           forward. The question isn't <strong>whether</strong> AI copilots will
@@ -89,7 +89,7 @@ export default function FinalCTACopilotSection() {
         </div>
 
         {/* Case Study */}
-        <p className="text-blue-100 max-w-3xl mx-auto mb-10 leading-relaxed italic">
+        <p className="text-blue-100  mx-auto mb-10 leading-relaxed italic">
           “That marketing agency we mentioned? Their copilot now handles client
           reporting, social media analysis, and campaign optimization. They went
           from working late every Friday to finishing ahead of schedule—and now
@@ -97,9 +97,27 @@ export default function FinalCTACopilotSection() {
         </p>
 
         {/* Final CTA Button */}
-        <Link href="/contact-us"  className="px-10 py-4 bg-gradient-to-r from-cyan-400 via-blue-600 to-blue-800 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-          Schedule Your Free AI Copilot Consultation
-        </Link>
+      <Link
+  href="/contact-us"
+  className="
+    block md:inline
+    w-full sm:w-auto
+    text-center
+    whitespace-normal
+    px-6 py-3
+    bg-gradient-to-r from-cyan-400 via-blue-600 to-blue-800
+    text-white font-semibold
+    rounded-xl
+    shadow-xl
+    hover:shadow-2xl
+    hover:-translate-y-1
+    transition-all duration-300
+  "
+>
+  Schedule Your Free AI Copilot Consultation
+</Link>
+
+
       </div>
 
       {/* Animation */}

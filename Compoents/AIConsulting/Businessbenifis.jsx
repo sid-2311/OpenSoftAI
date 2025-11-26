@@ -100,7 +100,7 @@ export default function BusinessBenefitsSection() {
                   <h3 className="text-2xl font-semibold mb-4">
                     {benefit.title}
                   </h3>
-                  <p className="text-blue-100 text-lg leading-relaxed mb-6">
+                  <p className="text-blue-100 text-md md:text-lg leading-relaxed mb-6">
                     {benefit.description}
                   </p>
 

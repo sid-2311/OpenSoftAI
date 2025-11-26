@@ -87,7 +87,7 @@ export default function GenerativeAICapabilities() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <header className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Core Generative AI Development Capabilities
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>

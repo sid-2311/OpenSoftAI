@@ -201,16 +201,27 @@ export default function CTAContactSection() {
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-center mb-8">
-                  <Link
-                    href="/contact-us"
-                    className="group inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-900 font-bold text-lg rounded-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-white/20"
-                  >
-                    <Calendar className="w-6 h-6" />
-                    Book Your Free AI Strategy Session
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+               <div className="text-center mb-8">
+  <Link
+    href="/contact-us"
+    className="
+      group inline-flex items-center gap-2 
+      px-6 py-3 
+      bg-white text-blue-900 font-bold 
+      text-base md:text-lg 
+      rounded-xl 
+      hover:bg-blue-50 transition-all duration-300 hover:scale-105 
+      shadow-xl hover:shadow-white/20
+    "
+  >
+    <Calendar className="w-5 h-5 md:w-6 md:h-6" />
+    <span className="leading-none text-sm">
+      Book Your Free AI Strategy Session
+    </span>
+    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+  </Link>
+</div>
+
 
                 <div className="text-center pt-8 border-t border-white/20">
                   <p className="text-xl text-blue-100 italic font-medium mb-2">

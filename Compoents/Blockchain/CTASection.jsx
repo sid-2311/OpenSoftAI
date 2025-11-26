@@ -142,7 +142,7 @@ export default function CTASection() {
           </p>
           <Link
             href="/contact-us"
-            className="bg-white hover:bg-blue-50 text-blue-600 font-bold px-10 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
+            className="bg-white hover:bg-blue-50 text-blue-600 font-bold px-6 py-3 rounded-xl  hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
           >
             Start Your Project Today
             <ArrowRight className="w-5 h-5" />

@@ -90,7 +90,7 @@ export default function AIWorkflowAutomationCapabilities() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <header className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
             Our Core AI Workflow Automation Capabilities
           </h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-600 mb-6">
@@ -106,7 +106,7 @@ export default function AIWorkflowAutomationCapabilities() {
             return (
               <div key={index} className="group perspective">
                 <motion.div
-                  whileHover={{ rotateY: 180 }}
+                  
                   className="relative w-full h-[22rem] cursor-pointer transition-transform duration-700 transform-style-preserve-3d"
                 >
                   {/* Front Side */}
@@ -144,20 +144,8 @@ export default function AIWorkflowAutomationCapabilities() {
       </div>
 
       {/* Custom CSS */}
-      <style jsx>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-        .transform-style-preserve-3d {
-          transform-style: preserve-3d;
-        }
-      `}</style>
+      
+       
     </section>
   );
 }
