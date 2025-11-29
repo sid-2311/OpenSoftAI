@@ -81,7 +81,7 @@ export default function DeFiCTASection() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
 
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             Ready to Build the Future of{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
               Finance with OpenSoftAI?
@@ -206,10 +206,10 @@ export default function DeFiCTASection() {
           {/* Main CTA Statement */}
           <div className="mb-8">
             <div className="inline-block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl p-12 shadow-2xl">
-              <h3 className="text-xl sm:text-4xl font-bold text-white mb-4">
+              <h3 className="text-xl  font-bold text-white mb-4">
                 Launch Your DeFi Vision
               </h3>
-              <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-md md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
                 Contact OpenSoftAI today for a free consultation and development roadmap. We'll review your protocol concept, discuss technical requirements, and provide you with a clear path from idea to mainnet launch.
               </p>
             </div>

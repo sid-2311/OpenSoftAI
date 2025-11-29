@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Palette, Gamepad2, Music, Building2, Zap, Shield, Users, Target } from 'lucide-react';
+import Link from 'next/link';
 
 export default function NFTExpertiseSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -135,7 +136,7 @@ export default function NFTExpertiseSection() {
         <div className="bg-gradient-to-br from-slate-800/80 to-blue-950/80 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-16 border border-blue-800/50 shadow-2xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6">
                 What Makes Us Different
               </h3>
               <p className="text-blue-100 mb-6 leading-relaxed">
@@ -176,7 +177,7 @@ export default function NFTExpertiseSection() {
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 rounded-3xl p-8 md:p-12 shadow-2xl">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
+          <h3 className="text-2xl font-bold text-white text-center mb-12">
             Our Impact in Numbers
           </h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -185,7 +186,7 @@ export default function NFTExpertiseSection() {
                 key={index}
                 className="text-center transform hover:scale-110 transition-transform duration-300"
               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.value}
                 </div>
                 <div className="text-blue-100 font-medium">
@@ -198,9 +199,9 @@ export default function NFTExpertiseSection() {
             <p className="text-white text-lg mb-6">
               Built NFT marketplaces with over $50M in total trading volume across gaming, art, and enterprise use cases
             </p>
-            <button className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            <Link href="/conatct-us" className="px-8 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
               Start Your Project
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -210,12 +211,12 @@ export default function NFTExpertiseSection() {
             Ready to build the next generation NFT marketplace?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+            <Link href="" className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
               View Case Studies
-            </button>
-            <button className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-500">
+            </Link>
+            <Link href="" className="px-6 py-3 bg-slate-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-500">
               Schedule Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -96,7 +96,7 @@ export default function TestimonialsSection() {
                 </AnimatePresence>
 
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="bg-transparent bg-opacity-20 rounded-full p-6 hover:bg-opacity-30 transition-all duration-300 group">
+                  <button suppressHydrationWarning className="bg-transparent bg-opacity-20 rounded-full p-6 hover:bg-opacity-30 transition-all duration-300 group">
                     <Play
                       className="w-8 h-8 text-black ml-1 group-hover:scale-110 transition-transform"
                       fill="currentColor"
@@ -111,12 +111,14 @@ export default function TestimonialsSection() {
           <div className="flex-1">
             <div className="flex justify-end gap-4 mb-8">
               <button
+              suppressHydrationWarning
                 onClick={handlePrev}
                 className="border border-gray-600 rounded-full p-3 text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
+              suppressHydrationWarning
                 onClick={handleNext}
                 className="border border-gray-600 rounded-full p-3 text-gray-400 hover:text-white hover:border-gray-400 transition-colors"
               >

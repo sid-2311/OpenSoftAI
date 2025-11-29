@@ -30,7 +30,7 @@ export default function SaaSSection() {
 
   // Define responsive orbit radius
   const getRadius = () => {
-    if (windowWidth < 640) return 127;
+    if (windowWidth < 640) return 117;
     if (windowWidth < 1024) return 150;
     return 170;
   };

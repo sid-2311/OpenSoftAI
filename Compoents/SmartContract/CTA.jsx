@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ArrowRight, Shield, Clock, CheckCircle, Rocket, FileSearch, Calendar, MessageSquare, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function SmartContractCTA() {
   const [hoveredButton, setHoveredButton] = useState(null);
@@ -69,12 +70,12 @@ export default function SmartContractCTA() {
             <div className="relative z-10">
              
 
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 Ready to Build Smart Contracts
                 That <span className="text-blue-200">Actually Work?</span>
               </h2>
 
-              <p className="text-blue-100 text-lg md:text-md max-w-3xl mx-auto leading-relaxed">
+              <p className="text-blue-100 text-md md:text-lg max-w-3xl mx-auto leading-relaxed">
                 Smart contracts are the foundation of every successful blockchain project, but they're also 
                 the most critical point of failure if not done correctly.
               </p>
@@ -90,7 +91,7 @@ export default function SmartContractCTA() {
                   <MessageSquare className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
                     Build Smart Contracts Users Can Trust
                   </h3>
                   <p className="text-gray-700 leading-relaxed mb-4">
@@ -188,10 +189,10 @@ export default function SmartContractCTA() {
               Let's create bulletproof blockchain infrastructure together.
             </p>
             <div className="mt-6">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2">
+              <Link href="/contact-us" className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold text-md md:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2">
                 Secure Your Blockchain Future
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

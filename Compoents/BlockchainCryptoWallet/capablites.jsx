@@ -252,7 +252,7 @@ export default function CryptoCapabilitiesSection() {
                   >
                     <div className="relative">
                       <div className={`absolute inset-0 bg-gradient-to-r ${capability.gradient} rounded-2xl opacity-0 group-hover:opacity-10 blur-xl transition-opacity`}></div>
-                      <div className="relative bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all border-2 border-blue-100 hover:border-blue-300">
+                      <div className="relative bg-white rounded-2xl p-6 md:p-8  transition-all border-2 border-blue-100 hover:border-blue-300">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-6">
                             <div className={`w-16 h-16 bg-gradient-to-br ${capability.gradient} rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0`}>

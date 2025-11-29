@@ -57,7 +57,7 @@ export default function CryptoTrustSection() {
           <div className="text-center mb-20">
            
             
-            <h1 className="text-5xl md:text-4xl lg:text-4xl font-black text-white mb-8 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl font-black text-white mb-8 leading-tight">
               Building Trust in the {" "}
             
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 animate-gradient">
@@ -96,19 +96,19 @@ export default function CryptoTrustSection() {
             <div className="relative bg-gradient-to-br from-slate-800/40 to-slate-900/40 backdrop-blur-2xl border border-blue-500/20 rounded-3xl p-8 md:p-12 shadow-2xl">
               <article className="prose prose-lg prose-invert max-w-none">
                 <div className="space-y-6 text-blue-100 leading-relaxed">
-                  <p className="text-lg">
+                  <p className="text-md md:text-lg">
                     In the world of cryptocurrency, <strong className="text-cyan-300">trust is everything</strong>. Users need to know their digital assets are safe, their transactions are secure, and their platform won't disappear overnight. Whether you're building the next generation crypto exchange or launching an innovative wallet solution, the stakes couldn't be higher. <span className="text-yellow-400">One security vulnerability or compliance oversight can destroy years of reputation building in minutes.</span>
                   </p>
                   
                   <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                   
-                  <p className="text-lg">
+                  <p className="text-md md:text-lg">
                     That's the reality of <strong className="text-cyan-300">crypto wallet and exchange development</strong> – it's not just about building functional software, it's about creating fortress-level security while maintaining the seamless user experience that drives adoption. At <strong className="text-white">OpenSoftAI</strong>, we understand that successful crypto platforms require a perfect balance of cutting-edge technology, bulletproof security, and regulatory compliance.
                   </p>
                   
                   <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
                   
-                  <p className="text-lg">
+                  <p className="text-md md:text-lg">
                     OpenSoftAI has been developing <strong className="text-cyan-300">crypto wallets and exchange platforms</strong> since the early days of Bitcoin, and we've seen what works and what doesn't. We've watched exchanges handle billions in volume, witnessed security breaches that could have been prevented, and learned from regulatory changes that caught many platforms off guard. This experience has taught us that building successful crypto infrastructure requires more than just coding skills – it requires deep understanding of cryptography, blockchain technology, financial regulations, and user behavior.
                   </p>
                 </div>
@@ -146,18 +146,18 @@ export default function CryptoTrustSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur-xl opacity-30"></div>
             <div className="relative bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold text-white mb-4">
                 Ready to Build the Future?
               </h2>
-              <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
+              <p className="text-blue-100 mb-8 text-md md:text-lg max-w-2xl mx-auto">
                 Join the platforms that trust OpenSoftAI with their digital assets and user security
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/contact-us" className="group bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
+                <Link href="/contact-us" className="group bg-white text-blue-600 px-6 py-3 rounded-full text-md md:text-lg font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
                   Start Building Your Platform
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-all">
+                <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-md md:text-lg font-bold hover:bg-white/10 transition-all">
                   View Case Studies
                 </button>
               </div>

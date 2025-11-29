@@ -55,7 +55,7 @@ export default function ExpertiseSection() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           
           
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl  md:text-4xl font-bold text-white mb-6">
             OpenSoftAI Token Development {" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-white mt-2">
               Expertise
@@ -101,19 +101,19 @@ export default function ExpertiseSection() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-4 animate-pulse"></div>
-                  <p className="text-blue-100 text-lg leading-relaxed">
+                  <p className="text-blue-100 text-md md:text-lg leading-relaxed">
                     We don't just code your token and walk away. We work with you to understand your business model, user journey, and long-term vision.
                   </p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-4 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                  <p className="text-blue-100 text-lg leading-relaxed">
+                  <p className="text-blue-100 text-md md:text-lg leading-relaxed">
                     Then we build a token strategy that actually supports those goals, not just what sounds good on paper.
                   </p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-4 animate-pulse" style={{ animationDelay: '1s' }}></div>
-                  <p className="text-blue-100 text-lg leading-relaxed">
+                  <p className="text-blue-100 text-md md:text-lg leading-relaxed">
                     Our teams understand the nuances of different token standards and what works best for different use cases across industries.
                   </p>
                 </div>

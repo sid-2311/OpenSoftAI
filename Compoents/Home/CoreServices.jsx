@@ -70,6 +70,7 @@ export default function CoreServices() {
             const isActive = tab.id === active;
             return (
               <button
+              suppressHydrationWarning
                 key={tab.id}
                 role="tab"
                 aria-selected={isActive}

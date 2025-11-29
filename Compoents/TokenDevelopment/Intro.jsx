@@ -10,7 +10,7 @@ export default function TokenDevelopmentSection() {
       
 
         {/* Main Heading */}
-        <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-center text-gray-900 mb-6 leading-tight">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-6 leading-tight">
           Why Token Development {" "}
           <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">
             Matters for Your Business
@@ -49,7 +49,7 @@ export default function TokenDevelopmentSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold mb-4">The OpenSoftAI Difference</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-4">The OpenSoftAI Difference</h3>
             <p className="text-blue-50 leading-relaxed mb-4">
               At OpenSoftAI, we've been in the trenches with crypto startups, fintech companies, and enterprises who needed more than just basic token creation.
             </p>

@@ -73,7 +73,7 @@ export default function DeFiDEXIntroSection() {
         <div className="text-center mb-16">
           
 
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
             Why DeFi and DEX Development {" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
               Is Critical Right Now
@@ -88,7 +88,7 @@ export default function DeFiDEXIntroSection() {
             <div className="relative">
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full"></div>
               <div className="pl-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
                   A Fundamental Shift in Finance
                 </h3>
                 

@@ -57,6 +57,7 @@ export default function NFTCTASection() {
       <div className="absolute inset-0">
         {[...Array(20)].map((_, i) => (
           <div
+          suppressHydrationWarning
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full opacity-30"
             style={{
@@ -85,13 +86,13 @@ export default function NFTCTASection() {
          
 
           {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6 leading-tight">
             Ready to Build the Next Generation{" "}
             <span className=" mt-2">NFT Marketplace?</span>
           </h2>
 
           {/* Subheading */}
-          <p className="text-xl md:text-lg text-blue-50 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-lg text-blue-50 max-w-4xl mx-auto mb-8 leading-relaxed">
             The NFT space is still evolving, and there's room for platforms that genuinely serve creators and collectors better than what exists today.
           </p>
 
@@ -103,10 +104,10 @@ export default function NFTCTASection() {
         {/* Value Proposition Card */}
         <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 mb-12 transform hover:scale-[1.02] transition-all duration-300">
           <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Build Something Extraordinary
             </h3>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-md md:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
               The best NFT marketplaces aren't just about buying and selling digital assets – they're about creating new ways for creators and fans to connect, communities to form, and value to be created and shared.
             </p>
           </div>
@@ -192,15 +193,15 @@ export default function NFTCTASection() {
             </div>
           </div>
 
-          <p className="text-2xl font-bold text-white mb-2">
+          <p className="text-xl font-bold text-white mb-2">
             Ready to empower creators and build the NFT marketplace your community deserves?
           </p>
-          <p className="text-xl text-blue-100">
+          <p className="text-lg text-blue-100">
             Let's create something extraordinary together.
           </p>
 
           {/* Contact Info */}
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 text-white">
+          <div className="mt-12 flex flex-row sm:flex-row items-center justify-center gap-6 text-white">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-blue-50">Available 24/7</span>

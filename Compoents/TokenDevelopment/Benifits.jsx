@@ -70,7 +70,7 @@ export default function BusinessBenefitsSection() {
         <div className="text-center mb-16">
           
           
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-6">
             Business Benefits You Can{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
               Actually Measure
@@ -155,14 +155,14 @@ export default function BusinessBenefitsSection() {
                   <ActiveIcon className="w-8 h-8 text-white" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900">
                     {benefits[activeTab].title}
                   </h3>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-8">
                 {benefits[activeTab].description}
               </p>
 
@@ -206,8 +206,8 @@ export default function BusinessBenefitsSection() {
             </div>
 
             {/* Floating Stats */}
-            <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-              <div className="text-4xl font-bold text-white mb-1">98%</div>
+            <div className="absolute -bottom-6 -right-2 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1">98%</div>
               <div className="text-blue-100 text-sm font-medium">Success Rate</div>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function BusinessBenefitsSection() {
 
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <button className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
+          <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-md md:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
             Start Measuring Your Success
             <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

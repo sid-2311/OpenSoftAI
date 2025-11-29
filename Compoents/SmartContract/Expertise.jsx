@@ -100,7 +100,7 @@ export default function ExpertiseSection() {
         <div className="text-center mb-16">
          
           
-          <h2 className="text-4xl md:text-4xl font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
               10 Years
             </span>
@@ -124,7 +124,7 @@ export default function ExpertiseSection() {
                 <div className="text-blue-400 group-hover:text-blue-300 transition-colors">
                   {achievement.icon}
                 </div>
-                <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   {achievement.number}
                 </div>
               </div>
@@ -141,7 +141,7 @@ export default function ExpertiseSection() {
           {/* Left: What Makes Us Different */}
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Sparkles className="w-8 h-8 text-blue-400" />
                 What Makes Us Different
               </h3>
@@ -157,7 +157,7 @@ export default function ExpertiseSection() {
                         {item.icon}
                       </div>
                       <div>
-                        <h4 className="text-xl font-bold text-white mb-2">{item.title}</h4>
+                        <h4 className="text-lg md:text-xl font-bold text-white mb-2">{item.title}</h4>
                         <p className="text-blue-200 leading-relaxed">{item.description}</p>
                       </div>
                     </div>
@@ -241,10 +241,10 @@ export default function ExpertiseSection() {
 
         {/* Bottom CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 text-center shadow-2xl shadow-blue-500/20">
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold text-white mb-4">
             The Best Smart Contracts Are Often The Simplest Ones
           </h3>
-          <p className="text-blue-100 text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-blue-100 text-md md:text-lg max-w-4xl mx-auto leading-relaxed">
             Elegant solutions that do exactly what they need to do without unnecessary complexity 
             that creates attack vectors. That's the OpenSoftAI difference.
           </p>

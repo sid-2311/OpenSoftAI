@@ -112,14 +112,14 @@ export default function DeFiExpertiseSection() {
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
 
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl  md:text-4xl font-bold text-white mb-6">
             OpenSoftAI Expertise in {" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-white mt-2">
               Developing DeFi Platforms
             </span>
           </h2>
 
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-md md:text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Battle-tested development process across different DeFi verticals with proven results
           </p>
         </div>
@@ -130,7 +130,7 @@ export default function DeFiExpertiseSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
             <div className="relative bg-slate-800 bg-opacity-50 backdrop-blur-xl border border-blue-500 border-opacity-30 rounded-3xl p-10 text-center">
               <BarChart3 className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white mb-2">
+              <div className="text-3xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white mb-2">
                 ${countUp.tvl}M+
               </div>
               <div className="text-blue-200 font-medium">Total Value Locked (TVL)</div>
@@ -142,7 +142,7 @@ export default function DeFiExpertiseSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
             <div className="relative bg-slate-800 bg-opacity-50 backdrop-blur-xl border border-blue-500 border-opacity-30 rounded-3xl p-10 text-center">
               <Shield className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white mb-2">
+              <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-white mb-2">
                 {countUp.protocols}+
               </div>
               <div className="text-blue-200 font-medium">DeFi Protocols Deployed</div>
@@ -203,7 +203,7 @@ export default function DeFiExpertiseSection() {
               <TrendingUp className="w-7 h-7 text-white" />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">What We've Learned</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">What We've Learned</h3>
               <p className="text-lg text-blue-100 leading-relaxed">
                 The most successful DeFi projects aren't necessarily the most complex ones – they're the ones that solve real problems elegantly while maintaining the highest security standards.
               </p>

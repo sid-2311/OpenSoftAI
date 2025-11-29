@@ -140,7 +140,7 @@ export default function WhyChooseOpenSoftAI() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <Link href="/contact-us" className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+          <Link href="/contact-us" className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
             Get Your HMS Consultation
             <svg
               className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"

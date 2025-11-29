@@ -1,6 +1,7 @@
 "use client";
 import Head from 'next/head';
 import { Code, Shield, Users, Zap, CheckCircle, TrendingUp, Lock, Layers, Cpu, Globe } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CryptoExpertiseSection() {
   const expertiseAreas = [
@@ -66,8 +67,8 @@ export default function CryptoExpertiseSection() {
             
             
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-black text-gray-900 mb-6 leading-tight">
-              Deep Expertise in
-              <br />
+              Deep Expertise in{" "}
+             
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600">
                 Crypto Infrastructure Development
               </span>
@@ -87,7 +88,7 @@ export default function CryptoExpertiseSection() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity blur-xl"></div>
                 <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-blue-100 hover:border-blue-300">
-                  <div className="text-5xl font-black bg-gradient-to-br from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-3xl md:text-3xl font-black bg-gradient-to-br from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">
                     {stat.value}
                   </div>
                   <div className="text-gray-600 font-medium">{stat.label}</div>
@@ -157,8 +158,8 @@ export default function CryptoExpertiseSection() {
           {/* Platform Types */}
           <div className="bg-white rounded-3xl p-10 shadow-2xl border border-blue-100 mb-20">
             <div className="text-center mb-10">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Complete Platform Spectrum</h3>
-              <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Platform Spectrum</h3>
+              <p className="text-gray-600 text-md md:text-lg max-w-3xl mx-auto">
                 Our experience spans the entire spectrum of crypto platforms – from simple mobile wallets to sophisticated institutional trading systems
               </p>
             </div>
@@ -192,19 +193,19 @@ export default function CryptoExpertiseSection() {
           <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 rounded-3xl p-12 shadow-2xl text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-grid-white opacity-10"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h3 className="text-3xl md:text-3xl font-bold text-white mb-6">
                 Built for Success & Sustainable Growth
               </h3>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+              <p className="text-lg md:text-lg text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
                 This comprehensive approach has helped our clients launch platforms that not only function perfectly but also achieve <strong className="text-white">rapid user adoption and sustainable growth</strong> through multiple market cycles and regulatory changes.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
+                <Link href="/contact-us" className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all">
                   Start Your Project
-                </button>
-                <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
+                </Link>
+                <Link href="/portfolio" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all">
                   See Our Work
-                </button>
+                </Link>
               </div>
             </div>
           </div>

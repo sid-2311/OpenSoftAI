@@ -57,6 +57,7 @@ export default function HMSCTASection() {
         {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
           <div
+          suppressHydrationWarning
             key={i}
             className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-30"
             style={{

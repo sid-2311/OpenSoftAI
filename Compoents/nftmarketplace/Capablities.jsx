@@ -88,7 +88,7 @@ export default function CapabilitiesSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-6">
             Core NFT Marketplace Development{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 mt-2">
               Capabilities

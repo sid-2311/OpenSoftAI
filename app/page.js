@@ -5,7 +5,7 @@ import Industries from "@/Compoents/Home/Industries";
 import TestimonialsSection from "@/Compoents/Home/Testimonail";
 import WhoWeAre from "@/Compoents/Home/WhoweAre";
 import WhyChooseOpenSoftAI from "@/Compoents/Home/WhyChoose";
-import Image from "next/image";
+
 
 export default function Home() {
   return (

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const countryCodes = [
   { code: "+91", name: "India" },
@@ -15,6 +16,7 @@ const ContactSection = () => {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const router = useRouter()
 
   const [errors, setErrors] = useState({}); // validation errors
 
@@ -57,6 +59,7 @@ const ContactSection = () => {
     };
 
     console.log("✅ Form Data:", formData);
+    router.push("/thank-you")
   };
 
   return (
@@ -104,6 +107,7 @@ const ContactSection = () => {
                 </label>
 
                 <input
+                suppressHydrationWarning
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -124,6 +128,7 @@ const ContactSection = () => {
 
                 <div className="flex gap-2">
                   <select
+                  suppressHydrationWarning
                     value={countryCode}
                     onChange={(e) => setCountryCode(e.target.value)}
                     className="w-32 p-2 rounded-md bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -136,6 +141,7 @@ const ContactSection = () => {
                   </select>
 
                   <input
+                  suppressHydrationWarning
                     type="text"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -154,6 +160,7 @@ const ContactSection = () => {
                 <label className="block text-sm mb-1 text-gray-200">Email Address</label>
 
                 <input
+                suppressHydrationWarning
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -189,6 +196,7 @@ const ContactSection = () => {
 
               {/* SUBMIT BUTTON */}
               <button
+              suppressHydrationWarning
                 type="submit"
                 className="w-full bg-[#1163FB]/90 hover:bg-[#1163FB] transition-colors rounded-md py-3 font-medium text-white"
               >

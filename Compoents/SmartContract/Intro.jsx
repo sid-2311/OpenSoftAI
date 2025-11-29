@@ -38,7 +38,7 @@ export default function SmartContractSection() {
         <div className="mb-12">
           
           
-          <h2 className="text-4xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             Why Smart Contract Development Is{' '}
             <span className="text-blue-600">Make-or-Break</span> for Your Project
           </h2>

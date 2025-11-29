@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ArrowRight, Shield, TrendingUp, Users, Check, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CryptoCTA() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -18,7 +19,7 @@ export default function CryptoCTA() {
         <div className="text-center mb-16 space-y-6">
           
           
-          <h3 className="text-5xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
+          <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-blue-200 bg-clip-text text-transparent">
             Ready to Launch Your {" "}Crypto Platform?
           </h3>
           
@@ -55,7 +56,7 @@ export default function CryptoCTA() {
         <div className="bg-slate-900/40 backdrop-blur-md border border-blue-500/20 rounded-3xl p-8 md:p-12 mb-12">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-white">
+              <h2 className="text-2xl md:text-3xl font-bold text-white">
                 Why Partner with OpenSoftAI?
               </h2>
               <p className="text-blue-100 leading-relaxed">
@@ -79,7 +80,7 @@ export default function CryptoCTA() {
             </div>
 
             <div className="bg-gradient-to-br from-blue-900/30 to-slate-900/30 rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-2xl font-bold text-white mb-4">The Stakes Are High</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-4">The Stakes Are High</h3>
               <p className="text-blue-100 mb-6 leading-relaxed">
                 The crypto space moves fast, and hesitation can mean missing market opportunities. But rushing to market with inadequate security or compliance can be catastrophic.
               </p>
@@ -99,18 +100,16 @@ export default function CryptoCTA() {
           </h2>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 flex items-center gap-2">
+            <Link href="/contact-us" className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-105 flex items-center gap-2">
               Get Free Platform Assessment
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </Link>
             
-            <button className="px-8 py-4 bg-slate-800/50 hover:bg-slate-800 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 rounded-xl font-semibold text-white transition-all duration-300">
+            <Link href="/contact-us" className="px-8 py-4 bg-slate-800/50 hover:bg-slate-800 backdrop-blur-sm border border-blue-500/30 hover:border-blue-400/50 rounded-xl font-semibold text-white transition-all duration-300">
               Schedule Technical Demo
-            </button>
+            </Link>
             
-            <button className="px-8 py-4 bg-transparent hover:bg-slate-800/30 border border-blue-500/30 hover:border-blue-400/50 rounded-xl font-semibold text-blue-300 hover:text-white transition-all duration-300">
-              Download Development Guide
-            </button>
+          
           </div>
 
           <p className="text-blue-200 text-lg mt-8 max-w-3xl mx-auto">

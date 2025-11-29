@@ -109,7 +109,7 @@ export default function WhyChooseUsSection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
             Why Choose{" "}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               OpenSoftAI
@@ -222,10 +222,10 @@ export default function WhyChooseUsSection() {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center md:text-left md:col-span-2">
-                <h3 className="text-3xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-white mb-3">
                   Ready to Launch Your DeFi Project?
                 </h3>
-                <p className="text-blue-100 text-lg">
+                <p className="text-blue-100 text-md md:text-lg">
                   Join 50+ DeFi protocols and fintech innovators who trust
                   OpenSoftAI to deliver secure, compliant, and scalable
                   blockchain systems.

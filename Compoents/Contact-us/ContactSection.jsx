@@ -3,6 +3,7 @@
 import { Facebook, Linkedin, Instagram, Youtube, Mail, Phone } from 'lucide-react';
 import Link from "next/link";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,8 @@ export default function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [countryCode, setCountryCode] = useState('+91');
+  const router=useRouter()
+
 
   const countryCodes = [
     { name: 'India', code: '+91' },
@@ -54,6 +57,7 @@ export default function ContactSection() {
     };
 
     console.log('📩 FORM SUBMITTED DATA:', finalPayload);
+    router.push("/thank-you")
 
     setTimeout(() => {
       setIsSubmitting(false);
@@ -106,6 +110,7 @@ export default function ContactSection() {
                 <div>
                   <label className="block text-sm mb-1 text-gray-200">Name <span className="text-red-500">*</span></label>
                   <input
+                  suppressHydrationWarning
                     type="text"
                     name="name"
                     value={formData.name}
@@ -121,6 +126,7 @@ export default function ContactSection() {
                   <label className="block text-sm mb-1 text-gray-200">Phone <span className="text-red-500">*</span></label>
                   <div className="flex gap-2">
                     <select
+                    suppressHydrationWarning
                       value={countryCode}
                       onChange={(e) => setCountryCode(e.target.value)}
                       className="w-32 p-2 rounded-md bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -133,6 +139,7 @@ export default function ContactSection() {
                     </select>
 
                     <input
+                    suppressHydrationWarning
                       type="text"
                       name="phone"
                       value={formData.phone}
@@ -148,6 +155,7 @@ export default function ContactSection() {
                 <div>
                   <label className="block text-sm mb-1 text-gray-200">Email Address</label>
                   <input
+                  suppressHydrationWarning
                     type="email"
                     name="email"
                     value={formData.email}
@@ -174,6 +182,7 @@ export default function ContactSection() {
                 </div>
 
                 <button
+                suppressHydrationWarning
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 hover:bg-blue-700 transition-colors rounded-md py-3 font-medium text-white disabled:opacity-50"

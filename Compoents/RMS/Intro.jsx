@@ -22,7 +22,7 @@ export default function RMSSection() {
     }, 3000);
 
     const updateRadius = () => {
-      if (window.innerWidth < 640) setRadius(120);
+      if (window.innerWidth < 640) setRadius(127);
       else if (window.innerWidth < 1024) setRadius(150);
       else setRadius(180);
     };
@@ -128,6 +128,7 @@ export default function RMSSection() {
 
                 return (
                   <div
+                  suppressHydrationWarning
                     key={index}
                     className="absolute transition-all duration-500"
                     style={{

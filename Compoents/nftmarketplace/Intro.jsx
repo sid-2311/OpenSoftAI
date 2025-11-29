@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Sparkles, Shield, Users, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function NFTInfrastructureSection() {
   const features = [
@@ -37,7 +38,7 @@ export default function NFTInfrastructureSection() {
         <div className="text-center mb-16">
          
           
-          <h2 className="text-5xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             The NFT Revolution Needs{" "}
             <span className=" mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
               Better Infrastructure
@@ -112,12 +113,12 @@ export default function NFTInfrastructureSection() {
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+            <Link href="/contact-us" className="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
               Explore Our Solutions
-            </button>
-            <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-blue-600">
+            </Link>
+            <Link href="/contact-us" className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 border-2 border-blue-600">
               Get In Touch
-            </button>
+            </Link>
           </div>
         </div>
       </div>

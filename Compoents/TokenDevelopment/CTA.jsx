@@ -97,7 +97,7 @@ export default function CTASection() {
           }`}
         >
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Launch <span className="text-blue-200">Your Token?</span>
             </h2>
             <p className="text-md text-blue-100 max-w-3xl mx-auto mb-4 leading-relaxed">
@@ -210,7 +210,7 @@ export default function CTASection() {
           {/* Bottom CTA Text */}
           <div className="text-center">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 border border-white/20">
-              <p className="text-white text-lg font-medium">
+              <p className="text-white text-md md:text-lg font-medium">
                 Ready to turn your token idea into reality?{" "}
                 <span className="text-blue-200 font-bold">
                   Let’s build something great together.
@@ -220,7 +220,7 @@ export default function CTASection() {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
+          {/* <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
             {[
               { value: "50+", label: "Projects Delivered" },
               { value: "98%", label: "Success Rate" },
@@ -236,7 +236,7 @@ export default function CTASection() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -135,6 +135,7 @@ export default function IMSection() {
 
                 return (
                   <div
+                  suppressHydrationWarning
                     key={index}
                     className="absolute transition-all duration-500"
                     style={{
