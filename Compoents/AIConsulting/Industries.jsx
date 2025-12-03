@@ -9,7 +9,7 @@ const TABS = [
     title: "Finance & Banking",
     heading: "Finance & Banking",
     text: `AI for fraud detection, risk assessment, algorithmic trading, and customer service automation.`,
-    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.jpg",
     alt:"digital finance data analysis investment dashboard",
     icon: (
       <svg
@@ -29,7 +29,7 @@ const TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Clinical decision support, medical imaging analysis, patient care optimization, and administrative automation.`,
-     img: "/images/doctor-using-digital-health-technology.avif",
+     img: "/images/doctor-using-digital-health-technology.jpg",
     alt:"doctor using digital health technology",
     icon: (
       <svg
@@ -49,7 +49,7 @@ const TABS = [
     title: "Retail & eCommerce",
     heading: "Retail & eCommerce",
     text: `Personalization engines, demand forecasting, inventory optimization, and customer behavior analysis.`,
-    img: "/images/ai-shopping-app-development.webp",
+    img: "/images/ai-shopping-app-development.jpg",
     alt:"ai shopping app development",
     icon: (
       <svg

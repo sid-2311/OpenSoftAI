@@ -33,7 +33,7 @@ const TABS = [
     title: "eCommerce & Retail",
     heading: "eCommerce & Retail",
     text: `Product description generation, visual merchandising, personalized marketing content, and customer communication automation that drives sales and improves customer experience.`,
-   img: "/images/ai-shopping-app-development.webp",
+   img: "/images/ai-shopping-app-development.jpg",
    alt:"ai shopping app development",
     icon: (
       <svg
@@ -110,7 +110,7 @@ const TABS = [
     title: "Finance & Banking",
     heading: "Finance & Banking",
     text: `Compliance-friendly content generation, client communication automation, report creation, and marketing material development that maintains regulatory standards.`,
-    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.jpg",
     alt:"digital finance data analysis investment dashboard",
     icon: (
       <svg
@@ -134,7 +134,7 @@ const TABS = [
     title: "Healthcare & Life Sciences",
     heading: "Healthcare & Life Sciences",
     text: `Patient education materials, medical content creation, research documentation, and communication tools that improve patient care and operational efficiency.`,
-     img: "/images/doctor-using-digital-health-technology.avif",
+     img: "/images/doctor-using-digital-health-technology.jpg",
     alt: "doctor using digital health technology",
     icon: (
       <svg

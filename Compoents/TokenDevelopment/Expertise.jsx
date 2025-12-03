@@ -169,7 +169,6 @@ export default function ExpertiseSection() {
           </div>
         </div>
 
-        {/* Bottom CTA Section */}
        
       </div>
 

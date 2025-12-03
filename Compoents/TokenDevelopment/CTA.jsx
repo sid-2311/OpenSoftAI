@@ -9,6 +9,7 @@ import {
   Zap,
   Rocket,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function CTASection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +27,7 @@ export default function CTASection() {
       description: "Get expert guidance on your token strategy.",
       primary: true,
       delay: 0,
-      href: "#contact",
+      href: "/contact-us",
     },
     {
       icon: FileText,
@@ -34,7 +35,7 @@ export default function CTASection() {
       description: "Transparent pricing for your requirements.",
       primary: false,
       delay: 100,
-      href: "#quote",
+      href: "/contact-us",
     },
     {
       icon: FolderOpen,
@@ -42,7 +43,7 @@ export default function CTASection() {
       description: "See our successful token launches.",
       primary: false,
       delay: 200,
-      href: "#portfolio",
+      href: "/portfolio",
     },
   ];
 
@@ -133,79 +134,94 @@ export default function CTASection() {
           </div>
 
           {/* Action Buttons */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-            {actions.map((action, idx) => {
-              const Icon = action.icon;
-              const isHovered = hoveredButton === idx;
-              return (
-                <a
-                  href={action.href}
-                  key={idx}
-                  className={`block transition-all duration-700 ${
-                    isVisible
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-10"
-                  }`}
-                  style={{ transitionDelay: `${action.delay}ms` }}
-                  onMouseEnter={() => setHoveredButton(idx)}
-                  onMouseLeave={() => setHoveredButton(null)}
-                >
-                  <div
-                    className={`relative overflow-hidden rounded-2xl p-8 transition-all duration-300 ${
-                      action.primary
-                        ? "bg-white text-blue-600 hover:shadow-xl"
-                        : "bg-white/10 border border-white/30 text-white hover:bg-white/20"
-                    }`}
-                  >
-                    {action.primary && (
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 transition-opacity duration-300 ${
-                          isHovered ? "opacity-100" : "opacity-0"
-                        }`}
-                      />
-                    )}
-                    <div className="relative z-10">
-                      <div
-                        className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 transition-all duration-300 ${
-                          action.primary
-                            ? "bg-transparent"
-                            : "bg-white/10 group-hover:bg-white/20"
-                        } ${isHovered ? "scale-110 rotate-6" : ""}`}
-                      >
-                        <Icon
-                          className={`w-7 h-7 ${
-                            action.primary ? "text-blue-600" : "text-white"
-                          }`}
-                        />
-                      </div>
-                      <h3
-                        className={`text-xl font-bold mb-2 ${
-                          action.primary ? "text-blue-600" : "text-white"
-                        }`}
-                      >
-                        {action.title}
-                      </h3>
-                      <p
-                        className={`text-sm mb-4 ${
-                          action.primary ? "text-blue-500" : "text-blue-200"
-                        }`}
-                      >
-                        {action.description}
-                      </p>
-                      <div
-                        className={`inline-flex items-center font-semibold text-sm transition-transform duration-300 ${
-                          isHovered ? "translate-x-2" : ""
-                        } ${action.primary ? "text-blue-600" : "text-white"}`}
-                      >
-                        <span>Get Started</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              );
-            })}
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+  {actions.map((action, idx) => {
+    const Icon = action.icon;
+    const isHovered = hoveredButton === idx;
+    return (
+      <Link
+        href={action.href}
+        key={idx}
+        className={`block transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+        style={{ transitionDelay: `${action.delay}ms` }}
+        onMouseEnter={() => setHoveredButton(idx)}
+        onMouseLeave={() => setHoveredButton(null)}
+      >
+        <div
+          className={`
+            relative overflow-hidden rounded-2xl p-8 transition-all duration-300
+            h-full min-h-[320px] flex flex-col justify-between
+            ${
+              action.primary
+                ? "bg-white text-blue-600 hover:shadow-xl"
+                : "bg-white/10 border border-white/30 text-white hover:bg-white/20"
+            }
+          `}
+        >
+          {/* Hover Overlay */}
+          {action.primary && (
+            <div
+              className={`absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 transition-opacity duration-300 ${
+                isHovered ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          )}
+
+          {/* Content */}
+          <div className="relative z-10 flex flex-col flex-grow">
+
+            {/* Icon */}
+            <div
+              className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 transition-all duration-300 ${
+                action.primary
+                  ? "bg-transparent"
+                  : "bg-white/10 group-hover:bg-white/20"
+              } ${isHovered ? "scale-110 rotate-6" : ""}`}
+            >
+              <Icon
+                className={`w-7 h-7 ${
+                  action.primary ? "text-blue-600" : "text-white"
+                }`}
+              />
+            </div>
+
+            {/* Title + Description */}
+            <div className="flex-grow">
+              <h3
+                className={`text-xl font-bold mb-2 ${
+                  action.primary ? "text-blue-600" : "text-white"
+                }`}
+              >
+                {action.title}
+              </h3>
+
+              <p
+                className={`text-sm mb-4 ${
+                  action.primary ? "text-blue-500" : "text-blue-200"
+                }`}
+              >
+                {action.description}
+              </p>
+            </div>
+
+            {/* CTA Row */}
+            <div
+              className={`inline-flex items-center font-semibold text-sm transition-transform duration-300 ${
+                isHovered ? "translate-x-2" : ""
+              } ${action.primary ? "text-blue-600" : "text-white"}`}
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </div>
           </div>
+        </div>
+      </Link>
+    );
+  })}
+</div>
+
 
           {/* Bottom CTA Text */}
           <div className="text-center">

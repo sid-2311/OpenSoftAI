@@ -9,7 +9,7 @@ const TABS = [
     title: "Financial Services",
     heading: "Financial Services",
     text: `We've built trading platforms that don't crash during market volatility. Payment systems that actually process payments. Compliance tools that keep regulators happy.`,
-    img: "/images/digital-finance-data-analysis-investment-dashboard.webp",
+    img: "/images/digital-finance-data-analysis-investment-dashboard.jpg",
     alt: "digital finance data analysis investment dashboard.webp",
     icon: (
       <svg
@@ -33,7 +33,7 @@ const TABS = [
     title: "Healthcare",
     heading: "Healthcare",
     text: `Electronic health records that doctors don't hate. Telemedicine platforms that work when patients need them most. Everything HIPAA-compliant because nobody has time for lawsuits.`,
-    img: "/images/doctor-using-digital-health-technology.avif",
+    img: "/images/doctor-using-digital-health-technology.jpg",
     alt:"doctor using digital health technology",
     icon: (
       <svg
@@ -57,7 +57,7 @@ const TABS = [
     title: "Retail & E-commerce",
     heading: "Retail & E-commerce",
     text: `Shopping platforms that convert browsers into buyers. Inventory systems that know what you have before you run out. Recommendation engines that actually recommend useful things.`,
-     img: "/images/ai-shopping-app-development.webp",
+     img: "/images/ai-shopping-app-development.jpg",
     alt:"ai shopping app development",
     icon: (
       <svg

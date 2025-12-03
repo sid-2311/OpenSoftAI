@@ -9,17 +9,7 @@ export default function HeroSection() {
   return (
     <>
       {/* SEO Head */}
-      <Head>
-        <title>AI Calling Agent Development | Smart Voice Automation</title>
-        <meta
-          name="description"
-          content="Build AI Calling Agents for smarter inbound and outbound voice automation. Enhance business communication with intelligent voice solutions."
-        />
-        <meta
-          name="keywords"
-          content="AI calling agent, voice automation, inbound call automation, outbound AI calls, conversational AI, call center automation"
-        />
-      </Head>
+     
 
       {/* Hero Section */}
       <section className="relative w-full min-h-[90vh] bg-[#0B0417] text-white flex items-center overflow-hidden">

@@ -214,7 +214,7 @@ export default function NFTExpertiseSection() {
             <Link href="" className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
               View Case Studies
             </Link>
-            <Link href="" className="px-6 py-3 bg-slate-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-500">
+            <Link href="/conatct-us" className="px-6 py-3 bg-slate-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-blue-500">
               Schedule Consultation
             </Link>
           </div>

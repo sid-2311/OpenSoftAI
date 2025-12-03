@@ -37,7 +37,7 @@ export const metadata = {
   alternates: {
     canonical: "https://opensoftai.com/portfolio",
   },
-  viewport: "width=device-width, initial-scale=1.0",
+  
   other: {
     "script:ld+json": JSON.stringify({
       "@context": "https://schema.org",
