@@ -13,7 +13,7 @@ export default function BlockchainHero() {
     >
       {/* Background image with overlay */}
       <Image
-        src="/images/crytohero.webp"
+        src="/images/cryptonet.jpg"
         alt="Earth from space with glowing city lights at night"
         fill
         priority

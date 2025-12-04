@@ -8,53 +8,57 @@ export default function BlockchainHero() {
   return (
     <section
       id="blockchain-hero"
-      className="relative min-h-screen overflow-hidden"
+      className="relative min-h-screen w-full overflow-hidden"
       aria-labelledby="blockchain-hero-heading"
     >
-      {/* Background image with overlay */}
-      <Image
-        src="/images/Digital-illustration-of-blockchain-smart-contract-technology-on-a-virtual-interface.jpg"
-        alt="Digital illustration of blockchain smart contract technology on a virtual interface"
-        fill
-        priority
-        className="object-cover"
-      />
-      {/* Animated background elements */}
-     
+      {/* MOBILE: Gradient Background */}
+      <div className="absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
+        {/* Mobile Glow Effects */}
+        <div className="absolute -top-16 -left-16 w-56 h-56 bg-indigo-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-56 h-56 bg-purple-500/10 rounded-full blur-2xl"></div>
+      </div>
 
-      {/* Main content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left content */}
-          <div className="text-white space-y-8">
+      {/* DESKTOP: Background Image */}
+      <div className="absolute inset-0 z-0 hidden sm:block">
+        <Image
+          src="/images/Digital-illustration-of-blockchain-smart-contract-technology-on-a-virtual-interface.jpg"
+          alt="Digital illustration of blockchain smart contract technology on a virtual interface"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+
+        {/* Desktop Overlay */}
+        <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 min-h-screen flex items-center">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
+          <div className="max-w-2xl">
+            {/* Heading */}
             <h1
               id="blockchain-hero-heading"
-              className="text-3xl lg:text-4xl font-bold leading-tight"
+              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight"
             >
-             Smart Contract Development Services  Secure, Auditable, and Business-Ready
+              Smart Contract Development Services – Secure, Auditable, and
+              Business-Ready
             </h1>
 
-           
-
             {/* CTA Button */}
-            <div className="pt-4">
-              <Link
-                href="/contact-us"
-                className="group inline-flex items-center space-x-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-              >
-                <span>Book A Free Consultation</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
+            <Link
+              href="/contact-us"
+              className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
+            >
+              Book A Free Consultation
+              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
           </div>
-
-          {/* Right content - Visual element */}
-          
         </div>
       </div>
 
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900 to-transparent"></div>
+      {/* DESKTOP ONLY: Bottom Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 to-transparent z-10 hidden sm:block"></div>
     </section>
   );
 }

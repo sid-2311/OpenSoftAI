@@ -10,55 +10,73 @@ export default function HeroSection() {
     <>
       {/* SEO Head */}
       <Head>
-        <title>AI Calling Agent Development | Smart Voice Automation</title>
+        <title>AI Consulting Services | Smart AI Adoption & Strategy</title>
         <meta
           name="description"
-          content="Build AI Calling Agents for smarter inbound and outbound voice automation. Enhance business communication with intelligent voice solutions."
+          content="Get expert AI consulting services to implement intelligent automation, enhance productivity, and adopt AI with a smart business strategy."
         />
         <meta
           name="keywords"
-          content="AI calling agent, voice automation, inbound call automation, outbound AI calls, conversational AI, call center automation"
+          content="AI consulting, AI strategy, machine learning consulting, business AI adoption, automation consulting"
         />
       </Head>
 
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[90vh] bg-[#0B0417] text-white flex items-center overflow-hidden">
-        {/* Background Image (Right side) */}
-        <div className="absolute inset-0">
-          <div className="absolute right-0 top-0 bottom-0 w-full bg-center bg-no-repeat">
-            <Image
-              src="/images/ai-consulting.webp"
-              alt="AI Calling Agent Development"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B0417] via-[#0B0417]/80 to-transparent"></div>
+      {/* HERO SECTION */}
+      <section
+        className="relative min-h-screen w-full overflow-hidden"
+        aria-labelledby="ai-consulting-heading"
+      >
+        {/* MOBILE: Gradient Background */}
+        <div className="absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900">
+          {/* Glow Effects */}
+          <div className="absolute -top-16 -left-16 w-56 h-56 bg-indigo-500/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-56 h-56 bg-purple-500/10 rounded-full blur-2xl"></div>
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 py-20 flex flex-col md:flex-row items-center">
-          <div className="w-full md:w-1/2 space-y-4">
-            <h1 className="text-4xl md:text-4xl font-bold leading-tight">
-        AI Consulting Services – Expert Guidance for Smarter AI Adoption
+        {/* DESKTOP: Background Image */}
+        <div className="absolute inset-0 z-0 hidden sm:block">
+          <Image
+            src="/images/ai-consulting.jpg"
+            alt="AI Consulting Services"
+            fill
+            priority
+            className="object-cover object-center"
+          />
 
-
-            </h1>
-
-            <Link
-              href="/contact-us"
-              className="mt-6 inline-flex items-center gap-2 bg-transparent text-white border-2 border-white font-semibold px-6 py-3 rounded-full hover:bg-gray-200 hover:text-black transition-all"
-            >
-              Book a Call
-              <span className="text-xl">→</span>
-            </Link>
-          </div>
-
-          {/* Right Side Placeholder */}
-          <div className="hidden md:block w-1/2"></div>
+          {/* Desktop Overlay */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
+
+        {/* CONTENT */}
+        <div className="relative z-10 min-h-screen flex items-center">
+          <div className="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div className="max-w-2xl">
+              {/* HEADING */}
+              <h1
+                id="ai-consulting-heading"
+                className="text-3xl md:text-4xl    font-bold text-white mb-6 leading-tight"
+              >
+                AI Consulting Services – Expert Guidance for Smarter AI Adoption
+              </h1>
+
+              {/* CTA BUTTON */}
+              <Link
+                href="/contact-us"
+                className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold 
+                text-white bg-transparent border-2 border-white rounded-full
+                hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
+              >
+                Book a Call
+                <span className="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300">
+                  →
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* DESKTOP ONLY: Bottom Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 hidden sm:block bg-gradient-to-t from-slate-900/80 to-transparent z-10"></div>
       </section>
     </>
   );
