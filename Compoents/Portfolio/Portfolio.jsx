@@ -478,35 +478,83 @@ export default function Portfolio() {
         </section>
 
         {/* PROCESS SECTION */}
-        <section className="py-24 px-6 bg-gradient-to-b from-blue-50 to-white" aria-labelledby="process-heading">
-          <div className="max-w-7xl mx-auto">
-            <header className="text-center mb-16">
-              <h2 id="process-heading" className="text-2xl md:text-4xl font-black text-blue-950 mb-4">
-                Our Development Process
-              </h2>
-              <p className="text-md text-gray-600 max-w-3xl mx-auto">
-                A proven methodology that ensures quality delivery and client satisfaction
-              </p>
-            </header>
-            <div className="grid md:grid-cols-5 gap-6">
-              {processSteps.map((step, i) => (
-                <article key={i} className="relative">
-                  <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-100 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-2 text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full mb-4" aria-hidden="true">
-                      {step.icon}
-                    </div>
-                    <div className="text-sm font-bold text-blue-600 mb-2">Step {i + 1}</div>
-                    <h3 className="text-lg font-bold text-blue-950 mb-2">{step.title}</h3>
-                    <p className="text-sm text-gray-600">{step.desc}</p>
+        {/* PROCESS SECTION */}
+<section
+  className="py-24 px-6 bg-gradient-to-b from-blue-50 to-white"
+  aria-labelledby="process-heading"
+>
+  <div className="max-w-7xl mx-auto">
+    <header className="text-center mb-16">
+      <h2
+        id="process-heading"
+        className="text-2xl md:text-4xl font-black text-blue-950 mb-4"
+      >
+        Our Development Process
+      </h2>
+      <p className="text-md text-gray-600 max-w-3xl mx-auto">
+        A proven methodology that ensures quality delivery and client satisfaction
+      </p>
+    </header>
+
+    <div className="relative max-w-5xl mx-auto">
+      {/* Center line (desktop only) */}
+      <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-blue-200 -translate-x-1/2" />
+
+      <div className="space-y-16">
+        {processSteps.map((step, index) => {
+          const isLeft = index % 2 === 0;
+
+          return (
+            <div
+              key={index}
+              className={`relative flex items-start gap-4 md:gap-0 ${
+                isLeft ? "md:justify-start" : "md:justify-end"
+              }`}
+            >
+              {/* ICON */}
+              <div
+                className="
+                  relative md:absolute 
+                  md:left-1/2 md:-translate-x-1/2
+                  w-12 h-12 md:w-14 md:h-14
+                  bg-gradient-to-br from-blue-600 to-blue-700
+                  text-white rounded-xl
+                  flex items-center justify-center
+                  shadow-lg
+                "
+                aria-hidden="true"
+              >
+                {step.icon}
+              </div>
+
+              {/* CARD */}
+              <div
+                className={`w-full md:w-5/12 ${
+                  isLeft
+                    ? "md:pr-12 md:text-right"
+                    : "md:pl-12 md:text-left"
+                }`}
+              >
+                <div className="bg-white p-6 rounded-2xl shadow-lg border-2 border-blue-100 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="text-sm font-bold text-blue-600 mb-2">
+                    Step {index + 1}
                   </div>
-                  {i < processSteps.length - 1 && (
-                    <div className="hidden md:block absolute top-10 -right-3 w-6 h-0.5 bg-blue-300" aria-hidden="true"></div>
-                  )}
-                </article>
-              ))}
+                  <h3 className="text-lg font-bold text-blue-950 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {step.desc}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* TESTIMONIAL SECTION */}
         <section className="py-24 px-6 bg-gradient-to-r from-blue-900 to-blue-950 text-white" aria-labelledby="testimonial-heading">

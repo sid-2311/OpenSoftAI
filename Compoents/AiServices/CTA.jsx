@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import {
   Rocket,
@@ -75,168 +74,124 @@ export default function CTAContactSection() {
   ];
 
   return (
-    <>
-      {/* SEO Optimization */}
-     
-      <section
-        className="relative bg-gradient-to-b from-slate-50 via-blue-50 to-slate-900 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden"
-        id="contact"
-      >
-        {/* Decorative Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
-        <div
-          className="absolute top-0 left-1/4 w-96 h-96 bg-blue-400 rounded-full blur-3xl opacity-20 animate-pulse"
-          style={{ animationDuration: "5s" }}
-        />
-        <div
-          className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-3xl opacity-20 animate-pulse"
-          style={{ animationDuration: "7s", animationDelay: "2s" }}
-        />
+    <section
+      id="contact"
+      className="relative bg-gradient-to-b from-slate-50 via-blue-50 to-blue-50 py-24 px-4 overflow-hidden"
+    >
+      {/* HEADER */}
+      <div className="max-w-7xl mx-auto text-center mb-20">
+        <h2 className="text-3xl lg:text-5xl font-bold text-gray-900">
+          Ready to Build Your{" "}
+          <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            Intelligent Future?
+          </span>
+        </h2>
+      </div>
 
-        <div className="relative max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Ready to Build Your{" "}
-              <span className=" mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
-                Intelligent Future?
-              </span>
-            </h2>
-          </div>
+      {/* ================= TIMELINE ================= */}
+      <div className="max-w-5xl mx-auto mb-28 relative">
+        {/* Center Line (desktop only) */}
+        <div className="absolute left-1/2 top-0 h-full w-1 bg-blue-200 -translate-x-1/2 hidden md:block" />
 
-          {/* Process Steps */}
-          <section aria-labelledby="process-steps">
-          
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
-              {steps.map((step, index) => (
+        <div className="space-y-16">
+          {steps.map((step, index) => {
+            const isLeft = index % 2 === 0;
+
+            return (
+              <div
+                key={index}
+                onMouseEnter={() => setHoveredStep(index)}
+                onMouseLeave={() => setHoveredStep(null)}
+                className={`relative flex items-start gap-4 md:gap-0 ${
+                  isLeft ? "md:justify-start" : "md:justify-end"
+                }`}
+              >
+                {/* ICON */}
                 <div
-                  key={index}
-                  onMouseEnter={() => setHoveredStep(index)}
-                  onMouseLeave={() => setHoveredStep(null)}
-                  className="group relative"
+                  className={`
+                    relative md:absolute 
+                    md:left-1/2 md:-translate-x-1/2
+                    w-12 h-12 md:w-14 md:h-14
+                    rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 
+                    text-white flex items-center justify-center shadow-lg
+                    transition-all duration-300
+                    ${hoveredStep === index ? "scale-110 rotate-6" : ""}
+                  `}
                 >
-                  {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-12 left-full w-6 h-0.5 bg-gradient-to-r from-blue-300 to-blue-400 -translate-x-3" />
-                  )}
+                  {step.icon}
+                </div>
 
+                {/* CARD */}
+                <div
+                  className={`w-full md:w-5/12 ${
+                    isLeft
+                      ? "md:pr-12 md:text-right"
+                      : "md:pl-12 md:text-left"
+                  }`}
+                >
                   <div
-                    className={`relative bg-white rounded-2xl p-6 border transition-all duration-300 ${
+                    className={`bg-white rounded-2xl p-6 border transition-all duration-300
+                    ${
                       hoveredStep === index
-                        ? "border-blue-400 shadow-2xl shadow-blue-500/30 -translate-y-2"
+                        ? "border-blue-400 shadow-xl shadow-blue-500/30 -translate-y-1"
                         : "border-blue-100 shadow-lg"
                     }`}
                   >
-                    <div
-                      className={`absolute -top-4 -left-4 w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-white font-bold shadow-lg transition-transform duration-300 ${
-                        hoveredStep === index ? "scale-110 rotate-6" : "scale-100"
-                      }`}
-                    >
-                      {step.number}
+                    <div className="text-sm font-mono text-blue-600 mb-1">
+                      STEP {step.number}
                     </div>
-
-                    <div
-                      className={`w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-4 ml-8 transition-colors duration-300 ${
-                        hoveredStep === index ? "bg-blue-600 text-white" : ""
-                      }`}
-                    >
-                      {step.icon}
-                    </div>
-
-                    <h4 className="text-lg font-bold text-gray-900 mb-2 leading-snug">
+                    <h4 className="text-lg font-bold text-gray-900 mb-2">
                       {step.title}
                     </h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {step.description}
-                    </p>
+                    <p className="text-gray-600">{step.description}</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Contact Section */}
-          <section
-            aria-labelledby="contact-options"
-            className="relative text-center"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 rounded-3xl blur-xl opacity-50" />
-
-            <div className="relative bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-700/50 overflow-hidden">
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
-
-              <div className="relative z-10">
-                <h3
-                  id="contact-options"
-                  className="text-2xl lg:text-4xl font-bold text-white mb-4"
-                >
-                  Ready to Get Started?
-                </h3>
-                <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-12">
-                  Choose your preferred way to connect with our AI experts
-                </p>
-
-                <div className="grid md:grid-cols-3 gap-6 mb-12">
-                  {contactMethods.map((method, index) => (
-                    <Link
-                      key={index}
-                      href={method.link}
-                      className="group relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
-                    >
-                      <div
-                        className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        {method.icon}
-                      </div>
-                      <h4 className="text-lg font-bold text-white mb-2">
-                        {method.title}
-                      </h4>
-                      <p className="text-blue-200 group-hover:text-white transition-colors">
-                        {method.value}
-                      </p>
-                      <div className="absolute bottom-6 right-6 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-
-                {/* CTA Button */}
-               <div className="text-center mb-8">
-  <Link
-    href="/contact-us"
-    className="
-      group inline-flex items-center gap-2 
-      px-6 py-3 
-      bg-white text-blue-900 font-bold 
-      text-base md:text-lg 
-      rounded-xl 
-      hover:bg-blue-50 transition-all duration-300 hover:scale-105 
-      shadow-xl hover:shadow-white/20
-    "
-  >
-    <Calendar className="w-5 h-5 md:w-6 md:h-6" />
-    <span className="leading-none text-sm">
-      Book Your Free AI Strategy Session
-    </span>
-    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
-  </Link>
-</div>
-
-
-                <div className="text-center pt-8 border-t border-white/20">
-                  <p className="text-xl text-blue-100 italic font-medium mb-2">
-                    Let&apos;s build AI that works as hard as you do.
-                  </p>
-                  <p className="text-blue-200">
-                    Contact{" "}
-                    <span className="font-bold text-white">OpenSoftAI</span> today and turn your data into your competitive advantage.
-                  </p>
-                </div>
               </div>
-            </div>
-          </section>
+            );
+          })}
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* ================= CONTACT SECTION ================= */}
+      <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-700/50">
+          <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-blue-100 text-lg mb-12">
+            Choose your preferred way to connect with our AI experts
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {contactMethods.map((method, index) => (
+              <Link
+                key={index}
+                href={method.link}
+                className="group bg-white/10 rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all hover:scale-105"
+              >
+                <div
+                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} flex items-center justify-center text-white mb-6`}
+                >
+                  {method.icon}
+                </div>
+                <h4 className="text-lg font-bold text-white mb-2">
+                  {method.title}
+                </h4>
+                <p className="text-blue-200">{method.value}</p>
+              </Link>
+            ))}
+          </div>
+
+          <Link
+            href="/contact-us"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-900 font-bold rounded-xl hover:scale-105 transition"
+          >
+            <Calendar className="w-5 h-5" />
+            Book Your Free AI Strategy Session
+            <ArrowRight className="w-5 h-5" />
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }
