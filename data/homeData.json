@@ -1,0 +1,291 @@
+{
+    "hero": {
+        "seo": {
+            "heading": "AI Automation & Expert Software Development Services",
+            "description": "We provide expert software development, AI-powered automation, and intelligent digital solutions to help businesses scale, innovate, and grow efficiently."
+        },
+        "videoSchema": {
+            "name": "How AI Automation Improves Business Efficiency",
+            "description": "This video explains how AI-powered automation helps businesses save time, improve accuracy, and optimize performance. It shows the impact of smart workflow automation on business efficiency.",
+            "contentUrl": "https://opensoftai.com/images/ai-automation.mp4",
+            "thumbnailUrl": "https://opensoftai.com/images/ai-automation-thumbnail.jpeg",
+            "uploadDate": "2024-01-01"
+        },
+        "backgroundVideo": "/images/ai-automation.mp4",
+        "title": {
+            "text": "Transform Your Business with",
+            "highlight": "Expert Software Development",
+            "suffix": "& AI Solutions"
+        },
+        "cta": {
+            "text": "Schedule a Call",
+            "link": "/contact-us",
+            "ariaLabel": "Schedule a call for AI and software development services"
+        }
+    },
+    "whoweare": {
+        "heading": "Who We Are",
+        "content": [
+            "Here's the thing about software development – anyone can code, but not everyone can solve real business problems. We've been doing this for over 10 years now. Started small, working with local startups who needed websites that didn't crash every Tuesday. Fast forward to today? We're building AI systems for Fortune 500 companies and blockchain platforms that handle millions in transactions.",
+            "OpenSoftAI team isn't just a bunch of developers hiding behind computers. We're certified in all the big platforms – AWS, Microsoft Azure, Google Cloud, you name it. But more importantly, we actually understand business. Finance, healthcare, retail, manufacturing – we've seen it all. And we know what works.",
+            "The best part? We've delivered over 500 projects. Some were simple. Others kept us up at night for months. All of them taught us something new."
+        ],
+        "cta": {
+            "text": "Learn More About Us",
+            "link": "/about-us"
+        },
+        "decorativeImages": {
+            "left": "/images/separate-line.png",
+            "right": "/images/dotted-pattern-background-design.png"
+        }
+    },
+     "coreservices": {
+    "section": {
+      "heading": "The Core Services OpenSoftAI Offer",
+      "description": "Explore our main offerings designed to transform your business with cutting-edge technology and innovation."
+    },
+
+    "tabs": [
+      {
+        "id": "Custom Software Development",
+        "title": "Custom Software",
+        "heading": "Custom Software Development",
+        "text": "Remember when you had that brilliant idea? The one that could change everything if only you had the right software to make it happen?\nThat's where we come in. We build websites that don't just look pretty – they convert visitors into customers. Mobile apps that people actually want to use. Enterprise systems that make your team's life easier, not harder.\nNo cookie-cutter solutions here. Your business is unique, and your software should be too.",
+        "image": {
+          "src": "/images/custom-software-development.png",
+          "alt": "custom software development"
+        },
+        "icon": "code",
+        "link": "/software-development-company"
+      },
+      {
+        "id": "AI & Automation Solutions",
+        "title": "AI & Automation",
+        "heading": "AI & Automation Solutions",
+        "text": "Let's be honest. Your team is probably doing a lot of boring, repetitive stuff right now. Stuff that a smart system could handle while they focus on what actually matters.\nWe build AI that works in the real world. Chatbots that don't make your customers want to throw their phones. Automation that saves you hours every day. Machine learning models that actually predict useful things. The kind of technology that makes you wonder how you ever managed without it.",
+        "image": {
+          "src": "/images/ai-automation-development.png",
+          "alt": "ai automation development"
+        },
+        "icon": "bot",
+        "link": "/ai-development-company"
+      },
+      {
+        "id": "Full-Stack Blockchain Development",
+        "title": "Blockchain",
+        "heading": "Full-Stack Blockchain Development",
+        "text": "Blockchain isn't just about crypto anymore. Though we build those too – wallets, DeFi platforms, NFT marketplaces that don't fall apart when things get busy.\nSmart contracts that are actually smart. Decentralized apps that regular people can figure out. The whole blockchain thing, but done right. Secure, transparent, and built to scale when your big break comes.",
+        "image": {
+          "src": "/images/ai-blockchain-technology.png",
+          "alt": "ai blockchain technology"
+        },
+        "icon": "blocks",
+        "link": "/blockchain-development-service"
+      }
+    ]
+  },
+   "whychoose": {
+    "section": {
+      "heading": "Why Choose OpenSoftAI"
+    },
+
+    "features": [
+      {
+        "id": 1,
+        "icon": "users",
+        "title": "We Actually Know What We're Doing",
+        "description": "Ten years in this business teaches you things. Like how to spot problems before they become disasters. How to build systems that don't break when your traffic spikes. How to explain technical stuff without putting you to sleep.",
+        "subtext": "Our certifications? They're nice wall decorations. But what really matters is that we've been there, done that, fixed that at 3 AM on a Sunday.",
+        "gradient": "from-blue-500 to-purple-600"
+      },
+      {
+        "id": 2,
+        "icon": "shield",
+        "title": "Security Isn't Optional",
+        "description": "Your data is everything. We get it. That's why we build every single thing like hackers are watching. Enterprise-grade security from day one. Secure coding that makes the bad guys cry.",
+        "subtext": "No shortcuts. No \"we'll fix that later.\" Your business deserves better.",
+        "gradient": "from-emerald-500 to-teal-600"
+      },
+      {
+        "id": 3,
+        "icon": "eye",
+        "title": "No Surprises, Ever",
+        "description": "Here's what drives us crazy about other development companies: they disappear for weeks, then show up with something completely different from what you asked for. We don't do that.",
+        "subtext": "Your money, your project, your right to know what's happening.",
+        "gradient": "from-orange-500 to-red-600"
+      },
+      {
+        "id": 4,
+        "icon": "calendar",
+        "title": "Built for Tomorrow, Not Yesterday",
+        "description": "Technology changes fast. Really fast. The solution we build for you today needs to work in three years when your business has doubled and technology has evolved again.",
+        "subtext": "That's why we use modern architectures and industry best practices. Not because they're trendy, but because they last.",
+        "gradient": "from-violet-500 to-purple-600"
+      },
+      {
+        "id": 5,
+        "icon": "zap",
+        "title": "We Speak Your Industry",
+        "description": "Finance has compliance nightmares. Healthcare has HIPAA. Retail has inventory chaos. Manufacturing has supply chain puzzles.",
+        "subtext": "We've solved problems in all these industries. Multiple times. So when you explain your challenge, we already know what you're up against.",
+        "gradient": "from-cyan-500 to-blue-600"
+      },
+      {
+        "id": 6,
+        "icon": "lightbulb",
+        "title": "Ideas That Actually Work",
+        "description": "We don’t just build what you ask for—we help shape it. Sometimes the smallest tweak makes the biggest difference. We think with you, not just for you.",
+        "subtext": "Because innovation isn’t about fancy buzzwords, it’s about delivering real results that matter.",
+        "gradient": "from-pink-500 to-rose-600"
+      }
+    ]
+  },
+  "testimonials": {
+    "section": {
+      "heading": "What Our Clients Say"
+    },
+
+    "items": [
+      {
+        "name": "Aarav Mehta",
+        "company": "InnovateTech Solutions",
+        "image": "/images/smiling-man-in-yellow-shirt-on-blue-background.jpg",
+        "alt": "smiling man in yellow shirt on blue background",
+        "quote": "These guys took our messy manual processes and turned them into something that actually works. Cut our costs by 40% and our team finally stopped complaining about the system. That's worth its weight in gold."
+      },
+      {
+        "name": "Priya Nair",
+        "company": "NextWave Digital",
+        "image": "/images/men3.jpg",
+        "alt": "smiling woman in white shirt on blue background",
+        "quote": "The CRM they built completely changed how we work with clients. ROI showed up in the first quarter, which honestly surprised everyone, including me."
+      },
+      {
+        "name": "Rohan Sharma",
+        "company": "Finverse Technologies",
+        "image": "/images/men2.jpg",
+        "alt": "man in white shirt on white background",
+        "quote": "Over ₹400 crore in transactions through our platform and zero security issues. Zero. I sleep better at night knowing these guys built it right."
+      }
+    ]
+  },
+  "industries": {
+    "section": {
+      "heading": "Industries OpenSoftAI is Working With",
+      "description": "Explore how we transform various industries with innovative technology."
+    },
+
+    "tabs": [
+      {
+        "id": "Financial Services",
+        "title": "Financial Services",
+        "heading": "Financial Services",
+        "text": "We've built trading platforms that don't crash during market volatility. Payment systems that actually process payments. Compliance tools that keep regulators happy.",
+        "image": {
+          "src": "/images/digital-finance-data-analysis-investment-dashboard.jpg",
+          "alt": "digital finance data analysis investment dashboard"
+        },
+        "icon": "finance"
+      },
+      {
+        "id": "Healthcare",
+        "title": "Healthcare",
+        "heading": "Healthcare",
+        "text": "Electronic health records that doctors don't hate. Telemedicine platforms that work when patients need them most. Everything HIPAA-compliant because nobody has time for lawsuits.",
+        "image": {
+          "src": "/images/doctor-using-digital-health-technology.jpg",
+          "alt": "doctor using digital health technology"
+        },
+        "icon": "healthcare"
+      },
+      {
+        "id": "Retail & E-commerce",
+        "title": "Retail & E-commerce",
+        "heading": "Retail & E-commerce",
+        "text": "Shopping platforms that convert browsers into buyers. Inventory systems that know what you have before you run out. Recommendation engines that actually recommend useful things.",
+        "image": {
+          "src": "/images/ai-shopping-app-development.jpg",
+          "alt": "ai shopping app development"
+        },
+        "icon": "retail"
+      },
+      {
+        "id": "Manufacturing",
+        "title": "Manufacturing",
+        "heading": "Manufacturing",
+        "text": "Supply chains that talk to each other. IoT systems that prevent expensive breakdowns. Quality control that catches problems before customers do.",
+        "image": {
+          "src": "/images/ai-automation-manifacterng-software.jpg",
+          "alt": "ai automation manufacturing software"
+        },
+        "icon": "manufacturing"
+      },
+      {
+        "id": "Technology",
+        "title": "Technology",
+        "heading": "Technology",
+        "text": "SaaS platforms that scale. APIs that other developers actually want to use. Cloud migrations that don't give you nightmares.",
+        "image": {
+          "src": "/images/ai-and-human-brain-collaboration.jpg",
+          "alt": "ai and human brain collaboration"
+        },
+        "icon": "technology"
+      }
+    ]
+  },
+  "contact": {
+    "section": {
+      "tagline": "GET IN TOUCH",
+      "heading": "For Work Inquiry",
+      "subheading": "Mail to our sales department"
+    },
+
+    "content": [
+      "Look, we could keep talking about how great we are. But you probably have actual work to do.",
+      "Here's what happens when you call us. No sales pitch. No pressure. Just an honest conversation about what you're trying to build and whether we're the right team to help you build it.",
+      "We'll look at what you've got now. Figure out what you actually need (not what someone told you you need). Map out a plan that makes sense. Give you real numbers with no hidden surprises."
+    ],
+
+    "form": {
+      "title": "Send Your Query",
+
+      "fields": {
+        "name": {
+          "label": "Name",
+          "placeholder": "Enter your name",
+          "required": true
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "Enter your phone number",
+          "required": true
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "Enter your email",
+          "required": false
+        },
+        "description": {
+          "label": "Description (Interested Software)",
+          "placeholder": "Describe your interest...",
+          "required": true
+        }
+      },
+
+      "submitText": "Submit"
+    },
+
+    "countryCodes": [
+      { "code": "+91", "name": "India" },
+      { "code": "+1", "name": "United States" },
+      { "code": "+44", "name": "United Kingdom" },
+      { "code": "+61", "name": "Australia" },
+      { "code": "+971", "name": "UAE" }
+    ]
+  }
+}
+
+
+
+
+

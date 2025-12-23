@@ -10,7 +10,7 @@ export default function ContactSection() {
     name: '',
     email: '',
     phone: '',
-    company: '',
+  
     message: ''
   });
 
@@ -41,32 +41,62 @@ export default function ContactSection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const validationErrors = validateForm();
-    setErrors(validationErrors);
+  const validationErrors = validateForm();
+  setErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length > 0) return;
+  if (Object.keys(validationErrors).length > 0) return;
 
-    setIsSubmitting(true);
+  setIsSubmitting(true);
 
-    const finalPayload = {
-      ...formData,
-      phone: countryCode + ' ' + formData.phone
-    };
-
-    console.log('📩 FORM SUBMITTED DATA:', finalPayload);
-    router.push("/thank-you")
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-
-      setFormData({ name: '', email: '', phone: '', company: '', message: '' });
-      setTimeout(() => setSubmitStatus(''), 3000);
-    }, 1500);
+  const finalPayload = {
+    name: formData.name,
+    email: formData.email,
+    phone: countryCode + " " + formData.phone,
+    description: formData.message,
   };
+
+  try {
+    const res = await fetch(
+      "https://openbackerd.onrender.com/api/query",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(finalPayload),
+      }
+    );
+
+    const data = await res.json();
+    console.log("API RESPONSE:", data);
+
+    if (!res.ok || !data.success) {
+      alert(data.message || "Submission failed");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // ✅ SUCCESS → redirect
+    router.push("/thank-you");
+
+    // reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
+
+  } catch (error) {
+    console.error("FORM SUBMIT ERROR:", error);
+    alert("Server not responding");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <section className="relative bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white min-h-screen">
