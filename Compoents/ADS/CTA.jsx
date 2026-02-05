@@ -1,36 +1,45 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Calendar, MessageSquare, Smartphone, ArrowRight, Sparkles } from 'lucide-react';
+import { Calendar, MessageSquare, Smartphone, ArrowRight, Sparkles, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
-export default function ADSCTASection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function ADSCTASection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
   const [activeButton, setActiveButton] = useState(null);
+
+  // Extract section data
+  const section = data?.cta || {};
+  const heading = section.heading || {};
+  const description = section.description || {};
+  const actionsData = section.actions || [];
+  const footerCta = section.footerCta || {};
+
+  // Icon mapping
+  const iconMap = {
+    Calendar: Calendar,
+    MessageSquare: MessageSquare,
+    Smartphone: Smartphone,
+    Phone: Phone,
+    Mail: Mail,
+    Sparkles: Sparkles,
+  };
+
+  const ctaButtons = actionsData.map(button => ({
+    icon: iconMap[button.icon] || Calendar,
+    title: button.title,
+    description: button.description,
+    link: button.link || "/contact-us",
+    buttonText: button.buttonText || "Get Started",
+    gradient: button.gradient || 'from-blue-500 to-indigo-700',
+  }));
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const ctaButtons = [
-    {
-      icon: Calendar,
-      title: 'Schedule Your App Development Consultation',
-      description: 'Talk to our experts',
-      gradient: 'from-blue-500 to-indigo-700'
-    },
-    {
-      icon: MessageSquare,
-      title: 'Discuss Your App Concept',
-      description: 'Share your ideas with us',
-      gradient: 'from-blue-600 to-blue-700'
-    },
-    {
-      icon: Smartphone,
-      title: 'View Our Mobile Portfolio',
-      description: 'Explore previous projects',
-      gradient: 'from-blue-600 to-blue-700'
-    }
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 py-24 px-4 overflow-hidden">
@@ -57,22 +66,19 @@ export default function ADSCTASection() {
             {/* Decorative top accent */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-indigo-400 to-transparent"></div>
 
-            {/* Sparkle icon */}
-           
-
             <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
-              Ready to Build Your{' '}
+              {heading.main}{" "}
               <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
-                Mobile App?
+                {heading.highlight}
               </span>
             </h2>
 
             <p className="text-lg text-indigo-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
-              The mobile app landscape is competitive, but there's always room for applications that solve real problems elegantly and provide genuine value to users.
+              {description.primary}
             </p>
 
             <p className="text-md text-indigo-200 text-center max-w-3xl mx-auto leading-relaxed">
-              Turn your idea into a powerful mobile app with <span className="text-indigo-300 font-semibold">OpenSoftAI</span>. Contact us today to discover how expert mobile development can bring your vision to life and build sustainable business value.
+              {description.secondary}
             </p>
           </div>
 
@@ -85,10 +91,10 @@ export default function ADSCTASection() {
           <div className="p-12 pt-10">
             <div className="text-center mb-10">
               <p className="text-2xl text-white font-semibold mb-2">
-                Let's turn your app concept into reality.
+                {footerCta.title}
               </p>
               <p className="text-lg text-indigo-200">
-                Partner with <span className="text-indigo-300 font-bold">OpenSoftAI</span> to develop an app that stands out and creates real business impact.
+                {footerCta.subtitle}
               </p>
             </div>
 
@@ -119,7 +125,7 @@ export default function ADSCTASection() {
                         {button.description}
                       </p>
                       <div className="flex items-center gap-2 text-indigo-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <Link href="/contact-us" className="text-sm">Get Started</Link>
+                        <Link href={button.link} className="text-sm">{button.buttonText}</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>
@@ -127,14 +133,8 @@ export default function ADSCTASection() {
                 );
               })}
             </div>
-
-            {/* Trust Badge */}
-           
           </div>
         </div>
-
-        {/* Online Badge */}
-       
       </div>
     </section>
   );

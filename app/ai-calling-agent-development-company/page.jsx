@@ -1,3 +1,5 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
+
 import AdvancedFeaturesSection from "@/Compoents/AiCallingAgent/AdvanceFeature";
 import GetStartedSection from "@/Compoents/AiCallingAgent/CTA";
 import VoiceAIExpertiseSection from "@/Compoents/AiCallingAgent/Expertise";
@@ -9,53 +11,50 @@ import AICallingIntroSection from "@/Compoents/AiCallingAgent/Intro";
 import OpenSoftAIPartner from "@/Compoents/AiCallingAgent/Partner";
 import TestAICalling from "@/Compoents/AiCallingAgent/Testimonail";
 
-// ✅ SEO Metadata with Canonical URL
-export const metadata = {
-  title: "Next-Gen AI Calling Agent Development | OpenSoftAI Solutions",
-  description:"Transform your customer interactions with OpenSoftAI’s AI calling agents. Our intelligent, human-like AI handles calls efficiently, boosts engagement, and automates communication for businesses of all sizes.",
-  keywords: [
-    "AI calling agent",
-    "voice AI",
-    "AI voice assistant",
-    "automated calling",
-    "AI customer service",
-    "AI call center",
-    "conversational AI",
-    "AI phone bot",
-    "AI voice automation",
-  ],
-  alternates: {
-    canonical: "https://opensoftai.com/ai-calling-agent-development-company", // ✅ Canonical URL
-  },
-  openGraph: {
-    title: "Next-Gen AI Calling Agent Development | OpenSoftAI Solutions",
-    description: "Transform your customer interactions with OpenSoftAI’s AI calling agents. Our intelligent, human-like AI handles calls efficiently, boosts engagement, and automates communication for businesses of all sizes.",
-    url: "https://opensoftai.com/ai-calling-agent-development-company",
-   
-    locale: "en_US",
-    type: "website",
-  },
+const SLUG = "ai-calling-agent-development-company";
 
-  robots: {
-    index: true,
-    follow: true,
-  },
- 
-};
+// ✅ Dynamic Metadata from DB
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
 
-export default function AiCallingAgent() {
+export default async function Page() {
+  const pageData = await getPageData(SLUG);
+
+  if (!pageData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Page data not found</p>
+      </div>
+    );
+  }
+
+  // ❗ This page uses FLAT CMS (no sections)
+  const content = pageData.content || {};
+
   return (
     <>
-      <HeroSection />
-      <AICallingIntroSection />
-      <VoiceAIExpertiseSection />
-      <InboundOutboundAgentsSection />
-      <AdvancedFeaturesSection />
-      <AICallingAgents />
-      <OpenSoftAIPartner />
-      <IndustriesWeKnow />
-      <TestAICalling />
-      <GetStartedSection />
+      <HeroSection data={content.hero} />
+
+    <AICallingIntroSection data={content.intro} />
+
+    <VoiceAIExpertiseSection data={content.expertise} />
+
+    <InboundOutboundAgentsSection data={content.inboundOutbound} />
+
+    <AdvancedFeaturesSection data={content.advancedFeatures} />
+
+    <AICallingAgents data={content.features} />
+
+    <OpenSoftAIPartner data={content.partner} />
+
+    <IndustriesWeKnow data={content.industries} />
+
+    <TestAICalling data={content.testimonials} />
+
+    <GetStartedSection data={content.cta} />
+
     </>
   );
 }

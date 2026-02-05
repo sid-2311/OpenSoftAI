@@ -3,15 +3,31 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function HeroSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function HeroSection({ data }) {
+  // Extract section data
+  const section = data?.hero || {};
+  const cta = section.cta || {};
+  const background = section.background || {};
+  const seo = section.seo || {};
+
+  // Default mobile gradients
+  const from = background.mobileGradient?.from || "slate-900";
+  const via = background.mobileGradient?.via || "indigo-900";
+  const to = background.mobileGradient?.to || "slate-800";
+
+  if (!section.heading) return null;
+
   return (
     <section
       className="relative min-h-screen w-full overflow-hidden"
-      aria-labelledby="token-hero-heading"
+      aria-labelledby={seo.ariaLabelledBy || "token-hero-heading"}
     >
       {/* MOBILE: Gradient Background */}
-      <div className="absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
+      <div className={`absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-${from} via-${via} to-${to}`}>
         {/* Mobile Glow Effects */}
         <div className="absolute -top-20 -left-16 w-60 h-60 bg-indigo-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-500/10 rounded-full blur-2xl"></div>
@@ -19,13 +35,17 @@ export default function HeroSection() {
 
       {/* DESKTOP: Background Image */}
       <div className="absolute inset-0 z-0 hidden sm:block">
-        <Image
-          src="/images/token.jpg"
-          alt="AI Calling Agent Development"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        {background.desktopImage ? (
+          <Image
+            src={background.desktopImage}
+            alt={seo.imageAlt || "Token Development Hero"}
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-slate-900"></div>
+        )}
 
         {/* Desktop Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
@@ -37,20 +57,20 @@ export default function HeroSection() {
           <div className="max-w-2xl">
             {/* Heading */}
             <h1
-              id="token-hero-heading"
+              id={seo.ariaLabelledBy || "token-hero-heading"}
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight"
             >
-              Launch Secure and Scalable Crypto Tokens with OpenSoftAI
+              {section.heading}
             </h1>
 
             {/* CTA Button */}
             <Link
-              href="/contact-us"
+              href={cta.link || "/contact-us"}
               className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              Book a Call
+              {cta.label || "Book a Call"}
               <span className="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300">
-                →
+                <DynamicIcon name={cta.icon || "ArrowRight"} className="w-6 h-6" />
               </span>
             </Link>
           </div>

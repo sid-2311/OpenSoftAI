@@ -1,60 +1,57 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { 
-  Smartphone, 
-  Rocket, 
-  ShieldCheck, 
-  UserCheck, 
+import {
+  Smartphone,
+  Rocket,
+  ShieldCheck,
+  UserCheck,
   Code2,
-  Headphones 
+  Headphones,
+  CheckCircle,
+  Zap,
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function WhyChooseAppDevSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function WhyChooseAppDevSection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
+
+  // Extract section data
+  const section = data?.whyChooseUs || {};
+  const heading = section.heading || {};
+  const reasonsData = section.reasons || [];
+  const statsData = section.stats || [];
+  const cta = section.cta || {};
+
+  // Icon mapping
+  const iconMap = {
+    Smartphone: Smartphone,
+    Rocket: Rocket,
+    ShieldCheck: ShieldCheck,
+    UserCheck: UserCheck,
+    Code2: Code2,
+    Headphones: Headphones,
+    CheckCircle: CheckCircle,
+    Zap: Zap,
+  };
+
+  const reasons = reasonsData.map(r => ({
+    icon: iconMap[r.icon] || Smartphone,
+    title: r.title,
+    description: r.description,
+  }));
+
+  const stats = statsData.map(s => ({
+    value: s.value,
+    label: s.label,
+  }));
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const reasons = [
-    {
-      icon: Smartphone,
-      title: 'Proven Mobile Development Expertise Across Industries',
-      description:
-        'Our development team combines years of mobile app experience with deep understanding of different business models and user expectations. We’ve successfully launched apps for startups, enterprises, and everything in between across multiple industries.',
-    },
-    {
-      icon: Rocket,
-      title: 'Agile Development Methodology for Faster Time-to-Market',
-      description:
-        'Iterative development cycles, regular client feedback, and flexible project management help bring your app to market quickly while maintaining high quality standards. Rapid prototyping and testing ensure your app meets user expectations before full development investment.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Security-First Architecture for Long-Term Success',
-      description:
-        'Mobile apps handle sensitive user data and business information that require comprehensive security measures. We implement security best practices, encryption standards, and privacy protections from the initial development phases through ongoing maintenance.',
-    },
-    {
-      icon: UserCheck,
-      title: 'User Experience Design Based on Real Behavior Data',
-      description:
-        'Our design process combines user research, usability testing, and behavior analytics to create interfaces that users find intuitive and engaging. We design for how people actually use mobile apps, not just how we think they should use them.',
-    },
-    {
-      icon: Code2,
-      title: 'Cross-Platform Efficiency Without Compromising Quality',
-      description:
-        'When cross-platform development makes business sense, we use proven frameworks like Flutter and React Native to deliver native-quality experiences efficiently. Single codebase maintenance reduces long-term costs while maintaining excellent user experiences.',
-    },
-    {
-      icon: Headphones,
-      title: 'Comprehensive Post-Launch Support & Evolution',
-      description:
-        'Great apps require ongoing attention to maintain performance, security, and user satisfaction. We provide app store management, performance monitoring, security updates, and feature evolution services that keep your app competitive long-term.',
-    },
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-b from-white via-blue-50 to-white py-24 px-4 overflow-hidden">
@@ -67,16 +64,15 @@ export default function WhyChooseAppDevSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
+            }`}
         >
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
-            Why Choose{' '}
+            {heading.main}{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              OpenSoftAI
+              {heading.highlight}
             </span>{' '}
-            for App Development
+            {heading.suffix}
           </h2>
         </div>
 
@@ -87,11 +83,10 @@ export default function WhyChooseAppDevSection() {
             return (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300 ${
-                  isVisible
+                className={`bg-white rounded-2xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300 ${isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
-                }`}
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Icon */}
@@ -115,16 +110,10 @@ export default function WhyChooseAppDevSection() {
 
         {/* Bottom Stats Section */}
         <div
-          className={`grid md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`grid md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
-          {[
-            { value: '100+', label: 'Apps Delivered' },
-            { value: '95%', label: 'Client Retention' },
-            { value: '24/7', label: 'Support & Monitoring' },
-            { value: '5★', label: 'Average App Store Rating' },
-          ].map((stat, index) => (
+          {stats.map((stat, index) => (
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
@@ -139,12 +128,11 @@ export default function WhyChooseAppDevSection() {
 
         {/* CTA */}
         <div
-          className={`text-center transition-all duration-1000 delay-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
-          <Link href="/contact-us" className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
-            Start Your App Project
+          <Link href={cta.link || "/contact-us"} className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+            {cta.label || "Start Your App Project"}
             <svg
               className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
               fill="none"
@@ -164,13 +152,3 @@ export default function WhyChooseAppDevSection() {
     </section>
   );
 }
-
-// Industries We Transform Through Mobile Innovation
-// Healthcare & Telemedicine – Patient apps, provider tools, and health monitoring solutions that improve care access and outcomes.
-// Financial Services & FinTech – Trading platforms, banking apps, payment solutions, and personal finance tools with enterprise-grade security.
-// Retail & E-Commerce – Shopping apps, inventory management, customer loyalty programs, and omnichannel retail experiences.
-// Education & Training – Learning management systems, virtual classrooms, skill development platforms, and educational content delivery.
-// Real Estate – Property search apps, agent tools, virtual tours, and transaction management platforms.
-// Food & Hospitality – Ordering systems, reservation platforms, loyalty programs, and guest experience applications.
-// Transportation & Logistics – Fleet management, delivery optimization, rider apps, and supply chain visibility tools.
-// Enterprise & Productivity – Workflow automation, team collaboration, field service management, and business intelligence apps.

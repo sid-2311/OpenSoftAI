@@ -1,55 +1,48 @@
 "use client";
 import { useState } from 'react';
-import { 
-  LayoutDashboard, 
-  Cloud, 
-  BellRing, 
-  ShieldCheck, 
-  WifiOff, 
-  BarChart2 
+import {
+  LayoutDashboard,
+  Cloud,
+  BellRing,
+  ShieldCheck,
+  WifiOff,
+  BarChart2,
+  Users,
+  Smartphone,
+  Zap,
 } from 'lucide-react';
 
-export default function ADSFeaturesSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function ADSFeaturesSection({ data }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const features = [
-    {
-      icon: LayoutDashboard,
-      title: 'Intuitive UI/UX Design That Users Actually Enjoy',
-      description: 'User interface design that prioritizes clarity, efficiency, and engagement. Every screen and interaction is built on real user behavior research for an experience that feels natural and delightful.',
-      gradient: 'from-blue-400 via-blue-500 to-blue-600'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Integration & Seamless Data Synchronization',
-      description: 'Real-time synchronization across devices and platforms with offline support. Cloud-based architecture ensures security and reliability even in low-connectivity environments.',
-      gradient: 'from-blue-500 via-blue-600 to-blue-700'
-    },
-    {
-      icon: BellRing,
-      title: 'Smart Push Notifications & Real-Time Updates',
-      description: 'Engage users with timely, relevant updates that add value instead of noise. Personalized notifications based on user preferences and behavioral data.',
-      gradient: 'from-blue-400 via-blue-500 to-blue-600'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Secure API Integration & Payment Processing',
-      description: 'Enterprise-grade security for APIs and payment systems. Supports multiple gateways, encryption standards, and modern protocols to protect data and transactions.',
-      gradient: 'from-blue-500 via-blue-600 to-blue-700'
-    },
-    {
-      icon: WifiOff,
-      title: 'Offline Mode Support & Performance Optimization',
-      description: 'Reliable performance even with limited connectivity. Essential data is stored locally and synced automatically once the connection is restored.',
-      gradient: 'from-blue-400 via-blue-500 to-blue-600'
-    },
-    {
-      icon: BarChart2,
-      title: 'Comprehensive Analytics & Performance Monitoring',
-      description: 'Built-in analytics provide actionable insights into user behavior, performance, and business outcomes to drive continuous improvement.',
-      gradient: 'from-blue-500 via-blue-600 to-blue-700'
-    }
-  ];
+  // Extract section data
+  const section = data?.features || {};
+  const heading = section.heading || {};
+  const featuresData = section.items || [];
+
+  // Icon mapping
+  const iconMap = {
+    LayoutDashboard: LayoutDashboard,
+    Cloud: Cloud,
+    BellRing: BellRing,
+    ShieldCheck: ShieldCheck,
+    WifiOff: WifiOff,
+    BarChart2: BarChart2,
+    Users: Users,
+    Smartphone: Smartphone,
+    Zap: Zap,
+  };
+
+  const features = featuresData.map(f => ({
+    icon: iconMap[f.icon] || LayoutDashboard,
+    title: f.title,
+    description: f.description,
+    gradient: f.gradient || 'from-blue-400 via-blue-500 to-blue-600',
+  }));
+
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 px-4 overflow-hidden">
@@ -69,9 +62,9 @@ export default function ADSFeaturesSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Core Features Across All Our{' '}
+            {heading.main}{" "}
             <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-              Applications
+              {heading.highlight}
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto rounded-full"></div>

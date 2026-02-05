@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import BusinessTransformationSection from "@/Compoents/Software/BusinessTransformation";
 import FinalCTA from "@/Compoents/Software/CTA";
 import DevelopmentApproach from "@/Compoents/Software/DevlopmentApproch";
@@ -5,51 +6,35 @@ import HeroSection from "@/Compoents/Software/Hero";
 import SoftwareIndustries from "@/Compoents/Software/SoftwareIndustries";
 import SoftwareServices from "@/Compoents/Software/SoftwareServices";
 
-export const metadata = {
-  title: "Software Development Solution Company in India | Opensoft AI",
-  description: "Opensoft AI is a leading software development  solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
-  keywords: [
-    "custom software development",
-    "enterprise software solutions",
-    "web application development",
-    "software consulting",
-    "OpenSoftAI",
-    "business automation",
-    "SaaS development",
-    "software engineering",
-  ],
-  openGraph: {
-    title: "Software Development Solution Company in India | Opensoft AI",
-    description: "Opensoft AI is a leading software development  solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
-    url: "https://opensoftai.com/software-development-company",
-    type: "website",
-    images: [
-      {
-        url: "https://opensoftai.com/soft.avif",
-        alt: "Custom Software Development Banner",
-      },
-    ],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+const SLUG = 'software-development-company';
 
-   alternates: {
-    canonical: "https://opensoftai.com/software-development-company",
-  },
-};
+// Generate dynamic metadata from database
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
 
+// Fetch and render page with database content
+export default async function Software() {
+  const pageData = await getPageData(SLUG);
 
-export default function Software(){
-    return(
-        <>
-        <HeroSection/>
-        <BusinessTransformationSection/>
-        <SoftwareServices/>
-        <SoftwareIndustries/>
-        <DevelopmentApproach/>
-        <FinalCTA/>
-        </>
-    )
+  if (!pageData) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <p>Page data not found</p>
+    </div>;
+  }
+
+  // Extract sections data
+  const sections = pageData.content?.sections || {};
+
+  return (
+    <>
+      <HeroSection data={sections} />
+      <BusinessTransformationSection data={sections} />
+      <SoftwareServices data={sections} />
+      <SoftwareIndustries data={sections} />
+      <DevelopmentApproach data={sections} />
+      <FinalCTA data={sections} />
+    </>
+  );
 }

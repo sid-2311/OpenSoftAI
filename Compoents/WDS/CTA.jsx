@@ -1,36 +1,44 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { Globe, MessageSquare, FolderOpen, ArrowRight, Sparkles } from 'lucide-react';
+import { Globe, MessageSquare, FolderOpen, ArrowRight, Sparkles, Zap } from 'lucide-react';
 import Link from 'next/link';
 
-export default function WebsiteCTASection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function WebsiteCTASection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
   const [activeButton, setActiveButton] = useState(null);
+
+  // Extract section data
+  const section = data?.cta || {};
+  const heading = section.heading || {};
+  const description = section.description || {};
+  const actionsData = section.actions || [];
+  const footerCta = section.footerCta || {};
+
+  // Icon mapping
+  const iconMap = {
+    Globe: Globe,
+    MessageSquare: MessageSquare,
+    FolderOpen: FolderOpen,
+    Zap: Zap,
+    Sparkles: Sparkles,
+  };
+
+  const ctaButtons = actionsData.map(button => ({
+    icon: iconMap[button.icon] || Globe,
+    title: button.title,
+    description: button.description,
+    link: button.link || "/contact-us",
+    buttonText: button.buttonText || "Get Started",
+    gradient: button.gradient || "from-blue-500 to-blue-700",
+  }));
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const ctaButtons = [
-    {
-      icon: Globe,
-      title: 'Schedule Your Website Consultation',
-      description: 'Talk to our web experts',
-      gradient: 'from-blue-500 to-blue-700',
-    },
-    {
-      icon: MessageSquare,
-      title: 'Discuss Your Project Requirements',
-      description: 'Share your goals with us',
-      gradient: 'from-blue-600 to-blue-800',
-    },
-    {
-      icon: FolderOpen,
-      title: 'View Our Website Portfolio',
-      description: 'See our recent projects',
-      gradient: 'from-blue-700 to-blue-900',
-    },
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 px-4 overflow-hidden">
@@ -87,29 +95,26 @@ export default function WebsiteCTASection() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Main card */}
         <div
-          className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl border border-white/20 shadow-2xl overflow-hidden transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl border border-white/20 shadow-2xl overflow-hidden transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           {/* Header section */}
           <div className="relative p-12 pb-8">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
 
-            
-
             <h2 className="text-2xl md:text-5xl lg:text-4xl font-bold text-center mb-6 text-white leading-tight">
-              Ready to{' '}
+              {heading.main}{" "}
               <span className="bg-gradient-to-r from-blue-300 to-blue-500 bg-clip-text text-transparent">
-                Build Your Business Website?
+                {heading.highlight}
               </span>
             </h2>
 
             <p className="text-lg text-blue-100 text-center max-w-3xl mx-auto leading-relaxed mb-4">
-              Your website should be working as hard for your business as you are — a digital platform that attracts, engages, and converts visitors into customers.
+              {description.primary}
             </p>
 
             <p className="text-md text-blue-200 text-center max-w-3xl mx-auto leading-relaxed">
-              From professional portfolios to advanced eCommerce stores, <span className="text-blue-300 font-bold">OpenSoftAI</span> builds websites that deliver real business results.
+              {description.secondary}
             </p>
           </div>
 
@@ -122,10 +127,10 @@ export default function WebsiteCTASection() {
           <div className="p-12 pt-10">
             <div className="text-center mb-10">
               <p className="text-2xl text-white font-semibold mb-2">
-                Build your business website with OpenSoftAI today.
+                {footerCta.title}
               </p>
               <p className="text-lg text-blue-200">
-                From simple static sites to powerful eCommerce platforms — let’s create a website that accelerates your business growth.
+                {footerCta.subtitle}
               </p>
             </div>
 
@@ -139,11 +144,10 @@ export default function WebsiteCTASection() {
                     key={index}
                     onMouseEnter={() => setActiveButton(index)}
                     onMouseLeave={() => setActiveButton(null)}
-                    className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-left overflow-hidden ${
-                      isVisible
+                    className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 text-left overflow-hidden ${isVisible
                         ? "opacity-100 translate-y-0"
                         : "opacity-0 translate-y-10"
-                    }`}
+                      }`}
                     style={{ transitionDelay: `${300 + index * 150}ms` }}
                   >
                     <div
@@ -166,7 +170,7 @@ export default function WebsiteCTASection() {
                       </p>
 
                       <div className="flex items-center gap-2 text-blue-600 group-hover:text-white font-semibold transition-colors duration-300">
-                        <Link href="/contact-us" className="text-sm">Get Started</Link>
+                        <Link href={button.link} className="text-sm">{button.buttonText}</Link>
                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform duration-300" />
                       </div>
                     </div>
@@ -178,14 +182,8 @@ export default function WebsiteCTASection() {
                 );
               })}
             </div>
-
-            {/* Trust badge */}
-           
           </div>
         </div>
-
-        {/* Online badge */}
-       
       </div>
     </section>
   );

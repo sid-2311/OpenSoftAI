@@ -1,41 +1,29 @@
 import TestimonialsSection from "../ui/Testimonail";
 
-const testimonialsData = [
-  {
-    name: "Arjun Mehta",
-    company: "CEO, NovaDEX",
-    image: "/images/defi-exchange-yield-farming.jpg",
-    alt: "decentralized exchange platform interface",
-    quote:
-      "OpenSoftAI built our decentralized exchange with integrated yield farming, and we reached $10M TVL within three months of launch. Their economic modeling was crucial for our sustainable tokenomics.",
-  },
-  {
-    name: "Sophia Nguyen",
-    company: "Founder, LendFi Protocol",
-    image: "/images/defi-lending-protocol.jpg",
-    alt: "defi lending dashboard with analytics",
-    quote:
-      "The lending protocol they developed has processed over $50M in loans with zero security incidents. Their audit preparation saved us weeks and thousands in audit costs.",
-  },
-  {
-    name: "Ethan Park",
-    company: "Head of Product, DeFinance Labs",
-    image: "/images/defi-architecture-team.jpg",
-    alt: "defi architects collaborating on project",
-    quote:
-      "Working with OpenSoftAI felt like having a senior DeFi architect on our team. They understood our vision and built exactly what we needed to compete in the market.",
-  },
-];
+// Dynamic data from API - use data prop to access section data
 
+export default function TestDefiDexDevelopment({ data }) {
+  // Extract section data
+  const section = data?.testimonials || {};
+  const itemsData = section.items || [];
 
-export default function TestDefiDexDevelopment(){
-  return(
-   <main>
+  const testimonials = itemsData.map(item => ({
+    name: item.name,
+    company: item.company,
+    image: item.image,
+    alt: item.alt || "Testimonial Avatar",
+    quote: item.quote,
+  }));
+
+  if (testimonials.length === 0) return null;
+
+  return (
+    <main>
       <TestimonialsSection
-        title="What Clients Experience says about OpenSoftAI"
-        testimonials={testimonialsData}
-        darkMode={true}
+        title={section.title || "What Clients Experience says about OpenSoftAI"}
+        testimonials={testimonials}
+        darkMode={section.darkMode ?? true}
       />
     </main>
-  )
+  );
 }

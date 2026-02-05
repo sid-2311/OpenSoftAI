@@ -7,55 +7,40 @@ import {
   Database,
   CreditCard,
   Cloud,
+  LayoutDashboard,
+  ShieldCheck,
 } from "lucide-react";
 
-export default function WDSFeaturesSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function WDSFeaturesSection({ data }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const features = [
-    {
-      icon: Smartphone,
-      title: "Responsive Design for Every Device",
-      description:
-        "Your website performs perfectly on smartphones, tablets, and desktops. Mobile-first design ensures excellent user experiences across all devices.",
-      gradient: "from-blue-400 via-indigo-500 to-blue-600",
-    },
-    {
-      icon: Search,
-      title: "SEO-Friendly Architecture",
-      description:
-        "Built-in SEO from the ground up. Clean code, optimized speeds, proper headings, and best practices help your site rank higher and attract organic traffic.",
-      gradient: "from-indigo-500 via-blue-600 to-cyan-500",
-    },
-    {
-      icon: GaugeCircle,
-      title: "Performance Optimization & Fast Loading",
-      description:
-        "Speed impacts both user experience and search rankings. Our sites load fast across all devices, with built-in performance monitoring.",
-      gradient: "from-blue-500 via-cyan-500 to-teal-500",
-    },
-    {
-      icon: Database,
-      title: "Flexible CMS Integration",
-      description:
-        "Whether it’s WordPress, Shopify, Magento, or a custom CMS, we integrate the right content management system for easy content control.",
-      gradient: "from-indigo-500 via-blue-500 to-purple-600",
-    },
-    {
-      icon: CreditCard,
-      title: "Secure Payment Gateway Integration",
-      description:
-        "For eCommerce sites, we integrate secure, trusted payment gateways with SSL encryption and PCI-compliant processing for safe transactions.",
-      gradient: "from-blue-400 via-indigo-500 to-blue-700",
-    },
-    {
-      icon: Cloud,
-      title: "Cloud-Ready Scalable Infrastructure",
-      description:
-        "Built for growth with modern cloud architecture. Your website scales automatically with traffic and business expansion — no rebuilds needed.",
-      gradient: "from-cyan-500 via-blue-500 to-indigo-600",
-    },
-  ];
+  // Extract section data
+  const section = data?.features || {};
+  const heading = section.heading || {};
+  const featuresData = section.items || [];
+
+  // Icon mapping
+  const iconMap = {
+    Smartphone: Smartphone,
+    Search: Search,
+    GaugeCircle: GaugeCircle,
+    Database: Database,
+    CreditCard: CreditCard,
+    Cloud: Cloud,
+    LayoutDashboard: LayoutDashboard,
+    ShieldCheck: ShieldCheck,
+  };
+
+  const features = featuresData.map(f => ({
+    icon: iconMap[f.icon] || Smartphone,
+    title: f.title,
+    description: f.description,
+    gradient: f.gradient || "from-blue-400 via-indigo-500 to-blue-600",
+  }));
+
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-24 px-4 overflow-hidden">
@@ -81,9 +66,9 @@ export default function WDSFeaturesSection() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Core Features Across{" "}
+            {heading.main}{" "}
             <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-              All Our Websites
+              {heading.highlight}
             </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-indigo-500 mx-auto rounded-full"></div>
@@ -112,9 +97,8 @@ export default function WDSFeaturesSection() {
                   {/* Icon */}
                   <div className="flex items-start gap-6 mb-4">
                     <div
-                      className={`relative flex-shrink-0 w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center transform transition-transform duration-500 ${
-                        isHovered ? "scale-110 rotate-6" : ""
-                      }`}
+                      className={`relative flex-shrink-0 w-16 h-16 bg-gradient-to-br ${feature.gradient} rounded-xl flex items-center justify-center transform transition-transform duration-500 ${isHovered ? "scale-110 rotate-6" : ""
+                        }`}
                     >
                       <Icon className="w-8 h-8 text-white" />
 

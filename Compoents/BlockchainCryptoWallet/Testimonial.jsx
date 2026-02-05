@@ -1,50 +1,29 @@
 import TestimonialsSection from "../ui/Testimonail";
 
+// Dynamic data from API - use data prop to access section data
 
-const testimonialsData = [
-  {
-    name: "Sarah Chen",
-    company: "CEO, CryptoTrade Pro",
-    image: "/images/Professional-woman-in-office-chair.jpg",
-    alt: "crypto exchange dashboard showing transactions",
-    quote:
-      "OpenSoftAI built our multi-currency crypto exchange from the ground up, and it's been flawless. We're processing over 10,000 transactions daily with zero downtime. Their security architecture gave us confidence to launch, and their ongoing support keeps us running smoothly. We've grown from zero to 100,000+ users in eight months.",
-  },
-  {
-    name: "Michael Rodriguez",
-    company: "CTO, Digital Asset Custody",
-    image: "/images/crop2.jpg",
-    alt: "team managing digital asset custody system",
-    quote:
-      "The institutional wallet solution OpenSoftAI developed for us exceeded all expectations. The multi-signature security, compliance features, and API integration have made us the preferred custody solution for several major crypto funds. We're now managing over $500M in digital assets with complete confidence.",
-  },
-  {
-    name: "David Park",
-    company: "Founder, DefiSwap Exchange",
-    image: "/images/Smiling-man-in-black-and-white-portrait.jpg",
-    alt: "defi exchange dashboard with liquidity metrics",
-    quote:
-      "Working with OpenSoftAI on our DeFi exchange was exceptional. They understood the complexity of AMM protocols and built a platform that's both user-friendly and technically sophisticated. Our total value locked has grown to $50M, and the platform has never had a security incident.",
-  },
-  {
-    name: "Jennifer Walsh",
-    company: "COO, Global Crypto Solutions",
-    image: "/images/crop4.jpg",
-    alt: "compliance team reviewing KYC/AML dashboard",
-    quote:
-      "OpenSoftAI's compliance integration saved us months of development time and regulatory headaches. Their KYC/AML system is comprehensive yet user-friendly, and we've passed every regulatory audit since launch. We couldn't have achieved our growth without their expertise.",
-  },
-];
+export default function TestBlockChainCrypto({ data }) {
+  // Extract section data
+  const section = data?.testimonials || {};
+  const itemsData = section.items || [];
 
+  const testimonials = itemsData.map(item => ({
+    name: item.name,
+    company: item.company,
+    image: item.image,
+    alt: item.alt,
+    quote: item.quote,
+  }));
 
-export default function TestBlockChainCrypto(){
-  return(
-   <main>
+  if (testimonials.length === 0) return null;
+
+  return (
+    <main>
       <TestimonialsSection
-        title="What Our Clients Are Experiencing"
-        testimonials={testimonialsData}
-        darkMode={true}
+        title={section.title || "What Our Clients Are Experiencing"}
+        testimonials={testimonials}
+        darkMode={section.darkMode ?? true}
       />
     </main>
-  )
+  );
 }

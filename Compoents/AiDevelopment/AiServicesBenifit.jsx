@@ -2,146 +2,30 @@
 
 import React from "react";
 import Link from "next/link";
-import {
-  Brain,
-  Phone,
-  MessageSquare,
-  Users,
-  Lightbulb,
-  FileText,
-  Workflow,
-  Cpu,
-} from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function AIServicesBenefits() {
-  const services = [
-    {
-      icon: Brain,
-      title: "AI Development Services",
-      description:
-        "Machine learning systems that learn from your specific business patterns. Not generic algorithms, but AI that understands your industry and customers. Increase sales conversions by 45% or predict equipment problems before disasters.",
-      benefits: [
-        "Your data works harder than spreadsheets ever could",
-        "Faster, more accurate decisions by seeing patterns humans miss",
-        "System grows smarter as your business grows",
-        "Integrates with existing tools—no starting over",
-      ],
-      gradient: "from-blue-500 to-blue-600",
-    },
-    {
-      icon: Phone,
-      title: "AI Calling Agent Development",
-      description:
-        "AI calling agents that sound completely natural in conversation. They remember every detail, never have bad days, work 24/7, and seamlessly hand off to your human team when needed.",
-      benefits: [
-        "Phone costs drop by 70% with 24/7 availability",
-        "Same high level of service, every time",
-        "Human agents focus on complex problems",
-        "Handle global customers in their native languages",
-      ],
-      gradient: "from-purple-500 to-purple-600",
-    },
-    {
-      icon: MessageSquare,
-      title: "AI Chatbot Development",
-      description:
-        "Chatbots that actually understand what people are trying to accomplish. They pick up on context, remember conversations, and guide customers without feeling like a machine.",
-      benefits: [
-        "Customers get instant help that actually helps",
-        "Support team handles meaningful interactions",
-        "Every conversation makes the system smarter",
-        "Deploy across website, mobile app, and messaging platforms",
-      ],
-      gradient: "from-indigo-500 to-indigo-600",
-    },
-    {
-      icon: Users,
-      title: "AI Copilot Development",
-      description:
-        "AI copilots make your team superhuman. They handle tedious tasks, surface insights from complex data, and offer suggestions based on patterns across your organization.",
-      benefits: [
-        "Routine tasks happen automatically in background",
-        "Complex data analysis as easy as asking questions",
-        "Everyone gets access to specialized expertise",
-        "Productivity jumps 60% without working harder",
-      ],
-      gradient: "from-cyan-500 to-cyan-600",
-    },
-    {
-      icon: Lightbulb,
-      title: "AI Consulting Services",
-      description:
-        "We help you avoid AI implementation mistakes by understanding your business first, then identifying where AI makes the biggest impact fastest.",
-      benefits: [
-        "Figure out what's actually worth automating",
-        "Clear plan with realistic timelines and budgets",
-        "Team learns to work with AI confidently",
-        "Every implementation builds toward strategic goals",
-      ],
-      gradient: "from-orange-500 to-orange-600",
-    },
-    {
-      icon: FileText,
-      title: "Generative AI Development",
-      description:
-        "Generative AI that creates content matching your brand voice. It learns your style and produces marketing, product, and technical content with consistency.",
-      benefits: [
-        "Marketing content stays on-brand with fresh angles",
-        "Product descriptions write themselves from specs",
-        "Technical documentation stays updated automatically",
-        "Personalized customer communications at scale",
-      ],
-      gradient: "from-pink-500 to-pink-600",
-    },
-    {
-      icon: Workflow,
-      title: "AI Workflow Automation",
-      description:
-        "Intelligent automation for complex workflows with exceptions and judgment calls. Systems that adapt to changes intelligently.",
-      benefits: [
-        "Complex processes run themselves, even with exceptions",
-        "Documents processed with 99.5% accuracy",
-        "Quality control happens automatically",
-        "Everything scales without breaking down",
-      ],
-      gradient: "from-green-500 to-green-600",
-    },
-    {
-      icon: Cpu,
-      title: "Custom AI Solutions",
-      description:
-        "Tailored AI systems that integrate with your infrastructure and scale with your business growth.",
-      benefits: [
-        "Solutions customized to your specific needs",
-        "Seamless integration with existing infrastructure",
-        "Scalable architecture that grows with you",
-        "Continuous improvement and ongoing support",
-      ],
-      gradient: "from-teal-500 to-teal-600",
-    },
-  ];
+export default function AIServicesBenefits({ data }) {
+  if (!data) return null;
+
+  const { header, services, cta } = data;
 
   return (
-    <section
-      className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 lg:px-8"
-      id="ai-services"
-    >
+    <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* SEO Heading */}
+        {/* Header */}
         <header className="text-center mb-16">
           <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            AI & Automation Solutions for Real Business Impact
+            {header.title}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            From AI chatbots to automation systems, we design intelligent
-            solutions that scale with your business and deliver measurable ROI.
+            {header.description}
           </p>
         </header>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => {
-            const Icon = service.icon;
+
             return (
               <article
                 key={index}
@@ -151,7 +35,7 @@ export default function AIServicesBenefits() {
                 <div
                   className={`w-16 h-16 rounded-full bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  <Icon className="w-8 h-8 text-white" aria-hidden="true" />
+                  <DynamicIcon name={service.icon} className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Title */}
@@ -164,7 +48,7 @@ export default function AIServicesBenefits() {
                   {service.description}
                 </p>
 
-                {/* Benefits List */}
+                {/* Benefits */}
                 <ul className="space-y-3">
                   {service.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start">
@@ -195,10 +79,10 @@ export default function AIServicesBenefits() {
         {/* CTA */}
         <div className="text-center mt-16">
           <Link
-            href="/contact-us"
+            href={cta.href}
             className="bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           >
-            Start Your AI Journey Today
+            {cta.label}
           </Link>
         </div>
       </div>

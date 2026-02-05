@@ -1,16 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Code2, Bot, Blocks } from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 import Image from "next/image";
 import Link from "next/link";
-
-/* 🔹 Icon map (JSON → Component) */
-const ICONS = {
-  code: <Code2 className="w-6 h-6" />,
-  bot: <Bot className="w-6 h-6" />,
-  blocks: <Blocks className="w-6 h-6" />,
-};
 
 export default function CoreServices({ data }) {
   const tabs = data.tabs;
@@ -40,19 +33,18 @@ export default function CoreServices({ data }) {
             const isActive = tab.id === active;
             return (
               <button
-              suppressHydrationWarning
+                suppressHydrationWarning
                 key={tab.id}
                 role="tab"
                 aria-selected={isActive}
                 onClick={() => setActive(tab.id)}
-                className={`flex flex-col items-center gap-2 px-6 py-4 rounded-xl min-w-[90px] transition ${
-                  isActive
-                    ? "bg-[#0B2542] text-white border-2 border-[#243B55] shadow-lg"
-                    : "text-gray-300 hover:text-white"
-                }`}
+                className={`flex flex-col items-center gap-2 px-6 py-4 rounded-xl min-w-[90px] transition ${isActive
+                  ? "bg-[#0B2542] text-white border-2 border-[#243B55] shadow-lg"
+                  : "text-gray-300 hover:text-white"
+                  }`}
               >
                 <div className="w-8 h-8 flex items-center justify-center">
-                  {ICONS[tab.icon]}
+                  <DynamicIcon name={tab.icon} className="w-6 h-6" />
                 </div>
                 <span className="text-sm font-medium text-center">
                   {tab.title}

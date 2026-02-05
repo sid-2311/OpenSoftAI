@@ -1,74 +1,35 @@
 "use client";
+
 import { useState } from "react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 import Image from "next/image";
-import {
-  ShoppingBag,
-  Stethoscope,
-  Landmark,
-  Laptop,
-  Plane,
-  GraduationCap,
-} from "lucide-react";
 
-const SOFTWARE_TABS = [
-  {
-    id: "E-commerce & Retail",
-    title: "E-commerce",
-    heading: "E-commerce & Retail",
-    text: `Product questions, size guides, shipping info, returns. One fashion retailer's chatbot handles 90% of their customer inquiries and actually improves conversion rates by suggesting complementary items.`,
-    img: "/images/ai-shopping-app-development.jpg",
-    alt: "E-commerce chatbot assisting customers with shopping",
-    icon: <ShoppingBag className="w-6 h-6" />,
-  },
-  {
-    id: "Healthcare & Medical",
-    title: "Healthcare",
-    heading: "Healthcare & Medical",
-    text: `Appointment scheduling, symptom checking, prescription refills. Always HIPAA-compliant, always secure, and smart enough to escalate serious concerns to medical professionals.`,
-    img: "/images/doctor-using-digital-health-technology.jpg",
-    alt: "Doctor using digital health technology",
-    icon: <Stethoscope className="w-6 h-6" />,
-  },
-  {
-    id: "Financial Services",
-    title: "Finance",
-    heading: "Financial Services",
-    text: `Account balances, transaction history, loan applications. Built with bank-level security and the ability to authenticate users before sharing sensitive information.`,
-    img: "/images/digital-finance-data-analysis-investment-dashboard.jpg",
-    alt: "Digital finance data analysis dashboard",
-    icon: <Landmark className="w-6 h-6" />,
-  },
-  {
-    id: "SaaS & Technology",
-    title: "SaaS",
-    heading: "SaaS & Technology",
-    text: `Onboarding help, feature explanations, technical troubleshooting. These bots understand your product as well as your documentation does—sometimes better.`,
-    img: "/images/saas.jpg",
-    alt: "SaaS dashboard and technology interface",
-    icon: <Laptop className="w-6 h-6" />,
-  },
-  {
-    id: "Travel & Hospitality",
-    title: "Travel",
-    heading: "Travel & Hospitality",
-    text: `Booking changes, local recommendations, check-in assistance. One hotel chain's chatbot handles 70% of guest service requests and gets higher satisfaction scores than their call center.`,
-    img: "/images/hospitality-industry-word-cloud-service-hotel-restaurant.jpg",
-    alt: "Hospitality industry word cloud hotel restaurant",
-    icon: <Plane className="w-6 h-6" />,
-  },
-  {
-    id: "Education & Training",
-    title: "Education",
-    heading: "Education & Training",
-    text: `Course information, enrollment help, progress tracking. Perfect for handling the administrative stuff so educators can focus on actual education.`,
-    img: "/images/creative-business-ideas-book.avif",
-    alt: "Education technology learning platform",
-    icon: <GraduationCap className="w-6 h-6" />,
-  },
-];
+// Dynamic data from API - use data prop to access section data
 
-export default function Industries() {
-  const [active, setActive] = useState(SOFTWARE_TABS[0].id);
+export default function Industries({ data }) {
+  const [active, setActive] = useState(null);
+
+  // Extract section data
+  const section = data?.industries || {};
+  const heading = section.heading || {};
+  const industriesData = section.items || [];
+
+  const industries = industriesData.map(i => ({
+    id: i.id,
+    title: i.title,
+    heading: i.heading,
+    text: i.text,
+    img: i.img,
+    alt: i.alt,
+    icon: <DynamicIcon name={i.icon} className="w-6 h-6" />,
+  }));
+
+  // Set initial active tab
+  if (active === null && industries.length > 0) {
+    setActive(industries[0].id);
+  }
+
+  if (!section.heading) return null;
 
   return (
     <section
@@ -78,53 +39,49 @@ export default function Industries() {
       {/* SEO Heading */}
       <header className="text-center mb-10 max-w-4xl">
         <h2 className="text-2xl md:text-4xl font-bold mb-3 text-slate-900">
-          Industries We Transform Through AI Chatbots
+          {heading.main || "Industries We Transform Through AI Chatbots"}
         </h2>
         <p className="text-gray-600 text-md">
-          Discover how <strong>OpenSoftAI</strong> helps businesses across
-          sectors automate support, improve customer experience, and increase
-          operational efficiency with intelligent chat solutions.
+          {heading.description}
         </p>
       </header>
 
       {/* Card Wrapper */}
       <div className="bg-[#0B2542] rounded-2xl shadow-xl p-6 md:p-10 w-full max-w-6xl">
         {/* Tabs */}
-       <nav
-  role="tablist"
-  aria-label="Software Industries"
-  className="flex flex-nowrap overflow-x-auto whitespace-nowrap gap-3 mb-8 py-2 px-1 no-scrollbar"
->
-  {SOFTWARE_TABS.map((tab) => {
-    const isActive = tab.id === active;
-    return (
-      <button
-        key={tab.id}
-        id={`tab-${tab.id}`}
-        role="tab"
-        aria-selected={isActive}
-        aria-controls={`panel-${tab.id}`}
-        onClick={() => setActive(tab.id)}
-        className={`flex flex-col items-center justify-center gap-2 px-5 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${
-          isActive
-            ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
-            : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
-        }`}
-      >
-        <div className="w-8 h-8 flex items-center justify-center">
-          {tab.icon}
-        </div>
-        <span className="text-sm font-medium text-center">
-          {tab.title}
-        </span>
-      </button>
-    );
-  })}
-</nav>
-
+        <nav
+          role="tablist"
+          aria-label="Software Industries"
+          className="flex flex-nowrap overflow-x-auto whitespace-nowrap gap-3 mb-8 py-2 px-1 no-scrollbar"
+        >
+          {industries.map((tab) => {
+            const isActive = tab.id === active;
+            return (
+              <button
+                key={tab.id}
+                id={`tab-${tab.id}`}
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`panel-${tab.id}`}
+                onClick={() => setActive(tab.id)}
+                className={`flex flex-col items-center justify-center gap-2 px-5 py-3 rounded-xl min-w-[90px] transition-all duration-300 ${isActive
+                  ? "bg-[#1E3A8A] text-white border-2 border-blue-400 shadow-lg scale-105"
+                  : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400"
+                  }`}
+              >
+                <div className="w-8 h-8 flex items-center justify-center">
+                  {tab.icon}
+                </div>
+                <span className="text-sm font-medium text-center">
+                  {tab.title}
+                </span>
+              </button>
+            );
+          })}
+        </nav>
 
         {/* Panels */}
-        {SOFTWARE_TABS.map((tab) => {
+        {industries.map((tab) => {
           const isActive = tab.id === active;
           return (
             <article

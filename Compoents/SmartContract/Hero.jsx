@@ -4,60 +4,79 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function BlockchainHero() {
+export default function BlockchainHero({ data }) {
+  const section = data?.Hero || {};
+  const cta = section.cta || {};
+  const background = section.background || {};
+
+  if (!section.heading) return null;
+
+  const overlayClass =
+    background.overlay === "black/60"
+      ? "bg-black/60"
+      : background.overlay === "black/50"
+      ? "bg-black/50"
+      : "bg-black/40";
+
   return (
     <section
       id="blockchain-hero"
       className="relative min-h-screen w-full overflow-hidden"
       aria-labelledby="blockchain-hero-heading"
     >
-      {/* MOBILE: Gradient Background */}
-      <div className="absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
-        {/* Mobile Glow Effects */}
+      {/* MOBILE BACKGROUND */}
+      <div
+        className={`absolute inset-0 z-0 sm:hidden bg-gradient-to-br ${
+          background.mobileGradient ||
+          "from-slate-900 via-indigo-900 to-slate-800"
+        }`}
+      >
         <div className="absolute -top-16 -left-16 w-56 h-56 bg-indigo-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-56 h-56 bg-purple-500/10 rounded-full blur-2xl"></div>
       </div>
 
-      {/* DESKTOP: Background Image */}
+      {/* DESKTOP BACKGROUND */}
       <div className="absolute inset-0 z-0 hidden sm:block">
-        <Image
-          src="/images/Digital-illustration-of-blockchain-smart-contract-technology-on-a-virtual-interface.jpg"
-          alt="Digital illustration of blockchain smart contract technology on a virtual interface"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        {background.desktopImage ? (
+          <Image
+            src={background.desktopImage}
+            alt="Hero background"
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        ) : (
+          <div className="w-full h-full bg-slate-900" />
+        )}
 
-        {/* Desktop Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* Overlay (Tailwind safe) */}
+        <div className={`absolute inset-0 ${overlayClass}`} />
       </div>
 
       {/* CONTENT */}
       <div className="relative z-10 min-h-screen flex items-center">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
           <div className="max-w-2xl">
-            {/* Heading */}
             <h1
               id="blockchain-hero-heading"
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight"
             >
-              Smart Contract Development Services – Secure, Auditable, and
-              Business-Ready
+              {section.heading}
             </h1>
 
-            {/* CTA Button */}
+            {/* CTA */}
             <Link
-              href="/contact-us"
+              href={cta.link || "/contact-us"}
               className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              Book A Free Consultation
+              {cta.label || "Book A Free Consultation"}
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
         </div>
       </div>
 
-      {/* DESKTOP ONLY: Bottom Fade */}
+      {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-900/80 to-transparent z-10 hidden sm:block"></div>
     </section>
   );

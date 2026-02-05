@@ -3,49 +3,36 @@ import { useState, useEffect } from 'react';
 import { ShieldCheck, DollarSign, Lock, BarChart3, Rocket, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function BusinessBenefitsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function BusinessBenefitsSection({ data }) {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  const benefits = [
-    {
-      icon: ShieldCheck,
-      title: 'Trustless, Secure Automation',
-      description:
-        'Smart contracts execute exactly as programmed, eliminating the need for intermediaries and reducing the risk of human error or manipulation. This trustless execution builds confidence with users and partners who can verify exactly how your system works.',
-      metrics: ['No Intermediaries', 'Immutable Logic', 'On-Chain Verification'],
-    },
-    {
-      icon: DollarSign,
-      title: 'Significant Cost Reduction',
-      description:
-        'By automating processes that traditionally required manual oversight or third-party services, smart contracts can dramatically reduce operational costs while providing 24/7 availability. The savings often justify blockchain adoption on their own.',
-      metrics: ['24/7 Automation', 'Reduced Overhead', 'Lower Transaction Costs'],
-    },
-    {
-      icon: Lock,
-      title: 'Enhanced Security and Transparency',
-      description:
-        "Properly audited smart contracts provide security guarantees that traditional systems can't match. Every transaction is recorded on-chain, creating an immutable audit trail that builds trust with users, investors, and regulators.",
-      metrics: ['Audited Smart Contracts', 'Immutable Records', 'User Trust & Transparency'],
-    },
-    {
-      icon: BarChart3,
-      title: 'Scalable Foundation for Growth',
-      description:
-        'Well-designed smart contracts can handle increased transaction volume and user growth without requiring proportional increases in operational staff or infrastructure. They provide a foundation that scales with your success.',
-      metrics: ['Horizontal Scalability', 'Load Resilience', 'Future-Proof Architecture'],
-    },
-    {
-      icon: Rocket,
-      title: 'Competitive Advantage Through Innovation',
-      description:
-        "Smart contracts enable business models and user experiences that simply aren't possible with traditional technology. This innovation potential can provide significant competitive advantages in your market.",
-      metrics: ['New Revenue Models', 'Faster Market Entry', 'Next-Gen Capabilities'],
-    },
-  ];
+  // Extract section data
+  const section = data?.businessBenefitsSection || {};
+  const benefitsData = section.benefits || [];
+  const cta = section.cta || {};
+  const satisfaction = section.satisfaction || {};
+
+  // Icon mapping
+  const iconMap = {
+    ShieldCheck: ShieldCheck,
+    DollarSign: DollarSign,
+    Lock: Lock,
+    BarChart3: BarChart3,
+    Rocket: Rocket,
+  };
+
+  const benefits = benefitsData.map(b => ({
+    icon: iconMap[b.icon] || ShieldCheck,
+    title: b.title,
+    description: b.description,
+    metrics: b.metrics || [],
+  }));
 
   useEffect(() => {
+    if (benefits.length === 0) return;
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -57,6 +44,8 @@ export default function BusinessBenefitsSection() {
     }, 100);
     return () => clearInterval(interval);
   }, [benefits.length]);
+
+  if (benefits.length === 0) return null;
 
   const ActiveIcon = benefits[activeTab].icon;
 
@@ -76,9 +65,8 @@ export default function BusinessBenefitsSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-         
-          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-6">
-            Business Benefits You Can{" "}
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {section.title?.split('Bank On')[0]}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
               Bank On
             </span>
@@ -99,9 +87,8 @@ export default function BusinessBenefitsSection() {
                     setActiveTab(idx);
                     setProgress(0);
                   }}
-                  className={`relative cursor-pointer transition-all duration-500 ${
-                    isActive ? 'scale-105' : 'scale-100 hover:scale-102'
-                  }`}
+                  className={`relative cursor-pointer transition-all duration-500 ${isActive ? 'scale-105' : 'scale-100 hover:scale-102'
+                    }`}
                 >
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-100 rounded-r-full overflow-hidden">
@@ -113,38 +100,33 @@ export default function BusinessBenefitsSection() {
                   )}
 
                   <div
-                    className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${
-                      isActive
-                        ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl'
-                        : 'border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg'
-                    }`}
+                    className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${isActive
+                      ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl'
+                      : 'border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg'
+                      }`}
                   >
                     <div className="flex items-start">
                       <div
-                        className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                          isActive
-                            ? 'bg-gradient-to-br from-blue-500 to-blue-600'
-                            : 'bg-blue-100'
-                        }`}
+                        className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive
+                          ? 'bg-gradient-to-br from-blue-500 to-blue-600'
+                          : 'bg-blue-100'
+                          }`}
                       >
                         <Icon
-                          className={`w-6 h-6 transition-colors duration-300 ${
-                            isActive ? 'text-white' : 'text-blue-600'
-                          }`}
+                          className={`w-6 h-6 transition-colors duration-300 ${isActive ? 'text-white' : 'text-blue-600'
+                            }`}
                         />
                       </div>
                       <div className="ml-4 flex-1">
                         <h3
-                          className={`text-lg font-bold mb-1 transition-colors duration-300 ${
-                            isActive ? 'text-blue-600' : 'text-gray-900'
-                          }`}
+                          className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-blue-600' : 'text-gray-900'
+                            }`}
                         >
                           {benefit.title}
                         </h3>
                         <p
-                          className={`text-sm transition-colors duration-300 ${
-                            isActive ? 'text-gray-700' : 'text-gray-600'
-                          }`}
+                          className={`text-sm transition-colors duration-300 ${isActive ? 'text-gray-700' : 'text-gray-600'
+                            }`}
                         >
                           {isActive
                             ? benefit.description
@@ -185,9 +167,6 @@ export default function BusinessBenefitsSection() {
                   <div
                     key={idx}
                     className="flex items-center transform transition-all duration-300 hover:translate-x-2"
-                    style={{
-                      animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`,
-                    }}
                   >
                     <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-white" />
@@ -205,9 +184,8 @@ export default function BusinessBenefitsSection() {
                   {benefits.map((_, idx) => (
                     <div
                       key={idx}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        idx === activeTab ? 'bg-blue-500 w-8' : 'bg-blue-200'
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeTab ? 'bg-blue-500 w-8' : 'bg-blue-200'
+                        }`}
                     ></div>
                   ))}
                 </div>
@@ -215,9 +193,9 @@ export default function BusinessBenefitsSection() {
             </div>
 
             <div className="absolute -bottom-6 -right-3 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-              <div className="text-4xl font-bold text-white mb-1">99%</div>
+              <div className="text-4xl font-bold text-white mb-1">{satisfaction.value || "99%"}</div>
               <div className="text-blue-100 text-sm font-medium">
-                Client Satisfaction
+                {satisfaction.label || "Client Satisfaction"}
               </div>
             </div>
           </div>
@@ -225,8 +203,8 @@ export default function BusinessBenefitsSection() {
 
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <Link href="/contact-us" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-md md:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
-            Explore Smart Contract Solutions
+          <Link href={cta.link || "/contact-us"} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-md md:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
+            {cta.label || "Explore Smart Contract Solutions"}
             <svg
               className="w-5 h-5 ml-2"
               fill="none"
@@ -243,19 +221,6 @@ export default function BusinessBenefitsSection() {
           </Link>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -1,24 +1,51 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { Brain, Globe, Users, Zap, Shield, ChevronDown, CheckCircle, ArrowRight, Lock, Database, MessageSquare, Sparkles, UserCheck, Activity } from 'lucide-react';
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function TechnicalFeaturesSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function TechnicalFeaturesSection({ data }) {
   const [expandedFeature, setExpandedFeature] = useState(null);
   const [activeDemo, setActiveDemo] = useState(0);
 
-  const conversationDemo = [
+  // Extract section data
+  const section = data?.features || {};
+  const heading = section.heading || {};
+  const technicalFeaturesData = section.items || [];
+  const integration = section.integration || {};
+  const securityBadgesData = section.securityBadges || [];
+  const demoConversation = section.demoConversation || [
     { user: "I need a blue shirt", bot: "Great! What size are you looking for?" },
     { user: "Medium. Do you have it in stock?", bot: "Yes, we have 15 blue medium shirts available. Would you like to see them?" },
     { user: "What about the one I saw yesterday?", bot: "I remember you viewed our Premium Cotton Blue Shirt. It's in stock in medium. Should I add it to your cart?" }
   ];
 
+  const technicalFeatures = technicalFeaturesData.map(f => ({
+    id: f.id,
+    title: f.title,
+    subtitle: f.subtitle,
+    icon: f.icon,
+    color: f.color,
+    problem: f.problem,
+    solution: f.solution,
+    benefits: f.benefits || [],
+    techDetails: f.techDetails,
+    stats: f.stats || {},
+  }));
+
+  const securityBadges = securityBadgesData.map(b => ({
+    icon: b.icon,
+    label: b.label,
+  }));
+
   // Auto cycle messages
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveDemo((prev) => (prev + 1) % conversationDemo.length);
+      setActiveDemo((prev) => (prev + 1) % demoConversation.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [demoConversation.length]);
 
   // Auto-scroll to bottom
   const scrollRef = useRef(null);
@@ -28,93 +55,7 @@ export default function TechnicalFeaturesSection() {
     }
   }, [activeDemo]);
 
-  const technicalFeatures = [
-    {
-      id: 'context',
-      title: 'Context Understanding, Not Just Keywords',
-      subtitle: 'True Conversational Memory',
-      icon: Brain,
-      color: 'from-blue-500 to-blue-600',
-      problem: 'Most chatbots die when someone asks a follow-up question.',
-      solution: 'Ours remember the entire conversation and understand when "it" refers to something mentioned three messages ago.',
-      benefits: [
-        'Full conversation history retention',
-        'Reference resolution across messages',
-        'Intent understanding and tracking',
-        'Natural flow without repetition'
-      ],
-      techDetails: 'Advanced NLP models with context windows spanning entire conversations, powered by transformer architectures for semantic understanding.',
-      stats: { value: '97%', label: 'Context Retention Accuracy' }
-    },
-    {
-      id: 'multilingual',
-      title: 'Multilingual Without the Awkwardness',
-      subtitle: 'Cultural Communication Intelligence',
-      icon: Globe,
-      color: 'from-blue-600 to-blue-700',
-      problem: 'Most translation just converts words, not cultural communication styles.',
-      solution: 'Supporting 20+ languages isn\'t just about translation. Cultural communication styles are different. A chatbot conversation in Japanese feels different from one in German, exactly like it should.',
-      benefits: [
-        '20+ languages supported natively',
-        'Cultural nuance preservation',
-        'Localized conversation patterns',
-        'Regional dialect understanding'
-      ],
-      techDetails: 'Language-specific training models that understand cultural context, formality levels, and regional communication preferences.',
-      stats: { value: '20+', label: 'Languages Supported' }
-    },
-    {
-      id: 'handoff',
-      title: 'They Know When to Give Up',
-      subtitle: 'Intelligent Human Escalation',
-      icon: Users,
-      color: 'from-blue-500 to-blue-600',
-      problem: 'Bad chatbots frustrate users by pretending to understand when they don\'t.',
-      solution: 'The smartest thing a chatbot can do is recognize when it\'s in over its head. Ours hand off to humans gracefully, with full context about what\'s already been discussed.',
-      benefits: [
-        'Automatic complexity detection',
-        'Seamless agent handoff',
-        'Full conversation transfer',
-        'No repetition for customers'
-      ],
-      techDetails: 'Confidence scoring algorithms that monitor conversation quality and trigger human escalation when uncertainty exceeds thresholds.',
-      stats: { value: '<30s', label: 'Average Handoff Time' }
-    },
-    {
-      id: 'integration',
-      title: 'Integration That Actually Works',
-      subtitle: 'Unified Data Intelligence',
-      icon: Zap,
-      color: 'from-blue-600 to-blue-700',
-      problem: 'Disconnected systems mean chatbots can\'t access the information they need.',
-      solution: 'Your CRM has customer history. Your inventory system knows what\'s in stock. Your booking system knows available appointments. Our chatbots use all that information naturally during conversations.',
-      benefits: [
-        'Real-time CRM integration',
-        'Live inventory access',
-        'Booking system sync',
-        'Payment gateway connection'
-      ],
-      techDetails: 'RESTful API connections with real-time data synchronization, webhook support, and enterprise SSO integration.',
-      stats: { value: '100+', label: 'Platform Integrations' }
-    },
-    {
-      id: 'security',
-      title: 'Security That Doesn\'t Break Functionality',
-      subtitle: 'Enterprise-Grade Protection',
-      icon: Shield,
-      color: 'from-blue-500 to-blue-600',
-      problem: 'Security often makes chatbots clunky and difficult to use.',
-      solution: 'GDPR compliance, data encryption, secure authentication. All the boring stuff that keeps lawyers happy without making the chatbot clunky to use.',
-      benefits: [
-        'GDPR & CCPA compliant',
-        'End-to-end encryption',
-        'SOC 2 Type II certified',
-        'Role-based access control'
-      ],
-      techDetails: 'AES-256 encryption at rest and in transit, zero-knowledge architecture, and automated compliance reporting.',
-      stats: { value: '100%', label: 'Data Encryption' }
-    }
-  ];
+  if (!section.heading) return null;
 
   return (
     <>
@@ -132,7 +73,7 @@ export default function TechnicalFeaturesSection() {
       `}</style>
 
       <section className="relative min-h-screen py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
-        
+
         {/* Background */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-200 rounded-full opacity-30 blur-3xl animate-float"></div>
@@ -151,13 +92,13 @@ export default function TechnicalFeaturesSection() {
           {/* Header */}
           <header className="text-center mb-20 animate-slideUp">
             <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-8 leading-tight">
-              The Technical Stuff That{" "}
+              {heading.main}{" "}
               <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
-                Actually Works
+                {heading.highlight}
               </span>
             </h2>
             <p className="text-md md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI technology and enterprise integrations working together to create chatbots that feel remarkably human.
+              {section.description}
             </p>
           </header>
 
@@ -190,9 +131,9 @@ export default function TechnicalFeaturesSection() {
                     scrollbarWidth: "thin"
                   }}
                 >
-                  {conversationDemo.slice(0, activeDemo + 1).map((msg, idx) => (
+                  {demoConversation.slice(0, activeDemo + 1).map((msg, idx) => (
                     <div key={idx} className="animate-slideUp" style={{ animationDelay: `${idx * 0.2}s`, opacity: 0 }}>
-                      
+
                       {/* User Message */}
                       <div className="flex items-start gap-3 mb-4">
                         <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-2xl shadow-lg">
@@ -231,8 +172,7 @@ export default function TechnicalFeaturesSection() {
           </div>
           {/* ---------- STABLE DEMO BOX END ---------- */}
 
-          {/* ---------- YOUR EXISTING FEATURES BELOW UNCHANGED ---------- */}
-
+          {/* ---------- Technical Features ---------- */}
           <div className="max-w-6xl mx-auto space-y-6 mb-20">
             {technicalFeatures.map((feature, idx) => (
               <article
@@ -241,16 +181,15 @@ export default function TechnicalFeaturesSection() {
                 style={{ animationDelay: `${idx * 0.1}s`, opacity: 0 }}
               >
                 <div className={`absolute -inset-0.5 bg-gradient-to-r ${feature.color} rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition duration-500`}></div>
-                <div className={`relative bg-white rounded-3xl overflow-hidden shadow-xl border-2 transition-all duration-500 ${
-                  expandedFeature === feature.id ? 'border-blue-500 shadow-2xl' : 'border-blue-100 hover:border-blue-300'
-                }`}>
+                <div className={`relative bg-white rounded-3xl overflow-hidden shadow-xl border-2 transition-all duration-500 ${expandedFeature === feature.id ? 'border-blue-500 shadow-2xl' : 'border-blue-100 hover:border-blue-300'
+                  }`}>
                   <button
                     onClick={() => setExpandedFeature(expandedFeature === feature.id ? null : feature.id)}
                     className="w-full p-8 flex items-start justify-between gap-6 text-left group/button"
                   >
                     <div className="flex items-start gap-6 flex-1">
                       <div className={`relative flex-shrink-0 w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center shadow-xl`}>
-                        <feature.icon className="w-8 h-8 text-white" />
+                        <DynamicIcon name={feature.icon} className="w-8 h-8 text-white" />
                         <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} rounded-2xl blur-xl opacity-50`}></div>
                       </div>
                       <div className="flex-1">
@@ -324,7 +263,7 @@ export default function TechnicalFeaturesSection() {
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl blur-xl opacity-40 animate-glow"></div>
               <div className="relative bg-white rounded-3xl p-12 shadow-2xl border-2 border-blue-100">
                 <h3 className="text-2xl md:text-4xl font-black text-gray-900 mb-12 text-center">
-                  Connected to Your Entire Tech Stack
+                  {integration.title || "Connected to Your Entire Tech Stack"}
                 </h3>
 
                 <div className="relative">
@@ -339,17 +278,19 @@ export default function TechnicalFeaturesSection() {
                   </div>
 
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {[{ icon: Database, label: 'CRM Systems' }, { icon: Shield, label: 'Security APIs' }, { icon: Zap, label: 'Booking Systems' }, { icon: Lock, label: 'Payment Gateways' }].map((item, idx) => (
-                      <div key={idx} className="text-center">
-                        <div className="relative mx-auto w-20 h-20 mb-4">
-                          <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl blur-xl opacity-40"></div>
-                          <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-2xl shadow-xl flex items-center justify-center">
-                            <item.icon className="w-10 h-10 text-white" />
+                    {(integration.integrations || [{ icon: 'Database', label: 'CRM Systems' }, { icon: 'Shield', label: 'Security APIs' }, { icon: 'Zap', label: 'Booking Systems' }, { icon: 'Lock', label: 'Payment Gateways' }]).map((item, idx) => {
+                      return (
+                        <div key={idx} className="text-center">
+                          <div className="relative mx-auto w-20 h-20 mb-4">
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl blur-xl opacity-40"></div>
+                            <div className="relative bg-gradient-to-br from-blue-500 to-blue-600 p-5 rounded-2xl shadow-xl flex items-center justify-center">
+                              <DynamicIcon name={item.icon} className="w-10 h-10 text-white" />
+                            </div>
                           </div>
+                          <div className="text-sm font-bold text-gray-800">{item.label}</div>
                         </div>
-                        <div className="text-sm font-bold text-gray-800">{item.label}</div>
-                      </div>
-                    ))}
+                      )
+                    })}
                   </div>
 
                 </div>
@@ -360,9 +301,9 @@ export default function TechnicalFeaturesSection() {
           {/* Security Badges */}
           <div className="max-w-4xl mx-auto mb-20">
             <div className="flex flex-wrap justify-center gap-4">
-              {[{ icon: Shield, label: 'GDPR Compliant' }, { icon: Lock, label: 'SOC 2 Type II' }, { icon: CheckCircle, label: 'ISO 27001' }, { icon: Database, label: 'AES-256 Encryption' }].map((badge, idx) => (
+              {securityBadges.map((badge, idx) => (
                 <div key={idx} className="bg-white px-6 py-4 rounded-2xl flex items-center gap-3 shadow-lg border-2 border-blue-100 hover:border-blue-300">
-                  <badge.icon className="w-5 h-5 text-blue-600" />
+                  <DynamicIcon name={badge.icon} className="w-5 h-5 text-blue-600" />
                   <span className="text-sm font-bold text-gray-800">{badge.label}</span>
                 </div>
               ))}

@@ -2,83 +2,35 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Stethoscope, Landmark, Factory, Truck, ShoppingCart, GraduationCap } from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-const INDUSTRIES = [
-  {
-    id: "Healthcare & Life Sciences",
-    title: "Healthcare",
-    heading: "Healthcare & Life Sciences",
-    text: `AI is redefining how healthcare organizations operate, diagnose, and innovate. From improving diagnostic accuracy to accelerating drug discovery, AI enables better patient outcomes and faster breakthroughs.`,
-    bullets: [
-      "Diagnostic imaging AI that helps radiologists identify conditions 40% faster",
-      "Drug discovery acceleration through molecular analysis",
-      "Patient outcome prediction for personalized treatment plans",
-    ],
-    img: "/images/doctor-using-digital-health-technology.jpg",
-    alt: "doctor using digital health technology",
-    icon: <Stethoscope className="w-6 h-6" />,
-  },
-  {
-    id: "Financial Services",
-    title: "Finance",
-    heading: "Financial Services",
-    text: `Financial institutions are turning to AI for security, efficiency, and smarter decision-making. With real-time fraud detection and AI-powered trading, banks can deliver trust and performance at scale.`,
-    bullets: [
-      "Fraud detection systems processing millions of transactions in real-time",
-      "Algorithmic trading models with risk management built-in",
-      "Credit scoring AI that reduces default rates by 25%",
-    ],
-    img: "/images/digital-finance-data-analysis-investment-dashboard.jpg",
-    alt:"digital finance data analysis investment dashboard",
-    icon: <Landmark className="w-6 h-6" />,
-  },
-  {
-    id: "Manufacturing & Logistics",
-    title: "Manufacturing",
-    heading: "Manufacturing & Logistics",
-    text: `AI brings precision and foresight to the industrial world. Predictive systems prevent downtime, optimize supply chains, and ensure quality with machine-level accuracy.`,
-    bullets: [
-      "Predictive maintenance reducing equipment downtime by 60%",
-      "Supply chain optimization saving 15–20% on logistics costs",
-      "Quality control AI detecting defects with 99.7% accuracy",
-    ],
-    img: "/images/global-logistics-and-supply-chain-transportation-network.jpg",
-     alt:"global logistics and supply chain transportation network",
-    icon: <Factory className="w-6 h-6" />,
-  },
-  {
-    id: "Retail & E-commerce",
-    title: "Retail",
-    heading: "Retail & E-commerce",
-    text: `Personalization at scale is the new retail advantage. AI helps brands understand customers, predict trends, and manage inventory with precision that feels almost human.`,
-    bullets: [
-      "Personalization engines increasing conversion rates by 35%",
-      "Dynamic pricing optimization based on real-time market conditions",
-      "Inventory forecasting reducing stockouts while minimizing overstock",
-    ],
-    img: "/images/ai-shopping-app-development.jpg",
-   alt:"ai shopping app development",
-    icon: <ShoppingCart className="w-6 h-6" />,
-  },
-  {
-    id: "Education Technology",
-    title: "EdTech",
-    heading: "Education Technology",
-    text: `AI is personalizing education like never before—helping teachers focus on teaching while adaptive systems guide every learner along their own best path.`,
-    bullets: [
-      "Adaptive learning platforms personalizing education for individual students",
-      "Automated essay grading and feedback systems",
-      "Student performance prediction for early intervention",
-    ],
-   img: "/images/creative-business-ideas-book.avif",
-    alt:"creative business ideas book",
-    icon: <GraduationCap className="w-6 h-6" />,
-  },
-];
+// Dynamic data from API - use data prop to access section data
 
-export default function IndustriesWeKnow() {
-  const [active, setActive] = useState(INDUSTRIES[0].id);
+export default function IndustriesWeKnow({ data }) {
+  // Extract section data
+  const section = data?.industries || {};
+  const itemsData = section.items || [];
+
+  const industries = itemsData.map(item => ({
+    id: item.id,
+    title: item.title,
+    heading: item.heading,
+    text: item.text,
+    bullets: item.bullets || [],
+    img: item.img,
+    alt: item.alt,
+    icon: item.icon,
+  }));
+
+  const initialActive = industries.length > 0 ? industries[0].id : "";
+  const [active, setActive] = useState(initialActive);
+
+  // Update initial active when industries load
+  if (active === "" && initialActive !== "") {
+    setActive(initialActive);
+  }
+
+  if (industries.length === 0) return null;
 
   return (
     <section
@@ -92,7 +44,7 @@ export default function IndustriesWeKnow() {
           id="industries-heading"
           className="text-2xl md:text-4xl font-bold mb-3"
         >
-          Industries We Transform with Custom AI
+          {section.heading || "Industries We Transform with Custom AI"}
         </h2>
       </header>
 
@@ -100,22 +52,21 @@ export default function IndustriesWeKnow() {
       <div className="bg-[#0B2542] rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-6xl">
         {/* Tabs Row */}
         <div className="flex justify-start gap-6 mb-8 overflow-x-auto no-scrollbar">
-          {INDUSTRIES.map((tab) => {
+          {industries.map((tab) => {
             const isActive = tab.id === active;
             return (
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`flex flex-col items-center justify-center gap-2 px-6 py-4 rounded-xl transition min-w-[90px] cursor-pointer ${
-                  isActive
-                    ? "bg-[#0B2542] text-white border-2 border-[#243B55] shadow-lg"
-                    : "text-gray-300 hover:text-white border border-[#0B2542]"
-                }`}
+                className={`flex flex-col items-center justify-center gap-2 px-6 py-4 rounded-xl transition min-w-[90px] cursor-pointer ${isActive
+                  ? "bg-[#1e3a8a] text-white border-2 border-blue-400 shadow-lg"
+                  : "text-gray-300 hover:text-white border border-transparent hover:border-blue-400/30"
+                  }`}
                 aria-selected={isActive}
                 role="tab"
               >
                 <div className="w-8 h-8 flex items-center justify-center">
-                  {tab.icon}
+                  <DynamicIcon name={tab.icon} className="w-6 h-6" />
                 </div>
                 <span className="text-sm font-medium text-center">{tab.title}</span>
               </button>
@@ -124,7 +75,7 @@ export default function IndustriesWeKnow() {
         </div>
 
         {/* Tab Panels */}
-        {INDUSTRIES.map((tab) => {
+        {industries.map((tab) => {
           const isActive = tab.id === active;
           return (
             <div
@@ -139,7 +90,7 @@ export default function IndustriesWeKnow() {
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">
                     {tab.heading}
                   </h3>
-                  {/* <p className="mb-6 whitespace-pre-line">{tab.text}</p> */}
+                  <p className="mb-6 text-gray-200 leading-relaxed">{tab.text}</p>
                   <ul className="list-disc list-inside space-y-2 text-gray-200">
                     {tab.bullets.map((point, i) => (
                       <li key={i}>{point}</li>
@@ -148,15 +99,20 @@ export default function IndustriesWeKnow() {
                 </div>
 
                 {/* Right Image */}
-                <div className="w-full flex justify-center md:justify-end">
-                  <Image
-                    src={tab.img}
-                    alt={tab.alt}
-                    width={480}
-                    height={360}
-                    className="rounded-lg object-cover"
-                    priority={isActive}
-                  />
+                <div className="w-full h-[360px] flex justify-center md:justify-end relative rounded-lg overflow-hidden">
+                  {tab.img && (
+                    <Image
+                      src={tab.img}
+                      alt={tab.alt || tab.heading}
+                      fill
+                      className="object-cover"
+                      priority={isActive}
+                      onError={(e) => {
+                        e.currentTarget.src =
+                          "https://via.placeholder.com/480x360?text=Image+Unavailable";
+                      }}
+                    />
+                  )}
                 </div>
               </div>
             </div>

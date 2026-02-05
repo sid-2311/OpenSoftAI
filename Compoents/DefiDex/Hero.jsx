@@ -1,18 +1,32 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import DynamicIcon from "../DynamicIcon";
 
-export default function BlockchainHero() {
+// Dynamic data from API - use data prop to access section data
+
+export default function BlockchainHero({ data }) {
+  // Extract section data
+  const section = data?.defidexHero || {};
+  const cta = section.cta || {};
+  const background = section.background || {};
+
+  // Default gradients for mobile fallback
+  const from = background.mobileGradient?.from || "slate-900";
+  const via = background.mobileGradient?.via || "indigo-900";
+  const to = background.mobileGradient?.to || "slate-800";
+
+  if (!section.heading) return null;
+
   return (
     <section
-      id="blockchain-hero"
+      id={section.id || "blockchain-hero"}
       className="relative min-h-screen w-full overflow-hidden"
       aria-labelledby="blockchain-hero-heading"
     >
       {/* MOBILE: Gradient Background */}
-      <div className="absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800">
+      <div className={`absolute inset-0 z-0 sm:hidden bg-gradient-to-br from-${from} via-${via} to-${to}`}>
         {/* Mobile Glow Effects */}
         <div className="absolute -top-16 -left-16 w-56 h-56 bg-indigo-500/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-56 h-56 bg-purple-500/10 rounded-full blur-2xl"></div>
@@ -20,13 +34,17 @@ export default function BlockchainHero() {
 
       {/* DESKTOP: Background Image */}
       <div className="absolute inset-0 z-0 hidden sm:block">
-        <Image
-          src="/images/dex.jpg"
-          alt="Decentralized Finance Development"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        {background.desktopImage ? (
+          <Image
+            src={background.desktopImage}
+            alt={cta.label || "DeFi Hero Background"}
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-slate-900"></div>
+        )}
 
         {/* Desktop Overlay */}
         <div className="absolute inset-0 bg-black/40"></div>
@@ -41,17 +59,19 @@ export default function BlockchainHero() {
               id="blockchain-hero-heading"
               className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight"
             >
-              OpenSoftAI Builds Secure, Scalable, and Decentralized Finance
-              Platforms
+              {section.heading}
             </h1>
 
             {/* CTA Button */}
             <Link
-              href="/contact-us"
+              href={cta.link || "/contact-us"}
               className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold text-white bg-transparent border-2 border-white rounded-full hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
             >
-              Book A Free Consultation
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              {cta.label || "Book A Free Consultation"}
+              <DynamicIcon
+                name={cta.icon || "ArrowRight"}
+                className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+              />
             </Link>
           </div>
         </div>

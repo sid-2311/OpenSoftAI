@@ -3,50 +3,50 @@ import React from 'react';
 import { Sparkles, Shield, Users, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
-export default function NFTInfrastructureSection() {
-  const features = [
-    {
-      icon: Sparkles,
-      title: "Creator-First Design",
-      description: "Platforms that give creators control over their brand and revenue streams"
-    },
-    {
-      icon: Shield,
-      title: "Trusted Ecosystem",
-      description: "Secure marketplaces collectors can trust with valuable digital assets"
-    },
-    {
-      icon: Users,
-      title: "Community Building",
-      description: "Form communities around shared interests and values"
-    },
-    {
-      icon: TrendingUp,
-      title: "Sustainable Growth",
-      description: "Build long-term businesses, not just quick sales"
-    }
-  ];
+// Dynamic data from API - use data prop to access section data
+
+export default function NFTInfrastructureSection({ data }) {
+  // Extract section data
+  const section = data?.nftIntro || {};
+  const heading = section.heading || {};
+  const challenge = section.challenge || {};
+  const experience = section.experience || {};
+  const featuresData = section.features || [];
+
+  // Icon mapping
+  const iconMap = {
+    Sparkles: Sparkles,
+    Shield: Shield,
+    Users: Users,
+    TrendingUp: TrendingUp,
+  };
+
+  const features = featuresData.map(f => ({
+    icon: iconMap[f.icon] || Sparkles,
+    title: f.title,
+    description: f.description
+  }));
+
+  if (!section.heading) return null;
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-100 py-24 px-4 sm:px-6 lg:px-8">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{animationDelay: '1s'}}></div>
-      
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-         
-          
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-            The NFT Revolution Needs{" "}
+            {heading.main}{" "}
             <span className=" mt-2 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-              Better Infrastructure
+              {heading.highlight}
             </span>
           </h2>
-          
+
           <p className="text-md text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            NFTs have fundamentally changed how we think about digital ownership, but the technology is only as good as the platforms that support it.
+            {section.description}
           </p>
         </div>
 
@@ -55,27 +55,29 @@ export default function NFTInfrastructureSection() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                The Challenge
+                {challenge.title}
               </h2>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                We've all watched the meteoric rise of digital art sales, gaming assets, and collectibles. But behind every successful NFT project is a marketplace that makes buying, selling, and trading actually work for real users.
-              </p>
-              <p className="text-gray-700 mb-4 leading-relaxed">
-                The problem? Most NFT marketplaces today feel like they were built by developers for developers. Complex interfaces, confusing gas fees, and limited customization options don't serve creators or collectors well.
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Creators need platforms that give them control over their brand and revenue streams. Collectors want marketplaces they can trust with valuable digital assets.
-              </p>
+              <div className="space-y-4">
+                {challenge.description?.split('\n').map((p, idx) => (
+                  <p key={idx} className="text-gray-700 leading-relaxed">
+                    {p}
+                  </p>
+                )) || (
+                    <p className="text-gray-700 leading-relaxed">
+                      {challenge.description}
+                    </p>
+                  )}
+              </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white shadow-xl">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-400 rounded-full opacity-20"></div>
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-700 rounded-full opacity-20"></div>
-                
-                <h3 className="text-2xl font-bold mb-4 relative z-10">Our Experience</h3>
+
+                <h3 className="text-2xl font-bold mb-4 relative z-10">{experience.title}</h3>
                 <p className="text-blue-50 leading-relaxed relative z-10">
-                  At OpenSoftAI, we've been building NFT marketplace infrastructure since before the 2021 NFT boom. We've learned that successful marketplaces aren't just about listing and selling digital assets.
+                  {experience.description}
                 </p>
                 <div className="mt-6 pt-6 border-t border-blue-400 relative z-10">
                   <p className="text-blue-50 font-medium">

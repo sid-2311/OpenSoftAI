@@ -1,0 +1,16 @@
+   ▲ Next.js 15.5.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 16.4s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/39) ...
+Error occurred prerendering page "/nft-marketplace-development". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: CheckCircle is not defined
+    at <unknown> (C:\Users\SHASHANK GOYAL\Downloads\openbackerd\OpenSoftAI\.next\server\app\nft-marketplace-development\page.js:2:31273)
+    at Array.map (<anonymous>)
+    at l (C:\Users\SHASHANK GOYAL\Downloads\openbackerd\OpenSoftAI\.next\server\app\nft-marketplace-development\page.js:2:31114) {
+  digest: '1427799674'
+}
+Export encountered an error on /nft-marketplace-development/page: /nft-marketplace-development, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

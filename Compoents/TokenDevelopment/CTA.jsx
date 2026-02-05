@@ -1,57 +1,45 @@
 "use client";
 import { useState, useEffect } from "react";
-import {
-  Calendar,
-  FileText,
-  FolderOpen,
-  ArrowRight,
-  Sparkles,
-  Zap,
-  Rocket,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 import Link from "next/link";
 
-export default function CTASection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function CTASection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredButton, setHoveredButton] = useState(null);
+
+  // Extract section data
+  const section = data?.finalCTA || {};
+  const heading = section.heading || {};
+  const description = section.description || [];
+  const infoCard = section.infoCard || {};
+  const actionsData = section.actions || [];
+  const floatingIconsData = section.floatingIcons || [];
+  const bottomNote = section.bottomNote || {};
+
+  const actions = actionsData.map((action, idx) => ({
+    icon: action.icon || "Calendar",
+    title: action.title,
+    description: action.description,
+    primary: action.primary,
+    delay: idx * 100,
+    href: action.href || "/contact-us",
+  }));
+
+  const floatingIcons = floatingIconsData.map(fi => ({
+    icon: fi.icon || "Sparkles",
+    position: fi.position,
+    delay: fi.delay,
+  }));
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 200);
     return () => clearTimeout(timer);
   }, []);
 
-  const actions = [
-    {
-      icon: Calendar,
-      title: "Schedule Your Free Consultation",
-      description: "Get expert guidance on your token strategy.",
-      primary: true,
-      delay: 0,
-      href: "/contact-us",
-    },
-    {
-      icon: FileText,
-      title: "Get a Project Quote",
-      description: "Transparent pricing for your requirements.",
-      primary: false,
-      delay: 100,
-      href: "/contact-us",
-    },
-    {
-      icon: FolderOpen,
-      title: "View Our Portfolio",
-      description: "See our successful token launches.",
-      primary: false,
-      delay: 200,
-      href: "/portfolio",
-    },
-  ];
-
-  const floatingIcons = [
-    { Icon: Sparkles, position: "top-10 left-10", delay: "0s" },
-    { Icon: Zap, position: "top-20 right-20", delay: "1s" },
-    { Icon: Rocket, position: "bottom-10 left-20", delay: "2s" },
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -65,7 +53,7 @@ export default function CTASection() {
       </div>
 
       {/* Floating Icons */}
-      {floatingIcons.map(({ Icon, position, delay }, idx) => (
+      {floatingIcons.map(({ icon, position, delay }, idx) => (
         <div
           key={idx}
           className={`absolute ${position} text-white opacity-10`}
@@ -74,7 +62,7 @@ export default function CTASection() {
             animationDelay: delay,
           }}
         >
-          <Icon className="w-16 h-16" />
+          <DynamicIcon name={icon} className="w-16 h-16" />
         </div>
       ))}
 
@@ -93,23 +81,18 @@ export default function CTASection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div
-          className={`transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Launch <span className="text-blue-200">Your Token?</span>
+              {heading.main} <span className="text-blue-200">{heading.highlight}</span>
             </h2>
-            <p className="text-md text-blue-100 max-w-3xl mx-auto mb-4 leading-relaxed">
-              Building a successful token isn’t just about the technology – it’s
-              about creating something that serves your business goals and
-              provides real value to your users.
-            </p>
-            <p className="text-md text-blue-200 max-w-2xl mx-auto">
-              If you’re ready to move beyond the planning phase and start
-              building something that actually works, let’s talk.
-            </p>
+            {description.map((p, idx) => (
+              <p key={idx} className={`text-md ${idx === 0 ? 'text-blue-100' : 'text-blue-200'} max-w-3xl mx-auto mb-4 leading-relaxed`}>
+                {p}
+              </p>
+            ))}
           </div>
 
           {/* Info Card */}
@@ -117,16 +100,14 @@ export default function CTASection() {
             <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
-                  <Sparkles className="w-6 h-6 text-white" />
+                  <DynamicIcon name={infoCard.icon || "Sparkles"} className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Get started today
+                    {infoCard.title}
                   </h3>
                   <p className="text-blue-100">
-                    Contact OpenSoftAI for a free consultation and token
-                    strategy session. We’ll review your project, discuss the
-                    technical roadmap, and guide you every step of the way.
+                    {infoCard.description}
                   </p>
                 </div>
               </div>
@@ -134,125 +115,100 @@ export default function CTASection() {
           </div>
 
           {/* Action Buttons */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
-  {actions.map((action, idx) => {
-    const Icon = action.icon;
-    const isHovered = hoveredButton === idx;
-    return (
-      <Link
-        href={action.href}
-        key={idx}
-        className={`block transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-        style={{ transitionDelay: `${action.delay}ms` }}
-        onMouseEnter={() => setHoveredButton(idx)}
-        onMouseLeave={() => setHoveredButton(null)}
-      >
-        <div
-          className={`
-            relative overflow-hidden rounded-2xl p-8 transition-all duration-300
-            h-full min-h-[320px] flex flex-col justify-between
-            ${
-              action.primary
-                ? "bg-white text-blue-600 hover:shadow-xl"
-                : "bg-white/10 border border-white/30 text-white hover:bg-white/20"
-            }
-          `}
-        >
-          {/* Hover Overlay */}
-          {action.primary && (
-            <div
-              className={`absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 transition-opacity duration-300 ${
-                isHovered ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          )}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            {actions.map((action, idx) => {
+              const Icon = action.icon;
+              const isHovered = hoveredButton === idx;
+              return (
+                <Link
+                  href={action.href}
+                  key={idx}
+                  className={`block transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                    }`}
+                  style={{ transitionDelay: `${action.delay}ms` }}
+                  onMouseEnter={() => setHoveredButton(idx)}
+                  onMouseLeave={() => setHoveredButton(null)}
+                >
+                  <div
+                    className={`
+                      relative overflow-hidden rounded-2xl p-8 transition-all duration-300
+                      h-full min-h-[320px] flex flex-col justify-between
+                      ${action.primary
+                        ? "bg-white text-blue-600 hover:shadow-xl"
+                        : "bg-white/10 border border-white/30 text-white hover:bg-white/20"
+                      }
+                    `}
+                  >
+                    {/* Hover Overlay */}
+                    {action.primary && (
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 transition-opacity duration-300 ${isHovered ? "opacity-100" : "opacity-0"
+                          }`}
+                      />
+                    )}
 
-          {/* Content */}
-          <div className="relative z-10 flex flex-col flex-grow">
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col flex-grow">
 
-            {/* Icon */}
-            <div
-              className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 transition-all duration-300 ${
-                action.primary
-                  ? "bg-transparent"
-                  : "bg-white/10 group-hover:bg-white/20"
-              } ${isHovered ? "scale-110 rotate-6" : ""}`}
-            >
-              <Icon
-                className={`w-7 h-7 ${
-                  action.primary ? "text-blue-600" : "text-white"
-                }`}
-              />
-            </div>
+                      {/* Icon */}
+                      <div
+                        className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 transition-all duration-300 ${action.primary
+                          ? "bg-transparent"
+                          : "bg-white/10 group-hover:bg-white/20"
+                          } ${isHovered ? "scale-110 rotate-6" : ""}`}
+                      >
+                        <DynamicIcon
+                          name={action.icon}
+                          className={`w-7 h-7 ${action.primary ? "text-blue-600" : "text-white"
+                            }`}
+                        />
+                      </div>
 
-            {/* Title + Description */}
-            <div className="flex-grow">
-              <h3
-                className={`text-xl font-bold mb-2 ${
-                  action.primary ? "text-blue-600" : "text-white"
-                }`}
-              >
-                {action.title}
-              </h3>
+                      {/* Title + Description */}
+                      <div className="flex-grow">
+                        <h3
+                          className={`text-xl font-bold mb-2 ${action.primary ? "text-blue-600" : "text-white"
+                            }`}
+                        >
+                          {action.title}
+                        </h3>
 
-              <p
-                className={`text-sm mb-4 ${
-                  action.primary ? "text-blue-500" : "text-blue-200"
-                }`}
-              >
-                {action.description}
-              </p>
-            </div>
+                        <p
+                          className={`text-sm mb-4 ${action.primary ? "text-blue-500" : "text-blue-200"
+                            }`}
+                        >
+                          {action.description}
+                        </p>
+                      </div>
 
-            {/* CTA Row */}
-            <div
-              className={`inline-flex items-center font-semibold text-sm transition-transform duration-300 ${
-                isHovered ? "translate-x-2" : ""
-              } ${action.primary ? "text-blue-600" : "text-white"}`}
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </div>
+                      {/* CTA Row */}
+                      <div
+                        className={`inline-flex items-center font-semibold text-sm transition-transform duration-300 ${isHovered ? "translate-x-2" : ""
+                          } ${action.primary ? "text-blue-600" : "text-white"}`}
+                      >
+                        <span>Get Started</span>
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
-        </div>
-      </Link>
-    );
-  })}
-</div>
-
 
           {/* Bottom CTA Text */}
-          <div className="text-center">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 border border-white/20">
-              <p className="text-white text-md md:text-lg font-medium">
-                Ready to turn your token idea into reality?{" "}
-                <span className="text-blue-200 font-bold">
-                  Let’s build something great together.
-                </span>
-              </p>
-            </div>
-          </div>
-
-          {/* Stats */}
-          {/* <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto text-center">
-            {[
-              { value: "50+", label: "Projects Delivered" },
-              { value: "98%", label: "Success Rate" },
-              { value: "24/7", label: "Support" },
-              { value: "100%", label: "Satisfaction" },
-            ].map((stat, idx) => (
-              <div key={idx}>
-                <div className="text-3xl font-bold text-white mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-blue-200 font-medium">
-                  {stat.label}
-                </div>
+          {bottomNote.text && (
+            <div className="text-center">
+              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 border border-white/20">
+                <p className="text-white text-md md:text-lg font-medium">
+                  {bottomNote.text}{" "}
+                  <span className="text-blue-200 font-bold">
+                    {bottomNote.highlight}
+                  </span>
+                </p>
               </div>
-            ))}
-          </div> */}
+            </div>
+          )}
         </div>
       </div>
 

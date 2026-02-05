@@ -11,53 +11,44 @@ import {
   Award,
 } from "lucide-react";
 
-export default function FinalCTA() {
+// Dynamic data from API - use data prop to access section data
+
+export default function FinalCTA({ data }) {
   const [activeCard, setActiveCard] = useState(null);
 
-  const features = [
-    {
-      icon: Shield,
-      title: "Streamline Operations",
-      desc: "Automate and optimize workflows",
-    },
-    {
-      icon: Star,
-      title: "Improve Experiences",
-      desc: "Delight your customers",
-    },
-    {
-      icon: Award,
-      title: "Revenue Growth",
-      desc: "Create new opportunities",
-    },
-  ];
+  // Extract section data
+  const section = data?.finalCTASection || {};
+  const hero = section.hero || {};
+  const featuresData = section.features || [];
+  const ctaBox = section.ctaBox || {};
+  const actionCardsData = section.actionCards || [];
 
-  const actionCards = [
-    {
-      id: 1,
-      icon: Calendar,
-      title: "Schedule Your Free Consultation",
-      subtitle: "Book a strategy session with our experts",
-      color: "from-white to-blue-50",
-      link: "/contact-us",
-    },
-    {
-      id: 2,
-      icon: MessageCircle,
-      title: "Discuss Your Project Requirements",
-      subtitle: "Share your vision and get expert advice",
-      color: "from-blue-50 to-white",
-      link: "/contact-us",
-    },
-    {
-      id: 3,
-      icon: FolderOpen,
-      title: "View Our Software Portfolio",
-      subtitle: "Explore our successful projects",
-      color: "from-white to-blue-50",
-      link: "/portfolio", // <-- Different link for portfolio
-    },
-  ];
+  // Icon mapping
+  const iconMap = {
+    Shield,
+    Star,
+    Award,
+    Calendar,
+    MessageCircle,
+    FolderOpen,
+  };
+
+  const features = featuresData.map(f => ({
+    icon: iconMap[f.icon] || Star,
+    title: f.title,
+    desc: f.desc,
+  }));
+
+  const actionCards = actionCardsData.map(card => ({
+    id: card.id,
+    icon: iconMap[card.icon] || Calendar,
+    title: card.title,
+    subtitle: card.subtitle,
+    color: card.color || "from-white to-blue-50",
+    link: card.link,
+  }));
+
+  if (!section.hero) return null;
 
   return (
     <section className="bg-gradient-to-b from-white via-blue-50 to-white py-20 px-4 sm:px-6 lg:px-8">
@@ -65,17 +56,13 @@ export default function FinalCTA() {
         {/* Hero Section */}
         <header className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
-            Ready to Build Your Custom
+            {hero.titleLine1}
           </h2>
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-8">
-            Software Solution?
+            {hero.titleLine2}
           </h2>
           <p className="text-lg text-slate-600 max-w-5xl mx-auto leading-relaxed">
-            Great software doesn't just automate processes – it transforms how your
-            business operates and grows. Whether you need to streamline operations,
-            improve customer experiences, or create new revenue opportunities, custom
-            software development provides the competitive advantages that off-the-shelf
-            solutions simply can't match.
+            {hero.description}
           </p>
         </header>
 
@@ -102,11 +89,10 @@ export default function FinalCTA() {
         <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 rounded-3xl p-12 md:p-16 shadow-2xl mb-12">
           <div className="text-center mb-12">
             <h3 className="text-xl md:text-4xl font-bold text-white mb-4">
-              Let's build software that works exactly the way your business needs it to work.
+              {ctaBox.heading}
             </h3>
             <p className="text-md text-blue-100">
-              Contact OpenSoftAI today to discuss your project requirements and discover how custom
-              software development can accelerate your business success.
+              {ctaBox.description}
             </p>
           </div>
 
@@ -119,26 +105,23 @@ export default function FinalCTA() {
                   key={card.id}
                   onMouseEnter={() => setActiveCard(card.id)}
                   onMouseLeave={() => setActiveCard(null)}
-                  className={`bg-gradient-to-br ${card.color} rounded-2xl p-6 cursor-pointer transition-all duration-300 group ${
-                    activeCard === card.id ? "scale-105 shadow-2xl" : "shadow-lg"
-                  }`}
+                  className={`bg-gradient-to-br ${card.color} rounded-2xl p-6 cursor-pointer transition-all duration-300 group ${activeCard === card.id ? "scale-105 shadow-2xl" : "shadow-lg"
+                    }`}
                 >
                   <div className="flex flex-col items-center text-center">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 ${
-                        activeCard === card.id ? "rotate-12 scale-110" : ""
-                      }`}
+                      className={`w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mb-4 transition-transform duration-300 ${activeCard === card.id ? "rotate-12 scale-110" : ""
+                        }`}
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <h4 className="text-lg font-bold text-slate-800 mb-2">{card.title}</h4>
                     <p className="text-sm text-slate-600 mb-4">{card.subtitle}</p>
                     <div
-                      className={`flex items-center gap-2 text-blue-700 font-semibold transition-transform duration-300 ${
-                        activeCard === card.id ? "translate-x-2" : ""
-                      }`}
+                      className={`flex items-center gap-2 text-blue-700 font-semibold transition-transform duration-300 ${activeCard === card.id ? "translate-x-2" : ""
+                        }`}
                     >
-                      <Link href={card.link}>Get Started</Link>
+                      <Link href={card.link || "#"}>Get Started</Link>
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </div>

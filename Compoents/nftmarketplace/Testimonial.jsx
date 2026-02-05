@@ -1,44 +1,29 @@
 import TestimonialsSection from "../ui/Testimonail";
 
+// Dynamic data from API - use data prop to access section data
 
+export default function TestNFTDevelopment({ data }) {
+  // Extract section data
+  const section = data?.testimonials || {};
+  const itemsData = section.items || [];
 
-const testimonialsData = [
-  {
-    name: "Ava Thompson",
-    company: "Founder, Artify Marketplace",
-    image: "/images/nft-marketplace-launch.jpg",
-    alt: "creators launching NFT marketplace",
-    quote:
-      "OpenSoftAI built our NFT marketplace with custom minting and auction features. We onboarded 5,000 creators in our first month and processed over $2M in sales.",
-  },
-  {
-    name: "Liam Chen",
-    company: "CTO, MetaPlay Studios",
-    image: "/images/multi-chain-gaming-marketplace.jpg",
-    alt: "gaming marketplace with cross-chain trading",
-    quote:
-      "Their multi-chain architecture was perfect for our gaming marketplace. Players can seamlessly trade assets across different blockchain networks without thinking about technical complexity.",
-  },
-  {
-    name: "Sophia Martinez",
-    company: "Director, CreatorHub Network",
-    image: "/images/nft-royalty-system.jpg",
-    alt: "royalty management system for NFT creators",
-    quote:
-      "The royalty management system they built ensures our artists get paid automatically on every resale. It's created a sustainable creator economy that keeps growing.",
-  },
-];
+  const testimonials = itemsData.map(item => ({
+    name: item.name,
+    company: item.company,
+    image: item.image,
+    alt: item.alt,
+    quote: item.quote,
+  }));
 
+  if (testimonials.length === 0) return null;
 
-
-export default function TestNFTDevelopment(){
-  return(
-   <main>
+  return (
+    <main>
       <TestimonialsSection
-        title="What people say about OpenSoftAI"
-        testimonials={testimonialsData}
+        title={section.heading || "What people say about OpenSoftAI"}
+        testimonials={testimonials}
         darkMode={true}
       />
     </main>
-  )
+  );
 }

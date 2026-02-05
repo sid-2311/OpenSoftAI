@@ -10,49 +10,36 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function BusinessBenefitsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function BusinessBenefitsSection({ data }) {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  const benefits = [
-    {
-      icon: DollarSign,
-      title: "Empower Creators with Direct Monetization",
-      description:
-        "Give creators the tools they need to build sustainable businesses around their digital work. From initial sales to ongoing royalties, well-designed NFT marketplaces provide revenue streams that traditional platforms can't match. This creator empowerment becomes your competitive advantage.",
-      metrics: ["Primary & Secondary Sales", "Royalty Automation", "Creator Economy Growth"],
-    },
-    {
-      icon: Eye,
-      title: "Build Trust Through Transparency",
-      description:
-        "Blockchain-based marketplaces provide transparency that builds confidence with both creators and collectors. Every transaction, ownership change, and royalty payment is recorded on-chain, creating trust that's impossible to fake or manipulate.",
-      metrics: ["On-Chain Ownership", "Transparent Royalties", "Immutable History"],
-    },
-    {
-      icon: Globe2,
-      title: "Scale Globally Without Geographic Restrictions",
-      description:
-        "NFT marketplaces operate 24/7 across all time zones without the regulatory complexity of traditional art markets. Multi-chain support expands your potential user base while reducing transaction costs and improving overall user experience.",
-      metrics: ["24/7 Global Access", "Multi-Chain Support", "Frictionless Transactions"],
-    },
-    {
-      icon: Users,
-      title: "Create Sustainable Community Ecosystems",
-      description:
-        "Successful NFT marketplaces become communities where creators, collectors, and fans interact regularly. Features like social profiles, creator spotlights, and community governance tools help build the engagement that drives long-term platform value.",
-      metrics: ["Community Governance", "Social Engagement", "Creator-Fan Interaction"],
-    },
-    {
-      icon: Settings,
-      title: "Reduce Operational Overhead",
-      description:
-        "Smart contract-based marketplaces automate much of the manual work involved in traditional art and collectibles markets. Automated royalty distribution, transparent transaction history, and programmable marketplace rules reduce operational costs while improving user experience.",
-      metrics: ["Automation Efficiency", "Lower Admin Costs", "Transparent Operations"],
-    },
-  ];
+  // Extract section data
+  const section = data?.businessBenefits || {};
+  const headingData = section.heading || {};
+  const benefitsData = section.benefits || [];
+  const stat = section.stat || {};
+
+  // Icon mapping
+  const iconMap = {
+    DollarSign: DollarSign,
+    Eye: Eye,
+    Globe2: Globe2,
+    Users: Users,
+    Settings: Settings,
+  };
+
+  const benefits = benefitsData.map(b => ({
+    icon: iconMap[b.icon] || DollarSign,
+    title: b.title,
+    description: b.description,
+    metrics: b.metrics || [],
+  }));
 
   useEffect(() => {
+    if (benefits.length === 0) return;
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -65,7 +52,9 @@ export default function BusinessBenefitsSection() {
     return () => clearInterval(interval);
   }, [benefits.length]);
 
-  const ActiveIcon = benefits[activeTab].icon;
+  if (!section.heading) return null;
+
+  const ActiveIcon = benefits[activeTab]?.icon || DollarSign;
 
   return (
     <section className="relative bg-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -83,12 +72,10 @@ export default function BusinessBenefitsSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-         
-
           <h2 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Business Benefits That Drive{" "}
+            {headingData.main}{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
-              Real Results
+              {headingData.highlight}
             </span>
           </h2>
         </div>
@@ -107,9 +94,8 @@ export default function BusinessBenefitsSection() {
                     setActiveTab(idx);
                     setProgress(0);
                   }}
-                  className={`relative cursor-pointer transition-all duration-500 ${
-                    isActive ? "scale-105" : "scale-100 hover:scale-102"
-                  }`}
+                  className={`relative cursor-pointer transition-all duration-500 ${isActive ? "scale-105" : "scale-100 hover:scale-102"
+                    }`}
                 >
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-100 rounded-r-full overflow-hidden">
@@ -121,42 +107,37 @@ export default function BusinessBenefitsSection() {
                   )}
 
                   <div
-                    className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${
-                      isActive
-                        ? "border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl"
-                        : "border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg"
-                    }`}
+                    className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${isActive
+                      ? "border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl"
+                      : "border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg"
+                      }`}
                   >
                     <div className="flex items-start">
                       <div
-                        className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                          isActive
-                            ? "bg-gradient-to-br from-blue-500 to-blue-600"
-                            : "bg-blue-100"
-                        }`}
+                        className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive
+                          ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                          : "bg-blue-100"
+                          }`}
                       >
                         <Icon
-                          className={`w-6 h-6 transition-colors duration-300 ${
-                            isActive ? "text-white" : "text-blue-600"
-                          }`}
+                          className={`w-6 h-6 transition-colors duration-300 ${isActive ? "text-white" : "text-blue-600"
+                            }`}
                         />
                       </div>
                       <div className="ml-4 flex-1">
                         <h3
-                          className={`text-lg font-bold mb-1 transition-colors duration-300 ${
-                            isActive ? "text-blue-600" : "text-gray-900"
-                          }`}
+                          className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? "text-blue-600" : "text-gray-900"
+                            }`}
                         >
                           {benefit.title}
                         </h3>
                         <p
-                          className={`text-sm transition-colors duration-300 ${
-                            isActive ? "text-gray-700" : "text-gray-600"
-                          }`}
+                          className={`text-sm transition-colors duration-300 ${isActive ? "text-gray-700" : "text-gray-600"
+                            }`}
                         >
                           {isActive
                             ? benefit.description
-                            : benefit.description.substring(0, 80) + "..."}
+                            : (benefit.description?.substring(0, 80) + "...")}
                         </p>
                       </div>
                     </div>
@@ -171,31 +152,28 @@ export default function BusinessBenefitsSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-50 rounded-3xl transform rotate-3"></div>
             <div className="relative bg-white rounded-3xl shadow-2xl p-10 border-2 border-blue-200 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center transform rotate-3">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center transform rotate-3 shrink-0">
                   <ActiveIcon className="w-8 h-8 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-gray-900">
-                    {benefits[activeTab].title}
+                    {benefits[activeTab]?.title}
                   </h3>
                 </div>
               </div>
 
               <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-8">
-                {benefits[activeTab].description}
+                {benefits[activeTab]?.description}
               </p>
 
               <div className="space-y-4">
                 <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">
                   Key Features
                 </h4>
-                {benefits[activeTab].metrics.map((metric, idx) => (
+                {benefits[activeTab]?.metrics.map((metric, idx) => (
                   <div
                     key={idx}
                     className="flex items-center transform transition-all duration-300 hover:translate-x-2"
-                    style={{
-                      animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`,
-                    }}
                   >
                     <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-white" />
@@ -215,21 +193,22 @@ export default function BusinessBenefitsSection() {
                   {benefits.map((_, idx) => (
                     <div
                       key={idx}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        idx === activeTab ? "bg-blue-500 w-8" : "bg-blue-200"
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeTab ? "bg-blue-500 w-8" : "bg-blue-200"
+                        }`}
                     ></div>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="absolute -bottom-6 -right-3 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-              <div className="text-4xl font-bold text-white mb-1">99%</div>
-              <div className="text-blue-100 text-sm font-medium">
-                Client Satisfaction
+            {stat.value && (
+              <div className="absolute -bottom-6 -right-3 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+                <div className="text-4xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-blue-100 text-sm font-medium">
+                  {stat.label}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
@@ -253,19 +232,6 @@ export default function BusinessBenefitsSection() {
           </Link>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }

@@ -1,90 +1,91 @@
-// Updated ClientsPage with world map and animated India pin
-'use client';
+"use client";
 
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-export default function ClientsPage() {
-  const clients = [
-    { name: 'Hinduja', logo: '/logos/hinduja.png', alt: 'Hinduja logo' },
-    { name: 'Casio', logo: '/logos/casio.png', alt: 'Casio logo' },
-    { name: 'Akamai', logo: '/logos/akamai.png', alt: 'Akamai logo' },
-    { name: 'Samsung', logo: '/logos/samsung.png', alt: 'Samsung logo' },
-    { name: 'Ericsson', logo: '/logos/ericsson.png', alt: 'Ericsson logo' },
-    { name: 'Pepsi', logo: '/logos/pepsi.png', alt: 'Pepsi logo' },
-  ];
+export default function ClientsPage({ data }) {
+  if (!data) return null;
+
+  const header = data.header;
+  const content = data.content;
 
   return (
-    <>
-      <main className="min-h-screen bg-gradient-to-b from-white to-gray-50" aria-labelledby="clients-heading">
-        {/* Header Section */}
-        <header className="text-center py-16 px-4">
-          <h1
-            id="clients-heading"
-            className="text-4xl md:text-5xl font-bold text-gray-800"
+    <main
+      className="min-h-screen bg-gradient-to-b from-white to-gray-50"
+      aria-labelledby="clients-heading"
+    >
+      {/* Header */}
+      <header className="text-center py-16 px-4">
+        <h1
+          id="clients-heading"
+          className="text-4xl md:text-5xl font-bold text-gray-800"
+        >
+          {header.titlePrefix}{" "}
+          <span className="text-gray-900">{header.titleHighlight}</span>{" "}
+          {header.titleSuffix}
+        </h1>
+      </header>
+
+      {/* Section */}
+      <section className="max-w-7xl mx-auto px-4 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        {/* Left */}
+        <div className="space-y-6">
+          <p className="text-orange-500 text-sm font-semibold tracking-wider uppercase">
+            {content.partnersLabel}
+          </p>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            {content.titlePrefix}{" "}
+            <span className="font-normal">{content.titleHighlight}</span>
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed">
+            {content.description}
+          </p>
+
+          <Link
+            href={content.buttonLink}
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300 group w-fit"
           >
-            Our <span className="text-gray-900">Worldwide</span> Presence
-          </h1>
-        </header>
-
-        {/* Clients Section */}
-        <section className="max-w-7xl mx-auto px-4 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Content */}
-          <div className="space-y-6">
-            <p className="text-orange-500 text-sm font-semibold tracking-wider uppercase">
-              Partners
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Our <span className="font-normal">Esteemed Clients</span>
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              We’ve collaborated with some of the world’s most recognized brands. Our team crafts exceptional experiences that help enterprises and startups alike achieve their goals. Don’t wait — leverage our expertise and build something extraordinary today!
-            </p>
-
-            <Link
-              href="/contact-us"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300 group w-fit"
-              aria-label="Start your project with OpenSoftAI"
+            {content.buttonText}
+            <svg
+              className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              START YOUR PROJECT NOW
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </Link>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Right Map */}
+        <div className="relative w-full h-[420px] flex items-center justify-center">
+          <Image
+            src={data.mapImage}
+            alt="World map"
+            fill
+            className="object-contain opacity-90 select-none"
+          />
+
+          {/* India Pin */}
+          <div
+            className="absolute animate-bounce"
+            style={{ top: "50%", left: "66%" }}
+          >
+            <div className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-400"></div>
+            <span className="text-xs mt-1 block text-red-700 font-semibold">
+              India
+            </span>
+            <span className="absolute inset-0 w-5 h-5 rounded-full bg-red-400 opacity-40 animate-ping"></span>
           </div>
-
-          {/* Right Side — World Map with India Pin */}
-          <div className="relative w-full h-[420px] flex items-center justify-center">
-            {/* World Map */}
-            <Image
-              src="/images/worldmap.png" // <-- Add your world map image
-              alt="World map"
-              fill
-              className="object-contain opacity-90 select-none"
-            />
-
-            {/* Animated India Pin */}
-            <div className="absolute animate-bounce" style={{ top: '50%', left: '66%' }}>
-              <div className="w-2 h-2 bg-red-600 rounded-full shadow-lg shadow-red-400"></div>
-              <span className="text-xs mt-1 block text-red-700 font-semibold">India</span>
-
-              {/* Pulse ring */}
-              <span className="absolute inset-0 w-5 h-5 rounded-full bg-red-400 opacity-40 animate-ping"></span>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </main>
   );
 }

@@ -7,93 +7,66 @@ import {
   Workflow,
   Layers,
   BarChart3,
+  Users,
+  Zap,
 } from "lucide-react";
 
-export default function ADSBenefitsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function ADSBenefitsSection({ data }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+
+  // Extract section data
+  const section = data?.benefits || {};
+  const heading = section.heading || {};
+  const itemsData = section.items || [];
+
+  // Icon mapping
+  const iconMap = {
+    Smartphone: Smartphone,
+    HeartHandshake: HeartHandshake,
+    DollarSign: DollarSign,
+    Workflow: Workflow,
+    Layers: Layers,
+    BarChart3: BarChart3,
+    Users: Users,
+    Zap: Zap,
+  };
+
+  const benefits = itemsData.map(b => ({
+    icon: iconMap[b.icon] || Smartphone,
+    title: b.title,
+    description: b.description,
+    stat: b.stat,
+    statLabel: b.statLabel,
+  }));
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const benefits = [
-    {
-      icon: Smartphone,
-      title: "Engage Customers Anytime, Anywhere",
-      description:
-        "Mobile apps put your business directly into customers’ hands, enabling engagement opportunities that websites can’t match. Push notifications, location-based features, and personalized experiences build stronger relationships.",
-      stat: "24/7",
-      statLabel: "Customer Access",
-    },
-    {
-      icon: HeartHandshake,
-      title: "Improve Brand Loyalty & Customer Experience",
-      description:
-        "Well-designed mobile apps create daily touchpoints that strengthen brand trust. Personalized experiences, convenience, and consistent value encourage customers to return again and again.",
-      stat: "90%",
-      statLabel: "Customer Retention",
-    },
-    {
-      icon: DollarSign,
-      title: "Unlock New Revenue Streams & Business Models",
-      description:
-        "Apps enable new monetization options like subscriptions, in-app purchases, and premium services. Direct relationships with users increase lifetime value and revenue predictability.",
-      stat: "+35%",
-      statLabel: "Revenue Growth",
-    },
-    {
-      icon: Workflow,
-      title: "Streamline Internal Operations & Productivity",
-      description:
-        "Enterprise mobile apps eliminate paperwork and manual data entry. Real-time access to business systems improves team productivity, data accuracy, and decision-making speed.",
-      stat: "2×",
-      statLabel: "Efficiency Boost",
-    },
-    {
-      icon: Layers,
-      title: "Build Scalable Foundations for Future Innovation",
-      description:
-        "Modern app architecture supports growth without needing full rebuilds. Add new features, scale users, and evolve business models efficiently to stay ahead of changing markets.",
-      stat: "∞",
-      statLabel: "Scalability",
-    },
-    {
-      icon: BarChart3,
-      title: "Generate Valuable Customer Data & Insights",
-      description:
-        "Apps provide detailed analytics about customer behavior and preferences. These insights inform better marketing, smarter product development, and more effective personalization.",
-      stat: "100%",
-      statLabel: "Data Visibility",
-    },
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-white py-24 px-4 overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        
-        {/* Animated circles */}
-
-        
-      </div>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-          }`}
+          className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+            }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Business Benefits That Drive{" "}
+            {heading.main}{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Real Growth
+              {heading.highlight}
             </span>
           </h2>
           <p className="text-md text-gray-600 max-w-3xl mx-auto">
-            Discover how mobile applications create measurable value across
-            customer engagement, operations, and business innovation.
+            {section.subheading}
           </p>
         </div>
 
@@ -107,15 +80,12 @@ export default function ADSBenefitsSection() {
             return (
               <div
                 key={index}
-                className={`flex flex-col ${
-                  isLeft ? "lg:flex-row" : "lg:flex-row-reverse"
-                } gap-12 items-center transition-all duration-700 ${
-                  isVisible
+                className={`flex flex-col ${isLeft ? "lg:flex-row" : "lg:flex-row-reverse"
+                  } gap-12 items-center transition-all duration-700 ${isVisible
                     ? "opacity-100 translate-x-0"
-                    : `opacity-0 ${
-                        isLeft ? "-translate-x-10" : "translate-x-10"
-                      }`
-                }`}
+                    : `opacity-0 ${isLeft ? "-translate-x-10" : "translate-x-10"
+                    }`
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setActiveIndex(index)}
               >
@@ -125,14 +95,12 @@ export default function ADSBenefitsSection() {
                     <div className="relative w-62 h-62 flex items-center justify-center">
                       {/* Animated rings */}
                       <div
-                        className={`absolute inset-0 rounded-full border-4 border-blue-200 transition-transform duration-700 ${
-                          isActive ? "rotate-180" : "rotate-0"
-                        }`}
+                        className={`absolute inset-0 rounded-full border-4 border-blue-200 transition-transform duration-700 ${isActive ? "rotate-180" : "rotate-0"
+                          }`}
                       ></div>
                       <div
-                        className={`absolute inset-8 rounded-full border-4 border-blue-300 transition-transform duration-700 ${
-                          isActive ? "-rotate-180" : "rotate-0"
-                        }`}
+                        className={`absolute inset-8 rounded-full border-4 border-blue-300 transition-transform duration-700 ${isActive ? "-rotate-180" : "rotate-0"
+                          }`}
                         style={{ animationDelay: "0.2s" }}
                       ></div>
 
@@ -159,7 +127,7 @@ export default function ADSBenefitsSection() {
                   <div className="max-w-2xl">
                     <div className="inline-block mb-4">
                       <span className="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
-                        Benefit {index + 1}
+                        {section.benefitLabel || "Benefit"} {index + 1}
                       </span>
                     </div>
 

@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import AICopilotSection from "@/Compoents/AiCopoilot/AiCopilotSection";
 import AiCopilot from "@/Compoents/AiCopoilot/Section";
 import HeroSection from "@/Compoents/AiCopoilot/Hero";
@@ -10,49 +11,39 @@ import AICopilotIntroSection from "@/Compoents/AiCopoilot/AiCopilotSection";
 import TestAICopilot from "@/Compoents/AiCopoilot/Testimonail";
 
 // ✅ SEO Metadata with Canonical URL
-export const metadata = {
-  title: "Build Smarter AI Copilot Solutions for Business | Opensoft AI",
-  description: "Partner with OpenSoftAI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
-  keywords: [
-    "AI copilot",
-    "AI assistant",
-    "productivity automation",
-    "AI for teams",
-    "workflow automation",
-    "AI integration",
-    "intelligent copilot",
-    "AI business solutions",
-  ],
-  alternates: {
-    canonical: "https://opensoftai.com/ai-copilot-development-company", // ✅ Canonical URL
-  },
-  openGraph: {
-    title: "Build Smarter AI Copilot Solutions for Business | Opensoft AI",
-    description: "Partner with OpenSoftAI to create AI copilots that optimize workflows, enhance productivity, and drive business growth with intelligent automation.",
-    url: "https://opensoftai.com/ai-copilot-development-company",
-   
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
- 
-};
 
-export default function AICopilot() {
+const SLUG = 'ai-copilot-development-company';
+
+// Generate dynamic metadata from database
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
+
+// Fetch and render page with database content
+export default async function Page() {
+  const pageData = await getPageData(SLUG);
+  
+  if (!pageData) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <p>Page data not found</p>
+    </div>;
+  }
+
+  // Extract content data
+  const content =  pageData.content || {};
+
   return (
     <>
-      <HeroSection />
-      <AICopilotIntroSection />
-      <AiCopilot />
-      <CopilotTypesSection />
-      <TechnicalMagicSection />
-      <HowTeamsWorkSection />
-      <TestAICopilot />
-      <BuildCopilotSection />
-      <FinalCTACopilotSection />
+      <HeroSection data={content} />
+      <AICopilotIntroSection data={content} />
+      <AiCopilot data={content.statsSection} />
+      <CopilotTypesSection data={content.types} />
+      <TechnicalMagicSection data={content.technical} />
+      <HowTeamsWorkSection data={content.howItWorks} />
+      <TestAICopilot data={content.testimonials} />
+      <BuildCopilotSection data={content.steps} />
+      <FinalCTACopilotSection data={content.cta} />
     </>
   );
 }

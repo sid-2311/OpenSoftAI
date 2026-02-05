@@ -11,85 +11,46 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function WhyChooseUsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function WhyChooseUsSection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Extract section data
+  const section = data?.whyChooseUsSection || {};
+  const header = section.header || {};
+  const reasonsData = section.reasons || [];
+  const cta = section.cta || {};
+
+  // Icon mapping
+  const iconMap = {
+    Lock: Lock,
+    Cpu: Cpu,
+    RefreshCcw: RefreshCcw,
+    Eye: Eye,
+    Award: Award,
+    ShieldCheck: ShieldCheck,
+  };
+
+  const reasons = reasonsData.map(r => ({
+    icon: iconMap[r.icon] || Lock,
+    title: r.title,
+    description: r.description,
+    highlights: r.highlights || [],
+    stats: r.badge || "",
+  }));
+
   useEffect(() => {
     setIsVisible(true);
+    if (reasons.length === 0) return;
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % 5);
+      setActiveIndex((prev) => (prev + 1) % reasons.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [reasons.length]);
 
-  const reasons = [
-    {
-      icon: Lock,
-      title: "Security-First Development",
-      description:
-        "Every contract we write assumes it will be attacked — and we design accordingly. Our process includes threat modeling, extensive unit testing, and multiple internal code reviews before any deployment.",
-      highlights: [
-        "Threat Modeling",
-        "Comprehensive Testing",
-        "Internal Reviews",
-        "Audit Preparation",
-      ],
-      stats: "Zero Exploits",
-    },
-    {
-      icon: Cpu,
-      title: "Real-World Experience",
-      description:
-        "We've built and deployed smart contracts through multiple market cycles and blockchain upgrades. This experience helps us avoid common pitfalls and ensure reliable performance under real-world conditions.",
-      highlights: [
-        "Battle-Tested Solutions",
-        "Cross-Chain Knowledge",
-        "Performance Optimization",
-        "DeFi & NFT Expertise",
-      ],
-      stats: "Proven Track Record",
-    },
-    {
-      icon: RefreshCcw,
-      title: "End-to-End Support",
-      description:
-        "We don’t just deliver code and disappear. Our team provides ongoing support for upgrades, audits, and integrations with new protocols — helping your project evolve as the ecosystem grows.",
-      highlights: [
-        "Post-Launch Support",
-        "Upgrades & Maintenance",
-        "Protocol Integrations",
-        "Audit Collaboration",
-      ],
-      stats: "Full Lifecycle Care",
-    },
-    {
-      icon: Eye,
-      title: "Transparent Communication",
-      description:
-        "We explain technical concepts in plain English and keep you informed at every step. You’ll always understand what we’re building and why specific design decisions are made.",
-      highlights: [
-        "Plain-English Reporting",
-        "Collaborative Process",
-        "Weekly Updates",
-        "Full Visibility",
-      ],
-      stats: "Open Process",
-    },
-    {
-      icon: Award,
-      title: "Expert Credentials",
-      description:
-        "Our team includes certified smart contract auditors and blockchain security specialists, recognized as development partners by leading blockchain foundations and DeFi protocols.",
-      highlights: [
-        "Certified Auditors",
-        "Security Specialists",
-        "Recognized Partners",
-        "Industry-Leading Standards",
-      ],
-      stats: "Certified Team",
-    },
-  ];
+  if (!section.header) return null;
 
   return (
     <section className="relative bg-white py-24 overflow-hidden">
@@ -107,23 +68,18 @@ export default function WhyChooseUsSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
-            Why Choose{" "}
+            {header.title?.split('OpenSoftAI')[0]}
             <span className="mt-3 bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 bg-clip-text text-transparent">
               OpenSoftAI
             </span>{" "}
-            for Smart Contract Development
+            {header.title?.split('OpenSoftAI')[1]}
           </h2>
           <p className="max-w-3xl mx-auto text-slate-600 text-md">
-            We've been building smart contracts since before the term “DeFi”
-            existed, and our experience shows in the quality and security of our
-            work. We've navigated blockchain upgrades, market cycles, and
-            regulatory shifts — while maintaining a perfect security record for
-            all audited contracts.
+            {header.description}
           </p>
         </div>
 
@@ -136,36 +92,32 @@ export default function WhyChooseUsSection() {
             return (
               <div
                 key={index}
-                className={`group relative transition-all duration-700 ${
-                  isVisible
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
+                className={`group relative transition-all duration-700 ${isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+                  }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
                 onMouseEnter={() => setActiveIndex(index)}
               >
                 <div
-                  className={`relative bg-gradient-to-br from-white to-blue-50 rounded-3xl p-8 border-2 transition-all duration-500 h-full ${
-                    isActive
-                      ? "border-blue-500 shadow-2xl scale-[1.02]"
-                      : "border-blue-100 shadow-lg hover:border-blue-300 hover:shadow-xl"
-                  }`}
+                  className={`relative bg-gradient-to-br from-white to-blue-50 rounded-3xl p-8 border-2 transition-all duration-500 h-full ${isActive
+                    ? "border-blue-500 shadow-2xl scale-[1.02]"
+                    : "border-blue-100 shadow-lg hover:border-blue-300 hover:shadow-xl"
+                    }`}
                 >
                   {/* Corner Accent */}
                   <div
-                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-600 opacity-10 rounded-bl-full transition-opacity duration-500 ${
-                      isActive ? "opacity-20" : ""
-                    }`}
+                    className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-600 opacity-10 rounded-bl-full transition-opacity duration-500 ${isActive ? "opacity-20" : ""
+                      }`}
                   ></div>
 
                   {/* Icon Badge */}
                   <div className="relative mb-6">
                     <div
-                      className={`inline-flex p-5 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg transition-all duration-500 ${
-                        isActive
-                          ? "scale-110 rotate-6"
-                          : "group-hover:scale-105"
-                      }`}
+                      className={`inline-flex p-5 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 shadow-lg transition-all duration-500 ${isActive
+                        ? "scale-110 rotate-6"
+                        : "group-hover:scale-105"
+                        }`}
                     >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
@@ -189,14 +141,13 @@ export default function WhyChooseUsSection() {
 
                   {/* Highlights */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {reason.highlights.map((highlight, idx) => (
+                    {reason.highlights?.map((highlight, idx) => (
                       <span
                         key={idx}
-                        className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-300 ${
-                          isActive
-                            ? "bg-blue-600 text-white"
-                            : "bg-blue-100 text-blue-700 group-hover:bg-blue-200"
-                        }`}
+                        className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all duration-300 ${isActive
+                          ? "bg-blue-600 text-white"
+                          : "bg-blue-100 text-blue-700 group-hover:bg-blue-200"
+                          }`}
                       >
                         {highlight}
                       </span>
@@ -205,9 +156,8 @@ export default function WhyChooseUsSection() {
 
                   {/* CTA */}
                   <div
-                    className={`flex items-center gap-2 text-blue-700 font-semibold transition-all duration-300 ${
-                      isActive ? "gap-4" : "group-hover:gap-3"
-                    }`}
+                    className={`flex items-center gap-2 text-blue-700 font-semibold transition-all duration-300 ${isActive ? "gap-4" : "group-hover:gap-3"
+                      }`}
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-5 h-5" />
@@ -220,25 +170,23 @@ export default function WhyChooseUsSection() {
 
         {/* Bottom CTA */}
         <div
-          className={`bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-10 shadow-2xl transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
+          className={`bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-10 shadow-2xl transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
         >
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="text-center md:text-left md:col-span-2">
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Ready to Build Secure Smart Contracts?
+                  {cta.title}
                 </h3>
                 <p className="text-blue-100 text-md md:text-lg">
-                  Work with certified auditors and blockchain engineers trusted
-                  by top DeFi protocols and enterprises worldwide.
+                  {cta.description}
                 </p>
               </div>
 
               <div className="flex justify-center md:justify-end">
-                <Link href="/contact-us" className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
-                  <span>Get Started</span>
+                <Link href={cta.action?.url || "/contact-us"} className="group bg-white text-blue-700 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3">
+                  <span>{cta.action?.label}</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </Link>
               </div>

@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import BusinessBenefitsSection from "@/Compoents/AiChatbot/BusinessfitSection";
 import ChatbotTypesSection from "@/Compoents/AiChatbot/ChatBotTypes";
 import ExperienceSection from "@/Compoents/AiChatbot/Experience";
@@ -7,53 +8,41 @@ import Industries from "@/Compoents/AiChatbot/Industries";
 import AIChatbotIntroSection from "@/Compoents/AiChatbot/Intro";
 import ProcessSection from "@/Compoents/AiChatbot/Process";
 import TestAIChatbot from "@/Compoents/AiChatbot/Testimonail";
-import CTASection from "@/Compoents/Blockchain/CTASection";
+import CTASection from "@/Compoents/AiChatbot/CTA";
 
-// ✅ SEO Metadata with Canonical URL
-export const metadata = {
-  title: "Build Smart AI Chatbots for Business Growth | Opensoft AI",
-  description: "Enhance customer experience with Opensoft AI’s smart chatbot solutions. We design intelligent AI chatbots that boost engagement and automate conversations.",
-  keywords: [
-    "AI chatbot",
-    "chatbot development",
-    "AI assistant",
-    "conversational AI",
-    "chatbot for business",
-    "customer support automation",
-    "intelligent chatbot",
-    "AI conversation bot",
-  ],
-  alternates: {
-    canonical: "https://opensoftai.com/ai-chatbot-development-company", // ✅ Canonical URL
-  },
-  openGraph: {
-    title: "Build Smart AI Chatbots for Business Growth | Opensoft AI",
-    description: "Enhance customer experience with Opensoft AI’s smart chatbot solutions. We design intelligent AI chatbots that boost engagement and automate conversations. ",
-    url: "https://opensoftai.com/ai-chatbot-development-company",
-   
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
- 
-};
+const SLUG = "ai-chatbot-development-company";
 
-export default function ChatBot() {
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
+
+export default async function Page() {
+  const pageData = await getPageData(SLUG);
+
+  if (!pageData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Page data not found</p>
+      </div>
+    );
+  }
+
+  // ✅ THIS is the only variable you need
+  const content = pageData.content || {};
+
   return (
     <>
-      <HeroSection />
-      <AIChatbotIntroSection />
-      <ExperienceSection />
-      <ChatbotTypesSection />
-      <TechnicalFeaturesSection />
-      <BusinessBenefitsSection />
-      <Industries />
-      <TestAIChatbot />
-      <ProcessSection />
-      <CTASection />
+      <HeroSection data={content} />
+      <AIChatbotIntroSection data={content} />
+      <ExperienceSection data={content} />
+      <ChatbotTypesSection data={content} />
+      <TechnicalFeaturesSection data={content} />
+      <BusinessBenefitsSection data={content} />
+      <Industries data={content} />
+      <TestAIChatbot data={content} />
+      <ProcessSection data={content} />
+      <CTASection data={content} />
     </>
   );
 }

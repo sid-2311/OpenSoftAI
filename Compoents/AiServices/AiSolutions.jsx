@@ -1,11 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Brain, Sparkles, Zap, TrendingUp } from 'lucide-react';
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function AISolutionsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function AISolutionsSection({ data }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -16,28 +17,20 @@ export default function AISolutionsSection() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6" aria-hidden="true" />,
-      title: "Intelligent Automation",
-      description: "Streamline complex workflows with AI that learns and adapts to your business processes."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" aria-hidden="true" />,
-      title: "Predictive Analytics",
-      description: "Stay ahead of market trends with AI-powered forecasting and data-driven insights."
-    },
-    {
-      icon: <Sparkles className="w-6 h-6" aria-hidden="true" />,
-      title: "Custom Experiences",
-      description: "Create personalized customer journeys that evolve with every interaction."
-    },
-    {
-      icon: <Zap className="w-6 h-6" aria-hidden="true" />,
-      title: "Real-time Processing",
-      description: "Make instant decisions with AI that processes data at lightning speed."
-    }
-  ];
+  // Extract section data
+  const section = data?.solutions || {};
+  const heading = section.heading || {};
+  const description = section.description || [];
+  const cta = section.cta || {};
+  const featuresData = section.features || [];
+
+  const features = featuresData.map(f => ({
+    icon: f.icon,
+    title: f.title,
+    description: f.description
+  }));
+
+  if (!section.heading) return null;
 
   return (
     <section
@@ -76,26 +69,24 @@ export default function AISolutionsSection() {
           {/* Left Content */}
           <div className="space-y-8 md-mt-24">
             <h3 className="text-3xl lg:text-4xl font-bold leading-tight text-gray-900">
-              Transform Your Business with {" "}
+              {heading.prefix} {" "}
               <span className=" mt-2 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 bg-clip-text text-transparent">
-                Intelligent AI
+                {heading.highlight}
               </span>
             </h3>
 
-            <p className="text-md md:text-lg text-gray-600 leading-relaxed">
-              Think of AI development as building a digital brain for your business—one that learns, adapts, and gets smarter with every interaction. While off-the-shelf AI tools serve basic needs, custom AI development creates solutions that think exactly like your business does.
-            </p>
-
-            <p className="text-md md:text-lg text-gray-600 leading-relaxed">
-              At <span className="text-blue-600 font-semibold">OpenSoftAI</span>, we don't just code algorithms; we architect intelligent systems that solve real business problems. Whether you're looking to automate complex processes, predict market trends, or create entirely new customer experiences, our AI development services turn ambitious ideas into working reality.
-            </p>
+            {description.map((p, i) => (
+              <p key={i} className="text-md md:text-lg text-gray-600 leading-relaxed">
+                {p}
+              </p>
+            ))}
 
             <Link
-              href="/contact-us"
+              href={cta.link || "/contact-us"}
               className="group relative inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30 focus:ring-4 focus:ring-blue-300 focus:outline-none"
-              aria-label="Start your AI journey with OpenSoftAI"
+              aria-label={cta.text}
             >
-              <span className="relative z-10">Start Your AI Journey</span>
+              <span className="relative z-10">{cta.text}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity" />
             </Link>
           </div>
@@ -114,7 +105,7 @@ export default function AISolutionsSection() {
                   {/* Center Brain Icon */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/40 transform hover:rotate-12 transition-transform duration-500">
-                      <Brain className="w-16 h-16 text-white" aria-hidden="true" />
+                      <DynamicIcon name="Brain" className="w-16 h-16 text-white" aria-hidden="true" />
                     </div>
                   </div>
                 </div>
@@ -125,13 +116,13 @@ export default function AISolutionsSection() {
                 className="absolute top-8 right-8 w-16 h-16 bg-blue-100 backdrop-blur-md rounded-xl border border-blue-200 flex items-center justify-center animate-bounce shadow-lg shadow-blue-500/20"
                 style={{ animationDuration: '3s' }}
               >
-                <Zap className="w-8 h-8 text-blue-600" aria-hidden="true" />
+                <DynamicIcon name="Zap" className="w-8 h-8 text-blue-600" aria-hidden="true" />
               </div>
               <div
                 className="absolute bottom-12 left-8 w-16 h-16 bg-blue-100 backdrop-blur-md rounded-xl border border-blue-200 flex items-center justify-center animate-bounce shadow-lg shadow-blue-500/20"
                 style={{ animationDuration: '3s', animationDelay: '1s' }}
               >
-                <TrendingUp className="w-8 h-8 text-blue-600" aria-hidden="true" />
+                <DynamicIcon name="TrendingUp" className="w-8 h-8 text-blue-600" aria-hidden="true" />
               </div>
             </div>
 
@@ -144,7 +135,7 @@ export default function AISolutionsSection() {
                   aria-label={feature.title}
                 >
                   <div className="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4 group-hover:bg-blue-600 text-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                    {feature.icon}
+                    <DynamicIcon name={feature.icon} className="w-6 h-6" />
                   </div>
                   <h4 className="text-sm font-semibold mb-2 text-gray-900">{feature.title}</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">{feature.description}</p>

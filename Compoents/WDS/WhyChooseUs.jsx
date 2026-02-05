@@ -7,57 +7,44 @@ import {
   ShieldCheck,
   Rocket,
   BarChart3,
+  Zap,
 } from 'lucide-react';
 import Link from 'next/link';
 
-export default function WhyChooseWebsiteSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function WhyChooseWebsiteSection({ data }) {
   const [isVisible, setIsVisible] = useState(false);
+
+  // Extract section data
+  const section = data?.whyChooseUs || {};
+  const heading = section.heading || {};
+  const reasonsData = section.reasons || [];
+  const statsData = section.stats || [];
+  const cta = section.cta || {};
+
+  // Icon mapping
+  const iconMap = {
+    Code: Code,
+    Paintbrush: Paintbrush,
+    Search: Search,
+    ShieldCheck: ShieldCheck,
+    Rocket: Rocket,
+    BarChart3: BarChart3,
+    Zap: Zap,
+  };
+
+  const reasons = reasonsData.map(r => ({
+    icon: iconMap[r.icon] || Code,
+    title: r.title,
+    description: r.description,
+  }));
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const reasons = [
-    {
-      icon: Code,
-      title: 'Proven Expertise Across Industries & Technologies',
-      description:
-        'Our development team combines years of experience with the latest technology trends, creating high-performing websites built with modern frameworks and best practices.',
-    },
-    {
-      icon: Paintbrush,
-      title: 'Custom Design Meets Cutting-Edge Technology',
-      description:
-        'We don’t rely on cookie-cutter templates. Each website is uniquely designed for your brand and engineered to deliver both beauty and functionality.',
-    },
-    {
-      icon: Search,
-      title: 'SEO-First Development Approach',
-      description:
-        'We integrate search engine optimization from day one—technical SEO, clean structure, and optimized performance are core parts of our process.',
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Security-First Development Standards',
-      description:
-        'Security is never optional. We follow best practices and implement continuous monitoring, updates, and threat protection for your website.',
-    },
-    {
-      icon: Rocket,
-      title: 'End-to-End Development & Ongoing Support',
-      description:
-        'From concept to launch and beyond, we partner with you for long-term success. We ensure your website evolves with your business and technology changes.',
-    },
-    {
-      icon: BarChart3,
-      title: 'Performance Monitoring & Optimization',
-      description:
-        'We track, analyze, and optimize website performance to keep your site fast, reliable, and effective in achieving business goals.',
-    },
-//     Transparent Communication & Project Management
-// Regular updates, clear timelines, and honest communication keep you informed throughout development. You'll always understand project progress, upcoming milestones, and any decisions that need your input.
-
-  ];
+  if (!section.heading) return null;
 
   return (
     <section className="relative bg-gradient-to-b from-white via-blue-50 to-white py-24 px-4 overflow-hidden">
@@ -70,16 +57,15 @@ export default function WhyChooseWebsiteSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
+            }`}
         >
           <h2 className="text-2xl md:text-4xl font-bold mb-6">
-            Why Choose{' '}
+            {heading.main}{" "}
             <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              OpenSoftAI
+              {heading.highlight}
             </span>{' '}
-            for Website Development
+            {heading.suffix}
           </h2>
         </div>
 
@@ -90,11 +76,10 @@ export default function WhyChooseWebsiteSection() {
             return (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300 ${
-                  isVisible
+                className={`bg-white rounded-2xl p-8 shadow-lg border border-blue-100 transform hover:scale-105 hover:shadow-xl transition-all duration-300 ${isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
-                }`}
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Icon */}
@@ -118,16 +103,10 @@ export default function WhyChooseWebsiteSection() {
 
         {/* Bottom Stats */}
         <div
-          className={`grid md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-500 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`grid md:grid-cols-4 gap-6 mb-16 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
-          {[
-            { value: '7+', label: 'Industries Served' },
-            { value: '98%', label: 'Client Satisfaction' },
-            { value: '50+', label: 'Web Projects Delivered' },
-            { value: '100%', label: 'SEO-Optimized Websites' },
-          ].map((stat, index) => (
+          {statsData.map((stat, index) => (
             <div
               key={index}
               className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl"
@@ -142,12 +121,11 @@ export default function WhyChooseWebsiteSection() {
 
         {/* CTA */}
         <div
-          className={`text-center transition-all duration-1000 delay-700 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
+          className={`text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
         >
-          <Link href="/contact-us" className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
-            Build Your Website with Us
+          <Link href={cta.link || "/contact-us"} className="group bg-gradient-to-r from-blue-600 to-blue-800 text-white px-10 py-5 rounded-full font-bold text-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-3">
+            {cta.label || "Build Your Website with Us"}
             <svg
               className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300"
               fill="none"
@@ -167,13 +145,3 @@ export default function WhyChooseWebsiteSection() {
     </section>
   );
 }
-
-
-// Industries We Serve
-// Healthcare & Medical Practices – Professional websites with appointment scheduling, patient portals, and HIPAA-compliant functionality.
-// E-Commerce & Retail – Online stores with advanced product catalogs, inventory management, and multi-channel selling capabilities.
-// Professional Services – Lead-generating websites for law firms, accounting practices, consulting companies, and service providers.
-// Technology & SaaS – Product showcase sites, customer portals, and complex web applications for technology companies.
-// Real Estate – Property listing websites, agent portals, and lead management systems for real estate professionals.
-// Education & Training – Learning management systems, course platforms, and institutional websites for educational organizations.
-// Manufacturing & B2B – Product catalogs, dealer portals, and lead generation websites for manufacturing and industrial companies.

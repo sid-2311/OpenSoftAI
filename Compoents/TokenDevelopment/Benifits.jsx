@@ -1,46 +1,31 @@
 "use client"
-import { useState, useEffect } from 'react';
-import { ShieldCheck, Target, Zap, Globe, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { CheckCircle2 } from 'lucide-react';
+import DynamicIcon from "@/Compoents/DynamicIcon";
 import Link from 'next/link';
 
-export default function BusinessBenefitsSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function BusinessBenefitsSection({ data }) {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  const benefits = [
-    {
-      icon: ShieldCheck,
-      title: 'Launch Secure and Compliant Tokens',
-      description: 'Stop worrying about security vulnerabilities or regulatory issues. Our development process includes comprehensive testing, security best practices, and compliance frameworks that give you confidence in your token launch.',
-      metrics: ['100% Security Audited', 'Regulatory Compliant', 'Battle-Tested Code']
-    },
-    {
-      icon: Target,
-      title: 'Maximize Adoption with Strategic Tokenomics',
-      description: 'We help you design token mechanics that encourage the behaviors you want to see from your users. Whether that\'s long-term holding, active participation in governance, or increased platform usage – your tokenomics should work for your business goals.',
-      metrics: ['Custom Token Design', 'Behavioral Incentives', 'Growth-Focused Models']
-    },
-    {
-      icon: Zap,
-      title: 'Enable Advanced Features',
-      description: 'Staking rewards, governance voting, yield farming integration – we build tokens that can evolve with your platform. No need to rebuild everything when you want to add new features down the road.',
-      metrics: ['Staking & Rewards', 'Governance Systems', 'DeFi Integration']
-    },
-    {
-      icon: Globe,
-      title: 'Seamless Integration Everywhere',
-      description: 'Your token should work with popular wallets, be ready for exchange listings, and integrate smoothly with other DeFi protocols. We build with interoperability in mind so you\'re not locked into any single ecosystem.',
-      metrics: ['Multi-Wallet Support', 'Exchange Ready', 'Cross-Chain Compatible']
-    },
-    {
-      icon: AlertTriangle,
-      title: 'Reduce Technical Risk',
-      description: 'Smart contract bugs can be expensive mistakes. Our development process includes comprehensive testing, code reviews, and audit preparation to minimize technical risks before you go live.',
-      metrics: ['Comprehensive Testing', 'Code Reviews', 'Audit Preparation']
-    }
-  ];
+  // Extract section data
+  const section = data?.businessBenefits || {};
+  const heading = section.heading || {};
+  const benefitsData = section.benefits || [];
+  const cta = section.cta || {};
+  const floatingStat = section.floatingStat || {};
+
+  const benefits = benefitsData.map(b => ({
+    icon: b.icon || "ShieldCheck",
+    title: b.title,
+    description: b.description,
+    metrics: b.metrics || []
+  }));
 
   useEffect(() => {
+    if (benefits.length === 0) return;
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
@@ -54,7 +39,7 @@ export default function BusinessBenefitsSection() {
     return () => clearInterval(interval);
   }, [benefits.length]);
 
-  const ActiveIcon = benefits[activeTab].icon;
+  if (!section.heading || benefits.length === 0) return null;
 
   return (
     <section className="relative bg-white py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -69,12 +54,10 @@ export default function BusinessBenefitsSection() {
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          
-          
-          <h2 className="text-3xl  md:text-4xl font-bold text-gray-900 mb-6">
-            Business Benefits You Can{" "}
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {heading.main}{" "}
             <span className=" text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mt-2">
-              Actually Measure
+              {heading.highlight}
             </span>
           </h2>
         </div>
@@ -86,7 +69,7 @@ export default function BusinessBenefitsSection() {
             {benefits.map((benefit, idx) => {
               const Icon = benefit.icon;
               const isActive = activeTab === idx;
-              
+
               return (
                 <div
                   key={idx}
@@ -94,14 +77,13 @@ export default function BusinessBenefitsSection() {
                     setActiveTab(idx);
                     setProgress(0);
                   }}
-                  className={`relative cursor-pointer transition-all duration-500 ${
-                    isActive ? 'scale-105' : 'scale-100 hover:scale-102'
-                  }`}
+                  className={`relative cursor-pointer transition-all duration-500 ${isActive ? 'scale-105' : 'scale-100 hover:scale-102'
+                    }`}
                 >
                   {/* Progress Bar */}
                   {isActive && (
                     <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-100 rounded-r-full overflow-hidden">
-                      <div 
+                      <div
                         className="absolute top-0 left-0 right-0 bg-gradient-to-b from-blue-500 to-blue-600 transition-all duration-100 ease-linear"
                         style={{ height: `${progress}%` }}
                       ></div>
@@ -109,30 +91,25 @@ export default function BusinessBenefitsSection() {
                   )}
 
                   {/* Content */}
-                  <div className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${
-                    isActive 
-                      ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl' 
-                      : 'border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg'
-                  }`}>
+                  <div className={`pl-6 pr-6 py-6 rounded-2xl border-2 transition-all duration-300 ${isActive
+                    ? 'border-blue-500 bg-gradient-to-r from-blue-50 to-white shadow-xl'
+                    : 'border-blue-100 bg-white hover:border-blue-300 hover:shadow-lg'
+                    }`}>
                     <div className="flex items-start">
-                      <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                        isActive 
-                          ? 'bg-gradient-to-br from-blue-500 to-blue-600' 
-                          : 'bg-blue-100'
-                      }`}>
-                        <Icon className={`w-6 h-6 transition-colors duration-300 ${
-                          isActive ? 'text-white' : 'text-blue-600'
-                        }`} />
+                      <div className={`flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 ${isActive
+                        ? 'bg-gradient-to-br from-blue-500 to-blue-600'
+                        : 'bg-blue-100'
+                        }`}>
+                        <DynamicIcon name={benefit.icon} className={`w-6 h-6 transition-colors duration-300 ${isActive ? 'text-white' : 'text-blue-600'
+                          }`} />
                       </div>
                       <div className="ml-4 flex-1">
-                        <h3 className={`text-lg font-bold mb-1 transition-colors duration-300 ${
-                          isActive ? 'text-blue-600' : 'text-gray-900'
-                        }`}>
+                        <h3 className={`text-lg font-bold mb-1 transition-colors duration-300 ${isActive ? 'text-blue-600' : 'text-gray-900'
+                          }`}>
                           {benefit.title}
                         </h3>
-                        <p className={`text-sm transition-colors duration-300 ${
-                          isActive ? 'text-gray-700' : 'text-gray-600'
-                        }`}>
+                        <p className={`text-sm transition-colors duration-300 ${isActive ? 'text-gray-700' : 'text-gray-600'
+                          }`}>
                           {isActive ? benefit.description : benefit.description.substring(0, 80) + '...'}
                         </p>
                       </div>
@@ -147,24 +124,24 @@ export default function BusinessBenefitsSection() {
           <div className="relative">
             {/* Decorative Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-blue-100 to-indigo-50 rounded-3xl transform rotate-3"></div>
-            
+
             {/* Main Content Card */}
             <div className="relative bg-white rounded-3xl shadow-2xl p-10 border-2 border-blue-200 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
               {/* Icon Header */}
               <div className="flex items-center mb-8">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center transform rotate-3">
-                  <ActiveIcon className="w-8 h-8 text-white" />
+                <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center transform rotate-3">
+                  <DynamicIcon name={benefits[activeTab].icon} className="w-8 h-8 text-white" />
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900">
-                    {benefits[activeTab].title}
+                    {benefits[activeTab]?.title}
                   </h3>
                 </div>
               </div>
 
               {/* Description */}
               <p className="text-md md:text-lg text-gray-700 leading-relaxed mb-8">
-                {benefits[activeTab].description}
+                {benefits[activeTab]?.description}
               </p>
 
               {/* Metrics */}
@@ -172,13 +149,10 @@ export default function BusinessBenefitsSection() {
                 <h4 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-4">
                   Key Features
                 </h4>
-                {benefits[activeTab].metrics.map((metric, idx) => (
-                  <div 
+                {benefits[activeTab]?.metrics.map((metric, idx) => (
+                  <div
                     key={idx}
                     className="flex items-center transform transition-all duration-300 hover:translate-x-2"
-                    style={{ 
-                      animation: `slideIn 0.5s ease-out ${idx * 0.1}s both`
-                    }}
                   >
                     <div className="flex-shrink-0 w-6 h-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-white" />
@@ -197,9 +171,8 @@ export default function BusinessBenefitsSection() {
                   {benefits.map((_, idx) => (
                     <div
                       key={idx}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        idx === activeTab ? 'bg-blue-500 w-8' : 'bg-blue-200'
-                      }`}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${idx === activeTab ? 'bg-blue-500 w-8' : 'bg-blue-200'
+                        }`}
                     ></div>
                   ))}
                 </div>
@@ -207,36 +180,23 @@ export default function BusinessBenefitsSection() {
             </div>
 
             {/* Floating Stats */}
-            <div className="absolute -bottom-6 -right-2 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">98%</div>
-              <div className="text-blue-100 text-sm font-medium">Success Rate</div>
-            </div>
+            {floatingStat.value && (
+              <div className="absolute -bottom-6 -right-2 md:-right-6 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-6 shadow-2xl transform rotate-3 hover:rotate-6 transition-transform duration-300">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">{floatingStat.value}</div>
+                <div className="text-blue-100 text-sm font-medium">{floatingStat.label}</div>
+              </div>
+            )}
           </div>
         </div>
 
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <Link href="/contact-us" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-md md:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
-            Start Measuring Your Success
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-            </svg>
+          <Link href={cta.link || "/contact-us"} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-md md:text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1">
+            {cta.label || "Start Measuring Your Success"}
+            <DynamicIcon name={cta.icon || "ArrowRight"} className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </section>
   );
 }

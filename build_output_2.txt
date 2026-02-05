@@ -1,0 +1,25 @@
+   ▲ Next.js 15.5.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 28.7s
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/39) ...
+Failed to fetch page data for slug: saas-software-development
+Failed to fetch page data for slug: restaurant-management-system
+Failed to fetch page data for slug: saas-software-development
+Failed to fetch page data for slug: restaurant-management-system
+Failed to fetch page data for slug: inventory-management-software-development
+Failed to fetch page data for slug: hospital-management-system
+Failed to fetch page data for slug: inventory-management-software-development
+Failed to fetch page data for slug: hospital-management-system
+   Generating static pages (9/39) 
+Failed to fetch page data for slug: app-development-services
+Failed to fetch page data for slug: app-development-services
+Error occurred prerendering page "/smart-contract-development". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: MessageSquare is not defined
+    at k (C:\Users\SHASHANK GOYAL\Downloads\openbackerd\OpenSoftAI\.next\server\app\smart-contract-development\page.js:1:30597) {
+  digest: '3539494916'
+}
+Export encountered an error on /smart-contract-development/page: /smart-contract-development, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

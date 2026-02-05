@@ -1,10 +1,20 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function BlockchainHero() {
+// Dynamic data from API - use data prop to access section data
+
+export default function BlockchainHero({ data }) {
+  // Extract section data
+  const section = data?.blockchainHero || {};
+  const content = section.content || {};
+  const cta = content.cta || {};
+  const background = section.background || {};
+
+  if (!content.heading) return null;
+
   return (
     <section
       id="blockchain-hero"
@@ -12,44 +22,44 @@ export default function BlockchainHero() {
       aria-labelledby="blockchain-hero-heading"
     >
       {/* Background image with overlay */}
-      <Image
-        src="/images/cryptonet.jpg"
-        alt="Earth from space with glowing city lights at night"
-        fill
-        priority
-        className="object-cover"
-      />
-      {/* Animated background elements */}
-     
+      {background.image ? (
+        <Image
+          src={background.image}
+          alt={background.alt || "Blockchain Hero Background"}
+          fill
+          priority
+          className="object-cover"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-slate-900"></div>
+      )}
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 container mx-auto px-6 py-20 lg:py-32 h-full flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left content */}
           <div className="text-white space-y-8">
             <h1
               id="blockchain-hero-heading"
               className="text-3xl lg:text-4xl font-bold leading-tight"
             >
-              Crypto Wallet & Exchange Platform Development – Secure, Scalable, and Future-Ready
+              {content.heading}
             </h1>
-
-           
 
             {/* CTA Button */}
             <div className="pt-4">
               <Link
-                href="/contact-us"
+                href={cta.link || "/contact-us"}
                 className="group inline-flex items-center space-x-3 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
               >
-                <span>Book A Free Consultation</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <span>{cta.label || "Book A Free Consultation"}</span>
+                <DynamicIcon name={cta.icon || "ArrowRight"} className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
 
           {/* Right content - Visual element */}
-          
+
         </div>
       </div>
 

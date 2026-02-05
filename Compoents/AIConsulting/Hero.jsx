@@ -3,24 +3,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 
-export default function HeroSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function HeroSection({ data }) {
+  // Extract section data
+  const section = data?.hero || {};
+  const heading = section.heading || {};
+  const cta = section.cta || {};
+
   return (
     <>
-      {/* SEO Head */}
-      <Head>
-        <title>AI Consulting Services | Smart AI Adoption & Strategy</title>
-        <meta
-          name="description"
-          content="Get expert AI consulting services to implement intelligent automation, enhance productivity, and adopt AI with a smart business strategy."
-        />
-        <meta
-          name="keywords"
-          content="AI consulting, AI strategy, machine learning consulting, business AI adoption, automation consulting"
-        />
-      </Head>
-
       {/* HERO SECTION */}
       <section
         className="relative min-h-screen w-full overflow-hidden"
@@ -36,8 +29,8 @@ export default function HeroSection() {
         {/* DESKTOP: Background Image */}
         <div className="absolute inset-0 z-0 hidden sm:block">
           <Image
-            src="/images/ai-consulting.jpg"
-            alt="AI Consulting Services"
+            src={section.backgroundImage || "/images/ai-consulting.jpg"}
+            alt={section.title || "AI Consulting Services"}
             fill
             priority
             className="object-cover object-center"
@@ -56,17 +49,17 @@ export default function HeroSection() {
                 id="ai-consulting-heading"
                 className="text-3xl md:text-4xl    font-bold text-white mb-6 leading-tight"
               >
-                AI Consulting Services – Expert Guidance for Smarter AI Adoption
+                {section.title || "AI Consulting Services – Expert Guidance for Smarter AI Adoption"}
               </h1>
 
               {/* CTA BUTTON */}
               <Link
-                href="/contact-us"
+                href={cta.link || "/contact-us"}
                 className="group w-full sm:w-fit inline-flex items-center px-8 py-4 text-md font-semibold 
                 text-white bg-transparent border-2 border-white rounded-full
                 hover:bg-white hover:text-slate-900 transition-all duration-300 ease-in-out transform hover:scale-105"
               >
-                Book a Call
+                {cta.label || "Book a Call"}
                 <span className="ml-3 text-xl group-hover:translate-x-1 transition-transform duration-300">
                   →
                 </span>

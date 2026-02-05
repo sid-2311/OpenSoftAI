@@ -2,76 +2,39 @@
 import { useState } from "react";
 import Link from "next/link";
 import {
-  Rocket,
-  Phone,
-  Mail,
   Calendar,
-  CheckCircle,
   ArrowRight,
-  Sparkles,
-  MessageSquare,
 } from "lucide-react";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function CTAContactSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function CTAContactSection({ data }) {
   const [hoveredStep, setHoveredStep] = useState(null);
 
-  const steps = [
-    {
-      number: "01",
-      title: "Free AI Strategy Consultation",
-      description:
-        "We’ll analyze your business needs and identify AI opportunities.",
-      icon: <MessageSquare className="w-6 h-6" />,
-    },
-    {
-      number: "02",
-      title: "Custom Solution Design",
-      description: "Detailed project roadmap with timeline and deliverables.",
-      icon: <Sparkles className="w-6 h-6" />,
-    },
-    {
-      number: "03",
-      title: "Proof of Concept Development",
-      description: "Small-scale prototype to validate the approach.",
-      icon: <CheckCircle className="w-6 h-6" />,
-    },
-    {
-      number: "04",
-      title: "Full Development & Deployment",
-      description: "Complete AI solution built for your environment.",
-      icon: <Rocket className="w-6 h-6" />,
-    },
-    {
-      number: "05",
-      title: "Ongoing Optimization",
-      description: "Continuous improvement and scaling support.",
-      icon: <ArrowRight className="w-6 h-6" />,
-    },
-  ];
+  // Extract section data
+  const section = data?.cta || {};
+  const heading = section.heading || {};
+  const timelineSteps = section.timelineSteps || [];
+  const contactCard = section.contactCard || {};
+  const contactMethodsData = contactCard.methods || [];
 
-  const contactMethods = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: "Call Us",
-      value: "+91 9256497999",
-      link: "tel:+919256497999",
-      gradient: "from-blue-500 to-blue-600",
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      value: "info@opensoftai.com",
-      link: "mailto:info@opensoftai.com",
-      gradient: "from-blue-600 to-blue-700",
-    },
-    {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Schedule a Consultation",
-      value: "Book your free AI strategy session",
-      link: "/contact-us",
-      gradient: "from-blue-700 to-blue-800",
-    },
-  ];
+  const steps = timelineSteps.map(step => ({
+    number: step.number,
+    title: step.title,
+    description: step.description,
+    icon: step.icon,
+  }));
+
+  const contactMethods = contactMethodsData.map(method => ({
+    icon: method.icon,
+    title: method.title,
+    value: method.value,
+    link: method.link,
+    gradient: method.gradient || "from-blue-500 to-blue-600",
+  }));
+
+  if (!section.heading) return null;
 
   return (
     <section
@@ -81,9 +44,9 @@ export default function CTAContactSection() {
       {/* HEADER */}
       <div className="max-w-7xl mx-auto text-center mb-20">
         <h2 className="text-3xl lg:text-5xl font-bold text-gray-900">
-          Ready to Build Your{" "}
+          {heading.main}{" "}
           <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-            Intelligent Future?
+            {heading.highlight}
           </span>
         </h2>
       </div>
@@ -102,9 +65,8 @@ export default function CTAContactSection() {
                 key={index}
                 onMouseEnter={() => setHoveredStep(index)}
                 onMouseLeave={() => setHoveredStep(null)}
-                className={`relative flex items-start gap-4 md:gap-0 ${
-                  isLeft ? "md:justify-start" : "md:justify-end"
-                }`}
+                className={`relative flex items-start gap-4 md:gap-0 ${isLeft ? "md:justify-start" : "md:justify-end"
+                  }`}
               >
                 {/* ICON */}
                 <div
@@ -118,24 +80,22 @@ export default function CTAContactSection() {
                     ${hoveredStep === index ? "scale-110 rotate-6" : ""}
                   `}
                 >
-                  {step.icon}
+                  <DynamicIcon name={step.icon} className="w-6 h-6" />
                 </div>
 
                 {/* CARD */}
                 <div
-                  className={`w-full md:w-5/12 ${
-                    isLeft
-                      ? "md:pr-12 md:text-right"
-                      : "md:pl-12 md:text-left"
-                  }`}
+                  className={`w-full md:w-5/12 ${isLeft
+                    ? "md:pr-12 md:text-right"
+                    : "md:pl-12 md:text-left"
+                    }`}
                 >
                   <div
                     className={`bg-white rounded-2xl p-6 border transition-all duration-300
-                    ${
-                      hoveredStep === index
+                    ${hoveredStep === index
                         ? "border-blue-400 shadow-xl shadow-blue-500/30 -translate-y-1"
                         : "border-blue-100 shadow-lg"
-                    }`}
+                      }`}
                   >
                     <div className="text-sm font-mono text-blue-600 mb-1">
                       STEP {step.number}
@@ -156,10 +116,10 @@ export default function CTAContactSection() {
       <div className="relative max-w-7xl mx-auto text-center">
         <div className="relative bg-gradient-to-br from-slate-800 via-blue-900 to-slate-900 rounded-3xl p-12 lg:p-16 shadow-2xl border border-blue-700/50">
           <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+            {contactCard.heading}
           </h3>
           <p className="text-blue-100 text-lg mb-12">
-            Choose your preferred way to connect with our AI experts
+            {contactCard.subheading}
           </p>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -172,7 +132,7 @@ export default function CTAContactSection() {
                 <div
                   className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} flex items-center justify-center text-white mb-6`}
                 >
-                  {method.icon}
+                  <DynamicIcon name={method.icon} className="w-6 h-6" />
                 </div>
                 <h4 className="text-lg font-bold text-white mb-2">
                   {method.title}
@@ -183,11 +143,11 @@ export default function CTAContactSection() {
           </div>
 
           <Link
-            href="/contact-us"
+            href={contactCard.button?.link || "/contact-us"}
             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-900 font-bold rounded-xl hover:scale-105 transition"
           >
             <Calendar className="w-5 h-5" />
-            Book Your Free AI Strategy Session
+            {contactCard.button?.text}
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

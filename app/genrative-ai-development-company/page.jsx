@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import BusinessBenefits from "@/Compoents/GenrativeAi/BusinessBenifits";
 import CTASection from "@/Compoents/GenrativeAi/CTA";
 import GenerativeAIExpertiseSection from "@/Compoents/GenrativeAi/Expertise";
@@ -9,51 +10,39 @@ import TestAIGenrative from "@/Compoents/GenrativeAi/Testimonails";
 import WhyChooseUsSection from "@/Compoents/GenrativeAi/WhyChoose";
 
 // ✅ SEO Metadata with Canonical URL
-export const metadata = {
-  title: "Innovate with Generative AI Development Company in India | Opensoft AI",
-  description: "Unlock creativity and automation with Opensoft AI’s Generative AI development services. Build intelligent models that design, create, and innovate smarter.",
-  keywords: [
-    "Generative AI",
-    "AI content generation",
-    "AI automation",
-    "AI innovation",
-    "machine learning",
-    "AI for business",
-    "AI models",
-    "Generative AI development",
-  ],
-  alternates: {
-    canonical: "https://opensoftai.com/genrative-ai-development-company", // ✅ Canonical URL
-  },
-  openGraph: {
-    title: "Innovate with Generative AI Development Company in India | Opensoft AI",
-    description: "Unlock creativity and automation with Opensoft AI’s Generative AI development services. Build intelligent models that design, create, and innovate smarter.",
-    url: "https://opensoftai.com/genrative-ai-development-company",
-   
-    locale: "en_US",
-    type: "website",
-  },
 
-  robots: {
-    index: true,
-    follow: true,
-  },
- 
- 
-};
+const SLUG = 'genrative-ai-development-company';
 
-export default function GenrativeAi() {
+// Generate dynamic metadata from database
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
+
+// Fetch and render page with database content
+export default async function Page() {
+  const pageData = await getPageData(SLUG);
+  
+  if (!pageData) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <p>Page data not found</p>
+    </div>;
+  }
+
+  // Extract content data
+  const content =  pageData.content || {};
+
   return (
     <>
-      <HeroSection />
-      <GenerativeAISection />
-      <GenerativeAIExpertiseSection />
-      <GenerativeAICapabilities />
-      <BusinessBenefits />
-      <WhyChooseUsSection />
-      <Industries />
-      <TestAIGenrative />
-      <CTASection />
+      <HeroSection data={content} />
+      <GenerativeAISection data={content} />
+      <GenerativeAIExpertiseSection data={content} />
+      <GenerativeAICapabilities data={content} />
+      <BusinessBenefits data={content} />
+      <WhyChooseUsSection data={content} />
+      <Industries data={content} />
+      <TestAIGenrative data={content} />
+      <CTASection data={content} />
     </>
   );
 }

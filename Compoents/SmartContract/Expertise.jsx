@@ -2,8 +2,22 @@
 import React, { useState, useEffect } from 'react';
 import { Award, Shield, TrendingUp, Users, CheckCircle, Zap, Lock, Target, Sparkles, BarChart } from 'lucide-react';
 
-export default function ExpertiseSection() {
+// Dynamic data from API - use data prop to access section data
+
+export default function ExpertiseSection({ data }) {
   const [activeTab, setActiveTab] = useState(0);
+
+  // Extract section data
+  const section = data?.expertise || {};
+  const header = section.header || {};
+  const counters = section.counters || {};
+  const achievementsData = section.achievements || [];
+  const differentiatorsData = section.differentiators || [];
+  const experienceData = section.experience || [];
+  const processData = section.process || [];
+  const useCases = section.useCases || [];
+  const cta = section.cta || {};
+
   const [countUp, setCountUp] = useState({ years: 0, contracts: 0, assets: 0 });
 
   // Animated counter effect
@@ -11,80 +25,58 @@ export default function ExpertiseSection() {
     const duration = 2000;
     const steps = 60;
     const increment = duration / steps;
-    
+
     let currentStep = 0;
     const timer = setInterval(() => {
       currentStep++;
       const progress = currentStep / steps;
-      
+
       setCountUp({
-        years: Math.floor(10 * progress),
-        contracts: Math.floor(200 * progress),
-        assets: Math.floor(1 * progress)
+        years: Math.floor((counters.years || 10) * progress),
+        contracts: Math.floor((counters.contracts || 200) * progress),
+        assets: Math.floor((counters.assets || 1) * progress)
       });
-      
+
       if (currentStep >= steps) clearInterval(timer);
     }, increment);
-    
+
     return () => clearInterval(timer);
-  }, []);
+  }, [counters]);
 
-  const differentiators = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security First",
-      description: "Rigorous testing, formal verification, and extensive security analysis before mainnet deployment",
-      color: "from-blue-500 to-blue-600"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Built to Last",
-      description: "Code that withstands market cycles and evolving security landscapes",
-      color: "from-indigo-500 to-indigo-600"
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Elegant Simplicity",
-      description: "Simple solutions without unnecessary complexity that creates attack vectors",
-      color: "from-blue-600 to-blue-700"
-    }
-  ];
+  // Icon mapping
+  const iconMap = {
+    Shield: <Shield className="w-6 h-6" />,
+    Zap: <Zap className="w-6 h-6" />,
+    Target: <Target className="w-6 h-6" />,
+    TrendingUp: <TrendingUp className="w-5 h-5" />,
+    Lock: <Lock className="w-5 h-5" />,
+    Sparkles: <Sparkles className="w-5 h-5" />,
+    Users: <Users className="w-5 h-5" />,
+    Award: <Award className="w-8 h-8" />,
+    CheckCircle: <CheckCircle className="w-8 h-8" />,
+    BarChart: <BarChart className="w-8 h-8" />,
+  };
 
-  const experience = [
-    { icon: <TrendingUp className="w-5 h-5" />, text: "Multiple market cycles navigated" },
-    { icon: <Lock className="w-5 h-5" />, text: "Every type of exploit analyzed" },
-    { icon: <Sparkles className="w-5 h-5" />, text: "Simple token contracts to complex DeFi protocols" },
-    { icon: <Users className="w-5 h-5" />, text: "Startups to established enterprises" }
-  ];
+  const achievements = achievementsData.map(a => ({
+    number: `${a.prefix || ""}${countUp[a.key] || 0}${a.suffix || "+"}`,
+    label: a.label,
+    sublabel: a.sublabel,
+    icon: iconMap[a.icon] || <Award className="w-8 h-8" />
+  }));
 
-  const achievements = [
-    {
-      number: `${countUp.years}+`,
-      label: "Years of Expertise",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      number: `${countUp.contracts}+`,
-      label: "Smart Contracts Deployed",
-      sublabel: "Zero post-audit vulnerabilities",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      number: `$${countUp.assets}B+`,
-      label: "Assets Secured",
-      sublabel: "Without security incidents",
-      icon: <BarChart className="w-8 h-8" />
-    }
-  ];
+  const differentiators = differentiatorsData.map(d => ({
+    icon: iconMap[d.icon] || <Shield className="w-6 h-6" />,
+    title: d.title,
+    description: d.description,
+    color: d.color || "from-blue-500 to-blue-600"
+  }));
 
-  const useCases = [
-    "Token Contracts",
-    "DeFi Protocols",
-    "NFT Marketplaces",
-    "Supply Chain Automation",
-    "Governance Systems",
-    "Staking Mechanisms"
-  ];
+  const experience = experienceData.map(e => ({
+    icon: iconMap[e.icon] || <TrendingUp className="w-5 h-5" />,
+    text: e.text
+  }));
+
+  if (!section.header) return null;
 
   return (
     <section className="relative bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 py-20 px-4 overflow-hidden">
@@ -98,25 +90,22 @@ export default function ExpertiseSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-         
-          
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              10 Years
+              {header.highlight}
             </span>
-            {' '}of Smart Contract Excellence
+            {' '}{header.title}
           </h2>
-          
+
           <p className="text-md text-blue-200 max-w-3xl mx-auto leading-relaxed">
-            We've built smart contracts across every major use case – from simple tokens to complex 
-            DeFi protocols managing hundreds of millions in assets.
+            {header.description}
           </p>
         </div>
 
         {/* Achievements Stats */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {achievements.map((achievement, index) => (
-            <div 
+            <div
               key={index}
               className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
             >
@@ -143,12 +132,12 @@ export default function ExpertiseSection() {
             <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Sparkles className="w-8 h-8 text-blue-400" />
-                What Makes Us Different
+                {section.differentiatorsTitle || "What Makes Us Different"}
               </h3>
-              
+
               <div className="space-y-4">
                 {differentiators.map((item, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="group bg-slate-800/50 rounded-xl p-6 border border-blue-500/10 hover:border-blue-400/30 transition-all duration-300 hover:translate-x-2"
                   >
@@ -184,41 +173,27 @@ export default function ExpertiseSection() {
           <div className="space-y-6">
             {/* Our Process */}
             <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Our Development Process</h3>
-              
+              <h3 className="text-2xl font-bold text-white mb-6">{section.processTitle || "Our Development Process"}</h3>
+
               <div className="space-y-4">
-                <div className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-lg border border-blue-500/10">
-                  <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">1</div>
-                  <div>
-                    <div className="text-white font-semibold mb-1">Rigorous Testing</div>
-                    <div className="text-blue-200 text-sm">Comprehensive test coverage across all scenarios</div>
+                {processData.map((step, idx) => (
+                  <div key={idx} className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-lg border border-blue-500/10">
+                    <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">{step.step}</div>
+                    <div>
+                      <div className="text-white font-semibold mb-1">{step.title}</div>
+                      <div className="text-blue-200 text-sm">{step.description}</div>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-lg border border-blue-500/10">
-                  <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">2</div>
-                  <div>
-                    <div className="text-white font-semibold mb-1">Formal Verification</div>
-                    <div className="text-blue-200 text-sm">Mathematical proof of correctness where appropriate</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 p-4 bg-slate-800/50 rounded-lg border border-blue-500/10">
-                  <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold flex-shrink-0">3</div>
-                  <div>
-                    <div className="text-white font-semibold mb-1">Security Analysis</div>
-                    <div className="text-blue-200 text-sm">Extensive review before mainnet deployment</div>
-                  </div>
-                </div>
+                ))}
               </div>
 
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 rounded-lg border border-blue-400/30">
-                <p className="text-blue-100 text-sm leading-relaxed">
-                  <strong className="text-white">Real-world experience matters.</strong> We've seen what happens when 
-                  projects rush to market with inadequately tested contracts. Our entire workflow is built around 
-                  preventing those disasters.
-                </p>
-              </div>
+              {section.processNote && (
+                <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 rounded-lg border border-blue-400/30">
+                  <p className="text-blue-100 text-sm leading-relaxed">
+                    {section.processNote}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Use Cases */}
@@ -226,7 +201,7 @@ export default function ExpertiseSection() {
               <h3 className="text-2xl font-bold text-white mb-6">Proven Across Use Cases</h3>
               <div className="grid grid-cols-2 gap-3">
                 {useCases.map((useCase, index) => (
-                  <div 
+                  <div
                     key={index}
                     className="flex items-center gap-2 bg-slate-800/50 rounded-lg p-3 border border-blue-500/10 hover:border-blue-400/30 transition-colors duration-300"
                   >
@@ -242,11 +217,10 @@ export default function ExpertiseSection() {
         {/* Bottom CTA Section */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 text-center shadow-2xl shadow-blue-500/20">
           <h3 className="text-2xl font-bold text-white mb-4">
-            The Best Smart Contracts Are Often The Simplest Ones
+            {cta.title}
           </h3>
           <p className="text-blue-100 text-md md:text-lg max-w-4xl mx-auto leading-relaxed">
-            Elegant solutions that do exactly what they need to do without unnecessary complexity 
-            that creates attack vectors. That's the OpenSoftAI difference.
+            {cta.description}
           </p>
         </div>
       </div>

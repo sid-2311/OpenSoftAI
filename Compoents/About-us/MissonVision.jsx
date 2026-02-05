@@ -1,64 +1,59 @@
-"use client"; // 👈 Client component (for interactivity and smooth rendering)
+"use client";
 
 import React from "react";
-import Image from "next/image"; // ✅ Next.js image optimization
+import Image from "next/image";
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function MissionVisionSection() {
+export default function MissionVisionSection({ data }) {
+  if (!data) return null;
+
+  const {
+    ariaLabelledBy,
+    header,
+    mission,
+    vision,
+    image,
+    whatWeDo,
+  } = data;
+
   return (
     <section
       className="container mx-auto px-6 py-16"
-      aria-labelledby="mission-vision-title"
+      aria-labelledby={ariaLabelledBy}
     >
       {/* 🔹 Mission & Vision Section */}
       <div className="grid md:grid-cols-2 gap-10 items-center mt-0 mb-20">
         {/* Left side text */}
         <div className="text-left space-y-6 text-gray-700 leading-relaxed">
           <h2
-            id="mission-vision-title"
+            id={ariaLabelledBy}
             className="text-3xl md:text-4xl font-bold mb-8 text-center md:text-left"
           >
-            Our Mission & Vision
+            {header.title}
           </h2>
 
           {/* Mission */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-            <p>
-              At <strong>OpenSoftAI</strong>, our mission is to help businesses
-              scale and innovate using cutting-edge Artificial Intelligence,
-              Blockchain, and custom software development solutions. We don’t
-              just build technology — we build competitive advantages that help
-              our clients succeed in rapidly changing markets.
-            </p>
-            <p>
-              Every project we take on is guided by a simple question:{" "}
-              <em>
-                “How will this technology make our client’s business stronger?”
-              </em>{" "}
-              Whether we’re developing an AI system that automates complex
-              workflows, building a blockchain platform that creates new revenue
-              opportunities, or crafting custom software that streamlines
-              operations — our goal is always measurable business impact.
-            </p>
+            <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+              <DynamicIcon name={mission.icon || "Target"} className="w-6 h-6 text-blue-600" />
+              {mission.title}
+            </h3>
+
+            {mission.paragraphs.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
 
           {/* Vision */}
           <div>
-            <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-            <p>
-              Our vision is to become a global leader in AI and blockchain-driven
-              digital transformation. We envision a world where businesses of all
-              sizes can leverage the most advanced technologies to compete,
-              innovate, and grow — regardless of their internal technical
-              resources or geographic location.
-            </p>
-            <p>
-              We’re building toward a future where emerging technologies are
-              accessible, practical, and transformative for every business ready
-              to embrace them. That future requires partners who can navigate
-              technical complexity while keeping business goals at the center of
-              every decision.
-            </p>
+            <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
+              <DynamicIcon name={vision.icon || "Eye"} className="w-6 h-6 text-blue-600" />
+              {vision.title}
+            </h3>
+
+            {vision.paragraphs.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
           </div>
         </div>
 
@@ -66,12 +61,11 @@ export default function MissionVisionSection() {
         <div className="flex justify-center">
           <div className="relative">
             <Image
-              src="/images/business-team-collaboration-meeting-in-modern-office.webp"
-              alt="business team collaboration meeting in modern office"
-              width={400}
-              height={400}
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
               className="rounded-full shadow-lg"
-              loading="lazy"
             />
           </div>
         </div>
@@ -80,11 +74,10 @@ export default function MissionVisionSection() {
       {/* 🔹 What We Do Section */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold" id="what-we-do-title">
-          What We Do
+          {whatWeDo.title}
         </h2>
         <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
-          Empowering organizations with next-generation technology solutions that
-          deliver measurable impact and long-term growth.
+          {whatWeDo.description}
         </p>
       </div>
 
@@ -92,51 +85,23 @@ export default function MissionVisionSection() {
         className="grid md:grid-cols-3 gap-8"
         aria-labelledby="what-we-do-title"
       >
-        {/* Custom Software */}
-        <div
-          className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
-          aria-label="Custom Software Development"
-        >
-          <h3 className="text-xl font-semibold mb-3">
-            Custom Software Development
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            We build scalable web, mobile, and enterprise software applications
-            tailored to your business. From startup MVPs to complex system
-            integrations, we create software that fits your exact requirements
-            and helps you scale.
-          </p>
-        </div>
-
-        {/* AI Services */}
-        <div
-          className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
-          aria-label="AI and Automation Services"
-        >
-          <h3 className="text-xl font-semibold mb-3">
-            AI & Automation Services
-          </h3>
-          <p className="text-gray-600 leading-relaxed">
-            We develop AI agents, chatbots, business copilots, and automation
-            systems that handle repetitive tasks — freeing your team to focus on
-            growth and innovation. Our AI consulting ensures real-world impact
-            for your business.
-          </p>
-        </div>
-
-        {/* Blockchain */}
-        <div
-          className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
-          aria-label="Blockchain Development"
-        >
-          <h3 className="text-xl font-semibold mb-3">Blockchain Development</h3>
-          <p className="text-gray-600 leading-relaxed">
-            We go beyond crypto. Our blockchain solutions include wallets, DeFi
-            platforms, smart contracts, NFT marketplaces, and supply chain
-            transparency systems — designed for scalability, security, and real
-            business value.
-          </p>
-        </div>
+        {whatWeDo.services.map((service, i) => (
+          <div
+            key={i}
+            className="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition"
+            aria-label={service.ariaLabel}
+          >
+            <div className="mb-4">
+              <DynamicIcon name={service.icon || "Cpu"} className="w-10 h-10 text-blue-600" />
+            </div>
+            <h3 className="text-xl font-semibold mb-3">
+              {service.title}
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

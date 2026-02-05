@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import AISolutionsSection from "@/Compoents/AiServices/AiSolutions";
 import BusinessImpactSection from "@/Compoents/AiServices/BusinessImpact";
 import CTAContactSection from "@/Compoents/AiServices/CTA";
@@ -7,50 +8,37 @@ import IndustriesWeKnow from "@/Compoents/AiServices/Industries";
 import TestAIServices from "@/Compoents/AiServices/Testimonails";
 import WhyChooseSection from "@/Compoents/AiServices/WhyChoose";
 
-// ✅ SEO Metadata with Canonical URL
-export const metadata = {
-  title: "Custom AI Development Solutions | Build Smarter with Opensoft AI",
-  description:
-    "Accelerate innovation with Opensoft AI’s custom AI development solutions. We design intelligent software powered by automation, data, and machine learning.",
-  keywords: [
-    "AI services",
-    "artificial intelligence",
-    "machine learning",
-    "business automation",
-    "AI solutions",
-    "AI consulting",
-    "AI for business",
-  ],
-  alternates: {
-    canonical: "https://opensoftai.com/ai-development-service", // ✅ Canonical URL
-  },
-  openGraph: {
-    title: "Custom AI Development Solutions | Build Smarter with Opensoft AI",
-    description: "Accelerate innovation with Opensoft AI’s custom AI development solutions. We design intelligent software powered by automation, data, and machine learning.",
-    url: "https://opensoftai.com/ai-development-service",
-   
-    
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  
-};
+const SLUG = 'ai-development-service';
 
-export default function AiServices() {
+// Generate dynamic metadata from database
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
+
+// Fetch and render page with database content
+export default async function AIServicesPage() {
+  const pageData = await getPageData(SLUG);
+
+  if (!pageData) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <p>Page data not found</p>
+    </div>;
+  }
+
+  // Extract sections data
+  const sections = pageData.content?.sections || {};
+
   return (
     <>
-      <HeroSection />
-      <AISolutionsSection />
-      <AIExpertiseSection />
-      <BusinessImpactSection />
-      <WhyChooseSection />
-      <IndustriesWeKnow />
-      <TestAIServices />
-      <CTAContactSection />
+      <HeroSection data={sections} />
+      <AISolutionsSection data={sections} />
+      <AIExpertiseSection data={sections} />
+      <BusinessImpactSection data={sections} />
+      <WhyChooseSection data={sections} />
+      <IndustriesWeKnow data={sections} />
+      <TestAIServices data={sections} />
+      <CTAContactSection data={sections} />
     </>
   );
 }

@@ -1,0 +1,617 @@
+{
+    "success": true,
+    "data": {
+        "_id": "6966147593b696c13bb62a01",
+        "slug": "software-development-company",
+        "__v": 0,
+        "content": {
+            "page": "Software Development",
+            "metadata": {
+                "title": "Software Development Solution Company in India | Opensoft AI",
+                "description": "Opensoft AI is a leading software development solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
+                "keywords": [
+                    "custom software development",
+                    "enterprise software solutions",
+                    "web application development",
+                    "software consulting",
+                    "OpenSoftAI",
+                    "business automation",
+                    "SaaS development",
+                    "software engineering"
+                ],
+                "openGraph": {
+                    "title": "Software Development Solution Company in India | Opensoft AI",
+                    "description": "Opensoft AI is a leading software development solution company in India offering custom web, mobile, and AI-driven solutions to help businesses innovate and scale.",
+                    "url": "https://opensoftai.com/software-development-company",
+                    "type": "website",
+                    "images": [
+                        {
+                            "url": "https://opensoftai.com/soft.avif",
+                            "alt": "Custom Software Development Banner"
+                        }
+                    ]
+                },
+                "robots": {
+                    "index": true,
+                    "follow": true
+                },
+                "canonical": "https://opensoftai.com/software-development-company"
+            },
+            "sections": {
+                "heroSection": {
+                    "ariaLabelledBy": "hero-heading",
+                    "background": {
+                        "desktopImage": {
+                            "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306328/migrated-assets/t2gkhwxiqdqdbc4x8hpz.jpg",
+                            "alt": "software-developers-collaborating-on-project"
+                        },
+                        "overlay": "bg-black/40",
+                        "mobileGradient": "from-slate-900 via-slate-800 to-indigo-900"
+                    },
+                    "content": {
+                        "heading": "Custom Software Development Services – Scalable, Secure, and Tailored to Your Business",
+                        "description": "Build software that grows with your business. OpenSoftAI delivers custom web, mobile, and enterprise software solutions designed for your specific needs and industry requirements."
+                    },
+                    "cta": {
+                        "label": "Book A Free Consultation",
+                        "href": "/contact-us"
+                    }
+                },
+                "businessTransformationSection": {
+                    "badge": "Our Approach",
+                    "heading": {
+                        "text": "Transforming Business Operations Smart Software Solutions",
+                        "highlight": "Smart Software Solutions"
+                    },
+                    "description": [
+                        "At OpenSoftAI, we understand that off-the-shelf software rarely fits perfectly. Every business has unique processes, specific challenges, and distinct goals that require customized solutions. That's why we specialize in building software that works exactly the way your business needs it to work.",
+                        "Our software development expertise spans web applications that drive customer engagement, mobile apps that connect you with users anywhere, and enterprise software systems that streamline complex business operations. We've helped startups launch their first products, enabled growing companies to scale efficiently, and supported enterprises in digital transformation initiatives that deliver measurable results."
+                    ],
+                    "features": [
+                        {
+                            "id": 1,
+                            "title": "Web Applications",
+                            "description": "Drive customer engagement with powerful, responsive web solutions",
+                            "icon": "Code"
+                        },
+                        {
+                            "id": 2,
+                            "title": "Mobile Apps",
+                            "description": "Connect with users anywhere through native and cross-platform apps",
+                            "icon": "Smartphone"
+                        },
+                        {
+                            "id": 3,
+                            "title": "Enterprise Systems",
+                            "description": "Streamline complex operations with robust enterprise software",
+                            "icon": "Building2"
+                        }
+                    ],
+                    "achievements": [
+                        {
+                            "id": 1,
+                            "label": "Startup Success",
+                            "description": "Helped startups launch their first products",
+                            "icon": "Zap"
+                        },
+                        {
+                            "id": 2,
+                            "label": "Scaling Growth",
+                            "description": "Enabled companies to scale efficiently",
+                            "icon": "TrendingUp"
+                        },
+                        {
+                            "id": 3,
+                            "label": "Digital Transformation",
+                            "description": "Supported enterprises with measurable results",
+                            "icon": "Users"
+                        }
+                    ],
+                    "closingStatement": "Whether you need a complete business management system, a customer-facing application, or specialized software for your industry, we build solutions that combine powerful functionality with intuitive user experiences."
+                },
+                "softwareSolutionsSection": {
+                    "header": {
+                        "title": "Core Software Solutions We Deliver",
+                        "description": "Comprehensive software solutions tailored to transform your business operations and drive growth across every industry."
+                    },
+                    "categories": [
+                        {
+                            "id": "all",
+                            "label": "All Solutions"
+                        },
+                        {
+                            "id": "enterprise",
+                            "label": "Enterprise"
+                        },
+                        {
+                            "id": "business",
+                            "label": "Business"
+                        },
+                        {
+                            "id": "education",
+                            "label": "Education"
+                        },
+                        {
+                            "id": "healthcare",
+                            "label": "Healthcare"
+                        },
+                        {
+                            "id": "hospitality",
+                            "label": "Hospitality"
+                        },
+                        {
+                            "id": "retail",
+                            "label": "Retail"
+                        },
+                        {
+                            "id": "finance",
+                            "label": "Finance"
+                        },
+                        {
+                            "id": "specialized",
+                            "label": "Specialized"
+                        }
+                    ],
+                    "services": [
+                        {
+                            "id": 1,
+                            "title": "ERP Software Development",
+                            "description": "Comprehensive enterprise resource planning systems that integrate all your business processes – from finance and HR to inventory and customer management.",
+                            "category": "enterprise",
+                            "icon": "Code",
+                            "link": "/erp-software-development"
+                        },
+                        {
+                            "id": 2,
+                            "title": "SaaS Software Development",
+                            "description": "Cloud-based software platforms that generate recurring revenue while serving your customers efficiently with subscription management and multi-tenancy.",
+                            "category": "enterprise",
+                            "icon": "Cloud",
+                            "link": "/saas-software-development"
+                        },
+                        {
+                            "id": 3,
+                            "title": "Warehouse Management Software",
+                            "description": "Optimize inventory tracking, order fulfillment, and logistics operations with custom warehouse management systems that reduce costs and improve accuracy.",
+                            "category": "business",
+                            "icon": "Package",
+                            "link": "/services/warehouse-management"
+                        },
+                        {
+                            "id": 4,
+                            "title": "HRMS Software Development",
+                            "description": "Streamline human resource management with integrated systems covering recruitment, payroll, performance management, and compliance reporting.",
+                            "category": "business",
+                            "icon": "Users",
+                            "link": "/hospital-management-system"
+                        },
+                        {
+                            "id": 5,
+                            "title": "Inventory Management Software",
+                            "description": "Real-time inventory tracking, automated reordering, supplier management, and comprehensive reporting systems that prevent stockouts.",
+                            "category": "business",
+                            "icon": "Package",
+                            "link": "/inventory-management-software-development"
+                        },
+                        {
+                            "id": 6,
+                            "title": "Accounting & Billing Software",
+                            "description": "Automated financial management systems with invoicing, expense tracking, tax compliance, and financial reporting that integrate seamlessly.",
+                            "category": "business",
+                            "icon": "FileText",
+                            "link": "/services/accounting-billing"
+                        },
+                        {
+                            "id": 7,
+                            "title": "POS System Software",
+                            "description": "Modern point-of-sale solutions for retail and hospitality businesses, featuring payment processing, inventory integration, and sales analytics.",
+                            "category": "retail",
+                            "icon": "ShoppingCart",
+                            "link": "/pos-system-software-development"
+                        },
+                        {
+                            "id": 8,
+                            "title": "Employee Tracking Software",
+                            "description": "Monitor productivity, project progress, and resource allocation with time tracking, task management, and performance analytics.",
+                            "category": "business",
+                            "icon": "Clock",
+                            "link": "/services/employee-tracking"
+                        },
+                        {
+                            "id": 9,
+                            "title": "Attendance System Software",
+                            "description": "Automated attendance tracking with biometric integration, shift scheduling, overtime calculation, and compliance reporting.",
+                            "category": "business",
+                            "icon": "Calendar",
+                            "link": "/services/attendance-system"
+                        },
+                        {
+                            "id": 10,
+                            "title": "Library Management System",
+                            "description": "Complete digital library solutions with cataloging, circulation management, member services, and digital resource access.",
+                            "category": "education",
+                            "icon": "BookOpen",
+                            "link": "/services/library-management"
+                        },
+                        {
+                            "id": 11,
+                            "title": "LMS with Live Class Software",
+                            "description": "Learning management platforms with interactive online classrooms, content delivery, student assessment, and progress tracking.",
+                            "category": "education",
+                            "icon": "GraduationCap",
+                            "link": "/lms-software-development"
+                        },
+                        {
+                            "id": 12,
+                            "title": "University Management Software",
+                            "description": "Comprehensive academic administration systems covering admissions, student records, course management, and fee collection.",
+                            "category": "education",
+                            "icon": "School",
+                            "link": "/services/university-management"
+                        },
+                        {
+                            "id": 13,
+                            "title": "Quiz System Software",
+                            "description": "Interactive assessment platforms with question banks, automated grading, performance analytics, and customizable testing environments.",
+                            "category": "education",
+                            "icon": "HelpCircle",
+                            "link": "/services/quiz-system"
+                        },
+                        {
+                            "id": 14,
+                            "title": "Astrology Software",
+                            "description": "Specialized astrology applications with chart calculations, prediction systems, consultation management, and client portals.",
+                            "category": "specialized",
+                            "icon": "Star",
+                            "link": "/services/astrology-software"
+                        },
+                        {
+                            "id": 15,
+                            "title": "Travel Booking Software",
+                            "description": "End-to-end travel management platforms with booking engines, inventory management, payment processing, and customer service tools.",
+                            "category": "specialized",
+                            "icon": "Plane",
+                            "link": "/services/travel-booking"
+                        },
+                        {
+                            "id": 16,
+                            "title": "Matrimonial Software",
+                            "description": "Comprehensive matchmaking platforms with profile management, compatibility matching, communication tools, and privacy controls.",
+                            "category": "specialized",
+                            "icon": "Heart",
+                            "link": "/services/matrimonial"
+                        },
+                        {
+                            "id": 17,
+                            "title": "Restaurant Management System",
+                            "description": "Integrated restaurant operations software covering order management, kitchen workflows, inventory tracking, and customer loyalty programs.",
+                            "category": "hospitality",
+                            "icon": "Utensils",
+                            "link": "/restaurant-management-system"
+                        },
+                        {
+                            "id": 18,
+                            "title": "Hotel Management Software",
+                            "description": "Complete hospitality management solutions with reservation systems, guest services, housekeeping coordination, and billing capabilities.",
+                            "category": "hospitality",
+                            "icon": "Building",
+                            "link": "/services/hotel-management"
+                        },
+                        {
+                            "id": 19,
+                            "title": "Event Management Software",
+                            "description": "Plan and execute successful events with registration management, venue coordination, vendor management, and attendee communication.",
+                            "category": "specialized",
+                            "icon": "PartyPopper",
+                            "link": "/services/event-management"
+                        },
+                        {
+                            "id": 20,
+                            "title": "Hospital Management System",
+                            "description": "Healthcare administration platforms integrating patient records, appointment scheduling, billing, inventory management, and clinical workflows.",
+                            "category": "healthcare",
+                            "icon": "Hospital",
+                            "link": "/services/hospital-management"
+                        },
+                        {
+                            "id": 21,
+                            "title": "Real Estate Software",
+                            "description": "Property management and sales platforms with listing management, client relationship tools, transaction tracking, and market analysis.",
+                            "category": "specialized",
+                            "icon": "Home",
+                            "link": "/services/real-estate"
+                        },
+                        {
+                            "id": 22,
+                            "title": "Clinic Management Software",
+                            "description": "Healthcare practice management with appointment scheduling, patient records, billing integration, and prescription management.",
+                            "category": "healthcare",
+                            "icon": "Stethoscope",
+                            "link": "/services/clinic-management"
+                        },
+                        {
+                            "id": 23,
+                            "title": "Trading Software",
+                            "description": "Financial trading platforms with real-time market data, portfolio management, risk analysis, and automated trading capabilities.",
+                            "category": "finance",
+                            "icon": "TrendingUp",
+                            "link": "/services/trading-software"
+                        },
+                        {
+                            "id": 24,
+                            "title": "Job Portal Software",
+                            "description": "Employment platforms connecting employers and job seekers with advanced search capabilities, application management, and candidate tracking.",
+                            "category": "specialized",
+                            "icon": "Briefcase",
+                            "link": "/services/job-portal"
+                        }
+                    ],
+                    "cta": {
+                        "heading": "Ready to Transform Your Business?",
+                        "description": "Let's discuss how our custom software solutions can streamline your operations and accelerate your growth.",
+                        "button": {
+                            "text": "Get Started Today",
+                            "link": "/contact-us"
+                        }
+                    }
+                },
+                "softwareIndustriesSection": {
+                    "header": {
+                        "title": "Industries We Transform Through Software"
+                    },
+                    "tabs": [
+                        {
+                            "id": "Healthcare",
+                            "title": "Healthcare",
+                            "heading": "Healthcare",
+                            "text": "Electronic health records, telemedicine platforms, practice management systems, and patient engagement tools that improve healthcare delivery while ensuring compliance.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306330/migrated-assets/kzt4l5rrqoxxqx6urnmc.jpg",
+                                "alt": "doctor using digital health technology"
+                            },
+                            "icon": "Stethoscope"
+                        },
+                        {
+                            "id": "Hospitality & Travel",
+                            "title": "Hospitality",
+                            "heading": "Hospitality & Travel",
+                            "text": "Booking systems, property management solutions, guest experience platforms, and operational management tools that enhance customer satisfaction and business efficiency.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306331/migrated-assets/e8fxlw7wskwvxvltr54o.jpg",
+                                "alt": "hospitality industry word cloud service hotel restaurant"
+                            },
+                            "icon": "Plane"
+                        },
+                        {
+                            "id": "Finance & Banking",
+                            "title": "Finance",
+                            "heading": "Finance & Banking",
+                            "text": "Trading platforms, risk management systems, digital banking solutions, and regulatory compliance tools that modernize financial services securely.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306332/migrated-assets/y51sdok5fdnfzdvqhooy.jpg",
+                                "alt": "digital finance data analysis investment dashboard"
+                            },
+                            "icon": "Landmark"
+                        },
+                        {
+                            "id": "Education",
+                            "title": "Education",
+                            "heading": "Education",
+                            "text": "Learning management systems, student information systems, online assessment platforms, and administrative tools that support modern educational environments.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306333/migrated-assets/t9gxf626d5cugqqaiwpn.avif",
+                                "alt": "creative business ideas book"
+                            },
+                            "icon": "GraduationCap"
+                        },
+                        {
+                            "id": "Retail & E-commerce",
+                            "title": "Retail",
+                            "heading": "Retail & E-commerce",
+                            "text": "Inventory management, point-of-sale systems, customer relationship platforms, and e-commerce solutions that drive sales and improve customer experiences.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306334/migrated-assets/ntkscupemdivtoltkl8f.jpg",
+                                "alt": "ai shopping app development"
+                            },
+                            "icon": "ShoppingBag"
+                        },
+                        {
+                            "id": "Logistics & Supply Chain",
+                            "title": "Logistics",
+                            "heading": "Logistics & Supply Chain",
+                            "text": "Warehouse management, transportation optimization, inventory tracking, and supply chain visibility tools that reduce costs and improve efficiency.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306335/migrated-assets/mp2mifjuxs6lug6hoo4j.jpg",
+                                "alt": "global logistics and supply chain transportation network"
+                            },
+                            "icon": "Truck"
+                        },
+                        {
+                            "id": "Real Estate",
+                            "title": "Real Estate",
+                            "heading": "Real Estate",
+                            "text": "Property management systems, CRM platforms, listing management tools, and transaction processing software that streamline real estate operations.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306336/migrated-assets/rpfvhponrwqgmfatehxl.webp",
+                                "alt": "real estate handshake property deal"
+                            },
+                            "icon": "Building2"
+                        },
+                        {
+                            "id": "Manufacturing",
+                            "title": "Manufacturing",
+                            "heading": "Manufacturing",
+                            "text": "Production planning systems, quality management tools, supply chain integration, and operational efficiency platforms that optimize manufacturing processes.",
+                            "image": {
+                                "src": "https://res.cloudinary.com/dl5tq7hx1/image/upload/v1768306337/migrated-assets/dxeiromgvkfhm1oaycf8.jpg",
+                                "alt": "ai automation manufacturing software"
+                            },
+                            "icon": "Factory"
+                        }
+                    ]
+                },
+                "developmentApproachSection": {
+                    "approachSection": {
+                        "heading": "Our Proven Development Approach",
+                        "description": "We follow best practices and modern development methodologies to deliver high-quality software solutions tailored to your business.",
+                        "items": [
+                            {
+                                "icon": "Zap",
+                                "title": "Agile Development Methodology",
+                                "description": "We use iterative development cycles that allow for continuous feedback, rapid adjustments, and faster time-to-market while maintaining high quality standards throughout the project.",
+                                "color": "from-blue-500 to-blue-600"
+                            },
+                            {
+                                "icon": "Users",
+                                "title": "User-First Design Philosophy",
+                                "description": "Every software solution we build starts with understanding your users' needs and workflows. Our design process ensures intuitive interfaces that drive adoption and productivity.",
+                                "color": "from-blue-600 to-blue-700"
+                            },
+                            {
+                                "icon": "Shield",
+                                "title": "Security-First Architecture",
+                                "description": "We integrate security considerations from the initial design phase through deployment, ensuring your software and data remain protected against evolving threats.",
+                                "color": "from-blue-500 to-blue-600"
+                            },
+                            {
+                                "icon": "Layers",
+                                "title": "Scalable Technology Foundation",
+                                "description": "Our software solutions are built to grow with your business, using modern architectures and cloud technologies that handle increased users, data, and functionality seamlessly.",
+                                "color": "from-blue-600 to-blue-700"
+                            }
+                        ]
+                    },
+                    "whyChooseSection": {
+                        "heading": "Why Choose OpenSoftAI for Software Development",
+                        "description": "From expertise to long-term partnerships, we ensure your software projects are a success.",
+                        "items": [
+                            {
+                                "icon": "Code",
+                                "title": "Deep Technical Expertise",
+                                "description": "Our development team combines years of experience across multiple technologies, industries, and project complexities.",
+                                "gradient": "from-blue-50 to-blue-100"
+                            },
+                            {
+                                "icon": "Puzzle",
+                                "title": "Custom Solutions, Not Templates",
+                                "description": "We build software specifically for your business requirements, not modified versions of existing products.",
+                                "gradient": "from-blue-100 to-blue-50"
+                            },
+                            {
+                                "icon": "Boxes",
+                                "title": "End-to-End Development Services",
+                                "description": "From initial concept through deployment and ongoing maintenance, we provide comprehensive services.",
+                                "gradient": "from-blue-50 to-blue-100"
+                            },
+                            {
+                                "icon": "Handshake",
+                                "title": "Long-Term Partnership Approach",
+                                "description": "We view every project as the beginning of a long-term relationship with continuous support.",
+                                "gradient": "from-blue-100 to-blue-50"
+                            },
+                            {
+                                "icon": "MessageSquare",
+                                "title": "Transparent Communication",
+                                "description": "Clear timelines, regular updates, and honest communication throughout the project lifecycle.",
+                                "gradient": "from-blue-50 to-blue-100"
+                            },
+                            {
+                                "icon": "Building2",
+                                "title": "Industry-Specific Knowledge",
+                                "description": "Our experience across industries helps us build compliant, efficient, and scalable solutions.",
+                                "gradient": "from-blue-100 to-blue-50"
+                            }
+                        ]
+                    },
+                    "stats": [
+                        {
+                            "number": "500+",
+                            "label": "Projects Delivered"
+                        },
+                        {
+                            "number": "98%",
+                            "label": "Client Satisfaction"
+                        },
+                        {
+                            "number": "50+",
+                            "label": "Industries Served"
+                        },
+                        {
+                            "number": "5+",
+                            "label": "Years of Experience"
+                        }
+                    ]
+                },
+                "finalCTASection": {
+                    "hero": {
+                        "titleLine1": "Ready to Build Your Custom",
+                        "titleLine2": "Software Solution?",
+                        "description": "Great software doesn't just automate processes – it transforms how your business operates and grows. Whether you need to streamline operations, improve customer experiences, or create new revenue opportunities, custom software development provides the competitive advantages that off-the-shelf solutions simply can't match."
+                    },
+                    "features": [
+                        {
+                            "icon": "Shield",
+                            "title": "Streamline Operations",
+                            "desc": "Automate and optimize workflows"
+                        },
+                        {
+                            "icon": "Star",
+                            "title": "Improve Experiences",
+                            "desc": "Delight your customers"
+                        },
+                        {
+                            "icon": "Award",
+                            "title": "Revenue Growth",
+                            "desc": "Create new opportunities"
+                        }
+                    ],
+                    "ctaBox": {
+                        "heading": "Let's build software that works exactly the way your business needs it to work.",
+                        "description": "Contact OpenSoftAI today to discuss your project requirements and discover how custom software development can accelerate your business success."
+                    },
+                    "actionCards": [
+                        {
+                            "id": 1,
+                            "icon": "Calendar",
+                            "title": "Schedule Your Free Consultation",
+                            "subtitle": "Book a strategy session with our experts",
+                            "color": "from-white to-blue-50",
+                            "link": "/contact-us"
+                        },
+                        {
+                            "id": 2,
+                            "icon": "MessageCircle",
+                            "title": "Discuss Your Project Requirements",
+                            "subtitle": "Share your vision and get expert advice",
+                            "color": "from-blue-50 to-white",
+                            "link": "/contact-us"
+                        },
+                        {
+                            "id": 3,
+                            "icon": "FolderOpen",
+                            "title": "View Our Software Portfolio",
+                            "subtitle": "Explore our successful projects",
+                            "color": "from-white to-blue-50",
+                            "link": "/portfolio"
+                        }
+                    ]
+                },
+                "order": [
+                    "heroSection",
+                    "businessTransformationSection",
+                    "softwareServicesSection",
+                    "softwareIndustriesSection",
+                    "developmentApproachSection",
+                    "finalCTASection"
+                ]
+            }
+        },
+        "createdAt": "2026-01-13T09:46:28.491Z",
+        "isActive": true,
+        "seo": {
+            "keywords": []
+        },
+        "title": "software development",
+        "updatedAt": "2026-02-02T11:18:35.965Z"
+    }
+}

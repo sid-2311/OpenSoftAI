@@ -1,24 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Shield,
-  Eye,
-  Calendar,
-  Zap,
-  Users,
-  Lightbulb,
-} from "lucide-react";
-
-/* 🔹 Icon mapping */
-const ICONS = {
-  users: Users,
-  shield: Shield,
-  eye: Eye,
-  calendar: Calendar,
-  zap: Zap,
-  lightbulb: Lightbulb,
-};
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
 export default function WhyChooseOpenSoftAI({ data }) {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -39,52 +22,48 @@ export default function WhyChooseOpenSoftAI({ data }) {
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             {data.section.heading}
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-50 to-pink-500 mx-auto rounded-full"></div>
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.features.map((feature) => {
-            const Icon = ICONS[feature.icon];
-
-            return (
+          {data.features.map((feature) => (
+            <div
+              key={feature.id}
+              className="group relative"
+              onMouseEnter={() => setHoveredCard(feature.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              {/* Glow */}
               <div
-                key={feature.id}
-                className="group relative"
-                onMouseEnter={() => setHoveredCard(feature.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                {/* Glow */}
+                className={`absolute -inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-1000`}
+              ></div>
+
+              <div className="relative bg-slate-800/50 border border-slate-700 rounded-2xl p-8 h-full transition group-hover:bg-slate-800/70">
+                {/* Icon */}
                 <div
-                  className={`absolute -inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-1000`}
-                ></div>
-
-                <div className="relative bg-slate-800/50 border border-slate-700 rounded-2xl p-8 h-full transition group-hover:bg-slate-800/70">
-                  {/* Icon */}
-                  <div
-                    className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition`}
-                  >
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-gray-300 mb-4 text-lg">
-                    {feature.description}
-                  </p>
-
-                  {/* Subtext */}
-                  <p className="text-gray-400 italic">
-                    {feature.subtext}
-                  </p>
+                  className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition`}
+                >
+                  <DynamicIcon name={feature.icon} className="w-8 h-8 text-white" />
                 </div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-300 mb-4 text-lg">
+                  {feature.description}
+                </p>
+
+                {/* Subtext */}
+                <p className="text-gray-400 italic">
+                  {feature.subtext}
+                </p>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>

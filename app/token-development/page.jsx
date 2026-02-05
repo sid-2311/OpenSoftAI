@@ -1,3 +1,4 @@
+import { getPageData, generateMetadataFromPageData } from "@/lib/pageData";
 import BusinessBenefitsSection from "@/Compoents/TokenDevelopment/Benifits";
 import CapabilitiesSection from "@/Compoents/TokenDevelopment/Capablities";
 import CTASection from "@/Compoents/TokenDevelopment/CTA";
@@ -7,32 +8,37 @@ import TokenDevelopmentSection from "@/Compoents/TokenDevelopment/Intro";
 import TestTokenDevelopment from "@/Compoents/TokenDevelopment/Testimonial";
 import WhyChooseUsSection from "@/Compoents/TokenDevelopment/WhyChooseus";
 
+const SLUG = 'token-development';
 
-export const metadata = {
-  title: "Token Development Services | ERC-20, BEP-20 & Custom Tokens | OpenSoftAI",
-  description:
-    "Create your own token with OpenSoftAI’s token development services. We build ERC-20, BEP-20 & custom blockchain tokens with robust security and smart contract audit.",
-  alternates: {
-    canonical: "https://opensoftai.com/token-development/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// Generate dynamic metadata from database
+export async function generateMetadata() {
+  const pageData = await getPageData(SLUG);
+  return generateMetadataFromPageData(pageData);
+}
 
+// Fetch and render page with database content
+export default async function Page() {
+  const pageData = await getPageData(SLUG);
+  
+  if (!pageData) {
+    return <div className="min-h-screen flex items-center justify-center">
+      <p>Page data not found</p>
+    </div>;
+  }
 
-export default function TokenDevelopment(){
-    return(
-        <>
-        <HeroSection/>
-        <TokenDevelopmentSection/>
-        <ExpertiseSection/>
-        <CapabilitiesSection/>
-        <BusinessBenefitsSection/>
-        <WhyChooseUsSection/>
-        <TestTokenDevelopment/>
-        <CTASection/>
+  // Extract sections data
+  const sections = pageData.content?.sections || pageData.content || {};
+
+  return (
+    <>
+        <HeroSection data={sections} />
+        <TokenDevelopmentSection data={sections} />
+        <ExpertiseSection data={sections} />
+        <CapabilitiesSection data={sections} />
+        <BusinessBenefitsSection data={sections} />
+        <WhyChooseUsSection data={sections} />
+        <TestTokenDevelopment data={sections} />
+        <CTASection data={sections} />
         </>
-    )
+  );
 }

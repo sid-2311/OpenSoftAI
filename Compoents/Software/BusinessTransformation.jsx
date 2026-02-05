@@ -1,42 +1,31 @@
 import React from 'react';
-import { Code, Smartphone, Building2, Zap, Users, TrendingUp, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import DynamicIcon from "@/Compoents/DynamicIcon";
 
-export default function BusinessTransformationSection() {
-  const features = [
-    {
-      icon: <Code className="w-6 h-6" />,
-      title: "Web Applications",
-      description: "Drive customer engagement with powerful, responsive web solutions"
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Mobile Apps",
-      description: "Connect with users anywhere through native and cross-platform apps"
-    },
-    {
-      icon: <Building2 className="w-6 h-6" />,
-      title: "Enterprise Systems",
-      description: "Streamline complex operations with robust enterprise software"
-    }
-  ];
+// Dynamic data from API - use data prop to access section data
 
-  const achievements = [
-    {
-      icon: <Zap className="w-7 h-7" />,
-      label: "Startup Success",
-      description: "Helped startups launch their first products"
-    },
-    {
-      icon: <TrendingUp className="w-7 h-7" />,
-      label: "Scaling Growth",
-      description: "Enabled companies to scale efficiently"
-    },
-    {
-      icon: <Users className="w-7 h-7" />,
-      label: "Digital Transformation",
-      description: "Supported enterprises with measurable results"
-    }
-  ];
+export default function BusinessTransformationSection({ data }) {
+  // Extract section data
+  const section = data?.businessTransformationSection || {};
+  const heading = section.heading || {};
+  const description = section.description || [];
+  const featuresData = section.features || [];
+  const achievementsData = section.achievements || [];
+
+  const features = featuresData.map(f => ({
+    icon: f.icon,
+    title: f.title,
+    description: f.description
+  }));
+
+  const achievements = achievementsData.map(a => ({
+    icon: a.icon,
+    label: a.label,
+    description: a.description
+  }));
+
+  // If no data, components should still render gracefully with some fallbacks or be handled in the page
+  if (!section.heading) return null;
 
   return (
     <section className="relative py-20 md:py-32 bg-white overflow-hidden">
@@ -55,21 +44,19 @@ export default function BusinessTransformationSection() {
           <div>
             <div className="inline-block mb-4">
               <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
-                Our Approach
+                {section.badge || "Our Approach"}
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Transforming Business Operations Through{' '}
-              <span className="text-blue-600">Smart Software Solutions</span>
+              {heading.text?.split(heading.highlight)[0]}
+              <span className="text-blue-600">{heading.highlight}</span>
+              {heading.text?.split(heading.highlight)[1]}
             </h2>
-            
+
             <div className="space-y-6 text-slate-600 text-md leading-relaxed">
-              <p>
-                At <span className="font-semibold text-slate-900">OpenSoftAI</span>, we understand that off-the-shelf software rarely fits perfectly. Every business has unique processes, specific challenges, and distinct goals that require customized solutions. That's why we specialize in building software that works exactly the way your business needs it to work.
-              </p>
-              <p>
-                Our software development expertise spans web applications that drive customer engagement, mobile apps that connect you with users anywhere, and enterprise software systems that streamline complex business operations. We've helped startups launch their first products, enabled growing companies to scale efficiently, and supported enterprises in digital transformation initiatives that deliver measurable results.
-              </p>
+              {description.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
           </div>
 
@@ -82,7 +69,7 @@ export default function BusinessTransformationSection() {
               >
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
+                    <DynamicIcon name={feature.icon} className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-slate-900 mb-2">
@@ -104,7 +91,7 @@ export default function BusinessTransformationSection() {
             {achievements.map((achievement, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white">
-                  {achievement.icon}
+                  <DynamicIcon name={achievement.icon} className="w-7 h-7" />
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-1">
@@ -122,9 +109,8 @@ export default function BusinessTransformationSection() {
         {/* Bottom Statement */}
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl md:text-2xl text-slate-700 leading-relaxed">
-            Whether you need a <span className="font-semibold text-blue-600">complete business management system</span>, a <span className="font-semibold text-blue-600">customer-facing application</span>, or <span className="font-semibold text-blue-600">specialized software for your industry</span>, we build solutions that combine powerful functionality with intuitive user experiences.
+            {section.closingStatement}
           </p>
-         
         </div>
       </div>
     </section>

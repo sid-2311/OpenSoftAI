@@ -1,23 +1,24 @@
-import ourTeamData from "@/Compoents/Team/ourTeamData.json"
+import { getPageData } from "@/lib/pageData";
 
 import OurLeaders from "@/Compoents/Team/OurLeaders";
 import OurTeamHero from "@/Compoents/Team/OurTeamHero";
 import OurVisionaries from "@/Compoents/Team/OurVisionaries";
 import Team from "@/Compoents/Team/Team";
 
+export default async function TeamPage() {
+  const pageData = await getPageData("team");
 
-export default function OurTeam() {
-    const { teamHero, leaders, visionaries, teamDev ,teamSales } = ourTeamData;
+  if (!pageData) return null;
 
-    return (
-        <>
-            <OurTeamHero data={teamHero} />
-            <OurLeaders data={leaders} />
-            <OurVisionaries data={visionaries} />
-            <Team data={teamDev} />
-            <Team data={teamSales} />
-        </>
+  const content = pageData.content;
 
-
-    );
+  return (
+    <>
+      <OurTeamHero data={content.teamHero} />
+      <OurLeaders data={content.leaders} />
+      <OurVisionaries data={content.visionaries} />
+      <Team data={content.teamDev} />
+      <Team data={content.teamSales} />
+    </>
+  );
 }

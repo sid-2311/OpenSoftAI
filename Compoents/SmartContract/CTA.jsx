@@ -13,53 +13,47 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export default function SmartContractCTA() {
+// Dynamic data from API - use data prop to access section data
+
+export default function SmartContractCTA({ data }) {
   const [hoveredButton, setHoveredButton] = useState(null);
 
-  const ctaButtons = [
-    {
-      id: "consultation",
-      icon: <Calendar className="w-5 h-5" />,
-      title: "Schedule Your Smart Contract Consultation",
-      description: "Get expert guidance tailored to your project",
-      color: "from-blue-600 to-blue-700",
-      hoverColor: "from-blue-700 to-blue-800",
-      href: "/contact-us",
-    },
-    {
-      id: "assessment",
-      icon: <FileSearch className="w-5 h-5" />,
-      title: "Get a Security Assessment",
-      description: "Identify vulnerabilities before deployment",
-      color: "from-indigo-600 to-indigo-700",
-      hoverColor: "from-indigo-700 to-indigo-800",
-      href: "/contact-us",
-    },
-    {
-      id: "portfolio",
-      icon: <Shield className="w-5 h-5" />,
-      title: "View Our Contract Portfolio",
-      description: "See our proven track record",
-      color: "from-blue-500 to-indigo-600",
-      hoverColor: "from-blue-600 to-indigo-700",
-      href: "/portfolio",
-    },
-  ];
+  // Extract section data
+  const section = data?.smartContractCTASection || {};
+  const header = section.header || {};
+  const keyMessage = section.keyMessage || {};
+  const featuresData = section.features || [];
+  const ctaButtonsData = section.ctaButtons || [];
+  const process = section.process || {};
+  const bottomCta = section.bottomCta || {};
 
-  const features = [
-    {
-      icon: <Shield className="w-5 h-5" />,
-      text: "Security-first development",
-    },
-    {
-      icon: <Clock className="w-5 h-5" />,
-      text: "Fast without compromising quality",
-    },
-    {
-      icon: <CheckCircle className="w-5 h-5" />,
-      text: "Clear roadmap from concept to deployment",
-    },
-  ];
+  // Icon mapping
+  const iconMap = {
+    Shield: <Shield className="w-5 h-5" />,
+    Clock: <Clock className="w-5 h-5" />,
+    CheckCircle: <CheckCircle className="w-5 h-5" />,
+    Rocket: <Rocket className="w-5 h-5" />,
+    FileSearch: <FileSearch className="w-5 h-5" />,
+    Calendar: <Calendar className="w-5 h-5" />,
+    MessageSquare: <MessageSquare className="w-6 h-6 text-white" />,
+  };
+
+  const features = featuresData.map(f => ({
+    icon: iconMap[f.icon] || <Shield className="w-5 h-5" />,
+    text: f.text,
+  }));
+
+  const ctaButtons = ctaButtonsData.map(b => ({
+    id: b.id,
+    icon: iconMap[b.icon] || <Calendar className="w-5 h-5" />,
+    title: b.title,
+    description: b.description,
+    color: b.gradient || "from-blue-600 to-blue-700",
+    hoverColor: b.hoverGradient || "from-blue-700 to-blue-800",
+    href: b.url || "/contact-us",
+  }));
+
+  if (!section.header) return null;
 
   return (
     <section className="relative bg-gradient-to-b from-white via-blue-50 to-white py-20 px-4 overflow-hidden">
@@ -88,14 +82,12 @@ export default function SmartContractCTA() {
 
             <div className="relative z-10">
               <h2 className="text-2xl md:text-4xl font-bold text-white mb-4 leading-tight">
-                Ready to Build Smart Contracts That{" "}
-                <span className="text-blue-200">Actually Work?</span>
+                {header.title?.split(header.highlight)[0]}
+                <span className="text-blue-200">{header.highlight}</span>
               </h2>
 
               <p className="text-blue-100 text-md md:text-lg max-w-3xl mx-auto leading-relaxed">
-                Smart contracts are the foundation of every successful
-                blockchain project — but they must be built correctly to avoid
-                critical failures.
+                {header.description}
               </p>
             </div>
           </div>
@@ -105,29 +97,26 @@ export default function SmartContractCTA() {
             {/* Key Message */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 mb-8 border border-blue-200">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-600 p-3 rounded-xl">
+                <div className="bg-blue-600 p-3 rounded-xl shrink-0">
                   <MessageSquare className="w-6 h-6 text-white" />
                 </div>
 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    Build Smart Contracts Users Can Trust
+                    {keyMessage.title}
                   </h3>
 
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    Build smart contracts that users trust with their assets
-                    and companies rely on for mission-critical operations.
+                    {keyMessage.description}
                   </p>
 
-                  <div className="bg-white rounded-lg p-4 border border-blue-200">
-                    <p className="text-gray-800 font-medium">
-                      <span className="text-blue-600 font-bold">
-                        The blockchain space moves fast,
-                      </span>{" "}
-                      but security cannot be rushed. We help you move quickly
-                      while maintaining enterprise-grade security standards.
-                    </p>
-                  </div>
+                  {keyMessage.note && (
+                    <div className="bg-white rounded-lg p-4 border border-blue-200">
+                      <p className="text-gray-800 font-medium">
+                        {keyMessage.note}
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -139,7 +128,7 @@ export default function SmartContractCTA() {
                   key={index}
                   className="flex items-center gap-3 bg-white rounded-xl p-4 border border-blue-100 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
                 >
-                  <div className="bg-blue-100 text-blue-600 p-2 rounded-lg">
+                  <div className="bg-blue-100 text-blue-600 p-2 rounded-lg shrink-0">
                     {feature.icon}
                   </div>
                   <span className="text-gray-700 font-medium text-sm">
@@ -157,14 +146,13 @@ export default function SmartContractCTA() {
                   key={button.id}
                   onMouseEnter={() => setHoveredButton(button.id)}
                   onMouseLeave={() => setHoveredButton(null)}
-                  className={`w-full group bg-gradient-to-r ${
-                    hoveredButton === button.id
-                      ? button.hoverColor
-                      : button.color
-                  } text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-between`}
+                  className={`w-full group bg-gradient-to-r ${hoveredButton === button.id
+                    ? button.hoverColor
+                    : button.color
+                    } text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-between`}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors">
+                    <div className="bg-white/20 p-3 rounded-lg group-hover:bg-white/30 transition-colors shrink-0">
                       {button.icon}
                     </div>
 
@@ -178,7 +166,7 @@ export default function SmartContractCTA() {
                     </div>
                   </div>
 
-                  <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
+                  <ChevronRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300 shrink-0" />
                 </Link>
               ))}
             </div>
@@ -186,45 +174,23 @@ export default function SmartContractCTA() {
             {/* Process Overview */}
             <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 border border-gray-200">
               <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                What Happens Next?
+                {process.title}
               </h4>
 
               <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center">
-                  <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">
-                    1
+                {(process.steps || []).map((step, idx) => (
+                  <div key={idx} className="text-center">
+                    <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">
+                      {step.step}
+                    </div>
+                    <h5 className="font-semibold text-gray-900 mb-2">
+                      {step.title}
+                    </h5>
+                    <p className="text-gray-600 text-sm">
+                      {step.description}
+                    </p>
                   </div>
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Review Requirements
-                  </h5>
-                  <p className="text-gray-600 text-sm">
-                    We’ll discuss your project’s technical and business needs.
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">
-                    2
-                  </div>
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Security Considerations
-                  </h5>
-                  <p className="text-gray-600 text-sm">
-                    Identify potential vulnerabilities early.
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="bg-blue-600 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mx-auto mb-3">
-                    3
-                  </div>
-                  <h5 className="font-semibold text-gray-900 mb-2">
-                    Clear Roadmap
-                  </h5>
-                  <p className="text-gray-600 text-sm">
-                    A complete, secure path from concept to deployment.
-                  </p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -232,17 +198,17 @@ export default function SmartContractCTA() {
           {/* Bottom Banner */}
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 md:px-12 py-8 text-center">
             <p className="text-white text-xl md:text-2xl font-bold mb-2">
-              Ready to Build Smart Contracts That Users Can Trust?
+              {bottomCta.title}
             </p>
             <p className="text-blue-100 text-lg">
-              Let’s create bulletproof blockchain infrastructure together.
+              {bottomCta.description}
             </p>
             <div className="mt-6">
               <Link
-                href="/contact-us"
+                href={bottomCta.action?.url || "/contact-us"}
                 className="bg-white text-blue-600 px-6 py-3 rounded-full font-bold text-md md:text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl inline-flex items-center gap-2"
               >
-                Secure Your Blockchain Future
+                {bottomCta.action?.label}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
